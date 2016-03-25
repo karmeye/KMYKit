@@ -6,7 +6,7 @@
 //  Copyright © 2016 Karmeye. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for KMYKit.
 FOUNDATION_EXPORT double KMYKitVersionNumber;
@@ -17,3 +17,5 @@ FOUNDATION_EXPORT const unsigned char KMYKitVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <KMYKit/PublicHeader.h>
 
 #import <KMYKit/NSObject+KMY.h>
+#import <KMYKit/NSArray+KMY.h>
+#import <KMYKit/NSMutableArray+KMY.h>

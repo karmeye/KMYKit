@@ -10,6 +10,10 @@
 		A6F6F6C11CA3CDAA0074F8A4 /* KMYKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A6F6F6C01CA3CDAA0074F8A4 /* KMYKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6F6F7091CA41A4B0074F8A4 /* NSObject+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A6F6F7071CA41A4B0074F8A4 /* NSObject+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6F6F70A1CA41A4B0074F8A4 /* NSObject+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F6F7081CA41A4B0074F8A4 /* NSObject+KMY.m */; };
+		A6F6F7531CA51C490074F8A4 /* NSArray+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A6F6F7511CA51C490074F8A4 /* NSArray+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6F6F7541CA51C490074F8A4 /* NSArray+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F6F7521CA51C490074F8A4 /* NSArray+KMY.m */; };
+		A6F6F7571CA51C5A0074F8A4 /* NSMutableArray+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A6F6F7551CA51C5A0074F8A4 /* NSMutableArray+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6F6F7581CA51C5A0074F8A4 /* NSMutableArray+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F6F7561CA51C5A0074F8A4 /* NSMutableArray+KMY.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +22,10 @@
 		A6F6F6C21CA3CDAA0074F8A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6F6F7071CA41A4B0074F8A4 /* NSObject+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KMY.h"; sourceTree = "<group>"; };
 		A6F6F7081CA41A4B0074F8A4 /* NSObject+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KMY.m"; sourceTree = "<group>"; };
+		A6F6F7511CA51C490074F8A4 /* NSArray+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+KMY.h"; sourceTree = "<group>"; };
+		A6F6F7521CA51C490074F8A4 /* NSArray+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+KMY.m"; sourceTree = "<group>"; };
+		A6F6F7551CA51C5A0074F8A4 /* NSMutableArray+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+KMY.h"; sourceTree = "<group>"; };
+		A6F6F7561CA51C5A0074F8A4 /* NSMutableArray+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+KMY.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,10 @@
 				A6F6F6C21CA3CDAA0074F8A4 /* Info.plist */,
 				A6F6F7071CA41A4B0074F8A4 /* NSObject+KMY.h */,
 				A6F6F7081CA41A4B0074F8A4 /* NSObject+KMY.m */,
+				A6F6F7511CA51C490074F8A4 /* NSArray+KMY.h */,
+				A6F6F7521CA51C490074F8A4 /* NSArray+KMY.m */,
+				A6F6F7551CA51C5A0074F8A4 /* NSMutableArray+KMY.h */,
+				A6F6F7561CA51C5A0074F8A4 /* NSMutableArray+KMY.m */,
 			);
 			path = KMYKit;
 			sourceTree = "<group>";
@@ -65,6 +77,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6F6F7571CA51C5A0074F8A4 /* NSMutableArray+KMY.h in Headers */,
+				A6F6F7531CA51C490074F8A4 /* NSArray+KMY.h in Headers */,
 				A6F6F7091CA41A4B0074F8A4 /* NSObject+KMY.h in Headers */,
 				A6F6F6C11CA3CDAA0074F8A4 /* KMYKit.h in Headers */,
 			);
@@ -137,7 +151,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6F6F7541CA51C490074F8A4 /* NSArray+KMY.m in Sources */,
 				A6F6F70A1CA41A4B0074F8A4 /* NSObject+KMY.m in Sources */,
+				A6F6F7581CA51C5A0074F8A4 /* NSMutableArray+KMY.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
