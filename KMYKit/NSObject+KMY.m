@@ -10,13 +10,10 @@
 
 @implementation NSObject (KMY)
 
-+ (instancetype)kmy_initWithInitializer:(void (^)(id object))initializer
-{
-    id object = [[[self class] alloc] init];
++ (instancetype)kmy_initWithInitializer:(void (^)(id object))initializer {
 
-    if (object && initializer != NULL) {
-        initializer(object);
-    }
+    id object = [[[self class] alloc] init];
+    if (object && initializer != NULL) initializer(object);
 
     return object;
 }
