@@ -9,4 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <KMYKit/KMY+Foundation.h>
 
+#import <KMYKit/KMYViewController.h>
+#import <KMYKit/KMYTableViewController.h>
+#import <KMYKit/KMYNavigationController.h>
 #import <KMYKit/UIView+KMY.h>

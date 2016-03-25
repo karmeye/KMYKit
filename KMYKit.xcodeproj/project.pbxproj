@@ -18,6 +18,12 @@
 		A6F6F7601CA522190074F8A4 /* KMY+UIFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = A6F6F75F1CA522190074F8A4 /* KMY+UIFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6F6F7631CA522600074F8A4 /* UIView+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A6F6F7611CA522600074F8A4 /* UIView+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6F6F7641CA522600074F8A4 /* UIView+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F6F7621CA522600074F8A4 /* UIView+KMY.m */; };
+		A6F6F7671CA524E30074F8A4 /* KMYViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A6F6F7651CA524E30074F8A4 /* KMYViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6F6F7681CA524E30074F8A4 /* KMYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F6F7661CA524E30074F8A4 /* KMYViewController.m */; };
+		A6F6F76B1CA5252E0074F8A4 /* KMYNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = A6F6F7691CA5252E0074F8A4 /* KMYNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6F6F76C1CA5252E0074F8A4 /* KMYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F6F76A1CA5252E0074F8A4 /* KMYNavigationController.m */; };
+		A6F6F76F1CA526140074F8A4 /* KMYTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A6F6F76D1CA526140074F8A4 /* KMYTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6F6F7701CA526140074F8A4 /* KMYTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F6F76E1CA526140074F8A4 /* KMYTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +40,12 @@
 		A6F6F75F1CA522190074F8A4 /* KMY+UIFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KMY+UIFoundation.h"; sourceTree = "<group>"; };
 		A6F6F7611CA522600074F8A4 /* UIView+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+KMY.h"; sourceTree = "<group>"; };
 		A6F6F7621CA522600074F8A4 /* UIView+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+KMY.m"; sourceTree = "<group>"; };
+		A6F6F7651CA524E30074F8A4 /* KMYViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYViewController.h; sourceTree = "<group>"; };
+		A6F6F7661CA524E30074F8A4 /* KMYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYViewController.m; sourceTree = "<group>"; };
+		A6F6F7691CA5252E0074F8A4 /* KMYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYNavigationController.h; sourceTree = "<group>"; };
+		A6F6F76A1CA5252E0074F8A4 /* KMYNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYNavigationController.m; sourceTree = "<group>"; };
+		A6F6F76D1CA526140074F8A4 /* KMYTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYTableViewController.h; sourceTree = "<group>"; };
+		A6F6F76E1CA526140074F8A4 /* KMYTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +104,12 @@
 			isa = PBXGroup;
 			children = (
 				A6F6F75F1CA522190074F8A4 /* KMY+UIFoundation.h */,
+				A6F6F7691CA5252E0074F8A4 /* KMYNavigationController.h */,
+				A6F6F76A1CA5252E0074F8A4 /* KMYNavigationController.m */,
+				A6F6F76D1CA526140074F8A4 /* KMYTableViewController.h */,
+				A6F6F76E1CA526140074F8A4 /* KMYTableViewController.m */,
+				A6F6F7651CA524E30074F8A4 /* KMYViewController.h */,
+				A6F6F7661CA524E30074F8A4 /* KMYViewController.m */,
 				A6F6F7611CA522600074F8A4 /* UIView+KMY.h */,
 				A6F6F7621CA522600074F8A4 /* UIView+KMY.m */,
 			);
@@ -111,6 +129,9 @@
 				A6F6F7091CA41A4B0074F8A4 /* NSObject+KMY.h in Headers */,
 				A6F6F6C11CA3CDAA0074F8A4 /* KMYKit.h in Headers */,
 				A6F6F7631CA522600074F8A4 /* UIView+KMY.h in Headers */,
+				A6F6F7671CA524E30074F8A4 /* KMYViewController.h in Headers */,
+				A6F6F76B1CA5252E0074F8A4 /* KMYNavigationController.h in Headers */,
+				A6F6F76F1CA526140074F8A4 /* KMYTableViewController.h in Headers */,
 				A6F6F7601CA522190074F8A4 /* KMY+UIFoundation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,7 +203,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6F6F7681CA524E30074F8A4 /* KMYViewController.m in Sources */,
+				A6F6F76C1CA5252E0074F8A4 /* KMYNavigationController.m in Sources */,
 				A6F6F7641CA522600074F8A4 /* UIView+KMY.m in Sources */,
+				A6F6F7701CA526140074F8A4 /* KMYTableViewController.m in Sources */,
 				A6F6F7541CA51C490074F8A4 /* NSArray+KMY.m in Sources */,
 				A6F6F70A1CA41A4B0074F8A4 /* NSObject+KMY.m in Sources */,
 				A6F6F7581CA51C5A0074F8A4 /* NSMutableArray+KMY.m in Sources */,
