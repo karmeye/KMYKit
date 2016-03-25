@@ -24,6 +24,8 @@
 		A6F6F76C1CA5252E0074F8A4 /* KMYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F6F76A1CA5252E0074F8A4 /* KMYNavigationController.m */; };
 		A6F6F76F1CA526140074F8A4 /* KMYTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A6F6F76D1CA526140074F8A4 /* KMYTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6F6F7701CA526140074F8A4 /* KMYTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F6F76E1CA526140074F8A4 /* KMYTableViewController.m */; };
+		A6F6F7731CA527440074F8A4 /* KMYDispatch.h in Headers */ = {isa = PBXBuildFile; fileRef = A6F6F7711CA527440074F8A4 /* KMYDispatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6F6F7741CA527440074F8A4 /* KMYDispatch.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F6F7721CA527440074F8A4 /* KMYDispatch.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		A6F6F76A1CA5252E0074F8A4 /* KMYNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYNavigationController.m; sourceTree = "<group>"; };
 		A6F6F76D1CA526140074F8A4 /* KMYTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYTableViewController.h; sourceTree = "<group>"; };
 		A6F6F76E1CA526140074F8A4 /* KMYTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYTableViewController.m; sourceTree = "<group>"; };
+		A6F6F7711CA527440074F8A4 /* KMYDispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYDispatch.h; sourceTree = "<group>"; };
+		A6F6F7721CA527440074F8A4 /* KMYDispatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYDispatch.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,13 +93,15 @@
 		A6F6F75A1CA51FBD0074F8A4 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				A6F6F7071CA41A4B0074F8A4 /* NSObject+KMY.h */,
-				A6F6F7081CA41A4B0074F8A4 /* NSObject+KMY.m */,
+				A6F6F75C1CA5203E0074F8A4 /* KMY+Foundation.h */,
+				A6F6F7711CA527440074F8A4 /* KMYDispatch.h */,
+				A6F6F7721CA527440074F8A4 /* KMYDispatch.m */,
 				A6F6F7511CA51C490074F8A4 /* NSArray+KMY.h */,
 				A6F6F7521CA51C490074F8A4 /* NSArray+KMY.m */,
 				A6F6F7551CA51C5A0074F8A4 /* NSMutableArray+KMY.h */,
 				A6F6F7561CA51C5A0074F8A4 /* NSMutableArray+KMY.m */,
-				A6F6F75C1CA5203E0074F8A4 /* KMY+Foundation.h */,
+				A6F6F7071CA41A4B0074F8A4 /* NSObject+KMY.h */,
+				A6F6F7081CA41A4B0074F8A4 /* NSObject+KMY.m */,
 			);
 			name = Foundation;
 			sourceTree = "<group>";
@@ -132,6 +138,7 @@
 				A6F6F7671CA524E30074F8A4 /* KMYViewController.h in Headers */,
 				A6F6F76B1CA5252E0074F8A4 /* KMYNavigationController.h in Headers */,
 				A6F6F76F1CA526140074F8A4 /* KMYTableViewController.h in Headers */,
+				A6F6F7731CA527440074F8A4 /* KMYDispatch.h in Headers */,
 				A6F6F7601CA522190074F8A4 /* KMY+UIFoundation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6F6F7681CA524E30074F8A4 /* KMYViewController.m in Sources */,
+				A6F6F7741CA527440074F8A4 /* KMYDispatch.m in Sources */,
 				A6F6F76C1CA5252E0074F8A4 /* KMYNavigationController.m in Sources */,
 				A6F6F7641CA522600074F8A4 /* UIView+KMY.m in Sources */,
 				A6F6F7701CA526140074F8A4 /* KMYTableViewController.m in Sources */,
