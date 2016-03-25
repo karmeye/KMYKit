@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface NSObject (KMY)
 
 /// Calls init. Supports subclasses.
@@ -15,6 +17,8 @@
 /// @param initializer Use to customize the newly allocated instance.
 ///
 /// @return A new NSObject instance.
-+ (nullable instancetype)kmy_initWithInitializer:(void (^ __nullable)(id __nonnull object))initializer;
++ (nullable instancetype)kmy_initWithInitializer:(void (^)(id object))initializer;
 
 @end
+
+NS_ASSUME_NONNULL_END
