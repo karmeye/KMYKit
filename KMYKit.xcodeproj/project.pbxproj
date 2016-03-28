@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A65B52A21CA91D7C0089E2B5 /* KMYItemAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = A65B52A11CA91D7C0089E2B5 /* KMYItemAttributes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6D926D11CA57C9B009B9C37 /* NSDictionary+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D926CF1CA57C9B009B9C37 /* NSDictionary+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6D926D21CA57C9B009B9C37 /* NSDictionary+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D926D01CA57C9B009B9C37 /* NSDictionary+KMY.m */; };
 		A6F6F6C11CA3CDAA0074F8A4 /* KMYKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A6F6F6C01CA3CDAA0074F8A4 /* KMYKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A65B52A11CA91D7C0089E2B5 /* KMYItemAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYItemAttributes.h; sourceTree = "<group>"; };
 		A6D926CF1CA57C9B009B9C37 /* NSDictionary+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+KMY.h"; sourceTree = "<group>"; };
 		A6D926D01CA57C9B009B9C37 /* NSDictionary+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+KMY.m"; sourceTree = "<group>"; };
 		A6F6F6BD1CA3CDAA0074F8A4 /* KMYKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KMYKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +102,7 @@
 				A6F6F75C1CA5203E0074F8A4 /* KMY+Foundation.h */,
 				A6F6F7711CA527440074F8A4 /* KMYDispatch.h */,
 				A6F6F7721CA527440074F8A4 /* KMYDispatch.m */,
+				A65B52A11CA91D7C0089E2B5 /* KMYItemAttributes.h */,
 				A6F6F7511CA51C490074F8A4 /* NSArray+KMY.h */,
 				A6F6F7521CA51C490074F8A4 /* NSArray+KMY.m */,
 				A6D926CF1CA57C9B009B9C37 /* NSDictionary+KMY.h */,
@@ -146,6 +149,7 @@
 				A6D926D11CA57C9B009B9C37 /* NSDictionary+KMY.h in Headers */,
 				A6F6F76F1CA526140074F8A4 /* KMYTableViewController.h in Headers */,
 				A6F6F7731CA527440074F8A4 /* KMYDispatch.h in Headers */,
+				A65B52A21CA91D7C0089E2B5 /* KMYItemAttributes.h in Headers */,
 				A6F6F7601CA522190074F8A4 /* KMY+UIFoundation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #import <KMYKit/KMYDispatch.h>
+#import <KMYKit/KMYItemAttributes.h>
 
 #import <KMYKit/NSObject+KMY.h>
 #import <KMYKit/NSArray+KMY.h>
