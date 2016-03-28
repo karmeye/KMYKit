@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		A65B52A21CA91D7C0089E2B5 /* KMYItemAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = A65B52A11CA91D7C0089E2B5 /* KMYItemAttributes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A65B52A91CA94DE50089E2B5 /* KMYItem.h in Headers */ = {isa = PBXBuildFile; fileRef = A65B52A71CA94DE50089E2B5 /* KMYItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A65B52AA1CA94DE50089E2B5 /* KMYItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A65B52A81CA94DE50089E2B5 /* KMYItem.m */; };
+		A6D926C91CA577D2009B9C37 /* KMYSection.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D926C71CA577D2009B9C37 /* KMYSection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6D926CA1CA577D2009B9C37 /* KMYSection.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D926C81CA577D2009B9C37 /* KMYSection.m */; };
 		A6D926D11CA57C9B009B9C37 /* NSDictionary+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D926CF1CA57C9B009B9C37 /* NSDictionary+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6D926D21CA57C9B009B9C37 /* NSDictionary+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D926D01CA57C9B009B9C37 /* NSDictionary+KMY.m */; };
 		A6F6F6C11CA3CDAA0074F8A4 /* KMYKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A6F6F6C01CA3CDAA0074F8A4 /* KMYKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -33,6 +37,10 @@
 
 /* Begin PBXFileReference section */
 		A65B52A11CA91D7C0089E2B5 /* KMYItemAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYItemAttributes.h; sourceTree = "<group>"; };
+		A65B52A71CA94DE50089E2B5 /* KMYItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYItem.h; sourceTree = "<group>"; };
+		A65B52A81CA94DE50089E2B5 /* KMYItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYItem.m; sourceTree = "<group>"; };
+		A6D926C71CA577D2009B9C37 /* KMYSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYSection.h; sourceTree = "<group>"; };
+		A6D926C81CA577D2009B9C37 /* KMYSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYSection.m; sourceTree = "<group>"; };
 		A6D926CF1CA57C9B009B9C37 /* NSDictionary+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+KMY.h"; sourceTree = "<group>"; };
 		A6D926D01CA57C9B009B9C37 /* NSDictionary+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+KMY.m"; sourceTree = "<group>"; };
 		A6F6F6BD1CA3CDAA0074F8A4 /* KMYKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KMYKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,7 +110,11 @@
 				A6F6F75C1CA5203E0074F8A4 /* KMY+Foundation.h */,
 				A6F6F7711CA527440074F8A4 /* KMYDispatch.h */,
 				A6F6F7721CA527440074F8A4 /* KMYDispatch.m */,
+				A65B52A71CA94DE50089E2B5 /* KMYItem.h */,
+				A65B52A81CA94DE50089E2B5 /* KMYItem.m */,
 				A65B52A11CA91D7C0089E2B5 /* KMYItemAttributes.h */,
+				A6D926C71CA577D2009B9C37 /* KMYSection.h */,
+				A6D926C81CA577D2009B9C37 /* KMYSection.m */,
 				A6F6F7511CA51C490074F8A4 /* NSArray+KMY.h */,
 				A6F6F7521CA51C490074F8A4 /* NSArray+KMY.m */,
 				A6D926CF1CA57C9B009B9C37 /* NSDictionary+KMY.h */,
@@ -147,8 +159,10 @@
 				A6F6F7671CA524E30074F8A4 /* KMYViewController.h in Headers */,
 				A6F6F76B1CA5252E0074F8A4 /* KMYNavigationController.h in Headers */,
 				A6D926D11CA57C9B009B9C37 /* NSDictionary+KMY.h in Headers */,
+				A6D926C91CA577D2009B9C37 /* KMYSection.h in Headers */,
 				A6F6F76F1CA526140074F8A4 /* KMYTableViewController.h in Headers */,
 				A6F6F7731CA527440074F8A4 /* KMYDispatch.h in Headers */,
+				A65B52A91CA94DE50089E2B5 /* KMYItem.h in Headers */,
 				A65B52A21CA91D7C0089E2B5 /* KMYItemAttributes.h in Headers */,
 				A6F6F7601CA522190074F8A4 /* KMY+UIFoundation.h in Headers */,
 			);
@@ -223,8 +237,10 @@
 			files = (
 				A6F6F7681CA524E30074F8A4 /* KMYViewController.m in Sources */,
 				A6F6F7741CA527440074F8A4 /* KMYDispatch.m in Sources */,
+				A6D926CA1CA577D2009B9C37 /* KMYSection.m in Sources */,
 				A6F6F76C1CA5252E0074F8A4 /* KMYNavigationController.m in Sources */,
 				A6F6F7641CA522600074F8A4 /* UIView+KMY.m in Sources */,
+				A65B52AA1CA94DE50089E2B5 /* KMYItem.m in Sources */,
 				A6F6F7701CA526140074F8A4 /* KMYTableViewController.m in Sources */,
 				A6D926D21CA57C9B009B9C37 /* NSDictionary+KMY.m in Sources */,
 				A6F6F7541CA51C490074F8A4 /* NSArray+KMY.m in Sources */,
