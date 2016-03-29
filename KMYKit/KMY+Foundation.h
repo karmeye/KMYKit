@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+#import <KMYKit/KMYBlock.h>
 #import <KMYKit/KMYDispatch.h>
 #import <KMYKit/KMYItemAttributes.h>
 #import <KMYKit/KMYSection.h>
