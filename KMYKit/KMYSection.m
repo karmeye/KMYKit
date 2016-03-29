@@ -39,6 +39,21 @@
     return instance;
 }
 
++ (instancetype)sectionWithInitializer:(void (^)(NSMutableDictionary * attributes, NSMutableArray * items))initializer {
+    KMYSection *instance = [[[self class] alloc] init];
+
+    if (self) {
+        NSMutableDictionary *attributes = [[NSMutableDictionary alloc] init];
+        NSMutableArray *items = [[NSMutableArray alloc] init];
+        initializer(attributes, items);
+
+        if (attributes.count > 0) instance.attributeDictionary = [attributes copy];
+        if (items.count > 0) instance.items = [items copy];
+    }
+
+    return instance;
+}
+
 - (KMYItem *)itemAtIndex:(NSUInteger)index {
     if (index < self.numberOfItems) {
         return self.items[index];

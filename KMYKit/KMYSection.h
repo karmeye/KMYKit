@@ -8,16 +8,18 @@
 
 #import <Foundation/Foundation.h>
 #import "KMYItem.h"
+#import "KMYItemAttributes.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface KMYSection : NSObject <KMYItemAttributes>
 
-@property (nonatomic, strong, readonly, nullable)   NSArray<KMYItem *>  *items;
-@property (nonatomic, assign, readonly)             NSUInteger          numberOfItems;
+@property (nonatomic, strong, readonly, nullable)   NSArray<__kindof KMYItem *> *items;
+@property (nonatomic, assign, readonly)             NSUInteger                  numberOfItems;
 
 + (instancetype)sectionWithItems:(NSArray * _Nullable)items;
-+ (instancetype)sectionWithItemsInitializer:(void (^)(NSMutableArray * _Nullable items))itemsInitializer;
++ (instancetype)sectionWithItemsInitializer:(void (^)(NSMutableArray * items))itemsInitializer;
++ (instancetype)sectionWithInitializer:(void (^)(NSMutableDictionary * attributes, NSMutableArray * items))initializer;
 
 - (KMYItem * _Nullable)itemAtIndex:(NSUInteger)index;
 
