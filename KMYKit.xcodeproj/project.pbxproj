@@ -10,6 +10,10 @@
 		A65B52A21CA91D7C0089E2B5 /* KMYItemAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = A65B52A11CA91D7C0089E2B5 /* KMYItemAttributes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A65B52A91CA94DE50089E2B5 /* KMYItem.h in Headers */ = {isa = PBXBuildFile; fileRef = A65B52A71CA94DE50089E2B5 /* KMYItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A65B52AA1CA94DE50089E2B5 /* KMYItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A65B52A81CA94DE50089E2B5 /* KMYItem.m */; };
+		A65B52AD1CA94FA10089E2B5 /* KMYUIItem.h in Headers */ = {isa = PBXBuildFile; fileRef = A65B52AB1CA94FA10089E2B5 /* KMYUIItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A65B52AE1CA94FA10089E2B5 /* KMYUIItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A65B52AC1CA94FA10089E2B5 /* KMYUIItem.m */; };
+		A65B52B11CA94FCD0089E2B5 /* KMYUISection.h in Headers */ = {isa = PBXBuildFile; fileRef = A65B52AF1CA94FCD0089E2B5 /* KMYUISection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A65B52B21CA94FCD0089E2B5 /* KMYUISection.m in Sources */ = {isa = PBXBuildFile; fileRef = A65B52B01CA94FCD0089E2B5 /* KMYUISection.m */; };
 		A68B8DF51CAA5CD100DE6E95 /* KMYBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = A68B8DF31CAA5CD100DE6E95 /* KMYBlock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A68B8DF61CAA5CD100DE6E95 /* KMYBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = A68B8DF41CAA5CD100DE6E95 /* KMYBlock.m */; };
 		A6D926C91CA577D2009B9C37 /* KMYSection.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D926C71CA577D2009B9C37 /* KMYSection.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -41,6 +45,10 @@
 		A65B52A11CA91D7C0089E2B5 /* KMYItemAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYItemAttributes.h; sourceTree = "<group>"; };
 		A65B52A71CA94DE50089E2B5 /* KMYItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYItem.h; sourceTree = "<group>"; };
 		A65B52A81CA94DE50089E2B5 /* KMYItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYItem.m; sourceTree = "<group>"; };
+		A65B52AB1CA94FA10089E2B5 /* KMYUIItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYUIItem.h; sourceTree = "<group>"; };
+		A65B52AC1CA94FA10089E2B5 /* KMYUIItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYUIItem.m; sourceTree = "<group>"; };
+		A65B52AF1CA94FCD0089E2B5 /* KMYUISection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYUISection.h; sourceTree = "<group>"; };
+		A65B52B01CA94FCD0089E2B5 /* KMYUISection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYUISection.m; sourceTree = "<group>"; };
 		A68B8DF31CAA5CD100DE6E95 /* KMYBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYBlock.h; sourceTree = "<group>"; };
 		A68B8DF41CAA5CD100DE6E95 /* KMYBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYBlock.m; sourceTree = "<group>"; };
 		A6D926C71CA577D2009B9C37 /* KMYSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYSection.h; sourceTree = "<group>"; };
@@ -141,6 +149,10 @@
 				A6F6F76A1CA5252E0074F8A4 /* KMYNavigationController.m */,
 				A6F6F76D1CA526140074F8A4 /* KMYTableViewController.h */,
 				A6F6F76E1CA526140074F8A4 /* KMYTableViewController.m */,
+				A65B52AB1CA94FA10089E2B5 /* KMYUIItem.h */,
+				A65B52AC1CA94FA10089E2B5 /* KMYUIItem.m */,
+				A65B52AF1CA94FCD0089E2B5 /* KMYUISection.h */,
+				A65B52B01CA94FCD0089E2B5 /* KMYUISection.m */,
 				A6F6F7651CA524E30074F8A4 /* KMYViewController.h */,
 				A6F6F7661CA524E30074F8A4 /* KMYViewController.m */,
 				A6F6F7611CA522600074F8A4 /* UIView+KMY.h */,
@@ -169,6 +181,8 @@
 				A6F6F76F1CA526140074F8A4 /* KMYTableViewController.h in Headers */,
 				A6F6F7731CA527440074F8A4 /* KMYDispatch.h in Headers */,
 				A65B52A91CA94DE50089E2B5 /* KMYItem.h in Headers */,
+				A65B52B11CA94FCD0089E2B5 /* KMYUISection.h in Headers */,
+				A65B52AD1CA94FA10089E2B5 /* KMYUIItem.h in Headers */,
 				A65B52A21CA91D7C0089E2B5 /* KMYItemAttributes.h in Headers */,
 				A68B8DF51CAA5CD100DE6E95 /* KMYBlock.h in Headers */,
 				A6F6F7601CA522190074F8A4 /* KMY+UIFoundation.h in Headers */,
@@ -245,7 +259,9 @@
 				A6F6F7681CA524E30074F8A4 /* KMYViewController.m in Sources */,
 				A68B8DF61CAA5CD100DE6E95 /* KMYBlock.m in Sources */,
 				A6F6F7741CA527440074F8A4 /* KMYDispatch.m in Sources */,
+				A65B52AE1CA94FA10089E2B5 /* KMYUIItem.m in Sources */,
 				A6D926CA1CA577D2009B9C37 /* KMYSection.m in Sources */,
+				A65B52B21CA94FCD0089E2B5 /* KMYUISection.m in Sources */,
 				A6F6F76C1CA5252E0074F8A4 /* KMYNavigationController.m in Sources */,
 				A6F6F7641CA522600074F8A4 /* UIView+KMY.m in Sources */,
 				A65B52AA1CA94DE50089E2B5 /* KMYItem.m in Sources */,

@@ -12,4 +12,8 @@
 #import <KMYKit/KMYViewController.h>
 #import <KMYKit/KMYTableViewController.h>
 #import <KMYKit/KMYNavigationController.h>
+
+#import <KMYKit/KMYUISection.h>
+#import <KMYKit/KMYUIItem.h>
+
 #import <KMYKit/UIView+KMY.h>
