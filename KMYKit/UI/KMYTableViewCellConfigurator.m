@@ -10,6 +10,7 @@
 
 #import "KMYTextFieldTableViewCell.h"
 #import "KMYDefaultStyleTableViewCell.h"
+#import "KMYSubtitleStyleTableViewCell.h"
 
 @interface KMYTableViewCellConfiguratorReuseInfo :  NSObject
 
@@ -130,8 +131,9 @@
     static NSDictionary *_kmy_defaultClassReuseIdentifierMapping;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _kmy_defaultClassReuseIdentifierMapping = @{ [KMYDefaultStyleTableViewCell defaultReuseIdentifier]   : [KMYDefaultStyleTableViewCell class],
-                                                     [KMYTextFieldTableViewCell defaultReuseIdentifier]      : [KMYTextFieldTableViewCell class] };
+        _kmy_defaultClassReuseIdentifierMapping = @{ [KMYDefaultStyleTableViewCell defaultReuseIdentifier]  : [KMYDefaultStyleTableViewCell class],
+                                                     [KMYSubtitleStyleTableViewCell defaultReuseIdentifier] : [KMYSubtitleStyleTableViewCell class],
+                                                     [KMYTextFieldTableViewCell defaultReuseIdentifier]     : [KMYTextFieldTableViewCell class] };
     });
     return _kmy_defaultClassReuseIdentifierMapping;
 }
@@ -142,6 +144,12 @@
 
             d[[KMYDefaultStyleTableViewCell class]] = ^(KMYDefaultStyleTableViewCell *cell, KMYUIItem *item, NSIndexPath *indexPath) {
                 cell.textLabel.text = item.text;
+                cell.detailTextLabel.text = item.detailText;
+            };
+
+            d[[KMYSubtitleStyleTableViewCell class]] = ^(KMYSubtitleStyleTableViewCell *cell, KMYUIItem *item, NSIndexPath *indexPath) {
+                cell.textLabel.text = item.text;
+                cell.detailTextLabel.text = item.detailText;
             };
 
             d[[KMYTextFieldTableViewCell class]] = ^(KMYTextFieldTableViewCell *cell, KMYUIItem *item, NSIndexPath *indexPath) {

@@ -17,6 +17,7 @@
 #import <KMYKit/KMYUIItem.h>
 #import <KMYKit/KMYDefaultStyleTableViewCell.h>
 #import <KMYKit/KMYTextFieldTableViewCell.h>
+#import <KMYKit/KMYSubtitleStyleTableViewCell.h>
 #import <KMYKit/KMYDefaultReusableIdentifying.h>
 
 #import <KMYKit/UIView+KMY.h>

@@ -10,6 +10,8 @@
 		A627751C1CAD493300238E9D /* KMYDefaultReusableIdentifying.h in Headers */ = {isa = PBXBuildFile; fileRef = A627751B1CAD493300238E9D /* KMYDefaultReusableIdentifying.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A627751F1CAE3B8300238E9D /* KMYAssert.h in Headers */ = {isa = PBXBuildFile; fileRef = A627751D1CAE3B8300238E9D /* KMYAssert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A62775201CAE3B8300238E9D /* KMYAssert.m in Sources */ = {isa = PBXBuildFile; fileRef = A627751E1CAE3B8300238E9D /* KMYAssert.m */; };
+		A627752A1CAE8BD600238E9D /* KMYSubtitleStyleTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A62775281CAE8BD600238E9D /* KMYSubtitleStyleTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A627752B1CAE8BD600238E9D /* KMYSubtitleStyleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A62775291CAE8BD600238E9D /* KMYSubtitleStyleTableViewCell.m */; };
 		A68B8E0A1CAA6F8900DE6E95 /* KMY+Foundation.h in Headers */ = {isa = PBXBuildFile; fileRef = A68B8DF81CAA6F8900DE6E95 /* KMY+Foundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A68B8E0B1CAA6F8900DE6E95 /* KMYBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = A68B8DF91CAA6F8900DE6E95 /* KMYBlock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A68B8E0C1CAA6F8900DE6E95 /* KMYBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = A68B8DFA1CAA6F8900DE6E95 /* KMYBlock.m */; };
@@ -56,6 +58,8 @@
 		A627751B1CAD493300238E9D /* KMYDefaultReusableIdentifying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYDefaultReusableIdentifying.h; sourceTree = "<group>"; };
 		A627751D1CAE3B8300238E9D /* KMYAssert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYAssert.h; sourceTree = "<group>"; };
 		A627751E1CAE3B8300238E9D /* KMYAssert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYAssert.m; sourceTree = "<group>"; };
+		A62775281CAE8BD600238E9D /* KMYSubtitleStyleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYSubtitleStyleTableViewCell.h; sourceTree = "<group>"; };
+		A62775291CAE8BD600238E9D /* KMYSubtitleStyleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYSubtitleStyleTableViewCell.m; sourceTree = "<group>"; };
 		A68B8DF81CAA6F8900DE6E95 /* KMY+Foundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KMY+Foundation.h"; sourceTree = "<group>"; };
 		A68B8DF91CAA6F8900DE6E95 /* KMYBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYBlock.h; sourceTree = "<group>"; };
 		A68B8DFA1CAA6F8900DE6E95 /* KMYBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYBlock.m; sourceTree = "<group>"; };
@@ -177,6 +181,8 @@
 			children = (
 				A6D01FED1CABE139003CF026 /* KMYDefaultStyleTableViewCell.h */,
 				A6D01FEE1CABE139003CF026 /* KMYDefaultStyleTableViewCell.m */,
+				A62775281CAE8BD600238E9D /* KMYSubtitleStyleTableViewCell.h */,
+				A62775291CAE8BD600238E9D /* KMYSubtitleStyleTableViewCell.m */,
 				A68B8E401CAAB61500DE6E95 /* KMYTextFieldTableViewCell.h */,
 				A68B8E411CAAB61500DE6E95 /* KMYTextFieldTableViewCell.m */,
 			);
@@ -240,6 +246,7 @@
 				A6D01FEF1CABE139003CF026 /* KMYDefaultStyleTableViewCell.h in Headers */,
 				A627751C1CAD493300238E9D /* KMYDefaultReusableIdentifying.h in Headers */,
 				A627751F1CAE3B8300238E9D /* KMYAssert.h in Headers */,
+				A627752A1CAE8BD600238E9D /* KMYSubtitleStyleTableViewCell.h in Headers */,
 				A68B8E2F1CAA6F9200DE6E95 /* KMYUIItem.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,6 +333,7 @@
 				A68B8E0C1CAA6F8900DE6E95 /* KMYBlock.m in Sources */,
 				A68B8E2C1CAA6F9200DE6E95 /* KMYNavigationController.m in Sources */,
 				A68B8E151CAA6F8900DE6E95 /* NSArray+KMY.m in Sources */,
+				A627752B1CAE8BD600238E9D /* KMYSubtitleStyleTableViewCell.m in Sources */,
 				A68B8E1B1CAA6F8900DE6E95 /* NSObject+KMY.m in Sources */,
 				A68B8E191CAA6F8900DE6E95 /* NSMutableArray+KMY.m in Sources */,
 				A68B8E0E1CAA6F8900DE6E95 /* KMYDispatch.m in Sources */,

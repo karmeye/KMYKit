@@ -32,7 +32,7 @@ NSString * const KMYUIItemKeyType           = @"KMYUIItemKeyType";
 
 #pragma mark - Public -
 
-- (NSString*)reuseIdentifier {
+- (NSString *)reuseIdentifier {
     return [self valueForAttribute:KMYUIItemReuseIdentifier];
 }
 
@@ -40,7 +40,7 @@ NSString * const KMYUIItemKeyType           = @"KMYUIItemKeyType";
     return [[self.attributeDictionary kmy_numberForKey:KMYUIItemKeyType] integerValue];
 }
 
-- (NSString*)text {
+- (NSString *)text {
     NSString *text = self.attributeDictionary[KMYUIItemKeyText];
 
     if (!text) {
@@ -49,6 +49,10 @@ NSString * const KMYUIItemKeyType           = @"KMYUIItemKeyType";
     }
 
     return text;
+}
+
+- (NSString *)detailText {
+    return [self valueForAttribute:KMYUIItemKeyDetailText];
 }
 
 @end
