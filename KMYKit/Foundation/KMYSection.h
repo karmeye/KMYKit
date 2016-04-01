@@ -17,11 +17,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly, nullable)   NSArray<__kindof KMYItem *> *items;
 @property (nonatomic, assign, readonly)             NSUInteger                  numberOfItems;
 
-+ (instancetype)sectionWithItems:(NSArray * _Nullable)items;
++ (instancetype)sectionWithItems:(nullable NSArray *)items;
 + (instancetype)sectionWithItemsInitializer:(void (^)(NSMutableArray * items))itemsInitializer;
 + (instancetype)sectionWithInitializer:(void (^)(NSMutableDictionary * attributes, NSMutableArray * items))initializer;
 
-- (KMYItem * _Nullable)itemAtIndex:(NSUInteger)index;
+- (nullable KMYItem *)itemAtIndex:(NSUInteger)index;
 
 @end
 

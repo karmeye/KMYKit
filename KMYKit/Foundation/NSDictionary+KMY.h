@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)kmy_boolForKey:(id)key;
 
 /// @return The NSNumber associated with the key. Or nil if there is no NSNumber (or subclass) for the key.
-- (NSNumber * _Nullable)kmy_numberForKey:(id)key;
+- (nullable NSNumber *)kmy_numberForKey:(id)key;
 
 /// @param key          The key
 /// @param defaultValue The value to return if there is no NSNumber associated with the key. For example use NSIntegerMax or 0.

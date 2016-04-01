@@ -31,7 +31,7 @@ typedef NS_ENUM(NSInteger, KMYUIItemType) {
 @property (nonatomic, readonly, nullable)           NSString                *text;
 @property (nonatomic, copy, readonly, nullable)     dispatch_block_t        actionHandler;
 
-+ (KMYUIItem *)itemWithAttributes:(NSDictionary *)dictionary
++ (KMYUIItem *)itemWithAttributes:(nullable NSDictionary *)dictionary
                     actionHandler:(nullable dispatch_block_t)actionHandler;
 
 @end

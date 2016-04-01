@@ -22,7 +22,7 @@ extern NSString *const KMYItemKeyID;
 
 @interface KMYItem : NSObject <KMYItemAttributes>
 
-+ (KMYItem *)itemWithAttributes:(NSDictionary *)dictionary;
++ (KMYItem *)itemWithAttributes:(nullable NSDictionary *)dictionary;
 
 @end
 
