@@ -60,12 +60,12 @@
 #pragma mark UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSAssert(NO, @"This method must be overridden by subclasses");
+    KMYAssert(NO, @"This method must be overridden by subclasses, or set the data source.");
     return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSAssert(NO, @"This method must be overridden by subclasses");
+    KMYAssert(NO, @"This method must be overridden by subclasses, or set the data source.");
     return nil;
 }
 
