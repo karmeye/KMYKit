@@ -8,6 +8,7 @@
 
 #import "KMYUIItem.h"
 
+NSString * const KMYUIItemReuseIdentifier   = @"KMYUIItemReuseIdentifier";
 NSString * const KMYUIItemKeyText           = @"KMYUIItemKeyText";
 NSString * const KMYUIItemKeyTextHandler    = @"KMYUIItemKeyTextHandler";
 NSString * const KMYUIItemKeyDetailText     = @"KMYUIItemKeyDetailText";
@@ -30,6 +31,10 @@ NSString * const KMYUIItemKeyType           = @"KMYUIItemKeyType";
 }
 
 #pragma mark - Public -
+
+- (NSString*)reuseIdentifier {
+    return [self valueForAttribute:KMYUIItemReuseIdentifier];
+}
 
 - (KMYUIItemType)type {
     return [[self.attributeDictionary kmy_numberForKey:KMYUIItemKeyType] integerValue];

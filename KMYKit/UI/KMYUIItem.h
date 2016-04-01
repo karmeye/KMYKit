@@ -10,6 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+extern NSString * const KMYUIItemReuseIdentifier;
 extern NSString * const KMYUIItemKeyText;
 extern NSString * const KMYUIItemKeyTextHandler;
 extern NSString * const KMYUIItemKeyDetailText;
@@ -19,14 +20,13 @@ typedef NSString * _Nullable (^KMYUIItemTextHandler)();
 
 typedef NS_ENUM(NSInteger, KMYUIItemType) {
     KMYUIItemTypeNone = 0,
-    KMYUIItemTypeText,
-    KMYUIItemTypeTextInput,
     KMYUIItemTypeSelectable,
     KMYUIItemTypeDisclosure
 };
 
 @interface KMYUIItem : KMYItem
 
+@property (nonatomic, readonly, nullable)           NSString                *reuseIdentifier;
 @property (nonatomic, readonly)                     KMYUIItemType           type;
 @property (nonatomic, readonly, nullable)           NSString                *text;
 @property (nonatomic, copy, readonly, nullable)     dispatch_block_t        actionHandler;

@@ -12,9 +12,11 @@
 #import <KMYKit/KMYViewController.h>
 #import <KMYKit/KMYTableViewController.h>
 #import <KMYKit/KMYNavigationController.h>
-
+#import <KMYKit/KMYTableViewDataSource.h>
 #import <KMYKit/KMYUISection.h>
 #import <KMYKit/KMYUIItem.h>
+#import <KMYKit/KMYDefaultStyleTableViewCell.h>
+#import <KMYKit/KMYTextFieldTableViewCell.h>
 #import <KMYKit/KMYDefaultReusableIdentifying.h>
 
 #import <KMYKit/UIView+KMY.h>
