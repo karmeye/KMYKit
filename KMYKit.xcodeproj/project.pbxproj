@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A627751F1CAE3B8300238E9D /* KMYAssert.h in Headers */ = {isa = PBXBuildFile; fileRef = A627751D1CAE3B8300238E9D /* KMYAssert.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A62775201CAE3B8300238E9D /* KMYAssert.m in Sources */ = {isa = PBXBuildFile; fileRef = A627751E1CAE3B8300238E9D /* KMYAssert.m */; };
 		A68B8E0A1CAA6F8900DE6E95 /* KMY+Foundation.h in Headers */ = {isa = PBXBuildFile; fileRef = A68B8DF81CAA6F8900DE6E95 /* KMY+Foundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A68B8E0B1CAA6F8900DE6E95 /* KMYBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = A68B8DF91CAA6F8900DE6E95 /* KMYBlock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A68B8E0C1CAA6F8900DE6E95 /* KMYBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = A68B8DFA1CAA6F8900DE6E95 /* KMYBlock.m */; };
@@ -42,6 +44,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A627751D1CAE3B8300238E9D /* KMYAssert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYAssert.h; sourceTree = "<group>"; };
+		A627751E1CAE3B8300238E9D /* KMYAssert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYAssert.m; sourceTree = "<group>"; };
 		A68B8DF81CAA6F8900DE6E95 /* KMY+Foundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KMY+Foundation.h"; sourceTree = "<group>"; };
 		A68B8DF91CAA6F8900DE6E95 /* KMYBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYBlock.h; sourceTree = "<group>"; };
 		A68B8DFA1CAA6F8900DE6E95 /* KMYBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYBlock.m; sourceTree = "<group>"; };
@@ -93,6 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				A68B8DF81CAA6F8900DE6E95 /* KMY+Foundation.h */,
+				A627751D1CAE3B8300238E9D /* KMYAssert.h */,
+				A627751E1CAE3B8300238E9D /* KMYAssert.m */,
 				A68B8DF91CAA6F8900DE6E95 /* KMYBlock.h */,
 				A68B8DFA1CAA6F8900DE6E95 /* KMYBlock.m */,
 				A68B8DFB1CAA6F8900DE6E95 /* KMYDispatch.h */,
@@ -185,6 +191,7 @@
 				A68B8E0F1CAA6F8900DE6E95 /* KMYItem.h in Headers */,
 				A68B8E181CAA6F8900DE6E95 /* NSMutableArray+KMY.h in Headers */,
 				A68B8E141CAA6F8900DE6E95 /* NSArray+KMY.h in Headers */,
+				A627751F1CAE3B8300238E9D /* KMYAssert.h in Headers */,
 				A68B8E2F1CAA6F9200DE6E95 /* KMYUIItem.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A62775201CAE3B8300238E9D /* KMYAssert.m in Sources */,
 				A68B8E171CAA6F8900DE6E95 /* NSDictionary+KMY.m in Sources */,
 				A68B8E321CAA6F9200DE6E95 /* KMYUISection.m in Sources */,
 				A68B8E101CAA6F8900DE6E95 /* KMYItem.m in Sources */,
