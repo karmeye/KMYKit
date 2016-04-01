@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A627751C1CAD493300238E9D /* KMYDefaultReusableIdentifying.h in Headers */ = {isa = PBXBuildFile; fileRef = A627751B1CAD493300238E9D /* KMYDefaultReusableIdentifying.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A627751F1CAE3B8300238E9D /* KMYAssert.h in Headers */ = {isa = PBXBuildFile; fileRef = A627751D1CAE3B8300238E9D /* KMYAssert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A62775201CAE3B8300238E9D /* KMYAssert.m in Sources */ = {isa = PBXBuildFile; fileRef = A627751E1CAE3B8300238E9D /* KMYAssert.m */; };
 		A68B8E0A1CAA6F8900DE6E95 /* KMY+Foundation.h in Headers */ = {isa = PBXBuildFile; fileRef = A68B8DF81CAA6F8900DE6E95 /* KMY+Foundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -44,6 +45,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A627751B1CAD493300238E9D /* KMYDefaultReusableIdentifying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYDefaultReusableIdentifying.h; sourceTree = "<group>"; };
 		A627751D1CAE3B8300238E9D /* KMYAssert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYAssert.h; sourceTree = "<group>"; };
 		A627751E1CAE3B8300238E9D /* KMYAssert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYAssert.m; sourceTree = "<group>"; };
 		A68B8DF81CAA6F8900DE6E95 /* KMY+Foundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KMY+Foundation.h"; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				A68B8E1D1CAA6F9200DE6E95 /* KMY+UIFoundation.h */,
+				A627751B1CAD493300238E9D /* KMYDefaultReusableIdentifying.h */,
 				A68B8E1E1CAA6F9200DE6E95 /* KMYNavigationController.h */,
 				A68B8E1F1CAA6F9200DE6E95 /* KMYNavigationController.m */,
 				A68B8E201CAA6F9200DE6E95 /* KMYTableViewController.h */,
@@ -191,6 +194,7 @@
 				A68B8E0F1CAA6F8900DE6E95 /* KMYItem.h in Headers */,
 				A68B8E181CAA6F8900DE6E95 /* NSMutableArray+KMY.h in Headers */,
 				A68B8E141CAA6F8900DE6E95 /* NSArray+KMY.h in Headers */,
+				A627751C1CAD493300238E9D /* KMYDefaultReusableIdentifying.h in Headers */,
 				A627751F1CAE3B8300238E9D /* KMYAssert.h in Headers */,
 				A68B8E2F1CAA6F9200DE6E95 /* KMYUIItem.h in Headers */,
 			);

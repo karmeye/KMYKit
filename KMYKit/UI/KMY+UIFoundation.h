@@ -15,5 +15,6 @@
 
 #import <KMYKit/KMYUISection.h>
 #import <KMYKit/KMYUIItem.h>
+#import <KMYKit/KMYDefaultReusableIdentifying.h>
 
 #import <KMYKit/UIView+KMY.h>
