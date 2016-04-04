@@ -13,22 +13,19 @@
 
 @implementation KMYTableViewDataSource
 
-- (instancetype)initWithSections:(NSArray<KMYUISection *>*)sections {
+- (instancetype)initWithSectionProvider:(id<KMYSectionProvider>)sectionProvider {
     self = [self init];
     if (self) {
-        self.sections = sections;
+        self.sectionProvider = sectionProvider;
     }
     return self;
 }
 
-- (instancetype)initWithSections:(NSArray<KMYUISection *>*)sections cellConfigurator:(id<KMYTableViewCellConfigurator>)cellConfigurator {
-    self = [self initWithSections:sections];
-
+- (instancetype)initWithSectionProvider:(id<KMYSectionProvider>)sectionProvider cellConfigurator:(id<KMYTableViewCellConfigurator>)cellConfigurator {
+    self = [self initWithSectionProvider:sectionProvider];
     if (self) {
-        self.sections = sections;
         self.cellConfigurator = cellConfigurator;
     }
-
     return self;
 }
 
@@ -50,18 +47,18 @@
 #pragma mark UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.sections.count;
+    return self.sectionProvider.sections.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.sections[section].numberOfItems;
+    return self.sectionProvider.sections[section].numberOfItems;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    KMYUIItem *item         = self.sections[indexPath.section].items[indexPath.row];
+    KMYUIItem *item = self.sectionProvider.sections[indexPath.section].items[indexPath.row];
     KMYAssert(item.reuseIdentifier, @"Missing reuse identifier for item: %@", item);
 
-    UITableViewCell *cell   = [tableView dequeueReusableCellWithIdentifier:item.reuseIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:item.reuseIdentifier];
     KMYAssert(cell, @"No cell was registered with reuse identifier: %@", item.reuseIdentifier);
 
     [self.cellConfigurator configureCell:cell withItem:item atIndexPath:indexPath];
@@ -70,11 +67,11 @@
 }
 
 - (NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return [self.sections[section] valueForAttribute:KMYUISectionKeyHeaderTitle];
+    return [self.sectionProvider.sections[section] valueForAttribute:KMYUISectionKeyHeaderTitle];
 }
 
 - (NSString*)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
-    return [self.sections[section] valueForAttribute:KMYUISectionKeyFooterTitle];
+    return [self.sectionProvider.sections[section] valueForAttribute:KMYUISectionKeyFooterTitle];
 }
 
 @end

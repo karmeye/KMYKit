@@ -15,11 +15,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface KMYTableViewDataSource : NSObject <UITableViewDataSource>
 
-@property (nonatomic, strong, readwrite, nullable)      NSArray<KMYUISection *>                 *sections;
-@property (nonatomic, strong, readwrite, nullable)      id<KMYTableViewCellConfigurator>        cellConfigurator;
+@property (nonatomic, weak, readwrite, nullable)        id<KMYSectionProvider>              sectionProvider;
+@property (nonatomic, strong, readwrite, nullable)      id<KMYTableViewCellConfigurator>    cellConfigurator;
 
-- (instancetype)initWithSections:(nullable NSArray<KMYUISection *> *)sections;
-- (instancetype)initWithSections:(nullable NSArray<KMYUISection *> *)sections cellConfigurator:(nullable id<KMYTableViewCellConfigurator>)cellConfigurator;
+- (instancetype)initWithSectionProvider:(nullable id<KMYSectionProvider>)sectionProvider;
+- (instancetype)initWithSectionProvider:(nullable id<KMYSectionProvider>)sectionProvider cellConfigurator:(nullable id<KMYTableViewCellConfigurator>)cellConfigurator;
 - (instancetype)initWithCellConfigurator:(nullable id<KMYTableViewCellConfigurator>)cellConfigurator;
 
 @end

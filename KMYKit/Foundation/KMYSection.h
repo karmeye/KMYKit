@@ -31,4 +31,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+@protocol KMYSectionProvider <NSObject>
+
+- (NSArray<__kindof KMYSection *> *)sections;
+
+@end
+
+
 NS_ASSUME_NONNULL_END
