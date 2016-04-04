@@ -45,6 +45,8 @@
 		A68B8E361CAA6F9200DE6E95 /* UIView+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A68B8E291CAA6F9200DE6E95 /* UIView+KMY.m */; };
 		A68B8E391CAA825900DE6E95 /* KMYTableViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = A68B8E371CAA825900DE6E95 /* KMYTableViewDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A68B8E3A1CAA825900DE6E95 /* KMYTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A68B8E381CAA825900DE6E95 /* KMYTableViewDataSource.m */; };
+		A68B8E3D1CAA828900DE6E95 /* KMYTableViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = A68B8E3B1CAA828900DE6E95 /* KMYTableViewDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A68B8E3E1CAA828900DE6E95 /* KMYTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A68B8E3C1CAA828900DE6E95 /* KMYTableViewDelegate.m */; };
 		A68B8E421CAAB61500DE6E95 /* KMYTextFieldTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A68B8E401CAAB61500DE6E95 /* KMYTextFieldTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A68B8E431CAAB61500DE6E95 /* KMYTextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A68B8E411CAAB61500DE6E95 /* KMYTextFieldTableViewCell.m */; };
 		A68B8E461CAAB6B300DE6E95 /* KMYTableViewCellConfigurator.h in Headers */ = {isa = PBXBuildFile; fileRef = A68B8E441CAAB6B300DE6E95 /* KMYTableViewCellConfigurator.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -93,6 +95,8 @@
 		A68B8E291CAA6F9200DE6E95 /* UIView+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+KMY.m"; sourceTree = "<group>"; };
 		A68B8E371CAA825900DE6E95 /* KMYTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYTableViewDataSource.h; sourceTree = "<group>"; };
 		A68B8E381CAA825900DE6E95 /* KMYTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYTableViewDataSource.m; sourceTree = "<group>"; };
+		A68B8E3B1CAA828900DE6E95 /* KMYTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYTableViewDelegate.h; sourceTree = "<group>"; };
+		A68B8E3C1CAA828900DE6E95 /* KMYTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYTableViewDelegate.m; sourceTree = "<group>"; };
 		A68B8E401CAAB61500DE6E95 /* KMYTextFieldTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYTextFieldTableViewCell.h; sourceTree = "<group>"; };
 		A68B8E411CAAB61500DE6E95 /* KMYTextFieldTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYTextFieldTableViewCell.m; sourceTree = "<group>"; };
 		A68B8E441CAAB6B300DE6E95 /* KMYTableViewCellConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYTableViewCellConfigurator.h; sourceTree = "<group>"; };
@@ -172,6 +176,8 @@
 				A68B8E211CAA6F9200DE6E95 /* KMYTableViewController.m */,
 				A68B8E371CAA825900DE6E95 /* KMYTableViewDataSource.h */,
 				A68B8E381CAA825900DE6E95 /* KMYTableViewDataSource.m */,
+				A68B8E3B1CAA828900DE6E95 /* KMYTableViewDelegate.h */,
+				A68B8E3C1CAA828900DE6E95 /* KMYTableViewDelegate.m */,
 			);
 			name = TableView;
 			sourceTree = "<group>";
@@ -239,6 +245,7 @@
 				A68B8E111CAA6F8900DE6E95 /* KMYItemAttributes.h in Headers */,
 				A68B8E0F1CAA6F8900DE6E95 /* KMYItem.h in Headers */,
 				A68B8E181CAA6F8900DE6E95 /* NSMutableArray+KMY.h in Headers */,
+				A68B8E3D1CAA828900DE6E95 /* KMYTableViewDelegate.h in Headers */,
 				A68B8E421CAAB61500DE6E95 /* KMYTextFieldTableViewCell.h in Headers */,
 				A68B8E461CAAB6B300DE6E95 /* KMYTableViewCellConfigurator.h in Headers */,
 				A68B8E391CAA825900DE6E95 /* KMYTableViewDataSource.h in Headers */,
@@ -321,6 +328,7 @@
 				A68B8E471CAAB6B300DE6E95 /* KMYTableViewCellConfigurator.m in Sources */,
 				A62775201CAE3B8300238E9D /* KMYAssert.m in Sources */,
 				A68B8E431CAAB61500DE6E95 /* KMYTextFieldTableViewCell.m in Sources */,
+				A68B8E3E1CAA828900DE6E95 /* KMYTableViewDelegate.m in Sources */,
 				A68B8E171CAA6F8900DE6E95 /* NSDictionary+KMY.m in Sources */,
 				A68B8E321CAA6F9200DE6E95 /* KMYUISection.m in Sources */,
 				A68B8E101CAA6F8900DE6E95 /* KMYItem.m in Sources */,

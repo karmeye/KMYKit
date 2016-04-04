@@ -13,6 +13,7 @@
 #import <KMYKit/KMYTableViewController.h>
 #import <KMYKit/KMYNavigationController.h>
 #import <KMYKit/KMYTableViewDataSource.h>
+#import <KMYKit/KMYTableViewDelegate.h>
 #import <KMYKit/KMYUISection.h>
 #import <KMYKit/KMYUIItem.h>
 #import <KMYKit/KMYDefaultStyleTableViewCell.h>
