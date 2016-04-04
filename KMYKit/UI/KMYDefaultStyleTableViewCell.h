@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <KMYKit/KMY+Foundation.h>
+#import "KMY+Foundation.h"
 #import "KMYDefaultReusableIdentifying.h"
 
 NS_ASSUME_NONNULL_BEGIN
