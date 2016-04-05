@@ -12,6 +12,7 @@
 		A62775201CAE3B8300238E9D /* KMYAssert.m in Sources */ = {isa = PBXBuildFile; fileRef = A627751E1CAE3B8300238E9D /* KMYAssert.m */; };
 		A627752A1CAE8BD600238E9D /* KMYSubtitleStyleTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A62775281CAE8BD600238E9D /* KMYSubtitleStyleTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A627752B1CAE8BD600238E9D /* KMYSubtitleStyleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A62775291CAE8BD600238E9D /* KMYSubtitleStyleTableViewCell.m */; };
+		A62775311CB38C1400238E9D /* KMYMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = A627752F1CB38C1400238E9D /* KMYMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A68B8E0A1CAA6F8900DE6E95 /* KMY+Foundation.h in Headers */ = {isa = PBXBuildFile; fileRef = A68B8DF81CAA6F8900DE6E95 /* KMY+Foundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A68B8E0B1CAA6F8900DE6E95 /* KMYBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = A68B8DF91CAA6F8900DE6E95 /* KMYBlock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A68B8E0C1CAA6F8900DE6E95 /* KMYBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = A68B8DFA1CAA6F8900DE6E95 /* KMYBlock.m */; };
@@ -62,6 +63,7 @@
 		A627751E1CAE3B8300238E9D /* KMYAssert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYAssert.m; sourceTree = "<group>"; };
 		A62775281CAE8BD600238E9D /* KMYSubtitleStyleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYSubtitleStyleTableViewCell.h; sourceTree = "<group>"; };
 		A62775291CAE8BD600238E9D /* KMYSubtitleStyleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYSubtitleStyleTableViewCell.m; sourceTree = "<group>"; };
+		A627752F1CB38C1400238E9D /* KMYMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYMacros.h; sourceTree = "<group>"; };
 		A68B8DF81CAA6F8900DE6E95 /* KMY+Foundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KMY+Foundation.h"; sourceTree = "<group>"; };
 		A68B8DF91CAA6F8900DE6E95 /* KMYBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYBlock.h; sourceTree = "<group>"; };
 		A68B8DFA1CAA6F8900DE6E95 /* KMYBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYBlock.m; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				A68B8DFD1CAA6F8900DE6E95 /* KMYItem.h */,
 				A68B8DFE1CAA6F8900DE6E95 /* KMYItem.m */,
 				A68B8DFF1CAA6F8900DE6E95 /* KMYItemAttributes.h */,
+				A627752F1CB38C1400238E9D /* KMYMacros.h */,
 				A68B8E001CAA6F8900DE6E95 /* KMYSection.h */,
 				A68B8E011CAA6F8900DE6E95 /* KMYSection.m */,
 				A68B8E021CAA6F8900DE6E95 /* NSArray+KMY.h */,
@@ -255,6 +258,7 @@
 				A627751F1CAE3B8300238E9D /* KMYAssert.h in Headers */,
 				A627752A1CAE8BD600238E9D /* KMYSubtitleStyleTableViewCell.h in Headers */,
 				A68B8E2F1CAA6F9200DE6E95 /* KMYUIItem.h in Headers */,
+				A62775311CB38C1400238E9D /* KMYMacros.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

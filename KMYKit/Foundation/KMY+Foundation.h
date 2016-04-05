@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+#import <KMYKit/KMYMacros.h>
 #import <KMYKit/KMYBlock.h>
 #import <KMYKit/KMYAssert.h>
 #import <KMYKit/KMYDispatch.h>
