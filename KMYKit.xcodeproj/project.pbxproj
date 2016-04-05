@@ -15,7 +15,7 @@
 		A62775311CB38C1400238E9D /* KMYMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = A627752F1CB38C1400238E9D /* KMYMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A62775351CB38F4100238E9D /* UITableViewController+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A62775331CB38F4100238E9D /* UITableViewController+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A62775361CB38F4100238E9D /* UITableViewController+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A62775341CB38F4100238E9D /* UITableViewController+KMY.m */; };
-		A627753B1CB3927400238E9D /* UINavigationController+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A62775391CB3927400238E9D /* UINavigationController+KMY.h */; };
+		A627753B1CB3927400238E9D /* UINavigationController+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A62775391CB3927400238E9D /* UINavigationController+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A627753C1CB3927400238E9D /* UINavigationController+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A627753A1CB3927400238E9D /* UINavigationController+KMY.m */; };
 		A68B8E0A1CAA6F8900DE6E95 /* KMY+Foundation.h in Headers */ = {isa = PBXBuildFile; fileRef = A68B8DF81CAA6F8900DE6E95 /* KMY+Foundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A68B8E0B1CAA6F8900DE6E95 /* KMYBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = A68B8DF91CAA6F8900DE6E95 /* KMYBlock.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -262,7 +262,6 @@
 			files = (
 				A68B8E2D1CAA6F9200DE6E95 /* KMYTableViewController.h in Headers */,
 				A68B8E331CAA6F9200DE6E95 /* KMYViewController.h in Headers */,
-				A627753B1CB3927400238E9D /* UINavigationController+KMY.h in Headers */,
 				A68B8E121CAA6F8900DE6E95 /* KMYSection.h in Headers */,
 				A68B8E351CAA6F9200DE6E95 /* UIView+KMY.h in Headers */,
 				A68B8E0D1CAA6F8900DE6E95 /* KMYDispatch.h in Headers */,
@@ -288,6 +287,7 @@
 				A627752A1CAE8BD600238E9D /* KMYSubtitleStyleTableViewCell.h in Headers */,
 				A68B8E2F1CAA6F9200DE6E95 /* KMYUIItem.h in Headers */,
 				A62775351CB38F4100238E9D /* UITableViewController+KMY.h in Headers */,
+				A627753B1CB3927400238E9D /* UINavigationController+KMY.h in Headers */,
 				A62775311CB38C1400238E9D /* KMYMacros.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

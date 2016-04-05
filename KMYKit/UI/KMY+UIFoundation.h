@@ -23,3 +23,4 @@
 
 #import <KMYKit/UIView+KMY.h>
 #import <KMYKit/UITableViewController+KMY.h>
+#import <KMYKit/UINavigationController+KMY.h>
