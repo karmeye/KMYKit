@@ -22,3 +22,4 @@
 #import <KMYKit/KMYDefaultReusableIdentifying.h>
 
 #import <KMYKit/UIView+KMY.h>
+#import <KMYKit/UITableViewController+KMY.h>
