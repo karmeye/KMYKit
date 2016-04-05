@@ -7,26 +7,80 @@
 //
 
 #import "KMYTableViewController.h"
+#import "UITableViewController+KMY.h"
 
-@interface KMYTableViewController ()
+@interface KMYTableViewControllerBehavior ()
 
-@property (nonatomic, strong)   UITableViewController   *innerTableViewController;
+@property (nonatomic, assign)           UITableViewStyle                    tableViewStyle;
+@property (nonatomic, strong)           UITableViewController               *tableViewController;
 
 @end
 
+@implementation KMYTableViewControllerBehavior
+
+- (nullable instancetype)initWithStyle:(UITableViewStyle)style {
+    self = [self init];
+    if (self) {
+        self.tableViewStyle = style;
+    }
+    return self;
+}
+
+- (UITableView*)tableView {
+    return self.tableViewController.tableView;
+}
+
+- (void)reloadData {
+    if ([self.tableViewController isViewLoaded]) [self.tableView reloadData];
+}
+
+- (void)initializeWithParentController:(UIViewController *)parentViewController {
+    self.tableViewController = [UITableViewController kmy_initWithStyle:self.tableViewStyle initializer:^(UITableViewController *tableViewController) {
+        [parentViewController addChildViewController:tableViewController];
+        [tableViewController didMoveToParentViewController:parentViewController];
+    }];
+}
+
+- (void)loadViewWithParentViewController:(UIViewController *)parentViewController {
+
+    UITableView *tableView      = self.tableViewController.tableView;
+    tableView.frame             = parentViewController.view.bounds;
+    tableView.autoresizingMask  = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    tableView.delegate          = self.delegate;
+    tableView.dataSource        = self.dataSource;
+
+    [parentViewController.view addSubview:tableView];
+}
+
+- (void)parentViewControllerDidLoadView:(UIViewController *)parentViewController {
+    KMYInvokeBlockIfSet(self.tableViewDidLoad, self.tableViewController.tableView);
+}
+
+@end
+
+#pragma mark -
+
+@interface KMYTableViewController ()
+@end
+
 @implementation KMYTableViewController
+
+@dynamic tableViewBehavior;
 
 - (instancetype)init {
     return [self initWithStyle:UITableViewStylePlain];
 }
 
 - (instancetype)initWithStyle:(UITableViewStyle)style {
-    self = [super init];
+    self = [super initWithBehavior:[[KMYTableViewControllerBehavior alloc] initWithStyle:style]];
 
     if (self) {
-        self.innerTableViewController = [[UITableViewController alloc] initWithStyle:style];
-        [self addChildViewController:self.innerTableViewController];
-        [self.innerTableViewController didMoveToParentViewController:self];
+        KMY_WEAK(self, weakSelf);
+        self.tableViewBehavior.tableViewDidLoad = ^(UITableView *tableView) {
+            KMY_STRONG(weakSelf, strongSelf);
+            strongSelf.tableView.delegate = strongSelf;
+            strongSelf.tableView.dataSource = strongSelf;
+        };
     }
 
     return self;
@@ -34,13 +88,6 @@
 
 - (void)loadView {
     [super loadView];
-
-    self.tableView.frame = self.view.bounds;
-    self.tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-
-    [self.view addSubview:self.tableView];
 }
 
 - (void)viewDidLoad {
@@ -48,13 +95,15 @@
 }
 
 - (UITableView*)tableView {
-    return self.innerTableViewController.tableView;
+    return self.tableViewBehavior.tableView;
 }
 
 - (void)reloadData {
-    if ([self isViewLoaded]) {
-        [self.tableView reloadData];
-    }
+    [self.tableViewBehavior reloadData];
+}
+
+- (KMYTableViewControllerBehavior *)tableViewBehavior {
+    return self.behavior;
 }
 
 #pragma mark UITableViewDataSource
