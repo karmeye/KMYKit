@@ -26,7 +26,7 @@
     return self;
 }
 
-- (nullable instancetype)initWithCoder:(NSCoder *)decoder behavior:(id <KMYViewControllerBehaving>)behavior {
+- (instancetype)initWithCoder:(NSCoder *)decoder behavior:(id <KMYViewControllerBehaving>)behavior {
     self = [super initWithCoder:decoder];
     if (self) {
         self.behaviors = @[behavior];
@@ -56,11 +56,11 @@
 
 #pragma mark - Public -
 
-- (nullable instancetype)initWithBehavior:(id <KMYViewControllerBehaving>)behavior {
+- (instancetype)initWithBehavior:(id <KMYViewControllerBehaving>)behavior {
     return [self initWithBehaviors:@[behavior]];
 }
 
-- (nullable instancetype)initWithBehaviors:(NSArray<id <KMYViewControllerBehaving>> *)behaviors {
+- (instancetype)initWithBehaviors:(NSArray<id <KMYViewControllerBehaving>> *)behaviors {
     self = [super init];
     if (self) {
         self.behaviors = behaviors;
