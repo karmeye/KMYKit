@@ -7,8 +7,23 @@
 //
 
 #import "NSDictionary+KMY.h"
+#import "NSObject+KMY.h"
 
 @implementation NSDictionary (KMY)
+
++ (instancetype)kmy_initWithInitializer:(void (^)(NSMutableDictionary *dictionary))initializer {
+    if ([self class] == [NSDictionary class]) {
+        // If this is non mutable, pass a mutable version to the initializer.
+        NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
+
+        if (dictionary && initializer != NULL) initializer(dictionary);
+
+        return [dictionary copy];
+    }
+    else {
+        return [super kmy_initWithInitializer:initializer];
+    }
+}
 
 - (BOOL)kmy_boolForKey:(id)key {
     NSNumber *number = [self kmy_numberForKey:key];

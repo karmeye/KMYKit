@@ -12,7 +12,6 @@
 @implementation NSArray (KMY)
 
 + (instancetype)kmy_initWithInitializer:(void (^)(NSMutableArray *array))initializer {
-
     if ([self class] == [NSArray class]) {
         // If this is non mutable, pass a mutable version to the initializer.
         NSMutableArray *array = [[NSMutableArray alloc] init];
