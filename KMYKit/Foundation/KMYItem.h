@@ -22,7 +22,11 @@ extern NSString *const KMYItemKeyID;
 
 @interface KMYItem : NSObject <KMYItemAttributes>
 
-+ (KMYItem *)itemWithAttributes:(nullable NSDictionary *)dictionary;
++ (__kindof KMYItem *)itemWithAttributes:(nullable NSDictionary *)dictionary;
+
+/// @discussion Keys are copied; values are retained.
+/// @return A copy of the reciver with added attributes and/or possibly overridden.
+- (__kindof KMYItem *)copyWithAttributes:(NSDictionary *)dictionary;
 
 @end
 

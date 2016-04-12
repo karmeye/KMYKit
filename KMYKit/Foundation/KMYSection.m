@@ -62,6 +62,12 @@
     }
 }
 
+- (void)replaceItemAtIndex:(NSUInteger)index withItem:(KMYItem *)item {
+    NSMutableArray *items = [self.items mutableCopy];
+    [items replaceObjectAtIndex:index withObject:item];
+    self.items = [items copy];
+}
+
 - (NSUInteger)numberOfItems {
     return self.items != nil ? self.items.count : 0;
 }

@@ -35,6 +35,12 @@ NSString * const KMYItemKeyID           = @"KMYItemKeyID";
     return item;
 }
 
+- (__kindof KMYItem *)copyWithAttributes:(NSDictionary *)dictionary {
+    NSMutableDictionary *attributes = [self.attributeDictionary mutableCopy];
+    [attributes addEntriesFromDictionary:dictionary];
+    return [[self class] itemWithAttributes:[attributes copy]];
+}
+
 #pragma mark - KMYItemAttributes Protocol
 
 - (NSArray *)attributes {

@@ -22,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)sectionWithInitializer:(void (^)(NSMutableDictionary * attributes, NSMutableArray * items))initializer;
 
 - (nullable KMYItem *)itemAtIndex:(NSUInteger)index;
+- (void)replaceItemAtIndex:(NSUInteger)index withItem:(__kindof KMYItem *)item;
 
 @end
 
