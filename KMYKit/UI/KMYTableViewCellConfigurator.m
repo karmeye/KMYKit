@@ -11,6 +11,8 @@
 #import "KMYTextFieldTableViewCell.h"
 #import "KMYDefaultStyleTableViewCell.h"
 #import "KMYSubtitleStyleTableViewCell.h"
+#import "KMYButtonTableViewCell.h"
+#import "KMYDestructiveButtonTableViewCell.h"
 
 @interface KMYTableViewCellConfiguratorReuseInfo :  NSObject
 
@@ -131,9 +133,11 @@
     static NSDictionary *_kmy_defaultClassReuseIdentifierMapping;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _kmy_defaultClassReuseIdentifierMapping = @{ [KMYDefaultStyleTableViewCell defaultReuseIdentifier]  : [KMYDefaultStyleTableViewCell class],
-                                                     [KMYSubtitleStyleTableViewCell defaultReuseIdentifier] : [KMYSubtitleStyleTableViewCell class],
-                                                     [KMYTextFieldTableViewCell defaultReuseIdentifier]     : [KMYTextFieldTableViewCell class] };
+        _kmy_defaultClassReuseIdentifierMapping = @{ [KMYDefaultStyleTableViewCell defaultReuseIdentifier]      : [KMYDefaultStyleTableViewCell class],
+                                                     [KMYSubtitleStyleTableViewCell defaultReuseIdentifier]     : [KMYSubtitleStyleTableViewCell class],
+                                                     [KMYTextFieldTableViewCell defaultReuseIdentifier]         : [KMYTextFieldTableViewCell class],
+                                                     [KMYButtonTableViewCell defaultReuseIdentifier]            : [KMYButtonTableViewCell class],
+                                                     [KMYDestructiveButtonTableViewCell defaultReuseIdentifier] : [KMYDestructiveButtonTableViewCell class] };
     });
     return _kmy_defaultClassReuseIdentifierMapping;
 }
@@ -142,14 +146,25 @@
     if (!_defaultCellConfigurationHandlers) {
         _defaultCellConfigurationHandlers = [[NSMutableDictionary kmy_initWithInitializer:^(NSMutableDictionary *d) {
 
-            d[[KMYDefaultStyleTableViewCell class]] = ^(KMYDefaultStyleTableViewCell *cell, KMYUIItem *item, NSIndexPath *indexPath) {
+            KMYTableViewCellConfiguratorCellConfigurationHandler setTextHandler = ^(KMYDefaultStyleTableViewCell *cell, KMYUIItem *item, NSIndexPath *indexPath) {
                 cell.textLabel.text = item.text;
                 cell.detailTextLabel.text = item.detailText;
             };
 
+            d[[KMYDefaultStyleTableViewCell class]] = ^(KMYDefaultStyleTableViewCell *cell, KMYUIItem *item, NSIndexPath *indexPath) {
+                setTextHandler(cell, item, indexPath);
+            };
+
             d[[KMYSubtitleStyleTableViewCell class]] = ^(KMYSubtitleStyleTableViewCell *cell, KMYUIItem *item, NSIndexPath *indexPath) {
-                cell.textLabel.text = item.text;
-                cell.detailTextLabel.text = item.detailText;
+                setTextHandler(cell, item, indexPath);
+            };
+
+            d[[KMYButtonTableViewCell class]] = ^(KMYButtonTableViewCell *cell, KMYUIItem *item, NSIndexPath *indexPath) {
+                setTextHandler(cell, item, indexPath);
+            };
+
+            d[[KMYDestructiveButtonTableViewCell class]] = ^(KMYDestructiveButtonTableViewCell *cell, KMYUIItem *item, NSIndexPath *indexPath) {
+                setTextHandler(cell, item, indexPath);
             };
 
             d[[KMYTextFieldTableViewCell class]] = ^(KMYTextFieldTableViewCell *cell, KMYUIItem *item, NSIndexPath *indexPath) {
