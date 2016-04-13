@@ -17,4 +17,5 @@ FOUNDATION_EXPORT const unsigned char KMYKitVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <KMYKit/PublicHeader.h>
 
 #import <KMYKit/KMY+Foundation.h>
+#import <KMYKit/KMY+CoreData.h>
 #import <KMYKit/KMY+UIFoundation.h>
