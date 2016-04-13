@@ -74,6 +74,20 @@
     return [self.sectionProvider.sections[section] valueForAttribute:KMYUISectionKeyFooterTitle];
 }
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    KMYUIItem *item = self.sectionProvider.sections[indexPath.section].items[indexPath.row];
+    return (item.editingOptions & KMYUIItemEditingOptionsDelete) || (item.editingOptions & KMYUIItemEditingOptionsInsert);
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    KMYUIItem *item = self.sectionProvider.sections[indexPath.section].items[indexPath.row];
+    if (editingStyle == UITableViewCellEditingStyleDelete && item.editingOptions & KMYUIItemEditingOptionsDelete) {
+        KMYInvokeBlockIfSet(self.commitEditingHandler, tableView, item, indexPath, editingStyle);
+    } else if (editingStyle == UITableViewCellEditingStyleInsert && item.editingOptions & KMYUIItemEditingOptionsInsert) {
+        KMYInvokeBlockIfSet(self.commitEditingHandler, tableView, item, indexPath, editingStyle);
+    }
+}
+
 @end
 
 
