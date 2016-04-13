@@ -15,6 +15,7 @@ extern NSString * const KMYUIItemKeyText;
 extern NSString * const KMYUIItemKeyTextHandler;
 extern NSString * const KMYUIItemKeyDetailText;
 extern NSString * const KMYUIItemKeyType;
+extern NSString * const KMYUIItemKeyEditingOptions;
 
 typedef NSString * _Nullable (^KMYUIItemTextHandler)();
 
@@ -24,8 +25,17 @@ typedef NS_ENUM(NSInteger, KMYUIItemType) {
     KMYUIItemTypeDisclosure
 };
 
+typedef NS_OPTIONS(NSUInteger, KMYUIItemEditingOptions) {
+    KMYUIItemEditingOptionsNone             = 0,
+    KMYUIItemEditingOptionsDelete           = 1UL << 0,
+    KMYUIItemEditingOptionsInsert           = 1UL << 1,
+    KMYUIItemEditingOptionsModify           = 1UL << 2,
+    KMYUIItemEditingOptionsAll              = NSUIntegerMax
+};
+
 @interface KMYUIItem : KMYItem
 
+@property (nonatomic, readonly)                     KMYUIItemEditingOptions editingOptions;
 @property (nonatomic, readonly, nullable)           NSString                *reuseIdentifier;
 @property (nonatomic, readonly)                     KMYUIItemType           type;
 @property (nonatomic, readonly, nullable)           NSString                *text;

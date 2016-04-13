@@ -13,6 +13,7 @@ NSString * const KMYUIItemKeyText           = @"KMYUIItemKeyText";
 NSString * const KMYUIItemKeyTextHandler    = @"KMYUIItemKeyTextHandler";
 NSString * const KMYUIItemKeyDetailText     = @"KMYUIItemKeyDetailText";
 NSString * const KMYUIItemKeyType           = @"KMYUIItemKeyType";
+NSString * const KMYUIItemKeyEditingOptions = @"KMYUIItemKeyEditingOptions";
 
 @interface KMYUIItem ()
 
@@ -21,6 +22,8 @@ NSString * const KMYUIItemKeyType           = @"KMYUIItemKeyType";
 @end
 
 @implementation KMYUIItem
+
+@dynamic reuseIdentifier, editingOptions, type, text, detailText;
 
 + (KMYUIItem *)itemWithAttributes:(NSDictionary *)dictionary actionHandler:(dispatch_block_t)actionHandler {
 
@@ -40,6 +43,10 @@ NSString * const KMYUIItemKeyType           = @"KMYUIItemKeyType";
     return [[self.attributeDictionary kmy_numberForKey:KMYUIItemKeyType] integerValue];
 }
 
+- (KMYUIItemEditingOptions)editingOptions {
+    return [self.attributeDictionary kmy_unsignedIntegerForKey:KMYUIItemKeyEditingOptions defaultValue:0];
+}
+
 - (NSString *)text {
     NSString *text = self.attributeDictionary[KMYUIItemKeyText];
 
@@ -56,3 +63,36 @@ NSString * const KMYUIItemKeyType           = @"KMYUIItemKeyType";
 }
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
