@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSArray (KMY)
 
-+ (nullable instancetype)kmy_initWithInitializer:(void (^)(NSMutableArray *array))initializer;
++ (nullable instancetype)kmy_arrayWithInitializer:(void (^_Nullable)(NSMutableArray *array))initializer;
 
 @end
 

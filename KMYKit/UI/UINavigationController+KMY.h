@@ -12,7 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UINavigationController (KMY)
 
-+ (nullable instancetype)kmy_initWithRootViewController:(UIViewController *)rootViewController initializer:(void (^)(UINavigationController *navigationController))initializer;
++ (nullable instancetype)kmy_navigationControllerWithRootViewController:(UIViewController *)rootViewController;
++ (nullable instancetype)kmy_navigationControllerWithRootViewController:(UIViewController *)rootViewController initializer:(void (^_Nullable)(__kindof UINavigationController *navigationController))initializer;
 
 @end
 

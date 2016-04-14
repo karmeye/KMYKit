@@ -10,10 +10,10 @@
 
 @implementation UITableViewController (KMY)
 
-+ (instancetype)kmy_initWithStyle:(UITableViewStyle)style initializer:(void (^)(UITableViewController *viewController))initializer {
-    id instance = [[[self class] alloc] initWithStyle:style];
-    if (instance && initializer != NULL) initializer(instance);
-    return instance;
++ (instancetype)kmy_tableViewControllerWithStyle:(UITableViewStyle)style initializer:(void (^)(__kindof UITableViewController *viewController))initializer {
+    UITableViewController *tableViewController = [[[self class] alloc] initWithStyle:style];
+    if (tableViewController && initializer != NULL) initializer(tableViewController);
+    return tableViewController;
 }
 
 @end

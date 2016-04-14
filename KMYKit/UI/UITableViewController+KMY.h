@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UITableViewController (KMY)
 
-+ (nullable instancetype)kmy_initWithStyle:(UITableViewStyle)style initializer:(void (^)(UITableViewController *viewController))initializer;
++ (nullable instancetype)kmy_tableViewControllerWithStyle:(UITableViewStyle)style initializer:(void (^_Nullable)(__kindof UITableViewController *viewController))initializer;
 
 @end
 

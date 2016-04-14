@@ -26,7 +26,7 @@
 @implementation KMYTableViewCellConfiguratorReuseInfo
 
 + (KMYTableViewCellConfiguratorReuseInfo *)infoWithClass:(Class)cls handler:(KMYTableViewCellConfiguratorCellConfigurationHandler)handler {
-    return [KMYTableViewCellConfiguratorReuseInfo kmy_initWithInitializer:^(KMYTableViewCellConfiguratorReuseInfo *info) {
+    return [KMYTableViewCellConfiguratorReuseInfo kmy_objectWithInitializer:^(KMYTableViewCellConfiguratorReuseInfo *info) {
         info.cls        = cls;
         info.handler    = handler;
     }];
@@ -144,7 +144,7 @@
 
 - (NSDictionary<Class, KMYTableViewCellConfiguratorCellConfigurationHandler> *)defaultCellConfigurationHandlers {
     if (!_defaultCellConfigurationHandlers) {
-        _defaultCellConfigurationHandlers = [[NSMutableDictionary kmy_initWithInitializer:^(NSMutableDictionary *d) {
+        _defaultCellConfigurationHandlers = [[NSMutableDictionary kmy_dictionaryWithInitializer:^(NSMutableDictionary *d) {
 
             KMYTableViewCellConfiguratorCellConfigurationHandler setTextHandler = ^(KMYDefaultStyleTableViewCell *cell, KMYUIItem *item, NSIndexPath *indexPath) {
                 cell.textLabel.text = item.text;

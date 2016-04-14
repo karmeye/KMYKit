@@ -11,17 +11,14 @@
 
 @implementation NSArray (KMY)
 
-+ (instancetype)kmy_initWithInitializer:(void (^)(NSMutableArray *array))initializer {
++ (instancetype)kmy_arrayWithInitializer:(void (^)(NSMutableArray *array))initializer {
     if ([self class] == [NSArray class]) {
         // If this is non mutable, pass a mutable version to the initializer.
         NSMutableArray *array = [[NSMutableArray alloc] init];
-
         if (array && initializer != NULL) initializer(array);
-
         return [array copy];
-    }
-    else {
-        return [super kmy_initWithInitializer:initializer];
+    } else {
+        return [super kmy_objectWithInitializer:initializer];
     }
 }
 

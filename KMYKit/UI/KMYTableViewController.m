@@ -35,7 +35,7 @@
 }
 
 - (void)initializeWithParentController:(UIViewController *)parentViewController {
-    self.tableViewController = [UITableViewController kmy_initWithStyle:self.tableViewStyle initializer:^(UITableViewController *tableViewController) {
+    self.tableViewController = [UITableViewController kmy_tableViewControllerWithStyle:self.tableViewStyle initializer:^(UITableViewController *tableViewController) {
         [parentViewController addChildViewController:tableViewController];
         [tableViewController didMoveToParentViewController:parentViewController];
     }];

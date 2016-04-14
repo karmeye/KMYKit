@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSDictionary (KMY)
 
-+ (nullable instancetype)kmy_initWithInitializer:(void (^)(NSMutableDictionary *dictionary))initializer;
++ (nullable instancetype)kmy_dictionaryWithInitializer:(void (^_Nullable)(NSMutableDictionary *dictionary))initializer;
 
 /// @return If there is a NSNumber associated with the key, the boolean value of the NSNumber, otherwise NO.
 - (BOOL)kmy_boolForKey:(id)key;

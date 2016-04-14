@@ -10,10 +10,14 @@
 
 @implementation UINavigationController (KMY)
 
-+ (instancetype)kmy_initWithRootViewController:(UIViewController *)rootViewController initializer:(void (^)(UINavigationController *navigationController))initializer {
-    id instance = [[[super class] alloc] initWithRootViewController:rootViewController];
-    if (instance && initializer != NULL) initializer(instance);
-    return instance;
++ (instancetype)kmy_navigationControllerWithRootViewController:(UIViewController *)rootViewController {
+    return [[self class] kmy_navigationControllerWithRootViewController:rootViewController initializer:NULL];
+}
+
++ (instancetype)kmy_navigationControllerWithRootViewController:(UIViewController *)rootViewController initializer:(void (^)(__kindof UINavigationController *navigationController))initializer {
+    UINavigationController *navigationController = [[[super class] alloc] initWithRootViewController:rootViewController];
+    if (navigationController && initializer != NULL) initializer(navigationController);
+    return navigationController;
 }
 
 @end

@@ -12,12 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSObject (KMY)
 
-/// Calls init. Supports subclasses.
+/// Calls alloc then init and subsequently invoces the initializer block passing the newly allocated instance. Supports subclasses.
 ///
 /// @param initializer Use to customize the newly allocated instance.
 ///
-/// @return A new NSObject instance.
-+ (nullable instancetype)kmy_initWithInitializer:(void (^)(id object))initializer;
+/// @return A new NSObject instance, or a subclass.
++ (nullable instancetype)kmy_objectWithInitializer:(void (^_Nullable)(__kindof NSObject *object))initializer;
 
 @end
 
