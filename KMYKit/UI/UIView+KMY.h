@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param initializer Use to customize the newly allocated UIView.
 ///
 /// @return A new UIView or subclass.
-+ (nullable instancetype)kmy_initWithFrame:(CGRect)frame initializer:(void (^)(UIView *view))initializer;
++ (nullable instancetype)kmy_initWithFrame:(CGRect)frame initializer:(void (^)(__kindof UIView *view))initializer;
 
 @end
 
