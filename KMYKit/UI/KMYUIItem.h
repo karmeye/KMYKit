@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-extern NSString * const KMYUIItemReuseIdentifier;
+extern NSString * const KMYUIItemKeyReuseIdentifier;
 extern NSString * const KMYUIItemKeyText;
 extern NSString * const KMYUIItemKeyTextHandler;
 extern NSString * const KMYUIItemKeyDetailText;

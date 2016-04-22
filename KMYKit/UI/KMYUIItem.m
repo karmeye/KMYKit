@@ -8,12 +8,12 @@
 
 #import "KMYUIItem.h"
 
-NSString * const KMYUIItemReuseIdentifier   = @"KMYUIItemReuseIdentifier";
-NSString * const KMYUIItemKeyText           = @"KMYUIItemKeyText";
-NSString * const KMYUIItemKeyTextHandler    = @"KMYUIItemKeyTextHandler";
-NSString * const KMYUIItemKeyDetailText     = @"KMYUIItemKeyDetailText";
-NSString * const KMYUIItemKeyType           = @"KMYUIItemKeyType";
-NSString * const KMYUIItemKeyEditingOptions = @"KMYUIItemKeyEditingOptions";
+NSString * const KMYUIItemKeyReuseIdentifier    = @"KMYUIItemKeyReuseIdentifier";
+NSString * const KMYUIItemKeyText               = @"KMYUIItemKeyText";
+NSString * const KMYUIItemKeyTextHandler        = @"KMYUIItemKeyTextHandler";
+NSString * const KMYUIItemKeyDetailText         = @"KMYUIItemKeyDetailText";
+NSString * const KMYUIItemKeyType               = @"KMYUIItemKeyType";
+NSString * const KMYUIItemKeyEditingOptions     = @"KMYUIItemKeyEditingOptions";
 
 @interface KMYUIItem ()
 
@@ -36,7 +36,7 @@ NSString * const KMYUIItemKeyEditingOptions = @"KMYUIItemKeyEditingOptions";
 #pragma mark - Public -
 
 - (NSString *)reuseIdentifier {
-    return [self valueForAttribute:KMYUIItemReuseIdentifier];
+    return [self valueForAttribute:KMYUIItemKeyReuseIdentifier];
 }
 
 - (KMYUIItemType)type {
