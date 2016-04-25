@@ -10,10 +10,11 @@
 #import <KMYKit/KMY+Foundation.h>
 
 #import <KMYKit/KMYViewController.h>
-#import <KMYKit/KMYTableViewController.h>
 #import <KMYKit/KMYNavigationController.h>
+#import <KMYKit/KMYTableViewController.h>
 #import <KMYKit/KMYTableViewDataSource.h>
 #import <KMYKit/KMYTableViewDelegate.h>
+#import <KMYKit/KMYTableViewControllerBehavior.h>
 #import <KMYKit/KMYUISection.h>
 #import <KMYKit/KMYUIItem.h>
 #import <KMYKit/KMYDefaultStyleTableViewCell.h>
