@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface KMYTableViewControllerBehavior : NSObject<KMYViewControllerBehaving>
+@interface KMYTableViewControllerBehavior : NSObject <KMYViewControllerBehaving>
 
 @property (nonatomic, strong, readonly) UITableView                         *tableView;
 @property (nonatomic, weak, nullable)   id <UITableViewDataSource>          dataSource;

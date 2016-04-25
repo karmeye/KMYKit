@@ -10,7 +10,7 @@
 
 @interface KMYViewController ()
 
-@property (nonatomic, strong, readwrite)     NSArray<id <KMYViewControllerBehaving>>         *behaviors;
+@property (nonatomic, strong, readwrite)        NSArray<id <KMYViewControllerBehaving>>         *behaviors;
 
 @end
 
@@ -18,18 +18,16 @@
 
 #pragma mark - UIViewController -
 
-- (instancetype)initWithNibName:(nullable NSString *)nibName bundle:(nullable NSBundle *)bundle behavior:(id <KMYViewControllerBehaving>)behavior {
+- (instancetype)initWithNibName:(nullable NSString *)nibName bundle:(nullable NSBundle *)bundle {
     self = [super initWithNibName:nibName bundle:bundle];
     if (self) {
-        self.behaviors = @[behavior];
     }
     return self;
 }
 
-- (instancetype)initWithCoder:(NSCoder *)decoder behavior:(id <KMYViewControllerBehaving>)behavior {
+- (instancetype)initWithCoder:(NSCoder *)decoder {
     self = [super initWithCoder:decoder];
     if (self) {
-        self.behaviors = @[behavior];
     }
     return self;
 }
@@ -38,8 +36,8 @@
     [super loadView];
 
     for (id <KMYViewControllerBehaving> behavior in self.behaviors) {
-        if ([self.behavior respondsToSelector:@selector(loadViewWithParentViewController:)]) {
-            [self.behavior loadViewWithParentViewController:self];
+        if ([behavior respondsToSelector:@selector(loadViewWithParentViewController:)]) {
+            [behavior loadViewWithParentViewController:self];
         }
     }
 }
@@ -48,13 +46,29 @@
     [super viewDidLoad];
 
     for (id <KMYViewControllerBehaving> behavior in self.behaviors) {
-        if ([self.behavior respondsToSelector:@selector(parentViewControllerDidLoadView:)]) {
-            [self.behavior parentViewControllerDidLoadView:self];
+        if ([behavior respondsToSelector:@selector(parentViewControllerDidLoadView:)]) {
+            [behavior parentViewControllerDidLoadView:self];
         }
     }
 }
 
 #pragma mark - Public -
+
+- (instancetype)initWithNibName:(nullable NSString *)nibName bundle:(nullable NSBundle *)bundle behavior:(id <KMYViewControllerBehaving>)behavior {
+    self = [super initWithNibName:nibName bundle:bundle];
+    if (self) {
+        self.behaviors = behavior ? @[behavior] : @[];
+    }
+    return self;
+}
+
+- (instancetype)initWithCoder:(NSCoder *)decoder behavior:(id <KMYViewControllerBehaving>)behavior {
+    self = [super initWithCoder:decoder];
+    if (self) {
+        self.behaviors = behavior ? @[behavior] : @[];
+    }
+    return self;
+}
 
 - (instancetype)initWithBehavior:(id <KMYViewControllerBehaving>)behavior {
     return [self initWithBehaviors:@[behavior]];

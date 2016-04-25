@@ -23,13 +23,13 @@ NS_ASSUME_NONNULL_BEGIN
 @interface KMYViewController : UIViewController
 
 @property (nonatomic, strong, readonly)     id <KMYViewControllerBehaving>                  behavior;
-@property (nonatomic, copy, readonly)       NSArray<id <KMYViewControllerBehaving>>         *behaviors;
+@property (nonatomic, strong, readonly)     NSArray<id <KMYViewControllerBehaving>>         *behaviors;
 
-- (instancetype)initWithNibName:(nullable NSString *)nibName bundle:(nullable NSBundle *)bundle behavior:(id <KMYViewControllerBehaving>)behavior;
-- (nullable instancetype)initWithCoder:(NSCoder *)decoder behavior:(id <KMYViewControllerBehaving>)behavior;
+- (instancetype)initWithNibName:(nullable NSString *)nibName bundle:(nullable NSBundle *)bundle behavior:(nullable id <KMYViewControllerBehaving>)behavior;
+- (nullable instancetype)initWithCoder:(NSCoder *)decoder behavior:(nullable id <KMYViewControllerBehaving>)behavior;
 
-- (nullable instancetype)initWithBehavior:(id <KMYViewControllerBehaving>)behavior;
-- (nullable instancetype)initWithBehaviors:(NSArray<id <KMYViewControllerBehaving>> *)behaviors;
+- (nullable instancetype)initWithBehavior:(nullable id <KMYViewControllerBehaving>)behavior;
+- (nullable instancetype)initWithBehaviors:(nullable NSArray<id <KMYViewControllerBehaving>> *)behaviors;
 
 @end
 

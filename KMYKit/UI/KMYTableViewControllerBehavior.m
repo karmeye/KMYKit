@@ -7,7 +7,7 @@
 //
 
 #import "KMYTableViewControllerBehavior.h"
-#import <KMYKit/UITableViewController+KMY.h>
+#import "UITableViewController+KMY.h"
 
 @interface KMYTableViewControllerBehavior ()
 
@@ -18,7 +18,9 @@
 
 @implementation KMYTableViewControllerBehavior
 
-- (nullable instancetype)initWithStyle:(UITableViewStyle)style {
+@dynamic tableView;
+
+- (instancetype)initWithStyle:(UITableViewStyle)style {
     self = [self init];
     if (self) {
         self.tableViewStyle = style;
@@ -43,7 +45,7 @@
 
 - (void)loadViewWithParentViewController:(UIViewController *)parentViewController {
 
-    UITableView *tableView      = self.tableViewController.tableView;
+    UITableView *tableView      = self.tableView;
     tableView.frame             = parentViewController.view.bounds;
     tableView.autoresizingMask  = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     tableView.delegate          = self.delegate;
@@ -53,7 +55,7 @@
 }
 
 - (void)parentViewControllerDidLoadView:(UIViewController *)parentViewController {
-    KMYInvokeBlockIfSet(self.tableViewDidLoad, self.tableViewController.tableView);
+    KMYInvokeBlockIfSet(self.tableViewDidLoad, self.tableView);
 }
 
 @end
