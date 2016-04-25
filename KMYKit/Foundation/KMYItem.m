@@ -20,6 +20,8 @@ NSString * const KMYItemKeyID           = @"KMYItemKeyID";
 
 @implementation KMYItem
 
+@dynamic value, identifier;
+
 - (instancetype)init {
     self = [super init];
 
@@ -39,6 +41,16 @@ NSString * const KMYItemKeyID           = @"KMYItemKeyID";
     NSMutableDictionary *attributes = [self.attributeDictionary mutableCopy];
     [attributes addEntriesFromDictionary:dictionary];
     return [[self class] itemWithAttributes:[attributes copy]];
+}
+
+#pragma mark - Accessors
+
+- (id)value {
+    return [self valueForAttribute:KMYItemKeyValue];
+}
+
+- (NSString *)identifier {
+    return [self valueForAttribute:KMYItemKeyID];
 }
 
 #pragma mark - KMYItemAttributes Protocol

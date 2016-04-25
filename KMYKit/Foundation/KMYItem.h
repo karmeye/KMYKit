@@ -22,6 +22,9 @@ extern NSString *const KMYItemKeyID;
 
 @interface KMYItem : NSObject <KMYItemAttributes>
 
+@property (nonatomic, readonly, nullable)           id                value;
+@property (nonatomic, readonly, nullable)           NSString          *identifier;
+
 + (__kindof KMYItem *)itemWithAttributes:(nullable NSDictionary *)dictionary;
 
 /// @discussion Keys are copied; values are retained.
