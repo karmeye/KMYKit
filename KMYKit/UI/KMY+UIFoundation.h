@@ -34,6 +34,7 @@
 #import <KMYKit/UIView+KMY.h>
 #import <KMYKit/UIImageView+KMY.h>
 #import <KMYKit/UIButton+KMY.h>
+#import <KMYKit/UIBarButtonItem+KMY.h>
 #import <KMYKit/UINavigationController+KMY.h>
 #import <KMYKit/UITableViewController+KMY.h>
 #import <KMYKit/UICollectionViewController+KMY.h>

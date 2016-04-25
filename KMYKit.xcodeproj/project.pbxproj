@@ -69,6 +69,8 @@
 		A68B8E471CAAB6B300DE6E95 /* KMYTableViewCellConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = A68B8E451CAAB6B300DE6E95 /* KMYTableViewCellConfigurator.m */; };
 		A6D01FEF1CABE139003CF026 /* KMYDefaultStyleTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D01FED1CABE139003CF026 /* KMYDefaultStyleTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6D01FF01CABE139003CF026 /* KMYDefaultStyleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D01FEE1CABE139003CF026 /* KMYDefaultStyleTableViewCell.m */; };
+		A6F6DA271CCA18AB0042B78A /* UIBarButtonItem+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A6F6DA251CCA18AB0042B78A /* UIBarButtonItem+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6F6DA281CCA18AB0042B78A /* UIBarButtonItem+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F6DA261CCA18AB0042B78A /* UIBarButtonItem+KMY.m */; };
 		A6F6DA601CCDD4650042B78A /* KMYTableViewControllerBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = A6F6DA5E1CCDD4650042B78A /* KMYTableViewControllerBehavior.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6F6DA611CCDD4650042B78A /* KMYTableViewControllerBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F6DA5F1CCDD4650042B78A /* KMYTableViewControllerBehavior.m */; };
 		A6F6DA641CCDD7190042B78A /* KMYCollectionViewControllerBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = A6F6DA621CCDD7190042B78A /* KMYCollectionViewControllerBehavior.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -149,6 +151,8 @@
 		A68B8E451CAAB6B300DE6E95 /* KMYTableViewCellConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYTableViewCellConfigurator.m; sourceTree = "<group>"; };
 		A6D01FED1CABE139003CF026 /* KMYDefaultStyleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYDefaultStyleTableViewCell.h; sourceTree = "<group>"; };
 		A6D01FEE1CABE139003CF026 /* KMYDefaultStyleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYDefaultStyleTableViewCell.m; sourceTree = "<group>"; };
+		A6F6DA251CCA18AB0042B78A /* UIBarButtonItem+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+KMY.h"; sourceTree = "<group>"; };
+		A6F6DA261CCA18AB0042B78A /* UIBarButtonItem+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+KMY.m"; sourceTree = "<group>"; };
 		A6F6DA5E1CCDD4650042B78A /* KMYTableViewControllerBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYTableViewControllerBehavior.h; sourceTree = "<group>"; };
 		A6F6DA5F1CCDD4650042B78A /* KMYTableViewControllerBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYTableViewControllerBehavior.m; sourceTree = "<group>"; };
 		A6F6DA621CCDD7190042B78A /* KMYCollectionViewControllerBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYCollectionViewControllerBehavior.h; sourceTree = "<group>"; };
@@ -182,6 +186,8 @@
 		A62775371CB391CB00238E9D /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				A6F6DA251CCA18AB0042B78A /* UIBarButtonItem+KMY.h */,
+				A6F6DA261CCA18AB0042B78A /* UIBarButtonItem+KMY.m */,
 				A6871C791CBFCAE30062E265 /* UIButton+KMY.h */,
 				A6871C7A1CBFCAE30062E265 /* UIButton+KMY.m */,
 				A6F6DA661CCDDC5C0042B78A /* UICollectionViewController+KMY.h */,
@@ -393,6 +399,7 @@
 				A6871C771CBFC8630062E265 /* UIImageView+KMY.h in Headers */,
 				A62775511CBCD71B00238E9D /* KMYDestructiveButtonTableViewCell.h in Headers */,
 				A6871C7B1CBFCAE30062E265 /* UIButton+KMY.h in Headers */,
+				A6F6DA271CCA18AB0042B78A /* UIBarButtonItem+KMY.h in Headers */,
 				A6F6DA681CCDDC5C0042B78A /* UICollectionViewController+KMY.h in Headers */,
 				A6F6DA601CCDD4650042B78A /* KMYTableViewControllerBehavior.h in Headers */,
 				A6F6DA641CCDD7190042B78A /* KMYCollectionViewControllerBehavior.h in Headers */,
@@ -504,6 +511,7 @@
 				A68B8E1B1CAA6F8900DE6E95 /* NSObject+KMY.m in Sources */,
 				A68B8E191CAA6F8900DE6E95 /* NSMutableArray+KMY.m in Sources */,
 				A6F6DA651CCDD7190042B78A /* KMYCollectionViewControllerBehavior.m in Sources */,
+				A6F6DA281CCA18AB0042B78A /* UIBarButtonItem+KMY.m in Sources */,
 				A68B8E0E1CAA6F8900DE6E95 /* KMYDispatch.m in Sources */,
 				A68B8E3A1CAA825900DE6E95 /* KMYTableViewDataSource.m in Sources */,
 			);
