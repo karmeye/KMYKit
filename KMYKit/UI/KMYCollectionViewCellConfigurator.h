@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// Implementation should call the @c UICollectionView registerClass:withReuseIdentifier methods
 - (void)registerClassesForCellReuseWithCollectionView:(UICollectionView *)collectionView;
 
+- (NSString *)reuseIdentifierForItem:(KMYUIItem *)item;
+
 /// Called by the data source after a cell has been dequeued.
 - (void)configureCell:(UICollectionViewCell*)cell
              withItem:(KMYUIItem*)item
@@ -25,6 +27,8 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface KMYCollectionViewCellConfigurator : NSObject <KMYCollectionViewCellConfigurator>
+
+@property (nonatomic, copy, nullable)   NSString    *defaultCellReuseIdentifier;
 
 @end
 

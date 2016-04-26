@@ -56,10 +56,11 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     KMYUIItem *item = self.sectionProvider.sections[indexPath.section].items[indexPath.row];
-    KMYAssert(item.reuseIdentifier, @"Missing reuse identifier for item: %@", item);
+    NSString *reuseIdentifier = [self.cellConfigurator reuseIdentifierForItem:item];
+    KMYAssert(reuseIdentifier, @"Missing reuse identifier for item: %@", item);
 
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:item.reuseIdentifier forIndexPath:indexPath];
-    KMYAssert(cell, @"No cell was registered with reuse identifier: %@", item.reuseIdentifier);
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
+    KMYAssert(cell, @"No cell was registered with reuse identifier: %@", reuseIdentifier);
 
     [self.cellConfigurator configureCell:cell withItem:item atIndexPath:indexPath];
     

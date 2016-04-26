@@ -37,10 +37,11 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     KMYUIItem *item = self.sectionProvider.sections[indexPath.section].items[indexPath.row];
-    KMYAssert(item.collectionViewReuseIdentifier, @"Missing reuse identifier for item: %@", item);
+    NSString *reuseIdentifier = [self.cellConfigurator reuseIdentifierForItem:item];
+    KMYAssert(reuseIdentifier, @"Missing reuse identifier for item: %@", item);
 
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:item.collectionViewReuseIdentifier forIndexPath:indexPath];
-    KMYAssert(cell, @"No cell was registered with reuse identifier: %@", item.collectionViewReuseIdentifier);
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    KMYAssert(cell, @"No cell was registered with reuse identifier: %@", reuseIdentifier);
 
     [self.cellConfigurator configureCell:cell withItem:item atIndexPath:indexPath];
 

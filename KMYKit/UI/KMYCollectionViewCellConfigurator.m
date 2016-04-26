@@ -19,6 +19,10 @@
     [collectionView registerClass:[KMYDefaultCollectionViewCell class] forCellWithReuseIdentifier:[KMYDefaultCollectionViewCell defaultReuseIdentifier]];
 }
 
+- (NSString *)reuseIdentifierForItem:(KMYUIItem *)item {
+    return item.collectionViewReuseIdentifier ?: self.defaultCellReuseIdentifier;
+}
+
 - (void)configureCell:(UICollectionViewCell*)cell withItem:(KMYUIItem*)item atIndexPath:(NSIndexPath *)indexPath {
 
 }

@@ -91,12 +91,19 @@
     }
 }
 
+- (NSString *)reuseIdentifierForItem:(KMYUIItem *)item {
+    return item.tableViewReuseIdentifier ?: self.defaultCellReuseIdentifier;
+}
+
 - (void)configureCell:(UITableViewCell*)cell withItem:(KMYUIItem*)item atIndexPath:(NSIndexPath *)indexPath {
 
-    KMYTableViewCellConfiguratorReuseInfo *info = _reuseIdentifierInfoMapping ? self.reuseIdentifierInfoMapping[item.tableViewReuseIdentifier] : nil;
+    NSString *reuseIdentifier = [self reuseIdentifierForItem:item];
+    KMYAssert(reuseIdentifier);
+
+    KMYTableViewCellConfiguratorReuseInfo *info = _reuseIdentifierInfoMapping ? self.reuseIdentifierInfoMapping[reuseIdentifier] : nil;
 
     // Find the class to be reused based on the reuse identifier
-    Class reuseClass = info ? info.cls : [[self class] defaultClassReuseIdentifierMapping][item.tableViewReuseIdentifier];
+    Class reuseClass = info ? info.cls : [[self class] defaultClassReuseIdentifierMapping][reuseIdentifier];
 
     // Always call default config handler before any custom handler
     KMYTableViewCellConfiguratorCellConfigurationHandler defaultHandler = [self defaultCellConfigurationHandlerForClass:reuseClass];

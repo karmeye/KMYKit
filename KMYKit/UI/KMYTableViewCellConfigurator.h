@@ -19,9 +19,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// Implementation should call the @c UITableView registerClass:withReuseIdentifier methods
 - (void)registerClassesForCellReuseWithTableView:(UITableView *)tableView;
 
+- (NSString *)reuseIdentifierForItem:(KMYUIItem *)item;
+
 /// Is called by the data source after a cell has been dequeued.
-- (void)configureCell:(UITableViewCell*)cell
-             withItem:(KMYUIItem*)item
+- (void)configureCell:(UITableViewCell *)cell
+             withItem:(KMYUIItem *)item
           atIndexPath:(NSIndexPath *)indexPath;
 
 @end
@@ -32,7 +34,8 @@ typedef void (^KMYTableViewCellConfiguratorCellConfigurationHandler)(__kindof UI
 @interface KMYTableViewCellConfigurator : NSObject<KMYTableViewCellConfigurator>
 
 /// Called for all cells after specific config
-@property (nonatomic, copy)         KMYTableViewCellConfiguratorCellConfigurationHandler  cellConfigurationHandler;
+@property (nonatomic, copy, nullable)   KMYTableViewCellConfiguratorCellConfigurationHandler    cellConfigurationHandler;
+@property (nonatomic, copy, nullable)   NSString                                                *defaultCellReuseIdentifier;
 
 - (void)registerClass:(Class<KMYDefaultReusableIdentifying>)cls;
 - (void)registerClass:(Class<KMYDefaultReusableIdentifying>)cls configurationHandler:(nullable KMYTableViewCellConfiguratorCellConfigurationHandler)handler;
