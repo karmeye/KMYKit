@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <KMYKit/KMYUISection.h>
+#import <KMYKit/KMYUIItem+CollectionView.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

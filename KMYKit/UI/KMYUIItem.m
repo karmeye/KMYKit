@@ -8,7 +8,6 @@
 
 #import "KMYUIItem.h"
 
-NSString * const KMYUIItemKeyReuseIdentifier    = @"KMYUIItemKeyReuseIdentifier";
 NSString * const KMYUIItemKeyText               = @"KMYUIItemKeyText";
 NSString * const KMYUIItemKeyTextHandler        = @"KMYUIItemKeyTextHandler";
 NSString * const KMYUIItemKeyDetailText         = @"KMYUIItemKeyDetailText";
@@ -23,7 +22,7 @@ NSString * const KMYUIItemKeyEditingOptions     = @"KMYUIItemKeyEditingOptions";
 
 @implementation KMYUIItem
 
-@dynamic reuseIdentifier, editingOptions, type, text, detailText;
+@dynamic editingOptions, type, text, detailText;
 
 + (KMYUIItem *)itemWithAttributes:(NSDictionary *)dictionary actionHandler:(dispatch_block_t)actionHandler {
 
@@ -34,10 +33,6 @@ NSString * const KMYUIItemKeyEditingOptions     = @"KMYUIItemKeyEditingOptions";
 }
 
 #pragma mark - Public -
-
-- (NSString *)reuseIdentifier {
-    return [self valueForAttribute:KMYUIItemKeyReuseIdentifier];
-}
 
 - (KMYUIItemType)type {
     return [[self.attributeDictionary kmy_numberForKey:KMYUIItemKeyType] integerValue];
@@ -63,11 +58,6 @@ NSString * const KMYUIItemKeyEditingOptions     = @"KMYUIItemKeyEditingOptions";
 }
 
 @end
-
-
-
-
-
 
 
 

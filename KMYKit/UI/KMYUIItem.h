@@ -10,7 +10,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-extern NSString * const KMYUIItemKeyReuseIdentifier;
 extern NSString * const KMYUIItemKeyText;
 extern NSString * const KMYUIItemKeyTextHandler;
 extern NSString * const KMYUIItemKeyDetailText;
@@ -36,7 +35,6 @@ typedef NS_OPTIONS(NSUInteger, KMYUIItemEditingOptions) {
 @interface KMYUIItem : KMYItem
 
 @property (nonatomic, readonly)                     KMYUIItemEditingOptions editingOptions;
-@property (nonatomic, readonly, nullable)           NSString                *reuseIdentifier;
 @property (nonatomic, readonly)                     KMYUIItemType           type;
 @property (nonatomic, readonly, nullable)           NSString                *text;
 @property (nonatomic, readonly, nullable)           NSString                *detailText;

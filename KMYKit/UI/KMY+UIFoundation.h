@@ -19,6 +19,7 @@
 #import <KMYKit/KMYTableViewController.h>
 #import <KMYKit/KMYTableViewDataSource.h>
 #import <KMYKit/KMYTableViewDelegate.h>
+#import <KMYKit/KMYUIItem+TableView.h>
 #import <KMYKit/KMYTableViewControllerBehavior.h>
 #import <KMYKit/KMYDefaultStyleTableViewCell.h>
 #import <KMYKit/KMYTextFieldTableViewCell.h>
@@ -29,7 +30,9 @@
 #import <KMYKit/KMYCollectionViewControllerBehavior.h>
 #import <KMYKit/KMYCollectionViewDataSource.h>
 #import <KMYKit/KMYCollectionViewDelegate.h>
+#import <KMYKit/KMYUIItem+CollectionView.h>
 #import <KMYKit/KMYDefaultCollectionViewCell.h>
+
 
 #import <KMYKit/UIView+KMY.h>
 #import <KMYKit/UIImageView+KMY.h>

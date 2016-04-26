@@ -93,10 +93,10 @@
 
 - (void)configureCell:(UITableViewCell*)cell withItem:(KMYUIItem*)item atIndexPath:(NSIndexPath *)indexPath {
 
-    KMYTableViewCellConfiguratorReuseInfo *info = _reuseIdentifierInfoMapping ? self.reuseIdentifierInfoMapping[item.reuseIdentifier] : nil;
+    KMYTableViewCellConfiguratorReuseInfo *info = _reuseIdentifierInfoMapping ? self.reuseIdentifierInfoMapping[item.tableViewReuseIdentifier] : nil;
 
     // Find the class to be reused based on the reuse identifier
-    Class reuseClass = info ? info.cls : [[self class] defaultClassReuseIdentifierMapping][item.reuseIdentifier];
+    Class reuseClass = info ? info.cls : [[self class] defaultClassReuseIdentifierMapping][item.tableViewReuseIdentifier];
 
     // Always call default config handler before any custom handler
     KMYTableViewCellConfiguratorCellConfigurationHandler defaultHandler = [self defaultCellConfigurationHandlerForClass:reuseClass];
