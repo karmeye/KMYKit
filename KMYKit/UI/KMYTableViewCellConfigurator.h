@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "KMY+Foundation.h"
-#import "KMYUISection.h"
+#import <KMYKit/KMY+Foundation.h>
+#import <KMYKit/KMYUISection.h>
 #import <KMYKit/KMYUIItem+TableView.h>
-#import "KMYDefaultReusableIdentifying.h"
+#import <KMYKit/KMYDefaultReusableIdentifying.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

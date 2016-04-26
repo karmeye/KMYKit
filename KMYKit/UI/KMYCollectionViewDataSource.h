@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readwrite, nullable)      id<KMYCollectionViewCellConfigurator>   cellConfigurator;
 
 - (instancetype)initWithSectionProvider:(nullable id<KMYSectionProvider>)sectionProvider;
+- (instancetype)initWithSectionProvider:(nullable id<KMYSectionProvider>)sectionProvider cellConfigurator:(nullable id<KMYCollectionViewCellConfigurator>)cellConfigurator;
 
 @end
 

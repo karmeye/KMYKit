@@ -18,6 +18,14 @@
     return self;
 }
 
+- (instancetype)initWithSectionProvider:(nullable id<KMYSectionProvider>)sectionProvider cellConfigurator:(nullable id<KMYCollectionViewCellConfigurator>)cellConfigurator {
+    self = [self initWithSectionProvider:sectionProvider];
+    if (self) {
+        self.cellConfigurator = cellConfigurator;
+    }
+    return self;
+}
+
 #pragma mark - Public -
 
 - (id<KMYCollectionViewCellConfigurator>)cellConfigurator {

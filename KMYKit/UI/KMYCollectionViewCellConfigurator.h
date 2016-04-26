@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <KMYKit/KMYUISection.h>
 #import <KMYKit/KMYUIItem+CollectionView.h>
+#import <KMYKit/KMYDefaultReusableIdentifying.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -26,9 +27,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+typedef void (^KMYCollectionViewCellConfiguratorCellConfigurationHandler)(__kindof UICollectionViewCell *cell, __kindof KMYUIItem *item, NSIndexPath *indexPath);
+
 @interface KMYCollectionViewCellConfigurator : NSObject <KMYCollectionViewCellConfigurator>
 
-@property (nonatomic, copy, nullable)   NSString    *defaultCellReuseIdentifier;
+/// Called for all cells after specific config
+@property (nonatomic, copy, nullable)   KMYCollectionViewCellConfiguratorCellConfigurationHandler   cellConfigurationHandler;
+@property (nonatomic, copy, nullable)   NSString                                                    *defaultCellReuseIdentifier;
+
+- (void)registerClass:(Class<KMYDefaultReusableIdentifying>)cls;
+- (void)registerClass:(Class<KMYDefaultReusableIdentifying>)cls configurationHandler:(nullable KMYCollectionViewCellConfiguratorCellConfigurationHandler)handler;
+- (void)registerClass:(Class)cls withReuseIdentifier:(NSString *)reuseIdentifier;
+- (void)registerClass:(Class)cls withReuseIdentifier:(NSString *)reuseIdentifier configurationHandler:(nullable KMYCollectionViewCellConfiguratorCellConfigurationHandler)handler;
 
 @end
 

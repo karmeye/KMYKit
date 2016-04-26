@@ -137,16 +137,16 @@
 
 /// @return A dictionary with the defualt reuse identifier as the key and the associated @c Class as the value.
 + (NSDictionary*)defaultClassReuseIdentifierMapping {
-    static NSDictionary *_kmy_defaultClassReuseIdentifierMapping;
+    static NSDictionary *defaultClassReuseIdentifierMapping;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _kmy_defaultClassReuseIdentifierMapping = @{ [KMYDefaultStyleTableViewCell defaultReuseIdentifier]      : [KMYDefaultStyleTableViewCell class],
-                                                     [KMYSubtitleStyleTableViewCell defaultReuseIdentifier]     : [KMYSubtitleStyleTableViewCell class],
-                                                     [KMYTextFieldTableViewCell defaultReuseIdentifier]         : [KMYTextFieldTableViewCell class],
-                                                     [KMYButtonTableViewCell defaultReuseIdentifier]            : [KMYButtonTableViewCell class],
-                                                     [KMYDestructiveButtonTableViewCell defaultReuseIdentifier] : [KMYDestructiveButtonTableViewCell class] };
+        defaultClassReuseIdentifierMapping = @{ [KMYDefaultStyleTableViewCell defaultReuseIdentifier]      : [KMYDefaultStyleTableViewCell class],
+                                                [KMYSubtitleStyleTableViewCell defaultReuseIdentifier]     : [KMYSubtitleStyleTableViewCell class],
+                                                [KMYTextFieldTableViewCell defaultReuseIdentifier]         : [KMYTextFieldTableViewCell class],
+                                                [KMYButtonTableViewCell defaultReuseIdentifier]            : [KMYButtonTableViewCell class],
+                                                [KMYDestructiveButtonTableViewCell defaultReuseIdentifier] : [KMYDestructiveButtonTableViewCell class] };
     });
-    return _kmy_defaultClassReuseIdentifierMapping;
+    return defaultClassReuseIdentifierMapping;
 }
 
 - (KMYTableViewCellConfiguratorCellConfigurationHandler)defaultCellConfigurationHandlerForClass:(Class)cls {
@@ -181,7 +181,7 @@
             d[NSStringFromClass([KMYTextFieldTableViewCell class])] = ^(KMYTextFieldTableViewCell *cell, KMYUIItem *item, NSIndexPath *indexPath) {
                 cell.textField.placeholder = item.text;
             };
-
+            
         }] copy];
     }
     return _defaultCellConfigurationHandlers;
