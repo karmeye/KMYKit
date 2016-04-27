@@ -64,7 +64,7 @@
                                                            multiplier:1.0
                                                              constant:0]];
 
-        [self.contentView addConstraints:constraints];
+        [NSLayoutConstraint activateConstraints:constraints];
 
     }
 
