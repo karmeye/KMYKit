@@ -8,10 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import <KMYKit/KMYDefaultReusableIdentifying.h>
+#import <KMYKit/KMY+Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface KMYDefaultCollectionViewCell : UICollectionViewCell <KMYDefaultReusableIdentifying>
+
+@property (nonatomic, strong, readonly, nullable)   UILabel         *textLabel;
+@property (nonatomic, strong, readonly, nullable)   UILabel         *detailTextLabel;
+@property (nonatomic, strong, readonly, nullable)   UIImageView     *imageView;
 
 @end
 
