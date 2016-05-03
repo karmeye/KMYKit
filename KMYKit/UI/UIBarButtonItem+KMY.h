@@ -16,9 +16,13 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)kmy_buttonWithTitle:(NSString *)title handler:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))handler;
 + (instancetype)kmy_doneButtonWithTitle:(NSString *)title handler:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))handler;
 + (instancetype)kmy_buttonWithSystemItem:(UIBarButtonSystemItem)systemItem handler:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))handler;
++ (instancetype)kmy_buttonWithImage:(UIImage *)image handler:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))handler;
++ (instancetype)kmy_buttonWithCustomView:(UIView *)view;
 
 - (instancetype)kmy_initWithTitle:(NSString *)title style:(UIBarButtonItemStyle)style handler:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))handler;
-- (instancetype)kmy_initWithBarButtonSystemItem:(UIBarButtonSystemItem)systemItem handler:(void (^)(__kindof UIBarButtonItem *buttonItem))handler;
+- (instancetype)kmy_initWithBarButtonSystemItem:(UIBarButtonSystemItem)systemItem handler:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))handler;
+- (instancetype)kmy_initWithImage:(UIImage *)image handler:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))handler;
+- (instancetype)kmy_initWithCustomView:(UIView *)view;
 
 @end
 
