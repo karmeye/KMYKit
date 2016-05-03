@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A626C98F1CD8A49C0094802F /* NSString+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A626C98D1CD8A49C0094802F /* NSString+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A626C9901CD8A49C0094802F /* NSString+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A626C98E1CD8A49C0094802F /* NSString+KMY.m */; };
 		A627751C1CAD493300238E9D /* KMYDefaultReusableIdentifying.h in Headers */ = {isa = PBXBuildFile; fileRef = A627751B1CAD493300238E9D /* KMYDefaultReusableIdentifying.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A627751F1CAE3B8300238E9D /* KMYAssert.h in Headers */ = {isa = PBXBuildFile; fileRef = A627751D1CAE3B8300238E9D /* KMYAssert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A62775201CAE3B8300238E9D /* KMYAssert.m in Sources */ = {isa = PBXBuildFile; fileRef = A627751E1CAE3B8300238E9D /* KMYAssert.m */; };
@@ -93,6 +95,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A626C98D1CD8A49C0094802F /* NSString+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+KMY.h"; sourceTree = "<group>"; };
+		A626C98E1CD8A49C0094802F /* NSString+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+KMY.m"; sourceTree = "<group>"; };
 		A627751B1CAD493300238E9D /* KMYDefaultReusableIdentifying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYDefaultReusableIdentifying.h; sourceTree = "<group>"; };
 		A627751D1CAE3B8300238E9D /* KMYAssert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYAssert.h; sourceTree = "<group>"; };
 		A627751E1CAE3B8300238E9D /* KMYAssert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYAssert.m; sourceTree = "<group>"; };
@@ -223,6 +227,8 @@
 				A68B8E071CAA6F8900DE6E95 /* NSMutableArray+KMY.m */,
 				A68B8E081CAA6F8900DE6E95 /* NSObject+KMY.h */,
 				A68B8E091CAA6F8900DE6E95 /* NSObject+KMY.m */,
+				A626C98D1CD8A49C0094802F /* NSString+KMY.h */,
+				A626C98E1CD8A49C0094802F /* NSString+KMY.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -421,6 +427,7 @@
 				A6F6DA7A1CCDEC960042B78A /* KMYCollectionViewDelegate.h in Headers */,
 				A6F6DA831CCF2BDF0042B78A /* KMYUIItem+TableView.h in Headers */,
 				A6F6DA7F1CCF298F0042B78A /* KMYUIItem+CollectionView.h in Headers */,
+				A626C98F1CD8A49C0094802F /* NSString+KMY.h in Headers */,
 				A62775311CB38C1400238E9D /* KMYMacros.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,6 +504,7 @@
 				A6F6DA841CCF2BDF0042B78A /* KMYUIItem+TableView.m in Sources */,
 				A62775201CAE3B8300238E9D /* KMYAssert.m in Sources */,
 				A68B8E431CAAB61500DE6E95 /* KMYTextFieldTableViewCell.m in Sources */,
+				A626C9901CD8A49C0094802F /* NSString+KMY.m in Sources */,
 				A62775521CBCD71B00238E9D /* KMYDestructiveButtonTableViewCell.m in Sources */,
 				A6F6DA7B1CCDEC960042B78A /* KMYCollectionViewDelegate.m in Sources */,
 				A627754E1CBCD33000238E9D /* KMYButtonTableViewCell.m in Sources */,
