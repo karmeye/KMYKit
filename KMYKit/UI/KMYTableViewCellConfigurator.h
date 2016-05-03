@@ -14,7 +14,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol KMYTableViewCellConfigurator <NSObject>
+@protocol KMYTableViewCellConfigurating <NSObject>
 
 /// Implementation should call the @c UITableView registerClass:withReuseIdentifier methods
 - (void)registerClassesForCellReuseWithTableView:(UITableView *)tableView;
@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 typedef void (^KMYTableViewCellConfiguratorCellConfigurationHandler)(__kindof UITableViewCell *cell, __kindof KMYUIItem *item, NSIndexPath *indexPath);
 
 /// Default cell configurator
-@interface KMYTableViewCellConfigurator : NSObject<KMYTableViewCellConfigurator>
+@interface KMYTableViewCellConfigurator : NSObject<KMYTableViewCellConfigurating>
 
 /// Called for all cells after specific config
 @property (nonatomic, copy, nullable)   KMYTableViewCellConfiguratorCellConfigurationHandler    cellConfigurationHandler;

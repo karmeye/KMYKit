@@ -16,15 +16,15 @@ NS_ASSUME_NONNULL_BEGIN
 @interface KMYTableViewDataSource : NSObject <UITableViewDataSource>
 
 @property (nonatomic, weak, readwrite, nullable)        id<KMYSectionProvider>              sectionProvider;
-@property (nonatomic, strong, readwrite, nullable)      id<KMYTableViewCellConfigurator>    cellConfigurator;
+@property (nonatomic, strong, readwrite, nullable)      id<KMYTableViewCellConfigurating>   cellConfigurator;
 
 @property (nonatomic, assign, readwrite)                BOOL                                canEditAllRows;
 
 @property (nonatomic, copy, nullable) void (^commitEditingHandler)(UITableView *tableView, __kindof KMYUIItem *item, NSIndexPath *indexPath, UITableViewCellEditingStyle editingStyle);
 
 - (instancetype)initWithSectionProvider:(nullable id<KMYSectionProvider>)sectionProvider;
-- (instancetype)initWithSectionProvider:(nullable id<KMYSectionProvider>)sectionProvider cellConfigurator:(nullable id<KMYTableViewCellConfigurator>)cellConfigurator;
-- (instancetype)initWithCellConfigurator:(nullable id<KMYTableViewCellConfigurator>)cellConfigurator;
+- (instancetype)initWithSectionProvider:(nullable id<KMYSectionProvider>)sectionProvider cellConfigurator:(nullable id<KMYTableViewCellConfigurating>)cellConfigurator;
+- (instancetype)initWithCellConfigurator:(nullable id<KMYTableViewCellConfigurating>)cellConfigurator;
 
 @end
 

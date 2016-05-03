@@ -21,7 +21,7 @@
     return self;
 }
 
-- (instancetype)initWithSectionProvider:(id<KMYSectionProvider>)sectionProvider cellConfigurator:(id<KMYTableViewCellConfigurator>)cellConfigurator {
+- (instancetype)initWithSectionProvider:(id<KMYSectionProvider>)sectionProvider cellConfigurator:(id<KMYTableViewCellConfigurating>)cellConfigurator {
     self = [self initWithSectionProvider:sectionProvider];
     if (self) {
         self.cellConfigurator = cellConfigurator;
@@ -29,7 +29,7 @@
     return self;
 }
 
-- (instancetype)initWithCellConfigurator:(nullable id<KMYTableViewCellConfigurator>)cellConfigurator {
+- (instancetype)initWithCellConfigurator:(nullable id<KMYTableViewCellConfigurating>)cellConfigurator {
     self = [self init];
     if (self) {
         self.cellConfigurator = cellConfigurator;
@@ -39,7 +39,7 @@
 
 #pragma mark - Public -
 
-- (id<KMYTableViewCellConfigurator>)cellConfigurator {
+- (id<KMYTableViewCellConfigurating>)cellConfigurator {
     if (!_cellConfigurator) _cellConfigurator = [[KMYTableViewCellConfigurator alloc] init];
     return _cellConfigurator;
 }

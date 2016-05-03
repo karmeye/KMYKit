@@ -15,10 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 @interface KMYCollectionViewDataSource : NSObject <UICollectionViewDataSource>
 
 @property (nonatomic, weak, readwrite, nullable)        id<KMYSectionProvider>                  sectionProvider;
-@property (nonatomic, strong, readwrite, nullable)      id<KMYCollectionViewCellConfigurator>   cellConfigurator;
+@property (nonatomic, strong, readwrite, nullable)      id<KMYCollectionViewCellConfigurating>  cellConfigurator;
 
 - (instancetype)initWithSectionProvider:(nullable id<KMYSectionProvider>)sectionProvider;
-- (instancetype)initWithSectionProvider:(nullable id<KMYSectionProvider>)sectionProvider cellConfigurator:(nullable id<KMYCollectionViewCellConfigurator>)cellConfigurator;
+- (instancetype)initWithSectionProvider:(nullable id<KMYSectionProvider>)sectionProvider cellConfigurator:(nullable id<KMYCollectionViewCellConfigurating>)cellConfigurator;
 
 @end
 

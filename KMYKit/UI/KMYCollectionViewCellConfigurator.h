@@ -13,7 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol KMYCollectionViewCellConfigurator <NSObject>
+@protocol KMYCollectionViewCellConfigurating <NSObject>
 
 /// Implementation should call the @c UICollectionView registerClass:withReuseIdentifier methods
 - (void)registerClassesForCellReuseWithCollectionView:(UICollectionView *)collectionView;
@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef void (^KMYCollectionViewCellConfiguratorCellConfigurationHandler)(__kindof UICollectionViewCell *cell, __kindof KMYUIItem *item, NSIndexPath *indexPath);
 
-@interface KMYCollectionViewCellConfigurator : NSObject <KMYCollectionViewCellConfigurator>
+@interface KMYCollectionViewCellConfigurator : NSObject <KMYCollectionViewCellConfigurating>
 
 /// Called for all cells after specific config
 @property (nonatomic, copy, nullable)   KMYCollectionViewCellConfiguratorCellConfigurationHandler   cellConfigurationHandler;
