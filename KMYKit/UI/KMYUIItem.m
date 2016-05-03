@@ -17,7 +17,7 @@ NSString * const KMYUIItemKeyEditingOptions     = @"KMYUIItemKeyEditingOptions";
 
 @interface KMYUIItem ()
 
-@property (nonatomic, copy, readwrite)     dispatch_block_t        actionHandler;
+@property (nonatomic, copy, readwrite)     KMYUIItemActionHandler        actionHandler;
 
 @end
 
@@ -25,7 +25,7 @@ NSString * const KMYUIItemKeyEditingOptions     = @"KMYUIItemKeyEditingOptions";
 
 @dynamic editingOptions, type, text, detailText, image;
 
-+ (KMYUIItem *)itemWithAttributes:(NSDictionary *)dictionary actionHandler:(dispatch_block_t)actionHandler {
++ (KMYUIItem *)itemWithAttributes:(NSDictionary *)dictionary actionHandler:(KMYUIItemActionHandler)actionHandler {
 
     KMYUIItem *item = [[self class] itemWithAttributes:dictionary];
     item.actionHandler = actionHandler;

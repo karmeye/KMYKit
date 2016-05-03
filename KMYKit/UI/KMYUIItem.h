@@ -18,7 +18,10 @@ extern NSString * const KMYUIItemKeyImage;
 extern NSString * const KMYUIItemKeyType;
 extern NSString * const KMYUIItemKeyEditingOptions;
 
+@class KMYUIItem;
+
 typedef NSString * _Nullable (^KMYUIItemTextHandler)();
+typedef void (^KMYUIItemActionHandler)(__kindof KMYUIItem *);
 
 typedef NS_ENUM(NSInteger, KMYUIItemType) {
     KMYUIItemTypeNone = 0,
@@ -41,10 +44,10 @@ typedef NS_OPTIONS(NSUInteger, KMYUIItemEditingOptions) {
 @property (nonatomic, readonly, nullable)           NSString                *text;
 @property (nonatomic, readonly, nullable)           NSString                *detailText;
 @property (nonatomic, readonly, nullable)           UIImage                 *image;
-@property (nonatomic, copy, readonly, nullable)     dispatch_block_t        actionHandler;
+@property (nonatomic, copy, readonly, nullable)     KMYUIItemActionHandler  actionHandler;
 
 + (KMYUIItem *)itemWithAttributes:(nullable NSDictionary *)dictionary
-                    actionHandler:(nullable dispatch_block_t)actionHandler;
+                    actionHandler:(nullable KMYUIItemActionHandler)actionHandler;
 
 @end
 

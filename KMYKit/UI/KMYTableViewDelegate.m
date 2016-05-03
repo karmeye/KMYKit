@@ -25,7 +25,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     KMYUIItem *item = self.sectionProvider.sections[indexPath.section].items[indexPath.row];
-    KMYInvokeBlockIfSet(item.actionHandler);
+    KMYInvokeBlockIfSet(item.actionHandler, item);
 
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
