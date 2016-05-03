@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// @return A new UIView or subclass.
 + (nullable instancetype)kmy_viewWithFrame:(CGRect)frame initializer:(void (^_Nullable)(__kindof UIView *view))initializer;
 
++ (nullable instancetype)kmy_viewWithInitializer:(void (^_Nullable)(__kindof UIView *view))initializer;
+
 @end
 
 NS_ASSUME_NONNULL_END

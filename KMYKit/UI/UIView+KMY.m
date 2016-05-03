@@ -16,4 +16,8 @@
     return view;
 }
 
++ (instancetype)kmy_viewWithInitializer:(void (^)(__kindof UIView *view))initializer {
+    return [[self class] kmy_viewWithFrame:CGRectZero initializer:initializer];
+}
+
 @end
