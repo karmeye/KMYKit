@@ -11,6 +11,7 @@
 NSString * const KMYUIItemKeyText               = @"KMYUIItemKeyText";
 NSString * const KMYUIItemKeyTextHandler        = @"KMYUIItemKeyTextHandler";
 NSString * const KMYUIItemKeyDetailText         = @"KMYUIItemKeyDetailText";
+NSString * const KMYUIItemKeyImage              = @"KMYUIItemKeyImage";
 NSString * const KMYUIItemKeyType               = @"KMYUIItemKeyType";
 NSString * const KMYUIItemKeyEditingOptions     = @"KMYUIItemKeyEditingOptions";
 
@@ -22,7 +23,7 @@ NSString * const KMYUIItemKeyEditingOptions     = @"KMYUIItemKeyEditingOptions";
 
 @implementation KMYUIItem
 
-@dynamic editingOptions, type, text, detailText;
+@dynamic editingOptions, type, text, detailText, image;
 
 + (KMYUIItem *)itemWithAttributes:(NSDictionary *)dictionary actionHandler:(dispatch_block_t)actionHandler {
 
@@ -55,6 +56,10 @@ NSString * const KMYUIItemKeyEditingOptions     = @"KMYUIItemKeyEditingOptions";
 
 - (NSString *)detailText {
     return [self valueForAttribute:KMYUIItemKeyDetailText];
+}
+
+- (UIImageView *)image {
+    return [self valueForAttribute:KMYUIItemKeyImage];
 }
 
 @end

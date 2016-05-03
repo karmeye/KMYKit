@@ -124,14 +124,10 @@
 - (NSDictionary<Class, KMYCollectionViewCellConfiguratorCellConfigurationHandler> *)defaultCellConfigurationHandlers {
     if (!_defaultCellConfigurationHandlers) {
         _defaultCellConfigurationHandlers = [[NSMutableDictionary kmy_dictionaryWithInitializer:^(NSMutableDictionary *d) {
-
-            KMYCollectionViewCellConfiguratorCellConfigurationHandler setTextHandler = ^(KMYDefaultCollectionViewCell *cell, KMYUIItem *item, NSIndexPath *indexPath) {
-                //cell.textLabel.text = item.text;
-                //cell.detailTextLabel.text = item.detailText;
-            };
-
             d[NSStringFromClass([KMYDefaultCollectionViewCell class])] = ^(KMYDefaultCollectionViewCell *cell, KMYUIItem *item, NSIndexPath *indexPath) {
-                setTextHandler(cell, item, indexPath);
+                cell.textLabel.text = item.text;
+                cell.detailTextLabel.text = item.detailText;
+                cell.imageView.image = item.image;
             };
 
         }] copy];

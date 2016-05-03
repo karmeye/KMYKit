@@ -6,13 +6,15 @@
 //  Copyright © 2016 Karmeye. All rights reserved.
 //
 
-#import "KMY+Foundation.h"
+#import <UIKit/UIKit.h>
+#import <KMYKit/KMY+Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 extern NSString * const KMYUIItemKeyText;
 extern NSString * const KMYUIItemKeyTextHandler;
 extern NSString * const KMYUIItemKeyDetailText;
+extern NSString * const KMYUIItemKeyImage;
 extern NSString * const KMYUIItemKeyType;
 extern NSString * const KMYUIItemKeyEditingOptions;
 
@@ -38,6 +40,7 @@ typedef NS_OPTIONS(NSUInteger, KMYUIItemEditingOptions) {
 @property (nonatomic, readonly)                     KMYUIItemType           type;
 @property (nonatomic, readonly, nullable)           NSString                *text;
 @property (nonatomic, readonly, nullable)           NSString                *detailText;
+@property (nonatomic, readonly, nullable)           UIImage                 *image;
 @property (nonatomic, copy, readonly, nullable)     dispatch_block_t        actionHandler;
 
 + (KMYUIItem *)itemWithAttributes:(nullable NSDictionary *)dictionary
