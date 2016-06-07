@@ -31,6 +31,10 @@
         abort(); \
     } while(0)
 
+
+#define KMYAssertMainThread() \
+    KMYAssert([NSThread isMainThread], @"This method must be called from main thread!\n\nStacktrace: %@", [NSThread callStackSymbols])
+
 //
 //
 // Following macros are only effected when DEBUG is set (which is the default in Xcode).
