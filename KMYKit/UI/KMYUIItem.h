@@ -11,12 +11,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-extern NSString * const KMYUIItemKeyText;
-extern NSString * const KMYUIItemKeyTextHandler;
-extern NSString * const KMYUIItemKeyDetailText;
-extern NSString * const KMYUIItemKeyImage;
-extern NSString * const KMYUIItemKeyType;
-extern NSString * const KMYUIItemKeyEditingOptions;
+FOUNDATION_EXPORT NSString * const KMYUIItemKeyText;
+FOUNDATION_EXPORT NSString * const KMYUIItemKeyTextHandler;
+FOUNDATION_EXPORT NSString * const KMYUIItemKeyDetailText;
+FOUNDATION_EXPORT NSString * const KMYUIItemKeyImage;
+FOUNDATION_EXPORT NSString * const KMYUIItemKeyType;
+FOUNDATION_EXPORT NSString * const KMYUIItemKeyEditingOptions;
 
 @class KMYUIItem;
 

@@ -11,8 +11,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-extern NSString * const KMYUISectionKeyHeaderTitle;
-extern NSString * const KMYUISectionKeyFooterTitle;
+FOUNDATION_EXPORT NSString * const KMYUISectionKeyHeaderTitle;
+FOUNDATION_EXPORT NSString * const KMYUISectionKeyFooterTitle;
 
 typedef NS_ENUM(NSInteger, KMYUISectionType) {
     KMYUISectionNone = 0
