@@ -13,6 +13,8 @@
 #import "KMYSubtitleStyleTableViewCell.h"
 #import "KMYButtonTableViewCell.h"
 #import "KMYDestructiveButtonTableViewCell.h"
+#import "KMYSwitchTableViewCell.h"
+#import "KMYSegmentedControlTableViewCell.h"
 
 @interface KMYTableViewCellConfiguratorReuseInfo :  NSObject
 
@@ -147,11 +149,13 @@
     static NSDictionary *defaultClassReuseIdentifierMapping;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        defaultClassReuseIdentifierMapping = @{ [KMYDefaultStyleTableViewCell defaultReuseIdentifier]      : [KMYDefaultStyleTableViewCell class],
-                                                [KMYSubtitleStyleTableViewCell defaultReuseIdentifier]     : [KMYSubtitleStyleTableViewCell class],
-                                                [KMYTextFieldTableViewCell defaultReuseIdentifier]         : [KMYTextFieldTableViewCell class],
-                                                [KMYButtonTableViewCell defaultReuseIdentifier]            : [KMYButtonTableViewCell class],
-                                                [KMYDestructiveButtonTableViewCell defaultReuseIdentifier] : [KMYDestructiveButtonTableViewCell class] };
+        defaultClassReuseIdentifierMapping = @{ [KMYDefaultStyleTableViewCell defaultReuseIdentifier]       : [KMYDefaultStyleTableViewCell class],
+                                                [KMYSubtitleStyleTableViewCell defaultReuseIdentifier]      : [KMYSubtitleStyleTableViewCell class],
+                                                [KMYTextFieldTableViewCell defaultReuseIdentifier]          : [KMYTextFieldTableViewCell class],
+                                                [KMYButtonTableViewCell defaultReuseIdentifier]             : [KMYButtonTableViewCell class],
+                                                [KMYDestructiveButtonTableViewCell defaultReuseIdentifier]  : [KMYDestructiveButtonTableViewCell class],
+                                                [KMYSwitchTableViewCell defaultReuseIdentifier]             : [KMYSwitchTableViewCell class],
+                                                [KMYSegmentedControlTableViewCell defaultReuseIdentifier]   : [KMYSegmentedControlTableViewCell class], };
     });
     return defaultClassReuseIdentifierMapping;
 }
@@ -165,8 +169,10 @@
         _defaultCellConfigurationHandlers = [[NSMutableDictionary kmy_dictionaryWithInitializer:^(NSMutableDictionary *d) {
 
             KMYTableViewCellConfiguratorCellConfigurationHandler setTextHandler = ^(KMYDefaultStyleTableViewCell *cell, KMYUIItem *item, NSIndexPath *indexPath) {
-                cell.textLabel.text = item.text;
-                cell.detailTextLabel.text = item.detailText;
+
+                if (item.text)          cell.textLabel.text = item.text;
+                if (item.detailText)    cell.detailTextLabel.text = item.detailText;
+
             };
 
             d[NSStringFromClass([KMYDefaultStyleTableViewCell class])] = ^(KMYDefaultStyleTableViewCell *cell, KMYUIItem *item, NSIndexPath *indexPath) {
@@ -187,6 +193,14 @@
 
             d[NSStringFromClass([KMYTextFieldTableViewCell class])] = ^(KMYTextFieldTableViewCell *cell, KMYUIItem *item, NSIndexPath *indexPath) {
                 cell.textField.placeholder = item.text;
+            };
+
+            d[NSStringFromClass([KMYSwitchTableViewCell class])] = ^(KMYSwitchTableViewCell *cell, KMYUIItem *item, NSIndexPath *indexPath) {
+                setTextHandler(cell, item, indexPath);
+            };
+
+            d[NSStringFromClass([KMYSegmentedControlTableViewCell class])] = ^(KMYSegmentedControlTableViewCell *cell, KMYUIItem *item, NSIndexPath *indexPath) {
+                setTextHandler(cell, item, indexPath);
             };
             
         }] copy];
