@@ -15,10 +15,9 @@ NSString * const KMYUIItemKeyImage              = @"KMYUIItemKeyImage";
 NSString * const KMYUIItemKeyType               = @"KMYUIItemKeyType";
 NSString * const KMYUIItemKeyEditingOptions     = @"KMYUIItemKeyEditingOptions";
 
+NSString * const KMYUIItemActionHandlerInfoKeyIndexPath     = @"KMYUIItemActionHandlerInfoKeyIndexPath";
+
 @interface KMYUIItem ()
-
-@property (nonatomic, copy, readwrite)     KMYUIItemActionHandler        actionHandler;
-
 @end
 
 @implementation KMYUIItem
@@ -26,10 +25,8 @@ NSString * const KMYUIItemKeyEditingOptions     = @"KMYUIItemKeyEditingOptions";
 @dynamic editingOptions, type, text, detailText, image;
 
 + (KMYUIItem *)itemWithAttributes:(NSDictionary *)dictionary actionHandler:(KMYUIItemActionHandler)actionHandler {
-
     KMYUIItem *item = [[self class] itemWithAttributes:dictionary];
     item.actionHandler = actionHandler;
-
     return item;
 }
 

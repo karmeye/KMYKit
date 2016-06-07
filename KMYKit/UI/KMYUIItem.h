@@ -18,10 +18,9 @@ FOUNDATION_EXPORT NSString * const KMYUIItemKeyImage;
 FOUNDATION_EXPORT NSString * const KMYUIItemKeyType;
 FOUNDATION_EXPORT NSString * const KMYUIItemKeyEditingOptions;
 
-@class KMYUIItem;
+FOUNDATION_EXPORT NSString * const KMYUIItemActionHandlerInfoKeyIndexPath;
 
-typedef NSString * _Nullable (^KMYUIItemTextHandler)();
-typedef void (^KMYUIItemActionHandler)(__kindof KMYUIItem *);
+@class KMYUIItem;
 
 typedef NS_ENUM(NSInteger, KMYUIItemType) {
     KMYUIItemTypeNone = 0,
@@ -37,14 +36,19 @@ typedef NS_OPTIONS(NSUInteger, KMYUIItemEditingOptions) {
     KMYUIItemEditingOptionsAll              = NSUIntegerMax
 };
 
+typedef void (^KMYUIItemActionHandler)(__kindof KMYUIItem *, NSDictionary * _Nullable info);
+
+typedef NSString * _Nullable (^KMYUIItemTextHandler)();
+
 @interface KMYUIItem : KMYItem
 
-@property (nonatomic, readonly)                     KMYUIItemEditingOptions editingOptions;
-@property (nonatomic, readonly)                     KMYUIItemType           type;
-@property (nonatomic, readonly, nullable)           NSString                *text;
-@property (nonatomic, readonly, nullable)           NSString                *detailText;
-@property (nonatomic, readonly, nullable)           UIImage                 *image;
-@property (nonatomic, copy, readonly, nullable)     KMYUIItemActionHandler  actionHandler;
+@property (nonatomic, readonly)                     KMYUIItemEditingOptions     editingOptions;
+@property (nonatomic, readonly)                     KMYUIItemType               type;
+@property (nonatomic, readonly, nullable)           NSString                    *text;
+@property (nonatomic, readonly, nullable)           NSString                    *detailText;
+@property (nonatomic, readonly, nullable)           UIImage                     *image;
+
+@property (nonatomic, copy, nullable)               KMYUIItemActionHandler      actionHandler;
 
 + (KMYUIItem *)itemWithAttributes:(nullable NSDictionary *)dictionary
                     actionHandler:(nullable KMYUIItemActionHandler)actionHandler;

@@ -7,6 +7,7 @@
 //
 
 #import "KMYTableViewDelegate.h"
+#import "KMYUIItem+TableView.h"
 
 @interface KMYTableViewDelegate ()
 @end
@@ -24,8 +25,9 @@
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     KMYUIItem *item = self.sectionProvider.sections[indexPath.section].items[indexPath.row];
-    KMYInvokeBlockIfSet(item.actionHandler, item);
+    KMYInvokeBlockIfSet(item.actionHandler, item, @{ KMYUIItemActionHandlerInfoKeyIndexPath : indexPath });
 
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
