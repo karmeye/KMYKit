@@ -40,20 +40,30 @@ static const void   *KMYBarButtonItemKeyHandler         = &KMYBarButtonItemKeyHa
     return [[[self class] alloc] kmy_initWithCustomView:view];
 }
 
++ (instancetype)kmy_buttonWithFlexibleSpace {
+    return [[[self class] alloc] kmy_initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace handler:NULL];
+}
+
++ (instancetype)kmy_buttonWithFixedSpace:(CGFloat)space {
+    UIBarButtonItem *item = [[[self class] alloc] kmy_initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace handler:NULL];
+    item.width = space;
+    return item;
+}
+
 - (instancetype)kmy_initWithTitle:(NSString *)title style:(UIBarButtonItemStyle)style handler:(void (^)(__kindof UIBarButtonItem *buttonItem))handler {
-    UIBarButtonItem *barButtonItem = [self initWithTitle:title style:style target:self action:KMYBarButtonItemActionSelector()];
+    UIBarButtonItem *barButtonItem = [self initWithTitle:title style:style target:handler == NULL ? nil : self action:handler == NULL ? nil : KMYBarButtonItemActionSelector()];
     [barButtonItem kmy_registerHandler:handler];
     return barButtonItem;
 }
 
 - (instancetype)kmy_initWithBarButtonSystemItem:(UIBarButtonSystemItem)systemItem handler:(void (^)(__kindof UIBarButtonItem *buttonItem))handler {
-    UIBarButtonItem *barButtonItem = [self initWithBarButtonSystemItem:systemItem target:self action:KMYBarButtonItemActionSelector()];
+    UIBarButtonItem *barButtonItem = [self initWithBarButtonSystemItem:systemItem target:handler == NULL ? nil : self action:handler == NULL ? nil : KMYBarButtonItemActionSelector()];
     [barButtonItem kmy_registerHandler:handler];
     return barButtonItem;
 }
 
 - (instancetype)kmy_initWithImage:(UIImage *)image handler:(void (^)(__kindof UIBarButtonItem *buttonItem))handler {
-    UIBarButtonItem *barButtonItem = [self initWithImage:image style:UIBarButtonItemStylePlain target:self action:KMYBarButtonItemActionSelector()];
+    UIBarButtonItem *barButtonItem = [self initWithImage:image style:UIBarButtonItemStylePlain target:handler == NULL ? nil : self action:handler == NULL ? nil : KMYBarButtonItemActionSelector()];
     [barButtonItem kmy_registerHandler:handler];
     return barButtonItem;
 }
@@ -74,3 +84,32 @@ static const void   *KMYBarButtonItemKeyHandler         = &KMYBarButtonItemKeyHa
 }
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

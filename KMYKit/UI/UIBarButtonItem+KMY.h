@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)kmy_buttonWithSystemItem:(UIBarButtonSystemItem)systemItem handler:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))handler;
 + (instancetype)kmy_buttonWithImage:(UIImage *)image handler:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))handler;
 + (instancetype)kmy_buttonWithCustomView:(UIView *)view;
++ (instancetype)kmy_buttonWithFlexibleSpace;
++ (instancetype)kmy_buttonWithFixedSpace:(CGFloat)space;
 
 - (instancetype)kmy_initWithTitle:(NSString *)title style:(UIBarButtonItemStyle)style handler:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))handler;
 - (instancetype)kmy_initWithBarButtonSystemItem:(UIBarButtonSystemItem)systemItem handler:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))handler;
