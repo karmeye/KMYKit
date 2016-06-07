@@ -39,11 +39,6 @@
 
 #pragma mark - Public -
 
-- (id<KMYTableViewCellConfigurating>)cellConfigurator {
-    if (!_cellConfigurator) _cellConfigurator = [[KMYTableViewCellConfigurator alloc] init];
-    return _cellConfigurator;
-}
-
 #pragma mark UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -55,7 +50,16 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    // Create a default configurator if none is set.
+    if (!self.cellConfigurator) {
+        self.cellConfigurator = [KMYTableViewCellConfigurator kmy_objectWithInitializer:^(KMYTableViewCellConfigurator *configurator) {
+            [configurator registerClassesForCellReuseWithTableView:tableView];
+        }];
+    }
+
     KMYUIItem *item = self.sectionProvider.sections[indexPath.section].items[indexPath.row];
+
     NSString *reuseIdentifier = [self.cellConfigurator reuseIdentifierForItem:item];
     KMYAssert(reuseIdentifier, @"Missing reuse identifier for item: %@", item);
 

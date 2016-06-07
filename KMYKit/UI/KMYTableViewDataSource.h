@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface KMYTableViewDataSource : NSObject <UITableViewDataSource>
 
 @property (nonatomic, weak, readwrite, nullable)        id<KMYSectionProvider>              sectionProvider;
-@property (nonatomic, strong, readwrite, nullable)      id<KMYTableViewCellConfigurating>   cellConfigurator;
+@property (nonatomic, strong, readwrite)                id<KMYTableViewCellConfigurating>   cellConfigurator;
 
 @property (nonatomic, assign, readwrite)                BOOL                                canEditAllRows;
 

@@ -73,6 +73,13 @@
     self.reuseIdentifierInfoMapping[reuseIdentifier] = [KMYTableViewCellConfiguratorReuseInfo infoWithClass:cls handler:handler];
 }
 
+- (NSString *)defaultCellReuseIdentifier {
+    if (!_defaultCellReuseIdentifier) {
+        _defaultCellReuseIdentifier = [KMYDefaultStyleTableViewCell defaultReuseIdentifier];
+    }
+    return _defaultCellReuseIdentifier;
+}
+
 #pragma mark - KMYTableViewCellConfigurator Protocol
 
 - (void)registerClassesForCellReuseWithTableView:(UITableView *)tableView {

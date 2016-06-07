@@ -35,6 +35,8 @@ typedef void (^KMYTableViewCellConfiguratorCellConfigurationHandler)(__kindof UI
 
 /// Called for all cells after specific config
 @property (nonatomic, copy, nullable)   KMYTableViewCellConfiguratorCellConfigurationHandler    cellConfigurationHandler;
+
+/// Defaults to KMYDefaultStyleTableViewCell
 @property (nonatomic, copy, nullable)   NSString                                                *defaultCellReuseIdentifier;
 
 - (void)registerClass:(Class<KMYDefaultReusableIdentifying>)cls;
