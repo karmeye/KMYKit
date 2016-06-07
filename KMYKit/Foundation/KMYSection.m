@@ -7,6 +7,7 @@
 //
 
 #import "KMYSection.h"
+#import "KMYBlock.h"
 
 @interface KMYSection ()
 
@@ -20,7 +21,7 @@
 + (instancetype)sectionWithItems:(NSArray *)items {
     KMYSection *instance = [[[self class] alloc] init];
 
-    if (self) {
+    if (instance) {
         instance.items = items;
     }
 
@@ -30,7 +31,7 @@
 + (instancetype)sectionWithItemsInitializer:(void (^)(NSMutableArray *items))itemsInitializer {
     KMYSection *instance = [[[self class] alloc] init];
 
-    if (self) {
+    if (instance) {
         NSMutableArray *items = [[NSMutableArray alloc] init];
         itemsInitializer(items);
         instance.items = [items copy];
@@ -42,7 +43,7 @@
 + (instancetype)sectionWithInitializer:(void (^)(NSMutableDictionary * attributes, NSMutableArray * items))initializer {
     KMYSection *instance = [[[self class] alloc] init];
 
-    if (self) {
+    if (instance) {
         NSMutableDictionary *attributes = [[NSMutableDictionary alloc] init];
         NSMutableArray *items = [[NSMutableArray alloc] init];
         initializer(attributes, items);
