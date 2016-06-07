@@ -7,6 +7,7 @@
 //
 
 #import "KMYItem.h"
+#import "KMYBlock.h"
 
 NSString * const KMYItemKeyValue        = @"KMYItemKeyValue";
 NSString * const KMYItemKeyType         = @"KMYItemKeyType";
@@ -34,6 +35,16 @@ NSString * const KMYItemKeyID           = @"KMYItemKeyID";
 + (KMYItem *)itemWithAttributes:(NSDictionary *)dictionary {
     KMYItem *item = [[[self class] alloc] init];
     item.attributeDictionary = dictionary;
+    return item;
+}
+
++ (__kindof KMYItem *)itemWithInitializer:(void (^)(NSMutableDictionary *attributes))initializer {
+    KMYItem *item = [[[self class] alloc] init];
+    if (item && initializer != NULL) {
+        NSMutableDictionary *attributes = [[NSMutableDictionary alloc] init];
+        KMYInvokeBlockIfSet(initializer, attributes);
+        item.attributeDictionary = [attributes copy];
+    }
     return item;
 }
 
@@ -68,3 +79,33 @@ NSString * const KMYItemKeyID           = @"KMYItemKeyID";
 }
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

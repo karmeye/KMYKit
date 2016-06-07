@@ -26,6 +26,7 @@ extern NSString *const KMYItemKeyID;
 @property (nonatomic, readonly, nullable)           NSString          *identifier;
 
 + (__kindof KMYItem *)itemWithAttributes:(nullable NSDictionary *)dictionary;
++ (__kindof KMYItem *)itemWithInitializer:(void (^)(NSMutableDictionary *attributes))initializer;
 
 /// @discussion Keys are copied; values are retained.
 /// @return A copy of the reciver with added attributes and/or possibly overridden.
