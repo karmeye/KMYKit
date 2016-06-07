@@ -8,3 +8,7 @@
 
 #define KMY_WEAK(instance, variableName)        typeof(instance) __weak variableName = instance
 #define KMY_STRONG(instance, variableName)      typeof(instance) __strong variableName = instance
+
+#define KMYCast(inst, type)                     ((type)inst)
+#define KMYCastIfKindOfClass(inst, className)   ([inst isKindOfClass:[className class]] ? (className*)inst : nil)
+
