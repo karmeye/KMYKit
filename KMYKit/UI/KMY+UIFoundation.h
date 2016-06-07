@@ -26,6 +26,8 @@
 #import <KMYKit/KMYSubtitleStyleTableViewCell.h>
 #import <KMYKit/KMYButtonTableViewCell.h>
 #import <KMYKit/KMYDestructiveButtonTableViewCell.h>
+#import <KMYKit/KMYSwitchTableViewCell.h>
+#import <KMYKit/KMYSegmentedControlTableViewCell.h>
 
 #import <KMYKit/KMYCollectionViewControllerBehavior.h>
 #import <KMYKit/KMYCollectionViewDataSource.h>

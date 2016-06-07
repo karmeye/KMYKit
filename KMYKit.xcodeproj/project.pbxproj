@@ -23,6 +23,10 @@
 		A627754E1CBCD33000238E9D /* KMYButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A627754C1CBCD33000238E9D /* KMYButtonTableViewCell.m */; };
 		A62775511CBCD71B00238E9D /* KMYDestructiveButtonTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A627754F1CBCD71B00238E9D /* KMYDestructiveButtonTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A62775521CBCD71B00238E9D /* KMYDestructiveButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A62775501CBCD71B00238E9D /* KMYDestructiveButtonTableViewCell.m */; };
+		A6587CE91D015C0400F6DD9E /* KMYSwitchTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A6587CE71D015C0400F6DD9E /* KMYSwitchTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6587CEA1D015C0400F6DD9E /* KMYSwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6587CE81D015C0400F6DD9E /* KMYSwitchTableViewCell.m */; };
+		A6587CED1D015F8200F6DD9E /* KMYSegmentedControlTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A6587CEB1D015F8200F6DD9E /* KMYSegmentedControlTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6587CEE1D015F8200F6DD9E /* KMYSegmentedControlTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6587CEC1D015F8200F6DD9E /* KMYSegmentedControlTableViewCell.m */; };
 		A6587CF11D01883B00F6DD9E /* UISegmentedControl+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A6587CEF1D01883B00F6DD9E /* UISegmentedControl+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6587CF21D01883B00F6DD9E /* UISegmentedControl+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A6587CF01D01883B00F6DD9E /* UISegmentedControl+KMY.m */; };
 		A6871C641CBE39710062E265 /* KMYManagedObject.h in Headers */ = {isa = PBXBuildFile; fileRef = A6871C621CBE39710062E265 /* KMYManagedObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -123,6 +127,10 @@
 		A627754C1CBCD33000238E9D /* KMYButtonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYButtonTableViewCell.m; sourceTree = "<group>"; };
 		A627754F1CBCD71B00238E9D /* KMYDestructiveButtonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYDestructiveButtonTableViewCell.h; sourceTree = "<group>"; };
 		A62775501CBCD71B00238E9D /* KMYDestructiveButtonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYDestructiveButtonTableViewCell.m; sourceTree = "<group>"; };
+		A6587CE71D015C0400F6DD9E /* KMYSwitchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYSwitchTableViewCell.h; sourceTree = "<group>"; };
+		A6587CE81D015C0400F6DD9E /* KMYSwitchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYSwitchTableViewCell.m; sourceTree = "<group>"; };
+		A6587CEB1D015F8200F6DD9E /* KMYSegmentedControlTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYSegmentedControlTableViewCell.h; sourceTree = "<group>"; };
+		A6587CEC1D015F8200F6DD9E /* KMYSegmentedControlTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYSegmentedControlTableViewCell.m; sourceTree = "<group>"; };
 		A6587CEF1D01883B00F6DD9E /* UISegmentedControl+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISegmentedControl+KMY.h"; sourceTree = "<group>"; };
 		A6587CF01D01883B00F6DD9E /* UISegmentedControl+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISegmentedControl+KMY.m"; sourceTree = "<group>"; };
 		A6871C621CBE39710062E265 /* KMYManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYManagedObject.h; sourceTree = "<group>"; };
@@ -349,8 +357,12 @@
 				A6D01FEE1CABE139003CF026 /* KMYDefaultStyleTableViewCell.m */,
 				A627754F1CBCD71B00238E9D /* KMYDestructiveButtonTableViewCell.h */,
 				A62775501CBCD71B00238E9D /* KMYDestructiveButtonTableViewCell.m */,
+				A6587CEB1D015F8200F6DD9E /* KMYSegmentedControlTableViewCell.h */,
+				A6587CEC1D015F8200F6DD9E /* KMYSegmentedControlTableViewCell.m */,
 				A62775281CAE8BD600238E9D /* KMYSubtitleStyleTableViewCell.h */,
 				A62775291CAE8BD600238E9D /* KMYSubtitleStyleTableViewCell.m */,
+				A6587CE71D015C0400F6DD9E /* KMYSwitchTableViewCell.h */,
+				A6587CE81D015C0400F6DD9E /* KMYSwitchTableViewCell.m */,
 				A68B8E401CAAB61500DE6E95 /* KMYTextFieldTableViewCell.h */,
 				A68B8E411CAAB61500DE6E95 /* KMYTextFieldTableViewCell.m */,
 			);
@@ -469,6 +481,7 @@
 				A62775311CB38C1400238E9D /* KMYMacros.h in Headers */,
 				A69674A71CFEE653003B49F0 /* UIGestureRecognizer+KMY.h in Headers */,
 				A6587CED1D015F8200F6DD9E /* KMYSegmentedControlTableViewCell.h in Headers */,
+				A6587CE91D015C0400F6DD9E /* KMYSwitchTableViewCell.h in Headers */,
 				A6587CF11D01883B00F6DD9E /* UISegmentedControl+KMY.h in Headers */,
 				A697721D1D01BD2E00F1BE5A /* UISwitch+KMY.h in Headers */,
 				A6D87A491CF70567006BEC47 /* WKWebView+KMY.h in Headers */,
@@ -577,6 +590,7 @@
 				A68B8E151CAA6F8900DE6E95 /* NSArray+KMY.m in Sources */,
 				A627752B1CAE8BD600238E9D /* KMYSubtitleStyleTableViewCell.m in Sources */,
 				A6871C781CBFC8630062E265 /* UIImageView+KMY.m in Sources */,
+				A6587CEE1D015F8200F6DD9E /* KMYSegmentedControlTableViewCell.m in Sources */,
 				A6871C7C1CBFCAE30062E265 /* UIButton+KMY.m in Sources */,
 				A68B8E1B1CAA6F8900DE6E95 /* NSObject+KMY.m in Sources */,
 				A68B8E191CAA6F8900DE6E95 /* NSMutableArray+KMY.m in Sources */,
@@ -585,6 +599,7 @@
 				A6F6DA651CCDD7190042B78A /* KMYCollectionViewControllerBehavior.m in Sources */,
 				A6F6DA281CCA18AB0042B78A /* UIBarButtonItem+KMY.m in Sources */,
 				A68B8E0E1CAA6F8900DE6E95 /* KMYDispatch.m in Sources */,
+				A6587CEA1D015C0400F6DD9E /* KMYSwitchTableViewCell.m in Sources */,
 				A68B8E3A1CAA825900DE6E95 /* KMYTableViewDataSource.m in Sources */,
 				A6D8DB611CE0B681003E227A /* NSAttributedString+KMY.m in Sources */,
 			);
