@@ -17,6 +17,7 @@
 #import <KMYKit/KMYItem.h>
 
 #import <KMYKit/NSArray+KMY.h>
+#import <KMYKit/NSAttributedString+KMY.h>
 #import <KMYKit/NSDictionary+KMY.h>
 #import <KMYKit/NSMutableArray+KMY.h>
 #import <KMYKit/NSObject+KMY.h>

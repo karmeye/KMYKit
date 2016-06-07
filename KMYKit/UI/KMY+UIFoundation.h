@@ -34,6 +34,8 @@
 #import <KMYKit/KMYDefaultCollectionViewCell.h>
 
 
+#import <KMYKit/NSLayoutAnchor+KMY.h>
+#import <KMYKit/WKWebView+KMY.h>
 #import <KMYKit/UIView+KMY.h>
 #import <KMYKit/UIImageView+KMY.h>
 #import <KMYKit/UIButton+KMY.h>
@@ -41,4 +43,7 @@
 #import <KMYKit/UINavigationController+KMY.h>
 #import <KMYKit/UITableViewController+KMY.h>
 #import <KMYKit/UICollectionViewController+KMY.h>
+#import <KMYKit/UIGestureRecognizer+KMY.h>
+#import <KMYKit/UISegmentedControl+KMY.h>
+#import <KMYKit/UISwitch+KMY.h>
 
