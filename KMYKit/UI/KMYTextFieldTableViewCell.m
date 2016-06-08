@@ -27,45 +27,50 @@
 
         [self.contentView addSubview:_textField];
 
-        _textField.translatesAutoresizingMaskIntoConstraints = NO;
-        self.contentView.layoutMargins = UIEdgeInsetsMake(0,0,0,0);
+        [NSLayoutConstraint activateConstraints:[NSArray kmy_arrayWithInitializer:^(NSMutableArray *c) {
 
-        NSMutableArray *constraints = [NSMutableArray array];
+            self.textField.translatesAutoresizingMaskIntoConstraints = NO;
 
-        [constraints addObject:[NSLayoutConstraint constraintWithItem:self.contentView
-                                                            attribute:NSLayoutAttributeLeftMargin
-                                                            relatedBy:NSLayoutRelationEqual
-                                                               toItem:_textField
-                                                            attribute:NSLayoutAttributeLeft
-                                                           multiplier:1.0
-                                                             constant:0]];
+            [c addObject:[NSLayoutConstraint constraintWithItem:self.contentView
+                                                      attribute:NSLayoutAttributeHeight
+                                                      relatedBy:NSLayoutRelationGreaterThanOrEqual
+                                                         toItem:nil
+                                                      attribute:NSLayoutAttributeNotAnAttribute
+                                                     multiplier:1.0f
+                                                       constant:44.0f]];
 
-        [constraints addObject:[NSLayoutConstraint constraintWithItem:self.contentView
-                                                            attribute:NSLayoutAttributeRightMargin
-                                                            relatedBy:NSLayoutRelationEqual
-                                                               toItem:_textField
-                                                            attribute:NSLayoutAttributeRight
-                                                           multiplier:1.0
-                                                             constant:0]];
+            [c addObject:[NSLayoutConstraint constraintWithItem:self.textField
+                                                      attribute:NSLayoutAttributeLeading
+                                                      relatedBy:NSLayoutRelationEqual
+                                                         toItem:self.contentView
+                                                      attribute:NSLayoutAttributeLeadingMargin
+                                                     multiplier:1.0
+                                                       constant:0]];
 
-        [constraints addObject:[NSLayoutConstraint constraintWithItem:self.contentView
-                                                            attribute:NSLayoutAttributeTopMargin
-                                                            relatedBy:NSLayoutRelationEqual
-                                                               toItem:_textField
-                                                            attribute:NSLayoutAttributeTop
-                                                           multiplier:1.0
-                                                             constant:0]];
+            [c addObject:[NSLayoutConstraint constraintWithItem:self.textField
+                                                      attribute:NSLayoutAttributeTrailing
+                                                      relatedBy:NSLayoutRelationEqual
+                                                         toItem:self.contentView
+                                                      attribute:NSLayoutAttributeTrailingMargin
+                                                     multiplier:1.0
+                                                       constant:0]];
 
-        [constraints addObject:[NSLayoutConstraint constraintWithItem:self.contentView
-                                                            attribute:NSLayoutAttributeBottomMargin
-                                                            relatedBy:NSLayoutRelationEqual
-                                                               toItem:_textField
-                                                            attribute:NSLayoutAttributeBottom
-                                                           multiplier:1.0
-                                                             constant:0]];
+            [c addObject:[NSLayoutConstraint constraintWithItem:self.textField
+                                                      attribute:NSLayoutAttributeTop
+                                                      relatedBy:NSLayoutRelationEqual
+                                                         toItem:self.contentView
+                                                      attribute:NSLayoutAttributeTopMargin
+                                                     multiplier:1.0
+                                                       constant:0]];
 
-        [NSLayoutConstraint activateConstraints:constraints];
-
+            [c addObject:[NSLayoutConstraint constraintWithItem:self.textField
+                                                      attribute:NSLayoutAttributeBottom
+                                                      relatedBy:NSLayoutRelationEqual
+                                                         toItem:self.contentView
+                                                      attribute:NSLayoutAttributeBottomMargin
+                                                     multiplier:1.0
+                                                       constant:0]];
+        }]];
     }
 
     return self;
@@ -73,7 +78,7 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-    
+
     if (selected) {
         [self.textField becomeFirstResponder];
     }

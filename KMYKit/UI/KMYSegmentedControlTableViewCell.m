@@ -37,6 +37,14 @@
             self.segmentedControl.translatesAutoresizingMaskIntoConstraints = NO;
             self.textLabel.translatesAutoresizingMaskIntoConstraints = NO;
 
+            [c addObject:[NSLayoutConstraint constraintWithItem:self.contentView
+                                                      attribute:NSLayoutAttributeHeight
+                                                      relatedBy:NSLayoutRelationGreaterThanOrEqual
+                                                         toItem:nil
+                                                      attribute:NSLayoutAttributeNotAnAttribute
+                                                     multiplier:1.0f
+                                                       constant:44.0f]];
+
             [c addObject:[NSLayoutConstraint constraintWithItem:self.segmentedControl
                                                       attribute:NSLayoutAttributeCenterYWithinMargins
                                                       relatedBy:NSLayoutRelationLessThanOrEqual
