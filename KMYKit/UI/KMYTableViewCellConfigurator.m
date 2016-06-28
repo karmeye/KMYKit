@@ -161,7 +161,7 @@
 }
 
 - (KMYTableViewCellConfiguratorCellConfigurationHandler)defaultCellConfigurationHandlerForClass:(Class)cls {
-    return self.defaultCellConfigurationHandlers[NSStringFromClass(cls)];
+    return self.defaultCellConfigurationHandlers[cls];
 }
 
 - (NSDictionary<Class, KMYTableViewCellConfiguratorCellConfigurationHandler> *)defaultCellConfigurationHandlers {
@@ -175,33 +175,40 @@
 
             };
 
-            d[NSStringFromClass([KMYDefaultStyleTableViewCell class])] = ^(KMYDefaultStyleTableViewCell *cell, KMYUIItem *item, NSIndexPath *indexPath) {
+            // Incompatible pointer types sending 'Class' to parameter of type 'id<NSCopying> _Nonnull'
+            // http://stackoverflow.com/a/769627/916241
+            // http://stackoverflow.com/questions/12525324/unable-to-use-class-as-a-key-in-nsdictionary/12525479#12525479
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wincompatible-pointer-types"
+            d[[KMYDefaultStyleTableViewCell class]] = ^(KMYDefaultStyleTableViewCell *cell, KMYUIItem *item, NSIndexPath *indexPath) {
                 setTextHandler(cell, item, indexPath);
             };
 
-            d[NSStringFromClass([KMYSubtitleStyleTableViewCell class])] = ^(KMYSubtitleStyleTableViewCell *cell, KMYUIItem *item, NSIndexPath *indexPath) {
+            d[[KMYSubtitleStyleTableViewCell class]] = ^(KMYSubtitleStyleTableViewCell *cell, KMYUIItem *item, NSIndexPath *indexPath) {
                 setTextHandler(cell, item, indexPath);
             };
 
-            d[NSStringFromClass([KMYButtonTableViewCell class])] = ^(KMYButtonTableViewCell *cell, KMYUIItem *item, NSIndexPath *indexPath) {
+            d[[KMYButtonTableViewCell class]] = ^(KMYButtonTableViewCell *cell, KMYUIItem *item, NSIndexPath *indexPath) {
                 setTextHandler(cell, item, indexPath);
             };
 
-            d[NSStringFromClass([KMYDestructiveButtonTableViewCell class])] = ^(KMYDestructiveButtonTableViewCell *cell, KMYUIItem *item, NSIndexPath *indexPath) {
+            d[[KMYDestructiveButtonTableViewCell class]] = ^(KMYDestructiveButtonTableViewCell *cell, KMYUIItem *item, NSIndexPath *indexPath) {
                 setTextHandler(cell, item, indexPath);
             };
 
-            d[NSStringFromClass([KMYTextFieldTableViewCell class])] = ^(KMYTextFieldTableViewCell *cell, KMYUIItem *item, NSIndexPath *indexPath) {
+            d[[KMYTextFieldTableViewCell class]] = ^(KMYTextFieldTableViewCell *cell, KMYUIItem *item, NSIndexPath *indexPath) {
                 cell.textField.placeholder = item.text;
             };
 
-            d[NSStringFromClass([KMYSwitchTableViewCell class])] = ^(KMYSwitchTableViewCell *cell, KMYUIItem *item, NSIndexPath *indexPath) {
+            d[[KMYSwitchTableViewCell class]] = ^(KMYSwitchTableViewCell *cell, KMYUIItem *item, NSIndexPath *indexPath) {
                 setTextHandler(cell, item, indexPath);
             };
 
-            d[NSStringFromClass([KMYSegmentedControlTableViewCell class])] = ^(KMYSegmentedControlTableViewCell *cell, KMYUIItem *item, NSIndexPath *indexPath) {
+            d[[KMYSegmentedControlTableViewCell class]] = ^(KMYSegmentedControlTableViewCell *cell, KMYUIItem *item, NSIndexPath *indexPath) {
                 setTextHandler(cell, item, indexPath);
             };
+#pragma clang diagnostic pop
             
         }] copy];
     }
