@@ -8,14 +8,29 @@
 
 #import "KMYUIItem+CollectionView.h"
 
-NSString * const KMYUIItemKeyCollectionViewReuseIdentifier = @"KMYUIItemKeyCollectionViewReuseIdentifier";
+NSString * const KMYUIItemKeyCollectionViewCellReuseIdentifier              = @"KMYUIItemKeyCollectionViewCellReuseIdentifier";
+NSString * const KMYUIItemKeyCollectionViewSupplementaryViewReuseIdentifier = @"KMYUIItemKeyCollectionViewSupplementaryViewReuseIdentifier";
+
+@implementation KMYUISection (CollectionView)
+
+@dynamic collectionViewSupplementaryViewReuseIdentifier;
+
+- (NSString *)collectionViewSupplementaryViewReuseIdentifier {
+    return [self valueForAttribute:KMYUIItemKeyCollectionViewSupplementaryViewReuseIdentifier];
+}
+
+@end
 
 @implementation KMYUIItem (CollectionView)
 
-@dynamic collectionViewReuseIdentifier;
+@dynamic collectionViewReuseIdentifier, collectionViewSupplementaryViewReuseIdentifier;
 
 - (NSString *)collectionViewReuseIdentifier {
-    return [self valueForAttribute:KMYUIItemKeyCollectionViewReuseIdentifier];
+    return [self valueForAttribute:KMYUIItemKeyCollectionViewCellReuseIdentifier];
+}
+
+- (NSString *)collectionViewSupplementaryViewReuseIdentifier {
+    return [self valueForAttribute:KMYUIItemKeyCollectionViewSupplementaryViewReuseIdentifier];
 }
 
 @end
