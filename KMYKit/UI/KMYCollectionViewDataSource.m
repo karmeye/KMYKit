@@ -44,16 +44,45 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    KMYUIItem *item = self.sectionProvider.sections[indexPath.section].items[indexPath.row];
+
+    KMYUIItem *item = self.sectionProvider.sections[indexPath.section].items[indexPath.item];
     NSString *reuseIdentifier = [self.cellConfigurator reuseIdentifierForItem:item];
     KMYAssert(reuseIdentifier, @"Missing reuse identifier for item: %@", item);
 
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     KMYAssert(cell, @"No cell was registered with reuse identifier: %@", reuseIdentifier);
-
     [self.cellConfigurator configureCell:cell withItem:item atIndexPath:indexPath];
 
     return cell;
 }
 
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+
+    KMYUISection *section       = self.sectionProvider.sections[indexPath.section];
+    KMYUIItem *item             = section.items[indexPath.item];
+    NSString *reuseIdentifier   = [self.supplementaryViewConfigurator supplementaryViewReuseIdentifierForItem:item inSection:section ofKind:kind];
+    KMYAssert(reuseIdentifier, @"Missing reuse identifier for supplementaryView: %@", item);
+
+    UICollectionReusableView *view = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    if (view) [self.supplementaryViewConfigurator configureSupplementaryView:view withItem:item inSection:section ofKind:kind atIndexPath:indexPath];
+
+    return view;
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -33,8 +33,9 @@
 #import <KMYKit/KMYCollectionViewDataSource.h>
 #import <KMYKit/KMYCollectionViewDelegate.h>
 #import <KMYKit/KMYUIItem+CollectionView.h>
+#import <KMYKit/KMYCollectionViewCellConfigurator.h>
+#import <KMYKit/KMYCollectionViewSupplementaryViewConfigurator.h>
 #import <KMYKit/KMYDefaultCollectionViewCell.h>
-
 
 #import <KMYKit/NSLayoutAnchor+KMY.h>
 #import <KMYKit/WKWebView+KMY.h>
