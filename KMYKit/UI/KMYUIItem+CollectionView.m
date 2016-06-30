@@ -23,9 +23,10 @@ NSString * const KMYUIItemKeyCollectionViewSupplementaryViewReuseIdentifier = @"
 
 @implementation KMYUIItem (CollectionView)
 
-@dynamic collectionViewReuseIdentifier, collectionViewSupplementaryViewReuseIdentifier;
+@dynamic collectionViewCellReuseIdentifier;
+@dynamic collectionViewSupplementaryViewReuseIdentifier;
 
-- (NSString *)collectionViewReuseIdentifier {
+- (NSString *)collectionViewCellReuseIdentifier {
     return [self valueForAttribute:KMYUIItemKeyCollectionViewCellReuseIdentifier];
 }
 

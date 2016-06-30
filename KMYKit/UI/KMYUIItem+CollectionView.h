@@ -10,8 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-extern NSString * const KMYUIItemKeyCollectionViewCellReuseIdentifier;
-extern NSString * const KMYUIItemKeyCollectionViewSupplementaryViewReuseIdentifier;
+UIKIT_EXTERN NSString * const KMYUIItemKeyCollectionViewCellReuseIdentifier;
+UIKIT_EXTERN NSString * const KMYUIItemKeyCollectionViewSupplementaryViewReuseIdentifier;
 
 @interface KMYUISection (CollectionView)
 
@@ -21,7 +21,7 @@ extern NSString * const KMYUIItemKeyCollectionViewSupplementaryViewReuseIdentifi
 
 @interface KMYUIItem (CollectionView)
 
-@property (nonatomic, readonly, nullable)   NSString    *collectionViewReuseIdentifier;
+@property (nonatomic, readonly, nullable)   NSString    *collectionViewCellReuseIdentifier;
 @property (nonatomic, readonly, nullable)   NSString    *collectionViewSupplementaryViewReuseIdentifier;
 
 @end

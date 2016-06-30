@@ -80,7 +80,7 @@
 }
 
 - (NSString *)reuseIdentifierForItem:(KMYUIItem *)item {
-    return item.collectionViewReuseIdentifier ?: self.defaultCellReuseIdentifier;
+    return item.collectionViewCellReuseIdentifier ?: self.defaultCellReuseIdentifier;
 }
 
 - (void)configureCell:(UICollectionViewCell*)cell withItem:(KMYUIItem*)item atIndexPath:(NSIndexPath *)indexPath {
