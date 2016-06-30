@@ -22,4 +22,8 @@
     }
 }
 
+- (id)kmy_objectAtIndexOrNil:(NSUInteger)index {
+    return index < self.count ? [self objectAtIndex:index] : nil;
+}
+
 @end

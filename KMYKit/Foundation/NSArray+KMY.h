@@ -14,6 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (nullable instancetype)kmy_arrayWithInitializer:(void (^_Nullable)(NSMutableArray *array))initializer;
 
+/// @return The object at the specified index or nil if index is out of bounds.
+- (nullable id)kmy_objectAtIndexOrNil:(NSUInteger)index;
+
 @end
 
 NS_ASSUME_NONNULL_END
