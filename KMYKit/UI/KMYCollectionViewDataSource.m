@@ -58,10 +58,11 @@
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
 
-    KMYUISection *section       = self.sectionProvider.sections[indexPath.section];
-    KMYUIItem *item             = section.items[indexPath.item];
+    // The indexPath might not be valid as it is dependent on the layout’s implementation.
+    KMYUISection *section       = [self.sectionProvider.sections kmy_objectAtIndexOrNil:indexPath.section];
+    KMYUIItem *item             = [section.items kmy_objectAtIndexOrNil:indexPath.item];
     NSString *reuseIdentifier   = [self.supplementaryViewConfigurator supplementaryViewReuseIdentifierForItem:item inSection:section ofKind:kind];
-    KMYAssert(reuseIdentifier, @"Missing reuse identifier for supplementaryView: %@", item);
+    KMYAssert(reuseIdentifier, @"Missing reuse identifier for supplementaryView of kind: %@", kind);
 
     UICollectionReusableView *view = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     if (view) [self.supplementaryViewConfigurator configureSupplementaryView:view withItem:item inSection:section ofKind:kind atIndexPath:indexPath];
