@@ -19,6 +19,8 @@
 #import <KMYKit/KMYTableViewController.h>
 #import <KMYKit/KMYTableViewDataSource.h>
 #import <KMYKit/KMYTableViewDelegate.h>
+#import <KMYKit/KMYTableViewCellConfigurator.h>
+#import <KMYKit/KMYTableViewHeaderFooterConfigurator.h>
 #import <KMYKit/KMYUIItem+TableView.h>
 #import <KMYKit/KMYTableViewControllerBehavior.h>
 #import <KMYKit/KMYDefaultStyleTableViewCell.h>

@@ -8,14 +8,32 @@
 
 #import "KMYUIItem+TableView.h"
 
-NSString * const KMYUIItemKeyTableViewReuseIdentifier = @"KMYUIItemKeyTableViewReuseIdentifier";
+NSString * const KMYUISectionKeyTableViewHeaderReuseIdentifier = @"KMYUISectionKeyTableViewHeaderReuseIdentifier";
+NSString * const KMYUISectionKeyTableViewFooterReuseIdentifier = @"KMYUISectionKeyTableViewFooterReuseIdentifier";
+
+NSString * const KMYUIItemKeyTableViewCellReuseIdentifier = @"KMYUIItemKeyTableViewCellReuseIdentifier";
+
+@implementation KMYUISection (TableView)
+
+@dynamic tableViewHeaderReuseIdentifier;
+@dynamic tableViewFooterReuseIdentifier;
+
+- (NSString *)tableViewHeaderReuseIdentifier {
+    return [self valueForAttribute:KMYUISectionKeyTableViewHeaderReuseIdentifier];
+}
+
+- (NSString *)tableViewFooterReuseIdentifier {
+    return [self valueForAttribute:KMYUISectionKeyTableViewFooterReuseIdentifier];
+}
+
+@end
 
 @implementation KMYUIItem (TableView)
 
-@dynamic tableViewReuseIdentifier;
+@dynamic tableViewCellReuseIdentifier;
 
-- (NSString *)tableViewReuseIdentifier {
-    return [self valueForAttribute:KMYUIItemKeyTableViewReuseIdentifier];
+- (NSString *)tableViewCellReuseIdentifier {
+    return [self valueForAttribute:KMYUIItemKeyTableViewCellReuseIdentifier];
 }
 
 @end

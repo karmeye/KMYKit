@@ -101,7 +101,7 @@
 }
 
 - (NSString *)reuseIdentifierForItem:(KMYUIItem *)item {
-    return item.tableViewReuseIdentifier ?: self.defaultCellReuseIdentifier;
+    return item.tableViewCellReuseIdentifier ?: self.defaultCellReuseIdentifier;
 }
 
 - (void)configureCell:(UITableViewCell*)cell withItem:(KMYUIItem*)item atIndexPath:(NSIndexPath *)indexPath {

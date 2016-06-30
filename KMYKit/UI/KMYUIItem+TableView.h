@@ -6,15 +6,25 @@
 //  Copyright © 2016 Karmeye. All rights reserved.
 //
 
-#import <KMYKit/KMYUIItem.h>
+#import <KMYKit/KMYUISection.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-extern NSString * const KMYUIItemKeyTableViewReuseIdentifier;
+UIKIT_EXTERN NSString * const KMYUISectionKeyTableViewHeaderReuseIdentifier;
+UIKIT_EXTERN NSString * const KMYUISectionKeyTableViewFooterReuseIdentifier;
+
+UIKIT_EXTERN NSString * const KMYUIItemKeyTableViewCellReuseIdentifier;
+
+@interface KMYUISection (TableView)
+
+@property (nonatomic, readonly, nullable)   NSString    *tableViewHeaderReuseIdentifier;
+@property (nonatomic, readonly, nullable)   NSString    *tableViewFooterReuseIdentifier;
+
+@end
 
 @interface KMYUIItem (TableView)
 
-@property (nonatomic, readonly, nullable)   NSString    *tableViewReuseIdentifier;
+@property (nonatomic, readonly, nullable)   NSString    *tableViewCellReuseIdentifier;
 
 @end
 

@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 typedef void (^KMYTableViewCellConfiguratorCellConfigurationHandler)(__kindof UITableViewCell *cell, __kindof KMYUIItem *item, NSIndexPath *indexPath);
 
 /// Default cell configurator
-@interface KMYTableViewCellConfigurator : NSObject<KMYTableViewCellConfigurating>
+@interface KMYTableViewCellConfigurator : NSObject <KMYTableViewCellConfigurating>
 
 /// Called for all cells after specific config
 @property (nonatomic, copy, nullable)   KMYTableViewCellConfiguratorCellConfigurationHandler    cellConfigurationHandler;
@@ -47,3 +47,30 @@ typedef void (^KMYTableViewCellConfiguratorCellConfigurationHandler)(__kindof UI
 @end
 
 NS_ASSUME_NONNULL_END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
