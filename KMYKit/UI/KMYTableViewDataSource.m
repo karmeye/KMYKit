@@ -13,6 +13,15 @@
 
 @implementation KMYTableViewDataSource
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.attributeForHeaderTitle = KMYUISectionKeyHeaderTitle;
+        self.attributeForFooterTitle = KMYUISectionKeyFooterTitle;
+    }
+    return self;
+}
+
 - (instancetype)initWithSectionProvider:(id<KMYSectionProvider>)sectionProvider {
     self = [self init];
     if (self) {
@@ -72,11 +81,11 @@
 }
 
 - (NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return [self.sectionProvider.sections[section] valueForAttribute:KMYUISectionKeyHeaderTitle];
+    return self.attributeForHeaderTitle ? [self.sectionProvider.sections[section] valueForAttribute:self.attributeForHeaderTitle] : nil;
 }
 
 - (NSString*)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
-    return [self.sectionProvider.sections[section] valueForAttribute:KMYUISectionKeyFooterTitle];
+    return self.attributeForFooterTitle ? [self.sectionProvider.sections[section] valueForAttribute:self.attributeForFooterTitle] : nil;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

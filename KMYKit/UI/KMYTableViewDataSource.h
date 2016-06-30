@@ -20,6 +20,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign, readwrite)                BOOL                                canEditAllRows;
 
+/// Attribute used to lookup return value in @c tableView:titleForHeaderInSection:.
+/// Set to @c nil to return @c nil.
+/// Defaults to @c KMYUISectionKeyHeaderTitle.
+@property (nonatomic, copy, nullable)                   NSString                            *attributeForHeaderTitle;
+
+/// Attribute used to lookup return value in @c tableView:titleForFooterInSection:.
+/// Set to @c nil to return @c nil.
+/// Defaults to @c KMYUISectionKeyFooterTitle.
+@property (nonatomic, copy, nullable)                   NSString                            *attributeForFooterTitle;
+
 @property (nonatomic, copy, nullable) void (^commitEditingHandler)(UITableView *tableView, __kindof KMYUIItem *item, NSIndexPath *indexPath, UITableViewCellEditingStyle editingStyle);
 
 - (instancetype)initWithSectionProvider:(nullable id<KMYSectionProvider>)sectionProvider;
