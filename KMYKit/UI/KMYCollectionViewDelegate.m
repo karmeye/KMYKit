@@ -21,11 +21,8 @@
 #pragma mark - UICollectionViewDelegate
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-
     KMYUIItem *item = self.sectionProvider.sections[indexPath.section].items[indexPath.row];    
     KMYInvokeBlockIfSet(item.actionHandler, item, @{ KMYUIItemActionHandlerInfoKeyIndexPath : indexPath });
-    
-    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
 }
 
 @end
