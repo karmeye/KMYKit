@@ -11,6 +11,21 @@
 
 NSString * const KMYEmptyString = @"";
 
+NSString *KMYStringTrimNonVisibleCharacters(NSString *stringToTrim) {
+    if (stringToTrim) {
+        NSMutableString *mutableStringToTrim = [stringToTrim mutableCopy];
+        CFStringTrimWhitespace((__bridge CFMutableStringRef)mutableStringToTrim);
+        return [mutableStringToTrim copy];
+    } else {
+        return nil;
+    }
+}
+
+BOOL KMYStringContainsVisibleCharacters(NSString *string) {
+    NSString * const trimmedString = KMYStringTrimNonVisibleCharacters(string);
+    return trimmedString ? [trimmedString length] > 0 : NO;
+}
+
 @implementation NSString (KMY)
 
 + (instancetype)kmy_stringWithInitializer:(void (^)(NSMutableString *string))initializer {
