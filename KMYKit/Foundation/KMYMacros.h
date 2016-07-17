@@ -12,3 +12,4 @@
 #define KMYCast(inst, type)                     ((type)inst)
 #define KMYCastIfKindOfClass(inst, className)   ([inst isKindOfClass:[className class]] ? (className*)inst : nil)
 
+#define KMYSetIfNil(var, value)                 if (!var) { var = value; }
