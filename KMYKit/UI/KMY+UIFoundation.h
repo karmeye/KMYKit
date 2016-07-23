@@ -51,4 +51,5 @@
 #import <KMYKit/UIGestureRecognizer+KMY.h>
 #import <KMYKit/UISegmentedControl+KMY.h>
 #import <KMYKit/UISwitch+KMY.h>
+#import <KMYKit/UIScreen+KMY.h>
 

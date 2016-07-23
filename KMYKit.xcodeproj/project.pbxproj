@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A6028DDB1D43817100289B3A /* UIScreen+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A6028DD91D43817100289B3A /* UIScreen+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6028DDC1D43817100289B3A /* UIScreen+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A6028DDA1D43817100289B3A /* UIScreen+KMY.m */; };
 		A626C98F1CD8A49C0094802F /* NSString+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A626C98D1CD8A49C0094802F /* NSString+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A626C9901CD8A49C0094802F /* NSString+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A626C98E1CD8A49C0094802F /* NSString+KMY.m */; };
 		A627751C1CAD493300238E9D /* KMYDefaultReusableIdentifying.h in Headers */ = {isa = PBXBuildFile; fileRef = A627751B1CAD493300238E9D /* KMYDefaultReusableIdentifying.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -115,6 +117,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A6028DD91D43817100289B3A /* UIScreen+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+KMY.h"; sourceTree = "<group>"; };
+		A6028DDA1D43817100289B3A /* UIScreen+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+KMY.m"; sourceTree = "<group>"; };
 		A626C98D1CD8A49C0094802F /* NSString+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+KMY.h"; sourceTree = "<group>"; };
 		A626C98E1CD8A49C0094802F /* NSString+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+KMY.m"; sourceTree = "<group>"; };
 		A627751B1CAD493300238E9D /* KMYDefaultReusableIdentifying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYDefaultReusableIdentifying.h; sourceTree = "<group>"; };
@@ -252,6 +256,8 @@
 				A6871C761CBFC8630062E265 /* UIImageView+KMY.m */,
 				A62775391CB3927400238E9D /* UINavigationController+KMY.h */,
 				A627753A1CB3927400238E9D /* UINavigationController+KMY.m */,
+				A6028DD91D43817100289B3A /* UIScreen+KMY.h */,
+				A6028DDA1D43817100289B3A /* UIScreen+KMY.m */,
 				A6587CEF1D01883B00F6DD9E /* UISegmentedControl+KMY.h */,
 				A6587CF01D01883B00F6DD9E /* UISegmentedControl+KMY.m */,
 				A697721B1D01BD2E00F1BE5A /* UISwitch+KMY.h */,
@@ -498,6 +504,7 @@
 				A697721D1D01BD2E00F1BE5A /* UISwitch+KMY.h in Headers */,
 				A6A8D03E1D22435E00BD292D /* KMYCollectionViewSupplementaryViewConfigurator.h in Headers */,
 				A6A8D0541D250F2100BD292D /* KMYTableViewHeaderFooterConfigurator.h in Headers */,
+				A6028DDB1D43817100289B3A /* UIScreen+KMY.h in Headers */,
 				A6D87A491CF70567006BEC47 /* WKWebView+KMY.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -618,6 +625,7 @@
 				A6587CEA1D015C0400F6DD9E /* KMYSwitchTableViewCell.m in Sources */,
 				A68B8E3A1CAA825900DE6E95 /* KMYTableViewDataSource.m in Sources */,
 				A6D8DB611CE0B681003E227A /* NSAttributedString+KMY.m in Sources */,
+				A6028DDC1D43817100289B3A /* UIScreen+KMY.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
