@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A6028DDB1D43817100289B3A /* UIScreen+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A6028DD91D43817100289B3A /* UIScreen+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6028DDC1D43817100289B3A /* UIScreen+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A6028DDA1D43817100289B3A /* UIScreen+KMY.m */; };
+		A6028DED1D46049800289B3A /* NSTimer+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A6028DEB1D46049800289B3A /* NSTimer+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6028DEE1D46049800289B3A /* NSTimer+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A6028DEC1D46049800289B3A /* NSTimer+KMY.m */; };
 		A626C98F1CD8A49C0094802F /* NSString+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A626C98D1CD8A49C0094802F /* NSString+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A626C9901CD8A49C0094802F /* NSString+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A626C98E1CD8A49C0094802F /* NSString+KMY.m */; };
 		A627751C1CAD493300238E9D /* KMYDefaultReusableIdentifying.h in Headers */ = {isa = PBXBuildFile; fileRef = A627751B1CAD493300238E9D /* KMYDefaultReusableIdentifying.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -119,6 +121,8 @@
 /* Begin PBXFileReference section */
 		A6028DD91D43817100289B3A /* UIScreen+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+KMY.h"; sourceTree = "<group>"; };
 		A6028DDA1D43817100289B3A /* UIScreen+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+KMY.m"; sourceTree = "<group>"; };
+		A6028DEB1D46049800289B3A /* NSTimer+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+KMY.h"; sourceTree = "<group>"; };
+		A6028DEC1D46049800289B3A /* NSTimer+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+KMY.m"; sourceTree = "<group>"; };
 		A626C98D1CD8A49C0094802F /* NSString+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+KMY.h"; sourceTree = "<group>"; };
 		A626C98E1CD8A49C0094802F /* NSString+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+KMY.m"; sourceTree = "<group>"; };
 		A627751B1CAD493300238E9D /* KMYDefaultReusableIdentifying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYDefaultReusableIdentifying.h; sourceTree = "<group>"; };
@@ -287,6 +291,8 @@
 				A68B8E091CAA6F8900DE6E95 /* NSObject+KMY.m */,
 				A626C98D1CD8A49C0094802F /* NSString+KMY.h */,
 				A626C98E1CD8A49C0094802F /* NSString+KMY.m */,
+				A6028DEB1D46049800289B3A /* NSTimer+KMY.h */,
+				A6028DEC1D46049800289B3A /* NSTimer+KMY.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -504,6 +510,7 @@
 				A697721D1D01BD2E00F1BE5A /* UISwitch+KMY.h in Headers */,
 				A6A8D03E1D22435E00BD292D /* KMYCollectionViewSupplementaryViewConfigurator.h in Headers */,
 				A6A8D0541D250F2100BD292D /* KMYTableViewHeaderFooterConfigurator.h in Headers */,
+				A6028DED1D46049800289B3A /* NSTimer+KMY.h in Headers */,
 				A6028DDB1D43817100289B3A /* UIScreen+KMY.h in Headers */,
 				A6D87A491CF70567006BEC47 /* WKWebView+KMY.h in Headers */,
 			);
@@ -605,6 +612,7 @@
 				A68B8E131CAA6F8900DE6E95 /* KMYSection.m in Sources */,
 				A6D01FF01CABE139003CF026 /* KMYDefaultStyleTableViewCell.m in Sources */,
 				A69E36081CEC40AF00FB3B8C /* NSLayoutAnchor+KMY.m in Sources */,
+				A6028DEE1D46049800289B3A /* NSTimer+KMY.m in Sources */,
 				A68B8E2E1CAA6F9200DE6E95 /* KMYTableViewController.m in Sources */,
 				A68B8E0C1CAA6F8900DE6E95 /* KMYBlock.m in Sources */,
 				A68B8E2C1CAA6F9200DE6E95 /* KMYNavigationController.m in Sources */,

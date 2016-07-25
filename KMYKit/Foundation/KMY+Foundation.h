@@ -22,6 +22,7 @@
 #import <KMYKit/NSMutableArray+KMY.h>
 #import <KMYKit/NSObject+KMY.h>
 #import <KMYKit/NSString+KMY.h>
+#import <KMYKit/NSTimer+KMY.h>
 
 
 
