@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A6028DDB1D43817100289B3A /* UIScreen+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A6028DD91D43817100289B3A /* UIScreen+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6028DDC1D43817100289B3A /* UIScreen+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A6028DDA1D43817100289B3A /* UIScreen+KMY.m */; };
+		A6028DE51D46041500289B3A /* NSLayoutConstraint+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A6028DE31D46041500289B3A /* NSLayoutConstraint+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6028DE61D46041500289B3A /* NSLayoutConstraint+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A6028DE41D46041500289B3A /* NSLayoutConstraint+KMY.m */; };
 		A6028DED1D46049800289B3A /* NSTimer+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A6028DEB1D46049800289B3A /* NSTimer+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6028DEE1D46049800289B3A /* NSTimer+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A6028DEC1D46049800289B3A /* NSTimer+KMY.m */; };
 		A626C98F1CD8A49C0094802F /* NSString+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A626C98D1CD8A49C0094802F /* NSString+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -121,6 +123,8 @@
 /* Begin PBXFileReference section */
 		A6028DD91D43817100289B3A /* UIScreen+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+KMY.h"; sourceTree = "<group>"; };
 		A6028DDA1D43817100289B3A /* UIScreen+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+KMY.m"; sourceTree = "<group>"; };
+		A6028DE31D46041500289B3A /* NSLayoutConstraint+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+KMY.h"; sourceTree = "<group>"; };
+		A6028DE41D46041500289B3A /* NSLayoutConstraint+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+KMY.m"; sourceTree = "<group>"; };
 		A6028DEB1D46049800289B3A /* NSTimer+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+KMY.h"; sourceTree = "<group>"; };
 		A6028DEC1D46049800289B3A /* NSTimer+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+KMY.m"; sourceTree = "<group>"; };
 		A626C98D1CD8A49C0094802F /* NSString+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+KMY.h"; sourceTree = "<group>"; };
@@ -248,6 +252,8 @@
 			children = (
 				A69E36051CEC40AF00FB3B8C /* NSLayoutAnchor+KMY.h */,
 				A69E36061CEC40AF00FB3B8C /* NSLayoutAnchor+KMY.m */,
+				A6028DE31D46041500289B3A /* NSLayoutConstraint+KMY.h */,
+				A6028DE41D46041500289B3A /* NSLayoutConstraint+KMY.m */,
 				A6F6DA251CCA18AB0042B78A /* UIBarButtonItem+KMY.h */,
 				A6F6DA261CCA18AB0042B78A /* UIBarButtonItem+KMY.m */,
 				A6871C791CBFCAE30062E265 /* UIButton+KMY.h */,
@@ -510,6 +516,7 @@
 				A697721D1D01BD2E00F1BE5A /* UISwitch+KMY.h in Headers */,
 				A6A8D03E1D22435E00BD292D /* KMYCollectionViewSupplementaryViewConfigurator.h in Headers */,
 				A6A8D0541D250F2100BD292D /* KMYTableViewHeaderFooterConfigurator.h in Headers */,
+				A6028DE51D46041500289B3A /* NSLayoutConstraint+KMY.h in Headers */,
 				A6028DED1D46049800289B3A /* NSTimer+KMY.h in Headers */,
 				A6028DDB1D43817100289B3A /* UIScreen+KMY.h in Headers */,
 				A6D87A491CF70567006BEC47 /* WKWebView+KMY.h in Headers */,
@@ -605,6 +612,7 @@
 				A6F6DA761CCDE7840042B78A /* KMYDefaultCollectionViewCell.m in Sources */,
 				A68B8E361CAA6F9200DE6E95 /* UIView+KMY.m in Sources */,
 				A62775361CB38F4100238E9D /* UITableViewController+KMY.m in Sources */,
+				A6028DE61D46041500289B3A /* NSLayoutConstraint+KMY.m in Sources */,
 				A6F6DA711CCDE45E0042B78A /* KMYCollectionViewCellConfigurator.m in Sources */,
 				A6F6DA6D1CCDE0C00042B78A /* KMYCollectionViewDataSource.m in Sources */,
 				A68B8E341CAA6F9200DE6E95 /* KMYViewController.m in Sources */,
