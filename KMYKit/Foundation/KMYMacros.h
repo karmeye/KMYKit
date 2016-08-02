@@ -11,5 +11,7 @@
 
 #define KMYCast(inst, type)                     ((type)inst)
 #define KMYCastIfKindOfClass(inst, className)   ([inst isKindOfClass:[className class]] ? (className*)inst : nil)
+#define KMYCastIfConformsToProtocol(inst, prot) ([inst conformsToProtocol:@protocol(prot)] ? (id<prot>)inst : nil)
+
 
 #define KMYSetIfNil(var, value)                 if (!var) { var = value; }
