@@ -20,6 +20,7 @@
 #import <KMYKit/NSAttributedString+KMY.h>
 #import <KMYKit/NSDictionary+KMY.h>
 #import <KMYKit/NSMutableArray+KMY.h>
+#import <KMYKit/NSMutableString+KMY.h>
 #import <KMYKit/NSObject+KMY.h>
 #import <KMYKit/NSString+KMY.h>
 #import <KMYKit/NSTimer+KMY.h>

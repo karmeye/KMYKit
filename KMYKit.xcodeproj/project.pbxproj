@@ -29,6 +29,8 @@
 		A627754E1CBCD33000238E9D /* KMYButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A627754C1CBCD33000238E9D /* KMYButtonTableViewCell.m */; };
 		A62775511CBCD71B00238E9D /* KMYDestructiveButtonTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A627754F1CBCD71B00238E9D /* KMYDestructiveButtonTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A62775521CBCD71B00238E9D /* KMYDestructiveButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A62775501CBCD71B00238E9D /* KMYDestructiveButtonTableViewCell.m */; };
+		A62AF9DC1D609AA000B6731D /* NSMutableString+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A62AF9DA1D609AA000B6731D /* NSMutableString+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A62AF9DD1D609AA000B6731D /* NSMutableString+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A62AF9DB1D609AA000B6731D /* NSMutableString+KMY.m */; };
 		A6587CE91D015C0400F6DD9E /* KMYSwitchTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A6587CE71D015C0400F6DD9E /* KMYSwitchTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6587CEA1D015C0400F6DD9E /* KMYSwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6587CE81D015C0400F6DD9E /* KMYSwitchTableViewCell.m */; };
 		A6587CED1D015F8200F6DD9E /* KMYSegmentedControlTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A6587CEB1D015F8200F6DD9E /* KMYSegmentedControlTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -143,6 +145,8 @@
 		A627754C1CBCD33000238E9D /* KMYButtonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYButtonTableViewCell.m; sourceTree = "<group>"; };
 		A627754F1CBCD71B00238E9D /* KMYDestructiveButtonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYDestructiveButtonTableViewCell.h; sourceTree = "<group>"; };
 		A62775501CBCD71B00238E9D /* KMYDestructiveButtonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYDestructiveButtonTableViewCell.m; sourceTree = "<group>"; };
+		A62AF9DA1D609AA000B6731D /* NSMutableString+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+KMY.h"; sourceTree = "<group>"; };
+		A62AF9DB1D609AA000B6731D /* NSMutableString+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+KMY.m"; sourceTree = "<group>"; };
 		A6587CE71D015C0400F6DD9E /* KMYSwitchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYSwitchTableViewCell.h; sourceTree = "<group>"; };
 		A6587CE81D015C0400F6DD9E /* KMYSwitchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYSwitchTableViewCell.m; sourceTree = "<group>"; };
 		A6587CEB1D015F8200F6DD9E /* KMYSegmentedControlTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYSegmentedControlTableViewCell.h; sourceTree = "<group>"; };
@@ -293,6 +297,8 @@
 				A68B8E051CAA6F8900DE6E95 /* NSDictionary+KMY.m */,
 				A68B8E061CAA6F8900DE6E95 /* NSMutableArray+KMY.h */,
 				A68B8E071CAA6F8900DE6E95 /* NSMutableArray+KMY.m */,
+				A62AF9DA1D609AA000B6731D /* NSMutableString+KMY.h */,
+				A62AF9DB1D609AA000B6731D /* NSMutableString+KMY.m */,
 				A68B8E081CAA6F8900DE6E95 /* NSObject+KMY.h */,
 				A68B8E091CAA6F8900DE6E95 /* NSObject+KMY.m */,
 				A626C98D1CD8A49C0094802F /* NSString+KMY.h */,
@@ -519,6 +525,7 @@
 				A6028DE51D46041500289B3A /* NSLayoutConstraint+KMY.h in Headers */,
 				A6028DED1D46049800289B3A /* NSTimer+KMY.h in Headers */,
 				A6028DDB1D43817100289B3A /* UIScreen+KMY.h in Headers */,
+				A62AF9DC1D609AA000B6731D /* NSMutableString+KMY.h in Headers */,
 				A6D87A491CF70567006BEC47 /* WKWebView+KMY.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -614,6 +621,7 @@
 				A62775361CB38F4100238E9D /* UITableViewController+KMY.m in Sources */,
 				A6028DE61D46041500289B3A /* NSLayoutConstraint+KMY.m in Sources */,
 				A6F6DA711CCDE45E0042B78A /* KMYCollectionViewCellConfigurator.m in Sources */,
+				A62AF9DD1D609AA000B6731D /* NSMutableString+KMY.m in Sources */,
 				A6F6DA6D1CCDE0C00042B78A /* KMYCollectionViewDataSource.m in Sources */,
 				A68B8E341CAA6F9200DE6E95 /* KMYViewController.m in Sources */,
 				A627753C1CB3927400238E9D /* UINavigationController+KMY.m in Sources */,
