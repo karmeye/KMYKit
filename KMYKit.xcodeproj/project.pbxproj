@@ -37,6 +37,8 @@
 		A6587CEE1D015F8200F6DD9E /* KMYSegmentedControlTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6587CEC1D015F8200F6DD9E /* KMYSegmentedControlTableViewCell.m */; };
 		A6587CF11D01883B00F6DD9E /* UISegmentedControl+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A6587CEF1D01883B00F6DD9E /* UISegmentedControl+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6587CF21D01883B00F6DD9E /* UISegmentedControl+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A6587CF01D01883B00F6DD9E /* UISegmentedControl+KMY.m */; };
+		A66DD83A1D5486DE00BD1A1E /* NSURL+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A66DD8381D5486DE00BD1A1E /* NSURL+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A66DD83B1D5486DE00BD1A1E /* NSURL+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A66DD8391D5486DE00BD1A1E /* NSURL+KMY.m */; };
 		A6871C641CBE39710062E265 /* KMYManagedObject.h in Headers */ = {isa = PBXBuildFile; fileRef = A6871C621CBE39710062E265 /* KMYManagedObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6871C651CBE39710062E265 /* KMYManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A6871C631CBE39710062E265 /* KMYManagedObject.m */; };
 		A6871C671CBE39DE0062E265 /* KMY+CoreData.h in Headers */ = {isa = PBXBuildFile; fileRef = A6871C661CBE39DE0062E265 /* KMY+CoreData.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -153,6 +155,8 @@
 		A6587CEC1D015F8200F6DD9E /* KMYSegmentedControlTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYSegmentedControlTableViewCell.m; sourceTree = "<group>"; };
 		A6587CEF1D01883B00F6DD9E /* UISegmentedControl+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISegmentedControl+KMY.h"; sourceTree = "<group>"; };
 		A6587CF01D01883B00F6DD9E /* UISegmentedControl+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISegmentedControl+KMY.m"; sourceTree = "<group>"; };
+		A66DD8381D5486DE00BD1A1E /* NSURL+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+KMY.h"; sourceTree = "<group>"; };
+		A66DD8391D5486DE00BD1A1E /* NSURL+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+KMY.m"; sourceTree = "<group>"; };
 		A6871C621CBE39710062E265 /* KMYManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYManagedObject.h; sourceTree = "<group>"; };
 		A6871C631CBE39710062E265 /* KMYManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYManagedObject.m; sourceTree = "<group>"; };
 		A6871C661CBE39DE0062E265 /* KMY+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KMY+CoreData.h"; sourceTree = "<group>"; };
@@ -305,6 +309,8 @@
 				A626C98E1CD8A49C0094802F /* NSString+KMY.m */,
 				A6028DEB1D46049800289B3A /* NSTimer+KMY.h */,
 				A6028DEC1D46049800289B3A /* NSTimer+KMY.m */,
+				A66DD8381D5486DE00BD1A1E /* NSURL+KMY.h */,
+				A66DD8391D5486DE00BD1A1E /* NSURL+KMY.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -525,6 +531,7 @@
 				A6028DE51D46041500289B3A /* NSLayoutConstraint+KMY.h in Headers */,
 				A6028DED1D46049800289B3A /* NSTimer+KMY.h in Headers */,
 				A6028DDB1D43817100289B3A /* UIScreen+KMY.h in Headers */,
+				A66DD83A1D5486DE00BD1A1E /* NSURL+KMY.h in Headers */,
 				A62AF9DC1D609AA000B6731D /* NSMutableString+KMY.h in Headers */,
 				A6D87A491CF70567006BEC47 /* WKWebView+KMY.h in Headers */,
 			);
@@ -633,6 +640,7 @@
 				A68B8E0C1CAA6F8900DE6E95 /* KMYBlock.m in Sources */,
 				A68B8E2C1CAA6F9200DE6E95 /* KMYNavigationController.m in Sources */,
 				A68B8E151CAA6F8900DE6E95 /* NSArray+KMY.m in Sources */,
+				A66DD83B1D5486DE00BD1A1E /* NSURL+KMY.m in Sources */,
 				A627752B1CAE8BD600238E9D /* KMYSubtitleStyleTableViewCell.m in Sources */,
 				A6871C781CBFC8630062E265 /* UIImageView+KMY.m in Sources */,
 				A6587CEE1D015F8200F6DD9E /* KMYSegmentedControlTableViewCell.m in Sources */,
