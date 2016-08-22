@@ -32,9 +32,9 @@ NS_ASSUME_NONNULL_BEGIN
                                           error:(NSError **)error;
 
 /// @return An array with the results; an empty array if there were no results; or @c nil if an error occurred.
-+ (nullable NSArray *)executeFetchWithSortDescriptors:(nullable NSPredicate *)predicate
-                               inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
-                                                error:(NSError **)error;
++ (NSArray *)executeFetchWithSortDescriptors:(NSArray *)sortDescriptors
+                      inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
+                                       error:(NSError **)error;
 
 /// @return An array with the results; an empty array if there were no results; or @c nil if an error occurred.
 + (nullable NSArray *)executeFetchWithPredicate:(nullable NSPredicate *)predicate
