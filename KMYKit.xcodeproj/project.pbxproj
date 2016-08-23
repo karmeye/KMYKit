@@ -31,6 +31,8 @@
 		A62775521CBCD71B00238E9D /* KMYDestructiveButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A62775501CBCD71B00238E9D /* KMYDestructiveButtonTableViewCell.m */; };
 		A62AF9DC1D609AA000B6731D /* NSMutableString+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A62AF9DA1D609AA000B6731D /* NSMutableString+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A62AF9DD1D609AA000B6731D /* NSMutableString+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A62AF9DB1D609AA000B6731D /* NSMutableString+KMY.m */; };
+		A62AF9E51D61766500B6731D /* UIColor+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A62AF9E31D61766500B6731D /* UIColor+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A62AF9E61D61766500B6731D /* UIColor+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A62AF9E41D61766500B6731D /* UIColor+KMY.m */; };
 		A6587CE91D015C0400F6DD9E /* KMYSwitchTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A6587CE71D015C0400F6DD9E /* KMYSwitchTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6587CEA1D015C0400F6DD9E /* KMYSwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6587CE81D015C0400F6DD9E /* KMYSwitchTableViewCell.m */; };
 		A6587CED1D015F8200F6DD9E /* KMYSegmentedControlTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A6587CEB1D015F8200F6DD9E /* KMYSegmentedControlTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -89,6 +91,10 @@
 		A692F8F91D6AE3D500BC84E8 /* KMYAsynchronousOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A692F8F71D6AE3D500BC84E8 /* KMYAsynchronousOperation.m */; };
 		A692F8FF1D6AFCCD00BC84E8 /* KMYSerialOperationQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = A692F8FD1D6AFCCD00BC84E8 /* KMYSerialOperationQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A692F9001D6AFCCD00BC84E8 /* KMYSerialOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A692F8FE1D6AFCCD00BC84E8 /* KMYSerialOperationQueue.m */; };
+		A692F9051D6B1A6000BC84E8 /* KMYPersistentContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = A692F9011D6B1A6000BC84E8 /* KMYPersistentContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A692F9061D6B1A6000BC84E8 /* KMYPersistentContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = A692F9021D6B1A6000BC84E8 /* KMYPersistentContainer.m */; };
+		A692F9071D6B1A6000BC84E8 /* KMYPersistentStoreOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = A692F9031D6B1A6000BC84E8 /* KMYPersistentStoreOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A692F9081D6B1A6000BC84E8 /* KMYPersistentStoreOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A692F9041D6B1A6000BC84E8 /* KMYPersistentStoreOperation.m */; };
 		A69674A71CFEE653003B49F0 /* UIGestureRecognizer+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A69674A51CFEE653003B49F0 /* UIGestureRecognizer+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A69674A81CFEE653003B49F0 /* UIGestureRecognizer+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A69674A61CFEE653003B49F0 /* UIGestureRecognizer+KMY.m */; };
 		A697721D1D01BD2E00F1BE5A /* UISwitch+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A697721B1D01BD2E00F1BE5A /* UISwitch+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -153,6 +159,8 @@
 		A62775501CBCD71B00238E9D /* KMYDestructiveButtonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYDestructiveButtonTableViewCell.m; sourceTree = "<group>"; };
 		A62AF9DA1D609AA000B6731D /* NSMutableString+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+KMY.h"; sourceTree = "<group>"; };
 		A62AF9DB1D609AA000B6731D /* NSMutableString+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+KMY.m"; sourceTree = "<group>"; };
+		A62AF9E31D61766500B6731D /* UIColor+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+KMY.h"; sourceTree = "<group>"; };
+		A62AF9E41D61766500B6731D /* UIColor+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+KMY.m"; sourceTree = "<group>"; };
 		A6587CE71D015C0400F6DD9E /* KMYSwitchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYSwitchTableViewCell.h; sourceTree = "<group>"; };
 		A6587CE81D015C0400F6DD9E /* KMYSwitchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYSwitchTableViewCell.m; sourceTree = "<group>"; };
 		A6587CEB1D015F8200F6DD9E /* KMYSegmentedControlTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYSegmentedControlTableViewCell.h; sourceTree = "<group>"; };
@@ -211,6 +219,10 @@
 		A692F8F71D6AE3D500BC84E8 /* KMYAsynchronousOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYAsynchronousOperation.m; sourceTree = "<group>"; };
 		A692F8FD1D6AFCCD00BC84E8 /* KMYSerialOperationQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYSerialOperationQueue.h; sourceTree = "<group>"; };
 		A692F8FE1D6AFCCD00BC84E8 /* KMYSerialOperationQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYSerialOperationQueue.m; sourceTree = "<group>"; };
+		A692F9011D6B1A6000BC84E8 /* KMYPersistentContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYPersistentContainer.h; sourceTree = "<group>"; };
+		A692F9021D6B1A6000BC84E8 /* KMYPersistentContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYPersistentContainer.m; sourceTree = "<group>"; };
+		A692F9031D6B1A6000BC84E8 /* KMYPersistentStoreOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYPersistentStoreOperation.h; sourceTree = "<group>"; };
+		A692F9041D6B1A6000BC84E8 /* KMYPersistentStoreOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYPersistentStoreOperation.m; sourceTree = "<group>"; };
 		A69674A51CFEE653003B49F0 /* UIGestureRecognizer+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+KMY.h"; sourceTree = "<group>"; };
 		A69674A61CFEE653003B49F0 /* UIGestureRecognizer+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+KMY.m"; sourceTree = "<group>"; };
 		A697721B1D01BD2E00F1BE5A /* UISwitch+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISwitch+KMY.h"; sourceTree = "<group>"; };
@@ -276,6 +288,8 @@
 				A6871C7A1CBFCAE30062E265 /* UIButton+KMY.m */,
 				A6F6DA661CCDDC5C0042B78A /* UICollectionViewController+KMY.h */,
 				A6F6DA671CCDDC5C0042B78A /* UICollectionViewController+KMY.m */,
+				A62AF9E31D61766500B6731D /* UIColor+KMY.h */,
+				A62AF9E41D61766500B6731D /* UIColor+KMY.m */,
 				A69674A51CFEE653003B49F0 /* UIGestureRecognizer+KMY.h */,
 				A69674A61CFEE653003B49F0 /* UIGestureRecognizer+KMY.m */,
 				A6871C751CBFC8630062E265 /* UIImageView+KMY.h */,
@@ -329,6 +343,10 @@
 				A6871C661CBE39DE0062E265 /* KMY+CoreData.h */,
 				A6871C621CBE39710062E265 /* KMYManagedObject.h */,
 				A6871C631CBE39710062E265 /* KMYManagedObject.m */,
+				A692F9011D6B1A6000BC84E8 /* KMYPersistentContainer.h */,
+				A692F9021D6B1A6000BC84E8 /* KMYPersistentContainer.m */,
+				A692F9031D6B1A6000BC84E8 /* KMYPersistentStoreOperation.h */,
+				A692F9041D6B1A6000BC84E8 /* KMYPersistentStoreOperation.m */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -545,7 +563,10 @@
 				A6028DDB1D43817100289B3A /* UIScreen+KMY.h in Headers */,
 				A66DD83A1D5486DE00BD1A1E /* NSURL+KMY.h in Headers */,
 				A62AF9DC1D609AA000B6731D /* NSMutableString+KMY.h in Headers */,
+				A62AF9E51D61766500B6731D /* UIColor+KMY.h in Headers */,
 				A692F8FF1D6AFCCD00BC84E8 /* KMYSerialOperationQueue.h in Headers */,
+				A692F9071D6B1A6000BC84E8 /* KMYPersistentStoreOperation.h in Headers */,
+				A692F9051D6B1A6000BC84E8 /* KMYPersistentContainer.h in Headers */,
 				A692F8F81D6AE3D500BC84E8 /* KMYAsynchronousOperation.h in Headers */,
 				A6D87A491CF70567006BEC47 /* WKWebView+KMY.h in Headers */,
 			);
@@ -625,6 +646,7 @@
 				A697721E1D01BD2E00F1BE5A /* UISwitch+KMY.m in Sources */,
 				A62775201CAE3B8300238E9D /* KMYAssert.m in Sources */,
 				A68B8E431CAAB61500DE6E95 /* KMYTextFieldTableViewCell.m in Sources */,
+				A692F9081D6B1A6000BC84E8 /* KMYPersistentStoreOperation.m in Sources */,
 				A626C9901CD8A49C0094802F /* NSString+KMY.m in Sources */,
 				A62775521CBCD71B00238E9D /* KMYDestructiveButtonTableViewCell.m in Sources */,
 				A6F6DA7B1CCDEC960042B78A /* KMYCollectionViewDelegate.m in Sources */,
@@ -636,6 +658,7 @@
 				A6F6DA611CCDD4650042B78A /* KMYTableViewControllerBehavior.m in Sources */,
 				A69674A81CFEE653003B49F0 /* UIGestureRecognizer+KMY.m in Sources */,
 				A68B8E101CAA6F8900DE6E95 /* KMYItem.m in Sources */,
+				A62AF9E61D61766500B6731D /* UIColor+KMY.m in Sources */,
 				A68B8E301CAA6F9200DE6E95 /* KMYUIItem.m in Sources */,
 				A6871C651CBE39710062E265 /* KMYManagedObject.m in Sources */,
 				A6F6DA761CCDE7840042B78A /* KMYDefaultCollectionViewCell.m in Sources */,
@@ -667,6 +690,7 @@
 				A6587CF21D01883B00F6DD9E /* UISegmentedControl+KMY.m in Sources */,
 				A6F6DA801CCF298F0042B78A /* KMYUIItem+CollectionView.m in Sources */,
 				A6F6DA651CCDD7190042B78A /* KMYCollectionViewControllerBehavior.m in Sources */,
+				A692F9061D6B1A6000BC84E8 /* KMYPersistentContainer.m in Sources */,
 				A6A8D03F1D22435E00BD292D /* KMYCollectionViewSupplementaryViewConfigurator.m in Sources */,
 				A6F6DA281CCA18AB0042B78A /* UIBarButtonItem+KMY.m in Sources */,
 				A68B8E0E1CAA6F8900DE6E95 /* KMYDispatch.m in Sources */,

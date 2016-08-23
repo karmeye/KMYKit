@@ -49,6 +49,7 @@
 #import <KMYKit/UINavigationController+KMY.h>
 #import <KMYKit/UITableViewController+KMY.h>
 #import <KMYKit/UICollectionViewController+KMY.h>
+#import <KMYKit/UIColor+KMY.h>
 #import <KMYKit/UIGestureRecognizer+KMY.h>
 #import <KMYKit/UISegmentedControl+KMY.h>
 #import <KMYKit/UISwitch+KMY.h>
