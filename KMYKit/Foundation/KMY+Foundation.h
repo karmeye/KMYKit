@@ -13,9 +13,11 @@
 #import <KMYKit/KMYAssert.h>
 #import <KMYKit/KMYAsynchronousOperation.h>
 #import <KMYKit/KMYDispatch.h>
+#import <KMYKit/KMYItem.h>
 #import <KMYKit/KMYItemAttributes.h>
 #import <KMYKit/KMYSection.h>
-#import <KMYKit/KMYItem.h>
+#import <KMYKit/KMYSerialOperationQueue.h>
+
 
 #import <KMYKit/NSArray+KMY.h>
 #import <KMYKit/NSAttributedString+KMY.h>
