@@ -7,6 +7,7 @@
 //
 
 #import "KMYManagedObject.h"
+#import <KMYKit/KMY+Foundation.h> 
 
 @implementation KMYManagedObject
 

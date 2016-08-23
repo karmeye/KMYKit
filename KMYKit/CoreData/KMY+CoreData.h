@@ -9,3 +9,5 @@
 #import <KMYKit/KMY+Foundation.h>
 
 #import <KMYKit/KMYManagedObject.h>
+#import <KMYKit/KMYPersistentContainer.h>
+#import <KMYKit/KMYPersistentStoreOperation.h>
