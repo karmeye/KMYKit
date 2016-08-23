@@ -10,12 +10,13 @@
 #include <libkern/OSAtomic.h>
 
 @interface KMYAsynchronousOperation ()
-
-@property (nonatomic, copy)     KMYAsynchronousOperationExecutionBlock      executionBlock;
-
 @end
 
 @implementation KMYAsynchronousOperation {
+
+    KMYAsynchronousOperationExecutionBlock              _executionBlock;
+    KMYAsynchronousOperationAsynchronousExecutionBlock  _asyncExecutionBlock;
+
     OSSpinLock  _isExecutingLock;
 
     BOOL        _isExecuting;
@@ -32,7 +33,13 @@
 
 - (instancetype)initWithExecutionBlock:(KMYAsynchronousOperationExecutionBlock)executionBlock {
     self = [self init];
-    self.executionBlock = executionBlock;
+    _executionBlock = [executionBlock copy];
+    return self;
+}
+
+- (instancetype)initWithAsynchronousExecutionBlock:(KMYAsynchronousOperationAsynchronousExecutionBlock)executionBlock {
+    self = [self init];
+    _asyncExecutionBlock = [executionBlock copy];
     return self;
 }
 
@@ -54,8 +61,16 @@
     if (self.isCancelled) {
         [self setOperationComplete];
     } else {
-        if (self.executionBlock) {
-            self.executionBlock();
+        if (_executionBlock) {
+            _executionBlock();
+        } else if (_asyncExecutionBlock) {
+
+            KMYAsynchronousOperationCompetionHandler c = ^{
+                [self setOperationComplete];
+            };
+
+            _asyncExecutionBlock(c);
+
         } else {
             [self execute];
         }

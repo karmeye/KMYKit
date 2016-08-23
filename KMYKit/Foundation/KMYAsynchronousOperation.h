@@ -10,10 +10,14 @@
 
 typedef void (^KMYAsynchronousOperationExecutionBlock)();
 
+typedef void (^KMYAsynchronousOperationCompetionHandler)(void);
+typedef void (^KMYAsynchronousOperationAsynchronousExecutionBlock)(KMYAsynchronousOperationCompetionHandler completionHandler);
+
 @interface KMYAsynchronousOperation : NSOperation
 
 - (instancetype)init;
 - (instancetype)initWithExecutionBlock:(KMYAsynchronousOperationExecutionBlock)executionBlock;
+- (instancetype)initWithAsynchronousExecutionBlock:(KMYAsynchronousOperationAsynchronousExecutionBlock)executionBlock;
 
 @end
 
@@ -23,7 +27,7 @@ typedef void (^KMYAsynchronousOperationExecutionBlock)();
 /// @attention Must be called after the operation completed or was cancelled.
 - (void)setOperationComplete;
 
-/// Will be called if no @c executionBlock was set.
+/// Will be called if no execution block was set.
 - (void)execute;
 
 @end
