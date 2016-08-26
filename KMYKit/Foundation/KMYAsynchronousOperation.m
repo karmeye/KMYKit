@@ -71,14 +71,11 @@
     } else {
         if (_syncExecutionBlock) {
             _syncExecutionBlock(self);
+            [self setOperationComplete];
         } else if (_asyncExecutionBlock) {
-
-            KMYAsynchronousOperationCompetionHandler c = ^{
+            _asyncExecutionBlock(self, ^{
                 [self setOperationComplete];
-            };
-
-            _asyncExecutionBlock(self, c);
-
+            });
         } else {
             [self execute];
         }
