@@ -33,6 +33,7 @@
 		A62AF9DD1D609AA000B6731D /* NSMutableString+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A62AF9DB1D609AA000B6731D /* NSMutableString+KMY.m */; };
 		A62AF9E51D61766500B6731D /* UIColor+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A62AF9E31D61766500B6731D /* UIColor+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A62AF9E61D61766500B6731D /* UIColor+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A62AF9E41D61766500B6731D /* UIColor+KMY.m */; };
+		A64408A51D700C2500450948 /* KMYCancelling.h in Headers */ = {isa = PBXBuildFile; fileRef = A64408A41D700C2500450948 /* KMYCancelling.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6587CE91D015C0400F6DD9E /* KMYSwitchTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A6587CE71D015C0400F6DD9E /* KMYSwitchTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6587CEA1D015C0400F6DD9E /* KMYSwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6587CE81D015C0400F6DD9E /* KMYSwitchTableViewCell.m */; };
 		A6587CED1D015F8200F6DD9E /* KMYSegmentedControlTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A6587CEB1D015F8200F6DD9E /* KMYSegmentedControlTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -161,6 +162,7 @@
 		A62AF9DB1D609AA000B6731D /* NSMutableString+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+KMY.m"; sourceTree = "<group>"; };
 		A62AF9E31D61766500B6731D /* UIColor+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+KMY.h"; sourceTree = "<group>"; };
 		A62AF9E41D61766500B6731D /* UIColor+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+KMY.m"; sourceTree = "<group>"; };
+		A64408A41D700C2500450948 /* KMYCancelling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYCancelling.h; sourceTree = "<group>"; };
 		A6587CE71D015C0400F6DD9E /* KMYSwitchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYSwitchTableViewCell.h; sourceTree = "<group>"; };
 		A6587CE81D015C0400F6DD9E /* KMYSwitchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYSwitchTableViewCell.m; sourceTree = "<group>"; };
 		A6587CEB1D015F8200F6DD9E /* KMYSegmentedControlTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYSegmentedControlTableViewCell.h; sourceTree = "<group>"; };
@@ -337,6 +339,15 @@
 			name = Category;
 			sourceTree = "<group>";
 		};
+		A64408A61D700C8E00450948 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				A64408A41D700C2500450948 /* KMYCancelling.h */,
+				A68B8DFF1CAA6F8900DE6E95 /* KMYItemAttributes.h */,
+			);
+			name = Protocol;
+			sourceTree = "<group>";
+		};
 		A6871C611CBE393E0062E265 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -366,12 +377,12 @@
 				A68B8DFC1CAA6F8900DE6E95 /* KMYDispatch.m */,
 				A68B8DFD1CAA6F8900DE6E95 /* KMYItem.h */,
 				A68B8DFE1CAA6F8900DE6E95 /* KMYItem.m */,
-				A68B8DFF1CAA6F8900DE6E95 /* KMYItemAttributes.h */,
 				A627752F1CB38C1400238E9D /* KMYMacros.h */,
 				A68B8E001CAA6F8900DE6E95 /* KMYSection.h */,
 				A68B8E011CAA6F8900DE6E95 /* KMYSection.m */,
 				A692F8FD1D6AFCCD00BC84E8 /* KMYSerialOperationQueue.h */,
 				A692F8FE1D6AFCCD00BC84E8 /* KMYSerialOperationQueue.m */,
+				A64408A61D700C8E00450948 /* Protocol */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -568,6 +579,7 @@
 				A692F9071D6B1A6000BC84E8 /* KMYPersistentStoreOperation.h in Headers */,
 				A692F9051D6B1A6000BC84E8 /* KMYPersistentContainer.h in Headers */,
 				A692F8F81D6AE3D500BC84E8 /* KMYAsynchronousOperation.h in Headers */,
+				A64408A51D700C2500450948 /* KMYCancelling.h in Headers */,
 				A6D87A491CF70567006BEC47 /* WKWebView+KMY.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
