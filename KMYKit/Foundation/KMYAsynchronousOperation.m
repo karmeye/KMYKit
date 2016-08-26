@@ -14,7 +14,7 @@
 
 @implementation KMYAsynchronousOperation {
 
-    KMYAsynchronousOperationExecutionBlock              _executionBlock;
+    KMYAsynchronousOperationSynchronousExecutionBlock   _syncExecutionBlock;
     KMYAsynchronousOperationAsynchronousExecutionBlock  _asyncExecutionBlock;
 
     OSSpinLock  _isExecutingLock;
@@ -31,9 +31,9 @@
     return self;
 }
 
-- (instancetype)initWithExecutionBlock:(KMYAsynchronousOperationExecutionBlock)executionBlock {
+- (instancetype)initWithSynchronousExecutionBlock:(KMYAsynchronousOperationSynchronousExecutionBlock)executionBlock {
     self = [self init];
-    _executionBlock = [executionBlock copy];
+    _syncExecutionBlock = [executionBlock copy];
     return self;
 }
 
@@ -52,6 +52,14 @@
 
 #pragma mark - NSOperation
 
+- (void)cancel {
+    [super cancel];
+}
+
+- (BOOL)isCancelled {
+    return [super isCancelled];
+}
+
 - (void)start {
 
     // From docs:
@@ -61,15 +69,15 @@
     if (self.isCancelled) {
         [self setOperationComplete];
     } else {
-        if (_executionBlock) {
-            _executionBlock();
+        if (_syncExecutionBlock) {
+            _syncExecutionBlock(self);
         } else if (_asyncExecutionBlock) {
 
             KMYAsynchronousOperationCompetionHandler c = ^{
                 [self setOperationComplete];
             };
 
-            _asyncExecutionBlock(c);
+            _asyncExecutionBlock(self, c);
 
         } else {
             [self execute];

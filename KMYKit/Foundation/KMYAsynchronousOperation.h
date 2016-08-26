@@ -7,21 +7,25 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <KMYKit/KMYCancelling.h>
 
-typedef void (^KMYAsynchronousOperationExecutionBlock)();
+NS_ASSUME_NONNULL_BEGIN
+
+typedef void (^KMYAsynchronousOperationSynchronousExecutionBlock)(id<KMYCancelling> cancellingHandler);
 
 typedef void (^KMYAsynchronousOperationCompetionHandler)(void);
-typedef void (^KMYAsynchronousOperationAsynchronousExecutionBlock)(KMYAsynchronousOperationCompetionHandler completionHandler);
+typedef void (^KMYAsynchronousOperationAsynchronousExecutionBlock)(id<KMYCancelling> cancellingHandler, KMYAsynchronousOperationCompetionHandler completionHandler);
 
-@interface KMYAsynchronousOperation : NSOperation
+@interface KMYAsynchronousOperation : NSOperation <KMYCancelling>
 
-- (instancetype)init;
-- (instancetype)initWithExecutionBlock:(KMYAsynchronousOperationExecutionBlock)executionBlock;
+- (instancetype)initWithSynchronousExecutionBlock:(KMYAsynchronousOperationSynchronousExecutionBlock)executionBlock;
 - (instancetype)initWithAsynchronousExecutionBlock:(KMYAsynchronousOperationAsynchronousExecutionBlock)executionBlock;
 
 @end
 
 @interface KMYAsynchronousOperation (Subclassing)
+
+- (instancetype)init;
 
 /// @brief Sets @c isFinished to @c YES and @c isExecuting to @c NO.
 /// @attention Must be called after the operation completed or was cancelled.
@@ -31,3 +35,5 @@ typedef void (^KMYAsynchronousOperationAsynchronousExecutionBlock)(KMYAsynchrono
 - (void)execute;
 
 @end
+
+NS_ASSUME_NONNULL_END
