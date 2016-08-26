@@ -12,11 +12,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void (^KMYPersistentStoreOperationExecutionBlock)(NSManagedObjectContext *managedObjectContext);
+typedef void (^KMYPersistentStoreOperationSynchronousExecutionBlock)(NSManagedObjectContext *managedObjectContext, id<KMYCancelling> cancellingHandler);
+typedef void (^KMYPersistentStoreOperationAsynchronousExecutionBlock)(NSManagedObjectContext *managedObjectContext, id<KMYCancelling> cancellingHandler, KMYAsynchronousOperationCompetionHandler completionHandler);
 
 @interface KMYPersistentStoreOperation : KMYAsynchronousOperation
 
-- (instancetype)initWithContainer:(KMYPersistentContainer *)container executionBlock:(KMYPersistentStoreOperationExecutionBlock)executionBlock;
+- (instancetype)initWithContainer:(KMYPersistentContainer *)container
+        synchronousExecutionBlock:(KMYPersistentStoreOperationSynchronousExecutionBlock)executionBlock;
+
+- (instancetype)initWithContainer:(KMYPersistentContainer *)container
+       asynchronousExecutionBlock:(KMYPersistentStoreOperationAsynchronousExecutionBlock)executionBlock;
 
 @end
 
