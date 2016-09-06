@@ -33,31 +33,74 @@
 }
 
 - (void)enter {
+    BOOL didOpen = NO;
+
     @synchronized(self) {
         BOOL wasClosed = self.openRequestCount == 0;
         self.openRequestCount += 1;
-        if (wasClosed && self.openRequestCount > 0) {
-            if (self.callbackQueue) {
-                dispatch_async(self.callbackQueue, self.didOpenHandler);
-            } else {
-                self.didOpenHandler();
-            }
+        didOpen = wasClosed && self.openRequestCount > 0;
+    }
+
+    if (didOpen && self.didOpenHandler != NULL) {
+        if (self.callbackQueue) {
+            dispatch_async(self.callbackQueue, self.didOpenHandler);
+        } else {
+            self.didOpenHandler();
         }
     }
 }
 
 - (void)exit {
+    BOOL didClose = NO;
+
     @synchronized(self) {
         BOOL wasOpen = self.openRequestCount > 0;
         self.openRequestCount = MAX(self.openRequestCount - 1, 0);
-        if (wasOpen && self.openRequestCount == 0) {
-            if (self.callbackQueue) {
-                dispatch_async(self.callbackQueue, self.didCloseHandler);
-            } else {
-                self.didCloseHandler();
-            }
+        didClose = wasOpen && self.openRequestCount == 0;
+    }
+
+    if (didClose && self.didCloseHandler != NULL) {
+        if (self.callbackQueue) {
+            dispatch_async(self.callbackQueue, self.didCloseHandler);
+        } else {
+            self.didCloseHandler();
         }
     }
 }
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
