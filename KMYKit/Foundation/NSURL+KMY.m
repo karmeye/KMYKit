@@ -14,7 +14,7 @@
 
     NSURL *URL;
 
-    if (stringRepresentation) {
+    if (stringRepresentation && fallbackBaseURL) {
         static NSString * const http    = @"http://";
         static NSString * const https   = @"https://";
         static NSString * const file    = @"file://";
