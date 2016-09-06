@@ -9,9 +9,32 @@
 #define KMY_WEAK(instance, variableName)        typeof(instance) __weak variableName = instance
 #define KMY_STRONG(instance, variableName)      typeof(instance) __strong variableName = instance
 
+// Class, Type
+//
+#define KMYClass()                              [self class]
 #define KMYCast(inst, type)                     ((type)inst)
 #define KMYCastIfKindOfClass(inst, className)   ([inst isKindOfClass:[className class]] ? (className*)inst : nil)
 #define KMYCastIfConformsToProtocol(inst, prot) ([inst conformsToProtocol:@protocol(prot)] ? (id<prot>)inst : nil)
 
+// Nil, Null
+//
+#define KMY_SET_IF_NIL(var, value)              if (!var) { var = value; }
+#define KMYIsNilOrNull(var)                     (var == nil || var == (id)[NSNull null])
+#define KMY_ENSURE_NIL_IF_NULL(var)             (var = (KMYIsNilOrNull(var) ? nil : var))
 
-#define KMYSetIfNil(var, value)                 if (!var) { var = value; }
+// Collections
+#define KMYArrayContainsObjects(array)              (array && array.count > 0)
+#define KMYDictionaryContainsObjects(dictionary)    (dictionary && dictionary.count > 0)
+
+
+#if defined(DEBUG)
+#define KMYIfDebugBuild(block)                  block()
+#else
+#define KMYIfDebugBuild(...)
+#endif
+
+#if TARGET_IPHONE_SIMULATOR
+#define KMYIfSimulator(block)                   block()
+#else
+#define KMYIfSimulator(...)
+#endif
