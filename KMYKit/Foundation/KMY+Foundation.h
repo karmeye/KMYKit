@@ -16,6 +16,7 @@
 #import <KMYKit/KMYItem.h>
 #import <KMYKit/KMYSection.h>
 #import <KMYKit/KMYSerialOperationQueue.h>
+#import <KMYKit/KMYGate.h>
 
 #import <KMYKit/KMYCancelling.h>
 #import <KMYKit/KMYItemAttributes.h>

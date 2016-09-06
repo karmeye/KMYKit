@@ -100,6 +100,8 @@
 		A69674A81CFEE653003B49F0 /* UIGestureRecognizer+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A69674A61CFEE653003B49F0 /* UIGestureRecognizer+KMY.m */; };
 		A697721D1D01BD2E00F1BE5A /* UISwitch+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A697721B1D01BD2E00F1BE5A /* UISwitch+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A697721E1D01BD2E00F1BE5A /* UISwitch+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A697721C1D01BD2E00F1BE5A /* UISwitch+KMY.m */; };
+		A69DCB111D773DCB0045A8DF /* KMYGate.h in Headers */ = {isa = PBXBuildFile; fileRef = A69DCB0F1D773DCB0045A8DF /* KMYGate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A69DCB121D773DCB0045A8DF /* KMYGate.m in Sources */ = {isa = PBXBuildFile; fileRef = A69DCB101D773DCB0045A8DF /* KMYGate.m */; };
 		A69E36071CEC40AF00FB3B8C /* NSLayoutAnchor+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A69E36051CEC40AF00FB3B8C /* NSLayoutAnchor+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A69E36081CEC40AF00FB3B8C /* NSLayoutAnchor+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A69E36061CEC40AF00FB3B8C /* NSLayoutAnchor+KMY.m */; };
 		A6A8D03E1D22435E00BD292D /* KMYCollectionViewSupplementaryViewConfigurator.h in Headers */ = {isa = PBXBuildFile; fileRef = A6A8D03C1D22435E00BD292D /* KMYCollectionViewSupplementaryViewConfigurator.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -229,6 +231,8 @@
 		A69674A61CFEE653003B49F0 /* UIGestureRecognizer+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+KMY.m"; sourceTree = "<group>"; };
 		A697721B1D01BD2E00F1BE5A /* UISwitch+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISwitch+KMY.h"; sourceTree = "<group>"; };
 		A697721C1D01BD2E00F1BE5A /* UISwitch+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISwitch+KMY.m"; sourceTree = "<group>"; };
+		A69DCB0F1D773DCB0045A8DF /* KMYGate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYGate.h; sourceTree = "<group>"; };
+		A69DCB101D773DCB0045A8DF /* KMYGate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYGate.m; sourceTree = "<group>"; };
 		A69E36051CEC40AF00FB3B8C /* NSLayoutAnchor+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutAnchor+KMY.h"; sourceTree = "<group>"; };
 		A69E36061CEC40AF00FB3B8C /* NSLayoutAnchor+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutAnchor+KMY.m"; sourceTree = "<group>"; };
 		A6A8D03C1D22435E00BD292D /* KMYCollectionViewSupplementaryViewConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYCollectionViewSupplementaryViewConfigurator.h; sourceTree = "<group>"; };
@@ -383,6 +387,8 @@
 				A692F8FD1D6AFCCD00BC84E8 /* KMYSerialOperationQueue.h */,
 				A692F8FE1D6AFCCD00BC84E8 /* KMYSerialOperationQueue.m */,
 				A64408A61D700C8E00450948 /* Protocol */,
+				A69DCB0F1D773DCB0045A8DF /* KMYGate.h */,
+				A69DCB101D773DCB0045A8DF /* KMYGate.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -580,6 +586,7 @@
 				A692F9051D6B1A6000BC84E8 /* KMYPersistentContainer.h in Headers */,
 				A692F8F81D6AE3D500BC84E8 /* KMYAsynchronousOperation.h in Headers */,
 				A64408A51D700C2500450948 /* KMYCancelling.h in Headers */,
+				A69DCB111D773DCB0045A8DF /* KMYGate.h in Headers */,
 				A6D87A491CF70567006BEC47 /* WKWebView+KMY.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -654,6 +661,7 @@
 				A6F6DA691CCDDC5C0042B78A /* UICollectionViewController+KMY.m in Sources */,
 				A68B8E471CAAB6B300DE6E95 /* KMYTableViewCellConfigurator.m in Sources */,
 				A6F6DA841CCF2BDF0042B78A /* KMYUIItem+TableView.m in Sources */,
+				A69DCB121D773DCB0045A8DF /* KMYGate.m in Sources */,
 				A692F8F91D6AE3D500BC84E8 /* KMYAsynchronousOperation.m in Sources */,
 				A697721E1D01BD2E00F1BE5A /* UISwitch+KMY.m in Sources */,
 				A62775201CAE3B8300238E9D /* KMYAssert.m in Sources */,
