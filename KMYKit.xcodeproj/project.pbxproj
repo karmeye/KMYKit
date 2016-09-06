@@ -42,6 +42,8 @@
 		A6587CF21D01883B00F6DD9E /* UISegmentedControl+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A6587CF01D01883B00F6DD9E /* UISegmentedControl+KMY.m */; };
 		A66DD83A1D5486DE00BD1A1E /* NSURL+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A66DD8381D5486DE00BD1A1E /* NSURL+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A66DD83B1D5486DE00BD1A1E /* NSURL+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A66DD8391D5486DE00BD1A1E /* NSURL+KMY.m */; };
+		A6863E201D7E8FD300694FF6 /* UIImage+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A6863E1E1D7E8FD300694FF6 /* UIImage+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6863E211D7E8FD300694FF6 /* UIImage+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A6863E1F1D7E8FD300694FF6 /* UIImage+KMY.m */; };
 		A6871C641CBE39710062E265 /* KMYManagedObject.h in Headers */ = {isa = PBXBuildFile; fileRef = A6871C621CBE39710062E265 /* KMYManagedObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6871C651CBE39710062E265 /* KMYManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A6871C631CBE39710062E265 /* KMYManagedObject.m */; };
 		A6871C671CBE39DE0062E265 /* KMY+CoreData.h in Headers */ = {isa = PBXBuildFile; fileRef = A6871C661CBE39DE0062E265 /* KMY+CoreData.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -173,6 +175,8 @@
 		A6587CF01D01883B00F6DD9E /* UISegmentedControl+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISegmentedControl+KMY.m"; sourceTree = "<group>"; };
 		A66DD8381D5486DE00BD1A1E /* NSURL+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+KMY.h"; sourceTree = "<group>"; };
 		A66DD8391D5486DE00BD1A1E /* NSURL+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+KMY.m"; sourceTree = "<group>"; };
+		A6863E1E1D7E8FD300694FF6 /* UIImage+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+KMY.h"; sourceTree = "<group>"; };
+		A6863E1F1D7E8FD300694FF6 /* UIImage+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+KMY.m"; sourceTree = "<group>"; };
 		A6871C621CBE39710062E265 /* KMYManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYManagedObject.h; sourceTree = "<group>"; };
 		A6871C631CBE39710062E265 /* KMYManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYManagedObject.m; sourceTree = "<group>"; };
 		A6871C661CBE39DE0062E265 /* KMY+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KMY+CoreData.h"; sourceTree = "<group>"; };
@@ -298,6 +302,8 @@
 				A62AF9E41D61766500B6731D /* UIColor+KMY.m */,
 				A69674A51CFEE653003B49F0 /* UIGestureRecognizer+KMY.h */,
 				A69674A61CFEE653003B49F0 /* UIGestureRecognizer+KMY.m */,
+				A6863E1E1D7E8FD300694FF6 /* UIImage+KMY.h */,
+				A6863E1F1D7E8FD300694FF6 /* UIImage+KMY.m */,
 				A6871C751CBFC8630062E265 /* UIImageView+KMY.h */,
 				A6871C761CBFC8630062E265 /* UIImageView+KMY.m */,
 				A62775391CB3927400238E9D /* UINavigationController+KMY.h */,
@@ -587,6 +593,7 @@
 				A692F8F81D6AE3D500BC84E8 /* KMYAsynchronousOperation.h in Headers */,
 				A64408A51D700C2500450948 /* KMYCancelling.h in Headers */,
 				A69DCB111D773DCB0045A8DF /* KMYGate.h in Headers */,
+				A6863E201D7E8FD300694FF6 /* UIImage+KMY.h in Headers */,
 				A6D87A491CF70567006BEC47 /* WKWebView+KMY.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -659,6 +666,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6F6DA691CCDDC5C0042B78A /* UICollectionViewController+KMY.m in Sources */,
+				A6863E211D7E8FD300694FF6 /* UIImage+KMY.m in Sources */,
 				A68B8E471CAAB6B300DE6E95 /* KMYTableViewCellConfigurator.m in Sources */,
 				A6F6DA841CCF2BDF0042B78A /* KMYUIItem+TableView.m in Sources */,
 				A69DCB121D773DCB0045A8DF /* KMYGate.m in Sources */,
