@@ -34,6 +34,8 @@
 		A62AF9E51D61766500B6731D /* UIColor+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A62AF9E31D61766500B6731D /* UIColor+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A62AF9E61D61766500B6731D /* UIColor+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A62AF9E41D61766500B6731D /* UIColor+KMY.m */; };
 		A64408A51D700C2500450948 /* KMYCancelling.h in Headers */ = {isa = PBXBuildFile; fileRef = A64408A41D700C2500450948 /* KMYCancelling.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A64773241D89592F00520769 /* KMYAbsoluteURL.h in Headers */ = {isa = PBXBuildFile; fileRef = A64773221D89592F00520769 /* KMYAbsoluteURL.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A64773251D89592F00520769 /* KMYAbsoluteURL.m in Sources */ = {isa = PBXBuildFile; fileRef = A64773231D89592F00520769 /* KMYAbsoluteURL.m */; };
 		A6587CE91D015C0400F6DD9E /* KMYSwitchTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A6587CE71D015C0400F6DD9E /* KMYSwitchTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6587CEA1D015C0400F6DD9E /* KMYSwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6587CE81D015C0400F6DD9E /* KMYSwitchTableViewCell.m */; };
 		A6587CED1D015F8200F6DD9E /* KMYSegmentedControlTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A6587CEB1D015F8200F6DD9E /* KMYSegmentedControlTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -167,6 +169,8 @@
 		A62AF9E31D61766500B6731D /* UIColor+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+KMY.h"; sourceTree = "<group>"; };
 		A62AF9E41D61766500B6731D /* UIColor+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+KMY.m"; sourceTree = "<group>"; };
 		A64408A41D700C2500450948 /* KMYCancelling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYCancelling.h; sourceTree = "<group>"; };
+		A64773221D89592F00520769 /* KMYAbsoluteURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYAbsoluteURL.h; sourceTree = "<group>"; };
+		A64773231D89592F00520769 /* KMYAbsoluteURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYAbsoluteURL.m; sourceTree = "<group>"; };
 		A6587CE71D015C0400F6DD9E /* KMYSwitchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYSwitchTableViewCell.h; sourceTree = "<group>"; };
 		A6587CE81D015C0400F6DD9E /* KMYSwitchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYSwitchTableViewCell.m; sourceTree = "<group>"; };
 		A6587CEB1D015F8200F6DD9E /* KMYSegmentedControlTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYSegmentedControlTableViewCell.h; sourceTree = "<group>"; };
@@ -377,6 +381,8 @@
 			children = (
 				A62775381CB391E600238E9D /* Category */,
 				A68B8DF81CAA6F8900DE6E95 /* KMY+Foundation.h */,
+				A64773221D89592F00520769 /* KMYAbsoluteURL.h */,
+				A64773231D89592F00520769 /* KMYAbsoluteURL.m */,
 				A627751D1CAE3B8300238E9D /* KMYAssert.h */,
 				A627751E1CAE3B8300238E9D /* KMYAssert.m */,
 				A692F8F61D6AE3D500BC84E8 /* KMYAsynchronousOperation.h */,
@@ -385,6 +391,8 @@
 				A68B8DFA1CAA6F8900DE6E95 /* KMYBlock.m */,
 				A68B8DFB1CAA6F8900DE6E95 /* KMYDispatch.h */,
 				A68B8DFC1CAA6F8900DE6E95 /* KMYDispatch.m */,
+				A69DCB0F1D773DCB0045A8DF /* KMYGate.h */,
+				A69DCB101D773DCB0045A8DF /* KMYGate.m */,
 				A68B8DFD1CAA6F8900DE6E95 /* KMYItem.h */,
 				A68B8DFE1CAA6F8900DE6E95 /* KMYItem.m */,
 				A627752F1CB38C1400238E9D /* KMYMacros.h */,
@@ -393,8 +401,6 @@
 				A692F8FD1D6AFCCD00BC84E8 /* KMYSerialOperationQueue.h */,
 				A692F8FE1D6AFCCD00BC84E8 /* KMYSerialOperationQueue.m */,
 				A64408A61D700C8E00450948 /* Protocol */,
-				A69DCB0F1D773DCB0045A8DF /* KMYGate.h */,
-				A69DCB101D773DCB0045A8DF /* KMYGate.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -594,6 +600,7 @@
 				A64408A51D700C2500450948 /* KMYCancelling.h in Headers */,
 				A69DCB111D773DCB0045A8DF /* KMYGate.h in Headers */,
 				A6863E201D7E8FD300694FF6 /* UIImage+KMY.h in Headers */,
+				A64773241D89592F00520769 /* KMYAbsoluteURL.h in Headers */,
 				A6D87A491CF70567006BEC47 /* WKWebView+KMY.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -685,6 +692,7 @@
 				A68B8E321CAA6F9200DE6E95 /* KMYUISection.m in Sources */,
 				A6F6DA611CCDD4650042B78A /* KMYTableViewControllerBehavior.m in Sources */,
 				A69674A81CFEE653003B49F0 /* UIGestureRecognizer+KMY.m in Sources */,
+				A64773251D89592F00520769 /* KMYAbsoluteURL.m in Sources */,
 				A68B8E101CAA6F8900DE6E95 /* KMYItem.m in Sources */,
 				A62AF9E61D61766500B6731D /* UIColor+KMY.m in Sources */,
 				A68B8E301CAA6F9200DE6E95 /* KMYUIItem.m in Sources */,
