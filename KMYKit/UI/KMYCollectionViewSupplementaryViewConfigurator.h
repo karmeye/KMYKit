@@ -27,7 +27,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-typedef void (^KMYCollectionViewSupplementaryViewConfiguratorHandler)(__kindof UICollectionReusableView *supplementaryView, __kindof KMYUISection *section, __kindof KMYUIItem *item, NSIndexPath *indexPath);
+typedef void (^KMYCollectionViewSupplementaryViewConfiguratorHandler)(__kindof UICollectionReusableView *supplementaryView,
+                                                                      NSString *kind,
+                                                                      __kindof KMYUISection *section,
+                                                                      __kindof KMYUIItem *item,
+                                                                      NSIndexPath *indexPath);
 
 @interface KMYCollectionViewSupplementaryViewConfigurator : NSObject <KMYCollectionViewSupplementaryViewConfigurating>
 
@@ -39,6 +43,8 @@ typedef void (^KMYCollectionViewSupplementaryViewConfiguratorHandler)(__kindof U
 
 - (void)registerClass:(Class)cls forSupplementaryViewOfKind:(NSString *)kind withReuseIdentifier:(NSString*)reuseIdentifier;
 - (void)registerClass:(Class)cls forSupplementaryViewOfKind:(NSString *)kind withReuseIdentifier:(NSString*)reuseIdentifier handler:(nullable KMYCollectionViewSupplementaryViewConfiguratorHandler)handler;
+
+- (void)registerClasses:(NSArray<Class> *)classes forSupplementaryViewsOfKinds:(NSArray<NSString *> *)kinds withReuseIdentifier:(NSString*)reuseIdentifier handler:(nullable KMYCollectionViewSupplementaryViewConfiguratorHandler)handler;
 
 @end
 

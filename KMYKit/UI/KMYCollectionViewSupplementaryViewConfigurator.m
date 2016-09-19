@@ -45,6 +45,14 @@
     [self registerClass:cls forSupplementaryViewOfKind:kind withReuseIdentifier:reuseIdentifier handler:NULL];
 }
 
+- (void)registerClasses:(NSArray<Class> *)classes forSupplementaryViewsOfKinds:(NSArray<NSString *> *)kinds withReuseIdentifier:(NSString*)reuseIdentifier handler:(nullable KMYCollectionViewSupplementaryViewConfiguratorHandler)handler {
+    KMYAssert(classes.count == kinds.count, @"One kind for each class please.");
+    
+    [classes enumerateObjectsUsingBlock:^(Class _Nonnull cls, NSUInteger idx, BOOL * _Nonnull stop) {
+        [self registerClass:cls forSupplementaryViewOfKind:kinds[idx] withReuseIdentifier:reuseIdentifier handler:handler];
+    }];
+}
+
 - (void)registerClass:(Class)cls forSupplementaryViewOfKind:(NSString *)kind withReuseIdentifier:(NSString*)reuseIdentifier handler:(KMYCollectionViewSupplementaryViewConfiguratorHandler)handler {
     KMYAssert(kind);
     KMYAssert(reuseIdentifier);
@@ -88,8 +96,8 @@
     NSString * const reuseInfoKey       = [self reuseInfoKeyFromIdentifier:reuseIdentifier kind:kind];
 
     KMYCollectionViewSupplementaryViewConfiguratorReuseInfo *info = _reuseInfo ? self.reuseInfo[reuseInfoKey] : nil;
-    KMYInvokeBlockIfSet(info.handler, supplementaryView, section, item, indexPath);
-    KMYInvokeBlockIfSet(self.configurationHandler, supplementaryView, section, item, indexPath);
+    KMYInvokeBlockIfSet(info.handler, supplementaryView, kind, section, item, indexPath);
+    KMYInvokeBlockIfSet(self.configurationHandler, supplementaryView, kind, section, item, indexPath);
 }
 
 #pragma mark - Private -
