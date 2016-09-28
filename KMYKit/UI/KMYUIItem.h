@@ -50,8 +50,8 @@ typedef NSString * _Nullable (^KMYUIItemTextHandler)();
 
 @property (nonatomic, copy, nullable)               KMYUIItemActionHandler      actionHandler;
 
-+ (KMYUIItem *)itemWithAttributes:(nullable NSDictionary *)dictionary
-                    actionHandler:(nullable KMYUIItemActionHandler)actionHandler;
++ (__kindof KMYUIItem *)itemWithAttributes:(nullable NSDictionary *)dictionary
+                             actionHandler:(nullable KMYUIItemActionHandler)actionHandler;
 
 @end
 

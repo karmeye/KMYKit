@@ -32,11 +32,9 @@
 
     if (!object) {
         return nil;
-    }
-    else if ([object isKindOfClass:[NSNumber class]]) {
-        return (NSNumber*)object;
-    }
-    else {
+    } else if ([object isKindOfClass:[NSNumber class]]) {
+        return (NSNumber *)object;
+    } else {
         return nil;
     }
 }
