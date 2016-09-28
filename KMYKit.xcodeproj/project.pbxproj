@@ -33,6 +33,8 @@
 		A62AF9DD1D609AA000B6731D /* NSMutableString+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A62AF9DB1D609AA000B6731D /* NSMutableString+KMY.m */; };
 		A62AF9E51D61766500B6731D /* UIColor+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A62AF9E31D61766500B6731D /* UIColor+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A62AF9E61D61766500B6731D /* UIColor+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A62AF9E41D61766500B6731D /* UIColor+KMY.m */; };
+		A62EA1E41D954CC300FAFAF7 /* KMYCGGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = A62EA1E21D954CC300FAFAF7 /* KMYCGGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A62EA1E51D954CC300FAFAF7 /* KMYCGGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = A62EA1E31D954CC300FAFAF7 /* KMYCGGeometry.m */; };
 		A64408A51D700C2500450948 /* KMYCancelling.h in Headers */ = {isa = PBXBuildFile; fileRef = A64408A41D700C2500450948 /* KMYCancelling.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A64773241D89592F00520769 /* KMYAbsoluteURL.h in Headers */ = {isa = PBXBuildFile; fileRef = A64773221D89592F00520769 /* KMYAbsoluteURL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A64773251D89592F00520769 /* KMYAbsoluteURL.m in Sources */ = {isa = PBXBuildFile; fileRef = A64773231D89592F00520769 /* KMYAbsoluteURL.m */; };
@@ -168,6 +170,8 @@
 		A62AF9DB1D609AA000B6731D /* NSMutableString+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+KMY.m"; sourceTree = "<group>"; };
 		A62AF9E31D61766500B6731D /* UIColor+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+KMY.h"; sourceTree = "<group>"; };
 		A62AF9E41D61766500B6731D /* UIColor+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+KMY.m"; sourceTree = "<group>"; };
+		A62EA1E21D954CC300FAFAF7 /* KMYCGGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYCGGeometry.h; sourceTree = "<group>"; };
+		A62EA1E31D954CC300FAFAF7 /* KMYCGGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYCGGeometry.m; sourceTree = "<group>"; };
 		A64408A41D700C2500450948 /* KMYCancelling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYCancelling.h; sourceTree = "<group>"; };
 		A64773221D89592F00520769 /* KMYAbsoluteURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYAbsoluteURL.h; sourceTree = "<group>"; };
 		A64773231D89592F00520769 /* KMYAbsoluteURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYAbsoluteURL.m; sourceTree = "<group>"; };
@@ -389,6 +393,8 @@
 				A692F8F71D6AE3D500BC84E8 /* KMYAsynchronousOperation.m */,
 				A68B8DF91CAA6F8900DE6E95 /* KMYBlock.h */,
 				A68B8DFA1CAA6F8900DE6E95 /* KMYBlock.m */,
+				A62EA1E21D954CC300FAFAF7 /* KMYCGGeometry.h */,
+				A62EA1E31D954CC300FAFAF7 /* KMYCGGeometry.m */,
 				A68B8DFB1CAA6F8900DE6E95 /* KMYDispatch.h */,
 				A68B8DFC1CAA6F8900DE6E95 /* KMYDispatch.m */,
 				A69DCB0F1D773DCB0045A8DF /* KMYGate.h */,
@@ -601,6 +607,7 @@
 				A69DCB111D773DCB0045A8DF /* KMYGate.h in Headers */,
 				A6863E201D7E8FD300694FF6 /* UIImage+KMY.h in Headers */,
 				A64773241D89592F00520769 /* KMYAbsoluteURL.h in Headers */,
+				A62EA1E41D954CC300FAFAF7 /* KMYCGGeometry.h in Headers */,
 				A6D87A491CF70567006BEC47 /* WKWebView+KMY.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -721,6 +728,7 @@
 				A6587CEE1D015F8200F6DD9E /* KMYSegmentedControlTableViewCell.m in Sources */,
 				A6871C7C1CBFCAE30062E265 /* UIButton+KMY.m in Sources */,
 				A68B8E1B1CAA6F8900DE6E95 /* NSObject+KMY.m in Sources */,
+				A62EA1E51D954CC300FAFAF7 /* KMYCGGeometry.m in Sources */,
 				A6A8D0551D250F2100BD292D /* KMYTableViewHeaderFooterConfigurator.m in Sources */,
 				A68B8E191CAA6F8900DE6E95 /* NSMutableArray+KMY.m in Sources */,
 				A6587CF21D01883B00F6DD9E /* UISegmentedControl+KMY.m in Sources */,
