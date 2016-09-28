@@ -10,7 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSMutableArray (KMY)
+@interface NSMutableArray<ObjectType>  (KMY)
+
+- (void)kmy_addObjectIfSet:(ObjectType)object;
 
 @end
 

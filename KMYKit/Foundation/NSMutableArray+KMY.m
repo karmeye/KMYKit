@@ -10,4 +10,10 @@
 
 @implementation NSMutableArray (KMY)
 
+- (void)kmy_addObjectIfSet:(id)object {
+    if (object) {
+        [self addObject:object];
+    }
+}
+
 @end
