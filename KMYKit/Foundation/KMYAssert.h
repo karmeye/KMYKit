@@ -40,8 +40,12 @@
     #define KMYAssertDebug                  KMYAssert
     #define KMYAssertDebugFail              KMYAssertFail
     #define KMYAssertDebugNotDeallocated    KMYAssertNotDeallocated
+    #define KMYAssertDebugMainThread        KMYAssertMainThread
+    #define KMYAssertDebugNotMainThread     KMYAssertNotMainThread
 #else
     #define KMYAssertDebug(...)
     #define KMYAssertDebugFail(...)
     #define KMYAssertDebugNotDeallocated(...)
+    #define KMYAssertDebugMainThread(...)
+    #define KMYAssertDebugNotMainThread(...)
 #endif
