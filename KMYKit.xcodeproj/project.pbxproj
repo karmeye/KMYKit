@@ -114,6 +114,8 @@
 		A6A8D03F1D22435E00BD292D /* KMYCollectionViewSupplementaryViewConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A8D03D1D22435E00BD292D /* KMYCollectionViewSupplementaryViewConfigurator.m */; };
 		A6A8D0541D250F2100BD292D /* KMYTableViewHeaderFooterConfigurator.h in Headers */ = {isa = PBXBuildFile; fileRef = A6A8D0521D250F2100BD292D /* KMYTableViewHeaderFooterConfigurator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6A8D0551D250F2100BD292D /* KMYTableViewHeaderFooterConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A8D0531D250F2100BD292D /* KMYTableViewHeaderFooterConfigurator.m */; };
+		A6C580771DA3C2930081FC2D /* UIRefreshControl+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A6C580751DA3C2930081FC2D /* UIRefreshControl+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6C580781DA3C2930081FC2D /* UIRefreshControl+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C580761DA3C2930081FC2D /* UIRefreshControl+KMY.m */; };
 		A6D01FEF1CABE139003CF026 /* KMYDefaultStyleTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D01FED1CABE139003CF026 /* KMYDefaultStyleTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6D01FF01CABE139003CF026 /* KMYDefaultStyleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D01FEE1CABE139003CF026 /* KMYDefaultStyleTableViewCell.m */; };
 		A6D87A491CF70567006BEC47 /* WKWebView+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D87A471CF70567006BEC47 /* WKWebView+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -251,6 +253,8 @@
 		A6A8D03D1D22435E00BD292D /* KMYCollectionViewSupplementaryViewConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYCollectionViewSupplementaryViewConfigurator.m; sourceTree = "<group>"; };
 		A6A8D0521D250F2100BD292D /* KMYTableViewHeaderFooterConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYTableViewHeaderFooterConfigurator.h; sourceTree = "<group>"; };
 		A6A8D0531D250F2100BD292D /* KMYTableViewHeaderFooterConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYTableViewHeaderFooterConfigurator.m; sourceTree = "<group>"; };
+		A6C580751DA3C2930081FC2D /* UIRefreshControl+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIRefreshControl+KMY.h"; sourceTree = "<group>"; };
+		A6C580761DA3C2930081FC2D /* UIRefreshControl+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+KMY.m"; sourceTree = "<group>"; };
 		A6D01FED1CABE139003CF026 /* KMYDefaultStyleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYDefaultStyleTableViewCell.h; sourceTree = "<group>"; };
 		A6D01FEE1CABE139003CF026 /* KMYDefaultStyleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYDefaultStyleTableViewCell.m; sourceTree = "<group>"; };
 		A6D87A471CF70567006BEC47 /* WKWebView+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WKWebView+KMY.h"; sourceTree = "<group>"; };
@@ -316,6 +320,8 @@
 				A6871C761CBFC8630062E265 /* UIImageView+KMY.m */,
 				A62775391CB3927400238E9D /* UINavigationController+KMY.h */,
 				A627753A1CB3927400238E9D /* UINavigationController+KMY.m */,
+				A6C580751DA3C2930081FC2D /* UIRefreshControl+KMY.h */,
+				A6C580761DA3C2930081FC2D /* UIRefreshControl+KMY.m */,
 				A6028DD91D43817100289B3A /* UIScreen+KMY.h */,
 				A6028DDA1D43817100289B3A /* UIScreen+KMY.m */,
 				A6587CEF1D01883B00F6DD9E /* UISegmentedControl+KMY.h */,
@@ -608,6 +614,7 @@
 				A6863E201D7E8FD300694FF6 /* UIImage+KMY.h in Headers */,
 				A64773241D89592F00520769 /* KMYAbsoluteURL.h in Headers */,
 				A62EA1E41D954CC300FAFAF7 /* KMYCGGeometry.h in Headers */,
+				A6C580771DA3C2930081FC2D /* UIRefreshControl+KMY.h in Headers */,
 				A6D87A491CF70567006BEC47 /* WKWebView+KMY.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -688,6 +695,7 @@
 				A697721E1D01BD2E00F1BE5A /* UISwitch+KMY.m in Sources */,
 				A62775201CAE3B8300238E9D /* KMYAssert.m in Sources */,
 				A68B8E431CAAB61500DE6E95 /* KMYTextFieldTableViewCell.m in Sources */,
+				A6C580781DA3C2930081FC2D /* UIRefreshControl+KMY.m in Sources */,
 				A692F9081D6B1A6000BC84E8 /* KMYPersistentStoreOperation.m in Sources */,
 				A626C9901CD8A49C0094802F /* NSString+KMY.m in Sources */,
 				A62775521CBCD71B00238E9D /* KMYDestructiveButtonTableViewCell.m in Sources */,
