@@ -103,12 +103,11 @@
 
 + (NSURL *)defaultDirectoryURL {
     static dispatch_once_t onceToken;
-    static NSURL *_defaultDirectoryURL = nil;
+    static NSURL *defaultDirectoryURL = nil;
     dispatch_once(&onceToken, ^{
-        //_defaultDirectoryURL = [[[NSFileManager defaultManager] URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask] lastObject];
-        _defaultDirectoryURL = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+        defaultDirectoryURL = [NSFileManager.defaultManager URLForDirectory:NSApplicationSupportDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:YES error:nil];
     });
-    return _defaultDirectoryURL;
+    return defaultDirectoryURL;
 }
 
 @end
