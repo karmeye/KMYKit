@@ -35,20 +35,26 @@
 
 - (void)loadPersistentStoreWithCompletionHandler:(void (^)(NSDictionary *options, NSError *error))block {
 
-    NSURL *URL = [[[self class] defaultDirectoryURL] URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.sqlite", self.name]];
+    NSURL *defaultDirectoryURL = [[self class] defaultDirectoryURL];
 
-    NSDictionary *options = @{ NSMigratePersistentStoresAutomaticallyOption : @YES,
-                               NSInferMappingModelAutomaticallyOption : @YES };
-    NSError *error;
+    if (defaultDirectoryURL) {
+        NSURL *URL = [defaultDirectoryURL URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.sqlite", self.name]];
 
-    [_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:URL options:options error:&error];
+        NSDictionary *options = @{ NSMigratePersistentStoresAutomaticallyOption : @YES,
+                                   NSInferMappingModelAutomaticallyOption : @YES };
+        NSError *error;
 
-    if (error) {
-        [[NSFileManager defaultManager] removeItemAtURL:URL error:nil];
+        [_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:URL options:options error:&error];
+
+        if (error) {
+            [[NSFileManager defaultManager] removeItemAtURL:URL error:nil];
+        } else {
+        }
+
+        block(options, error);
     } else {
+        block(nil, [NSError kmy_errorWithLocalizedDescription:NSLocalizedString(@"No directory given for persistent store.", nil)]);
     }
-
-    block(options, error);
 }
 
 #pragma mark -
