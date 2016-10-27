@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(class, nonatomic, readonly, strong, nullable)     NSURL        *cachesDirectoryURL;
 
 /// @returns @c YES if the directory was created or already exists. @c NO if an error occured.
-- (BOOL)createDirectoryAtURL:(NSURL *)URL error:(NSError **)error;
++ (BOOL)createDirectoryAtURL:(NSURL *)URL error:(NSError **)error;
 
 @end
 

@@ -48,8 +48,7 @@
     return URL;
 }
 
-
-- (BOOL)createDirectoryAtURL:(NSURL *)URL error:(NSError **)error {
++ (BOOL)createDirectoryAtURL:(NSURL *)URL error:(NSError **)error {
     NSError *innerError;
     BOOL success = [NSFileManager.defaultManager createDirectoryAtURL:URL withIntermediateDirectories:YES attributes:nil error:&innerError];
     if (error != NULL && innerError) *error = innerError;
