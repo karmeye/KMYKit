@@ -14,6 +14,7 @@
 #import <KMYKit/KMYBlock.h>
 #import <KMYKit/KMYCGGeometry.h>
 #import <KMYKit/KMYDispatch.h>
+#import <KMYKit/KMYFileManager.h>
 #import <KMYKit/KMYItem.h>
 #import <KMYKit/KMYMacros.h>
 #import <KMYKit/KMYSection.h>
