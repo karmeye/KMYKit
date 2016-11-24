@@ -12,6 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIColor (KMY)
 
+
+/**
+ Creates a new color from the given hex representation.
+ @param hex For example: 0x006F51
+ */
 + (instancetype)kmy_colorWithHex:(uint32_t)hex;
 + (instancetype)kmy_colorWithHex:(uint32_t)hex alpha:(CGFloat)alpha;
 
