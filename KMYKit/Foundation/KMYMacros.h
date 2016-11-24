@@ -24,8 +24,10 @@
 
 // Collections
 #define KMYArrayContainsObjects(array)              (array && array.count > 0)
+#define KMYArrayIsNilOrEmpty(array)                 (array == nil || array.count == 0)
 #define KMYDictionaryContainsObjects(dictionary)    (dictionary && dictionary.count > 0)
-
+#define KMYSetIsNilOrEmpty(set)                     (set == nil || set.count == 0)
+#define KMYSetContainsObjects(set)                  (set && set.count > 0)
 
 #if defined(DEBUG)
 #define KMYIfDebugBuild(block)                  block()
