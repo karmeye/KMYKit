@@ -21,10 +21,6 @@
 
 @implementation KMYApplicationBackgroundTask
 
-- (void)dealloc {
-    NSLog(@"KMYApplicationBackgroundTask dealloc");
-}
-
 - (instancetype)initWithExecutionHandler:(void(^)(KMYApplicationBackgroundTask *task))executionHandler
                        expirationHandler:(void(^)(void))expirationHandler {
 
@@ -68,9 +64,7 @@
 
         // Doc: This method can be safely called on a non-main thread.
         [self.application endBackgroundTask:self.taskIdentifier];
-
         self.taskIdentifier = UIBackgroundTaskInvalid;
-        NSLog(@"KMYApplicationBackgroundTask Task Ended");
     }
 }
 
