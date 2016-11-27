@@ -11,14 +11,18 @@
 
 @interface KMYGate ()
 
+@property (nonatomic, strong)   dispatch_queue_t            dispatchQueue;
+@property (nonatomic, assign)   NSInteger                   openRequestCount;
+@property (nonatomic, strong)   dispatch_queue_t            callbackQueue;
+
 @property (nonatomic, copy)     void                        (^didOpenHandler)();
 @property (nonatomic, copy)     void                        (^didCloseHandler)();
-@property (nonatomic, strong)   dispatch_queue_t            callbackQueue;
-@property (nonatomic, assign)   NSInteger                   openRequestCount;
 
 @end
 
 @implementation KMYGate
+
+@dynamic isOpen;
 
 + (instancetype)gateWithOpenHandler:(void (^)())didOpenHandler closeHandler:(void (^)())didCloseHandler {
     return [[self class] gateWithOpenHandler:didOpenHandler closeHandler:didCloseHandler callbackQueue:nil];
@@ -27,19 +31,20 @@
 + (instancetype)gateWithOpenHandler:(void (^)())didOpenHandler closeHandler:(void (^)())didCloseHandler callbackQueue:(dispatch_queue_t)callbackQueue {
     KMYGate *s          = [[[self class] alloc] init];
     s.callbackQueue     = callbackQueue;
+    s.dispatchQueue     = dispatch_queue_create("com.KMYKit.KMYGate", dispatch_queue_attr_make_with_qos_class(DISPATCH_QUEUE_SERIAL, QOS_CLASS_DEFAULT, -1));
     s.didOpenHandler    = didOpenHandler;
     s.didCloseHandler   = didCloseHandler;
     return s;
 }
 
 - (void)enter {
-    BOOL didOpen = NO;
+    BOOL __block didOpen;
 
-    @synchronized(self) {
-        BOOL wasClosed = self.openRequestCount == 0;
-        self.openRequestCount += 1;
-        didOpen = wasClosed && self.openRequestCount > 0;
-    }
+    dispatch_sync(self.dispatchQueue, ^{
+        BOOL wasClosed              = self.openRequestCount == 0;
+        self.openRequestCount       += 1;
+        didOpen                     = wasClosed && self.openRequestCount > 0;
+    });
 
     if (didOpen && self.didOpenHandler != NULL) {
         if (self.callbackQueue) {
@@ -51,13 +56,13 @@
 }
 
 - (void)exit {
-    BOOL didClose = NO;
+    BOOL __block didClose;
 
-    @synchronized(self) {
-        BOOL wasOpen = self.openRequestCount > 0;
-        self.openRequestCount = MAX(self.openRequestCount - 1, 0);
-        didClose = wasOpen && self.openRequestCount == 0;
-    }
+    dispatch_sync(self.dispatchQueue, ^{
+        BOOL const wasOpen      = self.openRequestCount > 0;
+        self.openRequestCount   = MAX(self.openRequestCount - 1, 0);
+        didClose                = wasOpen && self.openRequestCount == 0;
+    });
 
     if (didClose && self.didCloseHandler != NULL) {
         if (self.callbackQueue) {
@@ -66,6 +71,16 @@
             self.didCloseHandler();
         }
     }
+}
+
+- (BOOL)isOpen {
+    BOOL __block isOpen;
+
+    dispatch_sync(self.dispatchQueue, ^{
+        isOpen = self.openRequestCount > 0;
+    });
+    
+    return isOpen;
 }
 
 @end

@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface KMYGate : NSObject
 
+@property (nonatomic, assign, readonly)     BOOL    isOpen;
+
 + (instancetype)gateWithOpenHandler:(void (^)())didOpenHandler closeHandler:(void (^)())didCloseHandler;
 + (instancetype)gateWithOpenHandler:(void (^)())didOpenHandler closeHandler:(void (^)())didCloseHandler callbackQueue:(nullable dispatch_queue_t)callbackQueue;
 
