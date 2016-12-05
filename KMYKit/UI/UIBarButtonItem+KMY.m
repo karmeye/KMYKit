@@ -24,16 +24,40 @@ static const void   *KMYBarButtonItemKeyHandler         = &KMYBarButtonItemKeyHa
     return [[[self class] alloc] kmy_initWithTitle:title style:UIBarButtonItemStylePlain handler:handler];
 }
 
++ (instancetype)kmy_buttonWithTitle:(NSString *)title initializer:(void (^)(__kindof UIBarButtonItem *buttonItem))initializer handler:(void (^)(__kindof UIBarButtonItem *buttonItem))handler {
+    UIBarButtonItem *buttonItem = [[[self class] alloc] kmy_initWithTitle:title style:UIBarButtonItemStylePlain handler:handler];
+    KMYInvokeBlockIfSet(initializer, buttonItem);
+    return buttonItem;
+}
+
 + (instancetype)kmy_doneButtonWithTitle:(NSString *)title handler:(void (^)(__kindof UIBarButtonItem *buttonItem))handler {
     return [[[self class] alloc] kmy_initWithTitle:title style:UIBarButtonItemStyleDone handler:handler];
+}
+
++ (instancetype)kmy_doneButtonWithTitle:(NSString *)title initializer:(void (^)(__kindof UIBarButtonItem *buttonItem))initializer handler:(void (^)(__kindof UIBarButtonItem *buttonItem))handler {
+    UIBarButtonItem *buttonItem = [[[self class] alloc] kmy_initWithTitle:title style:UIBarButtonItemStyleDone handler:handler];
+    KMYInvokeBlockIfSet(initializer, buttonItem);
+    return buttonItem;
 }
 
 + (instancetype)kmy_buttonWithSystemItem:(UIBarButtonSystemItem)systemItem handler:(void (^)(__kindof UIBarButtonItem *buttonItem))handler {
     return [[[self class] alloc] kmy_initWithBarButtonSystemItem:systemItem handler:handler];
 }
 
++ (instancetype)kmy_buttonWithSystemItem:(UIBarButtonSystemItem)systemItem initializer:(void (^)(__kindof UIBarButtonItem *buttonItem))initializer handler:(void (^)(__kindof UIBarButtonItem *buttonItem))handler {
+    UIBarButtonItem *buttonItem = [[[self class] alloc] kmy_initWithBarButtonSystemItem:systemItem handler:handler];
+    KMYInvokeBlockIfSet(initializer, buttonItem);
+    return buttonItem;
+}
+
 + (instancetype)kmy_buttonWithImage:(UIImage *)image handler:(void (^)(__kindof UIBarButtonItem *buttonItem))handler {
     return [[[self class] alloc] kmy_initWithImage:image handler:handler];
+}
+
++ (instancetype)kmy_buttonWithImage:(UIImage *)image initializer:(void (^)(__kindof UIBarButtonItem *buttonItem))initializer handler:(void (^)(__kindof UIBarButtonItem *buttonItem))handler {
+    UIBarButtonItem *buttonItem = [[[self class] alloc] kmy_initWithImage:image handler:handler];
+    KMYInvokeBlockIfSet(initializer, buttonItem);
+    return buttonItem;
 }
 
 + (instancetype)kmy_buttonWithCustomView:(UIView *)view {
@@ -67,6 +91,7 @@ static const void   *KMYBarButtonItemKeyHandler         = &KMYBarButtonItemKeyHa
     [barButtonItem kmy_registerHandler:handler];
     return barButtonItem;
 }
+
 - (instancetype)kmy_initWithCustomView:(UIView *)view {
     UIBarButtonItem *barButtonItem = [self initWithCustomView:view];
     return barButtonItem;

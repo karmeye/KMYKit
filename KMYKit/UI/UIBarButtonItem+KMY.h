@@ -14,9 +14,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)kmy_buttonWithTitle:(NSString *)title;
 + (instancetype)kmy_buttonWithTitle:(NSString *)title handler:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))handler;
++ (instancetype)kmy_buttonWithTitle:(NSString *)title initializer:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))initializer handler:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))handler;
 + (instancetype)kmy_doneButtonWithTitle:(NSString *)title handler:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))handler;
++ (instancetype)kmy_doneButtonWithTitle:(NSString *)title initializer:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))initializer handler:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))handler;
 + (instancetype)kmy_buttonWithSystemItem:(UIBarButtonSystemItem)systemItem handler:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))handler;
++ (instancetype)kmy_buttonWithSystemItem:(UIBarButtonSystemItem)systemItem initializer:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))initializer handler:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))handler;
 + (instancetype)kmy_buttonWithImage:(UIImage *)image handler:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))handler;
++ (instancetype)kmy_buttonWithImage:(UIImage *)image initializer:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))initializer handler:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))handler;
 + (instancetype)kmy_buttonWithCustomView:(UIView *)view;
 + (instancetype)kmy_buttonWithFlexibleSpace;
 + (instancetype)kmy_buttonWithFixedSpace:(CGFloat)space;
