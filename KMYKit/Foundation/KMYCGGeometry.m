@@ -31,3 +31,15 @@ bool KMYCGSizeIsSetAndLargerThan(CGSize size, CGSize largerThanSize) {
 bool KMYCGSizeIsSetAndLessThan(CGSize size, CGSize lessThanSize) {
     return KMYCGSizeIsSet(size) && (size.width < lessThanSize.width && size.height < lessThanSize.height);
 }
+
+CGFloat KMYScaleForSizeThatFitsSize(CGSize size, CGSize sizeToFit) {
+
+    // Inspired by: https://github.com/quartermaster/QSKit/blob/master/Classes/Images/QSScaling.m
+
+    if (CGSizeEqualToSize(size, sizeToFit)) return 1.0f;
+
+    CGFloat heightFactor = size.height / sizeToFit.height;
+    CGFloat widthFactor = size.width / sizeToFit.width;
+
+    return heightFactor > widthFactor ? heightFactor : widthFactor;
+}
