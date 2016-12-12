@@ -128,6 +128,8 @@
 		A6D87A4A1CF70567006BEC47 /* WKWebView+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D87A481CF70567006BEC47 /* WKWebView+KMY.m */; };
 		A6D8DB601CE0B681003E227A /* NSAttributedString+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D8DB5E1CE0B681003E227A /* NSAttributedString+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6D8DB611CE0B681003E227A /* NSAttributedString+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D8DB5F1CE0B681003E227A /* NSAttributedString+KMY.m */; };
+		A6E4975D1DFECE0F0089E4EA /* UIFont+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A6E4975B1DFECE0F0089E4EA /* UIFont+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6E4975E1DFECE0F0089E4EA /* UIFont+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E4975C1DFECE0F0089E4EA /* UIFont+KMY.m */; };
 		A6F6DA271CCA18AB0042B78A /* UIBarButtonItem+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A6F6DA251CCA18AB0042B78A /* UIBarButtonItem+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6F6DA281CCA18AB0042B78A /* UIBarButtonItem+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F6DA261CCA18AB0042B78A /* UIBarButtonItem+KMY.m */; };
 		A6F6DA601CCDD4650042B78A /* KMYTableViewControllerBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = A6F6DA5E1CCDD4650042B78A /* KMYTableViewControllerBehavior.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -273,6 +275,8 @@
 		A6D87A481CF70567006BEC47 /* WKWebView+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WKWebView+KMY.m"; sourceTree = "<group>"; };
 		A6D8DB5E1CE0B681003E227A /* NSAttributedString+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+KMY.h"; sourceTree = "<group>"; };
 		A6D8DB5F1CE0B681003E227A /* NSAttributedString+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+KMY.m"; sourceTree = "<group>"; };
+		A6E4975B1DFECE0F0089E4EA /* UIFont+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+KMY.h"; sourceTree = "<group>"; };
+		A6E4975C1DFECE0F0089E4EA /* UIFont+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+KMY.m"; sourceTree = "<group>"; };
 		A6F6DA251CCA18AB0042B78A /* UIBarButtonItem+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+KMY.h"; sourceTree = "<group>"; };
 		A6F6DA261CCA18AB0042B78A /* UIBarButtonItem+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+KMY.m"; sourceTree = "<group>"; };
 		A6F6DA5E1CCDD4650042B78A /* KMYTableViewControllerBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYTableViewControllerBehavior.h; sourceTree = "<group>"; };
@@ -324,6 +328,8 @@
 				A6F6DA671CCDDC5C0042B78A /* UICollectionViewController+KMY.m */,
 				A62AF9E31D61766500B6731D /* UIColor+KMY.h */,
 				A62AF9E41D61766500B6731D /* UIColor+KMY.m */,
+				A6E4975B1DFECE0F0089E4EA /* UIFont+KMY.h */,
+				A6E4975C1DFECE0F0089E4EA /* UIFont+KMY.m */,
 				A69674A51CFEE653003B49F0 /* UIGestureRecognizer+KMY.h */,
 				A69674A61CFEE653003B49F0 /* UIGestureRecognizer+KMY.m */,
 				A6863E1E1D7E8FD300694FF6 /* UIImage+KMY.h */,
@@ -635,6 +641,7 @@
 				A62EA1E41D954CC300FAFAF7 /* KMYCGGeometry.h in Headers */,
 				A6C580771DA3C2930081FC2D /* UIRefreshControl+KMY.h in Headers */,
 				A6C2C67C1DC2065600EFD9D2 /* KMYFileManager.h in Headers */,
+				A6E4975D1DFECE0F0089E4EA /* UIFont+KMY.h in Headers */,
 				A681537D1DE730DA00793715 /* KMYApplicationBackgroundTask.h in Headers */,
 				A6D87A491CF70567006BEC47 /* WKWebView+KMY.h in Headers */,
 			);
@@ -730,6 +737,7 @@
 				A69674A81CFEE653003B49F0 /* UIGestureRecognizer+KMY.m in Sources */,
 				A64773251D89592F00520769 /* KMYAbsoluteURL.m in Sources */,
 				A68B8E101CAA6F8900DE6E95 /* KMYItem.m in Sources */,
+				A6E4975E1DFECE0F0089E4EA /* UIFont+KMY.m in Sources */,
 				A62AF9E61D61766500B6731D /* UIColor+KMY.m in Sources */,
 				A68B8E301CAA6F9200DE6E95 /* KMYUIItem.m in Sources */,
 				A681537E1DE730DA00793715 /* KMYApplicationBackgroundTask.m in Sources */,
