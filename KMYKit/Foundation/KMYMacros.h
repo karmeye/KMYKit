@@ -40,3 +40,6 @@
 #else
 #define KMYIfSimulator(...)
 #endif
+
+
+#define KMY_DEPRECATED(msg)                     __attribute__((deprecated("Deprecated in KMYKit: " msg)))
