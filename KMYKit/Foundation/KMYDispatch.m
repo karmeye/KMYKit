@@ -24,26 +24,67 @@ dispatch_queue_t kmy_dispatch_get_background_priority_queue(void) {
     return dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0);
 }
 
+
+dispatch_queue_t kmy_dispatch_get_user_interactive_queue(void) {
+    return dispatch_get_global_queue(QOS_CLASS_USER_INTERACTIVE, 0);
+}
+
+dispatch_queue_t kmy_dispatch_get_user_initiated_queue(void) {
+    return dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0);
+}
+
+dispatch_queue_t kmy_dispatch_get_default_queue(void) {
+    return dispatch_get_global_queue(QOS_CLASS_DEFAULT, 0);
+}
+
+dispatch_queue_t kmy_dispatch_get_utility_queue(void) {
+    return dispatch_get_global_queue(QOS_CLASS_UTILITY, 0);
+}
+
+dispatch_queue_t kmy_dispatch_get_background_queue(void) {
+    return dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0);
+}
+
 #pragma mark -
 
 void kmy_dispatch_async_on_main_queue(dispatch_block_t block) {
     dispatch_async(kmy_dispatch_get_main_queue(), block);
 }
 
+void kmy_dispatch_async_on_user_interactive_queue(dispatch_block_t block) {
+    dispatch_async(kmy_dispatch_get_user_interactive_queue(), block);
+}
+
+void kmy_dispatch_async_on_user_initiated_queue(dispatch_block_t block) {
+    dispatch_async(kmy_dispatch_get_user_initiated_queue(), block);
+}
+
+void kmy_dispatch_async_on_default_queue(dispatch_block_t block) {
+    dispatch_async(kmy_dispatch_get_default_queue(), block);
+}
+
+void kmy_dispatch_async_on_utility_queue(dispatch_block_t block) {
+    dispatch_async(kmy_dispatch_get_utility_queue(), block);
+}
+
+void kmy_dispatch_async_on_background_queue(dispatch_block_t block) {
+    dispatch_async(kmy_dispatch_get_background_queue(), block);
+}
+
 void kmy_dispatch_async_on_default_priority_queue(dispatch_block_t block) {
-    dispatch_async(kmy_dispatch_get_default_priority_queue(), block);
+    dispatch_async(kmy_dispatch_get_default_queue(), block);
 }
 
 void kmy_dispatch_async_on_high_priority_queue(dispatch_block_t block) {
-    dispatch_async(kmy_dispatch_get_high_priority_queue(), block);
+    dispatch_async(kmy_dispatch_get_user_initiated_queue(), block);
 }
 
 void kmy_dispatch_async_on_low_priority_queue(dispatch_block_t block) {
-    dispatch_async(kmy_dispatch_get_low_priority_queue(), block);
+    dispatch_async(kmy_dispatch_get_utility_queue(), block);
 }
 
 void kmy_dispatch_async_on_background_priority_queue(dispatch_block_t block) {
-    dispatch_async(kmy_dispatch_get_background_priority_queue(), block);
+    dispatch_async(kmy_dispatch_get_background_queue(), block);
 }
 
 void kmy_dispatch_async_on_main_queue_after(NSTimeInterval delay, dispatch_block_t block) {
@@ -60,6 +101,31 @@ void kmy_dispatch_async_if(dispatch_queue_t queue, dispatch_block_t block) {
     if (queue)  dispatch_async(queue, block);
     else        block();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
