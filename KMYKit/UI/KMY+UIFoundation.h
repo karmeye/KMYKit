@@ -46,6 +46,7 @@
 #import <KMYKit/UIButton+KMY.h>
 #import <KMYKit/UICollectionViewController+KMY.h>
 #import <KMYKit/UIColor+KMY.h>
+#import <KMYKit/UIFont+KMY.h>
 #import <KMYKit/UIGestureRecognizer+KMY.h>
 #import <KMYKit/UIImage+KMY.h>
 #import <KMYKit/UIImageView+KMY.h>
