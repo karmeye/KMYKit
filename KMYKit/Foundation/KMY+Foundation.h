@@ -26,6 +26,7 @@
 
 #import <KMYKit/NSArray+KMY.h>
 #import <KMYKit/NSAttributedString+KMY.h>
+#import <KMYKit/NSDate+KMY.h>
 #import <KMYKit/NSDictionary+KMY.h>
 #import <KMYKit/NSError+KMY.h>
 #import <KMYKit/NSMutableArray+KMY.h>
