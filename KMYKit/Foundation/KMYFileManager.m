@@ -55,6 +55,28 @@
     return success;
 }
 
++ (unsigned long long)sizeOfDirectoryAtURL:(NSURL *)directoryURL {
+    // TODO: Error handler and handle failed getResourceValue
+
+    NSDirectoryEnumerator<NSURL *> *enumerator = [NSFileManager.defaultManager enumeratorAtURL:directoryURL
+                                                                    includingPropertiesForKeys:@[NSURLFileSizeKey]
+                                                                                       options:0
+                                                                                  errorHandler:^BOOL(NSURL * _Nonnull url, NSError * _Nonnull error) {
+                                                                                      return YES;
+                                                                                  }];
+    unsigned long long  totalBytes  = 0;
+    NSNumber            *value      = nil;
+    
+    for (NSURL *URL in enumerator) {
+        if ([URL getResourceValue:&value forKey:NSURLFileSizeKey error:nil]) {
+            totalBytes += [value unsignedLongLongValue];
+        } else {}
+    }
+    
+    return totalBytes;
+}
+
+
 @end
 
 

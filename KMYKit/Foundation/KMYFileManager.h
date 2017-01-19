@@ -27,6 +27,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// @returns @c YES if the directory was created or already exists. @c NO if an error occured.
 + (BOOL)createDirectoryAtURL:(NSURL *)URL error:(NSError **)error;
 
++ (unsigned long long)sizeOfDirectoryAtURL:(NSURL *)directoryURL;
+
 @end
 
 NS_ASSUME_NONNULL_END
