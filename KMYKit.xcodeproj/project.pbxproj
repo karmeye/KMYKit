@@ -151,6 +151,8 @@
 		A6F6DA831CCF2BDF0042B78A /* KMYUIItem+TableView.h in Headers */ = {isa = PBXBuildFile; fileRef = A6F6DA811CCF2BDF0042B78A /* KMYUIItem+TableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6F6DA841CCF2BDF0042B78A /* KMYUIItem+TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F6DA821CCF2BDF0042B78A /* KMYUIItem+TableView.m */; };
 		A6F6F6C11CA3CDAA0074F8A4 /* KMYKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A6F6F6C01CA3CDAA0074F8A4 /* KMYKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6FAFA111E2E51EB0038F267 /* NSDate+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A6FAFA0F1E2E51EB0038F267 /* NSDate+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6FAFA121E2E51EB0038F267 /* NSDate+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FAFA101E2E51EB0038F267 /* NSDate+KMY.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -300,6 +302,8 @@
 		A6F6F6BD1CA3CDAA0074F8A4 /* KMYKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KMYKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6F6F6C01CA3CDAA0074F8A4 /* KMYKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMYKit.h; sourceTree = "<group>"; };
 		A6F6F6C21CA3CDAA0074F8A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6FAFA0F1E2E51EB0038F267 /* NSDate+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+KMY.h"; sourceTree = "<group>"; };
+		A6FAFA101E2E51EB0038F267 /* NSDate+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+KMY.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -363,6 +367,8 @@
 				A68B8E031CAA6F8900DE6E95 /* NSArray+KMY.m */,
 				A6D8DB5E1CE0B681003E227A /* NSAttributedString+KMY.h */,
 				A6D8DB5F1CE0B681003E227A /* NSAttributedString+KMY.m */,
+				A6FAFA0F1E2E51EB0038F267 /* NSDate+KMY.h */,
+				A6FAFA101E2E51EB0038F267 /* NSDate+KMY.m */,
 				A68B8E041CAA6F8900DE6E95 /* NSDictionary+KMY.h */,
 				A68B8E051CAA6F8900DE6E95 /* NSDictionary+KMY.m */,
 				A66C40261D73009500B8F836 /* NSError+KMY.h */,
@@ -642,6 +648,7 @@
 				A6C580771DA3C2930081FC2D /* UIRefreshControl+KMY.h in Headers */,
 				A6C2C67C1DC2065600EFD9D2 /* KMYFileManager.h in Headers */,
 				A6E4975D1DFECE0F0089E4EA /* UIFont+KMY.h in Headers */,
+				A6FAFA111E2E51EB0038F267 /* NSDate+KMY.h in Headers */,
 				A681537D1DE730DA00793715 /* KMYApplicationBackgroundTask.h in Headers */,
 				A6D87A491CF70567006BEC47 /* WKWebView+KMY.h in Headers */,
 			);
@@ -740,6 +747,7 @@
 				A6E4975E1DFECE0F0089E4EA /* UIFont+KMY.m in Sources */,
 				A62AF9E61D61766500B6731D /* UIColor+KMY.m in Sources */,
 				A68B8E301CAA6F9200DE6E95 /* KMYUIItem.m in Sources */,
+				A6FAFA121E2E51EB0038F267 /* NSDate+KMY.m in Sources */,
 				A681537E1DE730DA00793715 /* KMYApplicationBackgroundTask.m in Sources */,
 				A6871C651CBE39710062E265 /* KMYManagedObject.m in Sources */,
 				A6F6DA761CCDE7840042B78A /* KMYDefaultCollectionViewCell.m in Sources */,
