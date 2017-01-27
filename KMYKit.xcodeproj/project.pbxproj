@@ -153,6 +153,8 @@
 		A6F6F6C11CA3CDAA0074F8A4 /* KMYKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A6F6F6C01CA3CDAA0074F8A4 /* KMYKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6FAFA111E2E51EB0038F267 /* NSDate+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A6FAFA0F1E2E51EB0038F267 /* NSDate+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6FAFA121E2E51EB0038F267 /* NSDate+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FAFA101E2E51EB0038F267 /* NSDate+KMY.m */; };
+		A6FAFA151E30B3DC0038F267 /* NSManagedObjectContext+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A6FAFA131E30B3DC0038F267 /* NSManagedObjectContext+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6FAFA161E30B3DC0038F267 /* NSManagedObjectContext+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FAFA141E30B3DC0038F267 /* NSManagedObjectContext+KMY.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -304,6 +306,8 @@
 		A6F6F6C21CA3CDAA0074F8A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6FAFA0F1E2E51EB0038F267 /* NSDate+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+KMY.h"; sourceTree = "<group>"; };
 		A6FAFA101E2E51EB0038F267 /* NSDate+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+KMY.m"; sourceTree = "<group>"; };
+		A6FAFA131E30B3DC0038F267 /* NSManagedObjectContext+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+KMY.h"; sourceTree = "<group>"; };
+		A6FAFA141E30B3DC0038F267 /* NSManagedObjectContext+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+KMY.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -408,6 +412,8 @@
 				A692F9021D6B1A6000BC84E8 /* KMYPersistentContainer.m */,
 				A692F9031D6B1A6000BC84E8 /* KMYPersistentStoreOperation.h */,
 				A692F9041D6B1A6000BC84E8 /* KMYPersistentStoreOperation.m */,
+				A6FAFA131E30B3DC0038F267 /* NSManagedObjectContext+KMY.h */,
+				A6FAFA141E30B3DC0038F267 /* NSManagedObjectContext+KMY.m */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -649,6 +655,7 @@
 				A6C2C67C1DC2065600EFD9D2 /* KMYFileManager.h in Headers */,
 				A6E4975D1DFECE0F0089E4EA /* UIFont+KMY.h in Headers */,
 				A6FAFA111E2E51EB0038F267 /* NSDate+KMY.h in Headers */,
+				A6FAFA151E30B3DC0038F267 /* NSManagedObjectContext+KMY.h in Headers */,
 				A681537D1DE730DA00793715 /* KMYApplicationBackgroundTask.h in Headers */,
 				A6D87A491CF70567006BEC47 /* WKWebView+KMY.h in Headers */,
 			);
@@ -779,6 +786,7 @@
 				A6A8D0551D250F2100BD292D /* KMYTableViewHeaderFooterConfigurator.m in Sources */,
 				A66C40291D73009500B8F836 /* NSError+KMY.m in Sources */,
 				A68B8E191CAA6F8900DE6E95 /* NSMutableArray+KMY.m in Sources */,
+				A6FAFA161E30B3DC0038F267 /* NSManagedObjectContext+KMY.m in Sources */,
 				A6587CF21D01883B00F6DD9E /* UISegmentedControl+KMY.m in Sources */,
 				A6F6DA801CCF298F0042B78A /* KMYUIItem+CollectionView.m in Sources */,
 				A6F6DA651CCDD7190042B78A /* KMYCollectionViewControllerBehavior.m in Sources */,

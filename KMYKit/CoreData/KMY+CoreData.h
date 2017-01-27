@@ -11,3 +11,5 @@
 #import <KMYKit/KMYManagedObject.h>
 #import <KMYKit/KMYPersistentContainer.h>
 #import <KMYKit/KMYPersistentStoreOperation.h>
+
+#import <KMYKit/NSManagedObjectContext+KMY.h>
