@@ -11,8 +11,8 @@
 
 @interface KMYSection ()
 
-@property (nonatomic, strong, readwrite, nullable)  NSArray<KMYItem *>  *items;
-@property (nonatomic, strong, readwrite)            NSDictionary        *attributeDictionary;
+@property (nonatomic, strong, readwrite, nullable)  NSArray<KMYItem *>              *items;
+@property (nonatomic, strong, readwrite)            NSDictionary<NSString *, id>    *attributeDictionary;
 
 @end
 
@@ -40,7 +40,7 @@
     return instance;
 }
 
-+ (instancetype)sectionWithInitializer:(void (^)(NSMutableDictionary * attributes, NSMutableArray * items))initializer {
++ (instancetype)sectionWithInitializer:(void (^)(NSMutableDictionary<NSString *, id> *attributes, NSMutableArray *items))initializer {
     KMYSection *instance = [[[self class] alloc] init];
 
     if (instance) {
@@ -75,7 +75,7 @@
 
 #pragma mark - KMYItemAttributes Protocol
 
-- (NSArray *)attributes {
+- (NSArray<NSString *> *)attributes {
     return self.attributeDictionary != nil ? self.attributeDictionary.allKeys : @[];
 }
 

@@ -24,7 +24,7 @@ NSString * const KMYUIItemActionHandlerInfoKeyIndexPath     = @"KMYUIItemActionH
 
 @dynamic editingOptions, type, text, detailText, image;
 
-+ (KMYUIItem *)itemWithAttributes:(NSDictionary *)dictionary actionHandler:(KMYUIItemActionHandler)actionHandler {
++ (KMYUIItem *)itemWithAttributes:(NSDictionary<NSString *, id> *)dictionary actionHandler:(KMYUIItemActionHandler)actionHandler {
     KMYUIItem *item = [[self class] itemWithAttributes:dictionary];
     item.actionHandler = actionHandler;
     return item;
@@ -41,10 +41,10 @@ NSString * const KMYUIItemActionHandlerInfoKeyIndexPath     = @"KMYUIItemActionH
 }
 
 - (NSString *)text {
-    NSString *text = self.attributeDictionary[KMYUIItemKeyText];
+    NSString *text = KMYCastIfKindOfClass(self.attributeDictionary[KMYUIItemKeyText], NSString);
 
     if (!text) {
-        KMYUIItemTextHandler textHandler = self.attributeDictionary[KMYUIItemKeyTextHandler];
+        KMYUIItemTextHandler textHandler = (KMYUIItemTextHandler)self.attributeDictionary[KMYUIItemKeyTextHandler];
         text = textHandler ? textHandler() : nil;
     }
 

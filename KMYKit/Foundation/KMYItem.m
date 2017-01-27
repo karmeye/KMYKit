@@ -15,7 +15,7 @@ NSString * const KMYItemKeyID           = @"KMYItemKeyID";
 
 @interface KMYItem ()
 
-@property (nonatomic, strong, readwrite)    NSDictionary        *attributeDictionary;
+@property (nonatomic, strong, readwrite)    NSDictionary<NSString *, id>    *attributeDictionary;
 
 @end
 
@@ -32,13 +32,13 @@ NSString * const KMYItemKeyID           = @"KMYItemKeyID";
     return self;
 }
 
-+ (KMYItem *)itemWithAttributes:(NSDictionary *)dictionary {
++ (KMYItem *)itemWithAttributes:(NSDictionary<NSString *, id> *)dictionary {
     KMYItem *item = [[[self class] alloc] init];
     item.attributeDictionary = dictionary;
     return item;
 }
 
-+ (__kindof KMYItem *)itemWithInitializer:(void (^)(NSMutableDictionary *attributes))initializer {
++ (__kindof KMYItem *)itemWithInitializer:(void (^)(NSMutableDictionary<NSString *, id> *attributes))initializer {
     KMYItem *item = [[[self class] alloc] init];
     if (item && initializer != NULL) {
         NSMutableDictionary *attributes = [[NSMutableDictionary alloc] init];
@@ -48,7 +48,7 @@ NSString * const KMYItemKeyID           = @"KMYItemKeyID";
     return item;
 }
 
-- (__kindof KMYItem *)copyWithAttributes:(NSDictionary *)dictionary {
+- (__kindof KMYItem *)copyWithAttributes:(NSDictionary<NSString *, id> *)dictionary {
     NSMutableDictionary *attributes = [self.attributeDictionary mutableCopy];
     [attributes addEntriesFromDictionary:dictionary];
     return [[self class] itemWithAttributes:[attributes copy]];
@@ -66,7 +66,7 @@ NSString * const KMYItemKeyID           = @"KMYItemKeyID";
 
 #pragma mark - KMYItemAttributes Protocol
 
-- (NSArray *)attributes {
+- (NSArray<NSString *> *)attributes {
     return self.attributeDictionary != nil ? self.attributeDictionary.allKeys : @[];
 }
 

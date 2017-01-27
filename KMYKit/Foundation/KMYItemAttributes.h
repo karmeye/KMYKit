@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// @brief An array containing the attribute keys for the item’s values or an empty array if the item has no attributes.
 /// @discussion This property contains an array of attribute keys, representing the values available from this item.
-@property (readonly, copy)      NSArray     *attributes;
+@property (readonly, copy)      NSArray<NSString *> *attributes;
 
 /// Returns the receiver’s metadata attribute name specified by a given key.
 ///

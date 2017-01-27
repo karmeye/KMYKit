@@ -25,18 +25,18 @@ extern NSString *const KMYItemKeyID;
 @property (nonatomic, readonly, nullable)           id                value;
 @property (nonatomic, readonly, nullable)           NSString          *identifier;
 
-+ (__kindof KMYItem *)itemWithAttributes:(nullable NSDictionary *)dictionary;
-+ (__kindof KMYItem *)itemWithInitializer:(void (^)(NSMutableDictionary *attributes))initializer;
++ (__kindof KMYItem *)itemWithAttributes:(nullable NSDictionary<NSString *, id> *)dictionary;
++ (__kindof KMYItem *)itemWithInitializer:(void (^)(NSMutableDictionary<NSString *, id> *attributes))initializer;
 
 /// @discussion Keys are copied; values are retained.
 /// @return A copy of the reciver with added attributes and/or possibly overridden.
-- (__kindof KMYItem *)copyWithAttributes:(NSDictionary *)dictionary;
+- (__kindof KMYItem *)copyWithAttributes:(NSDictionary<NSString *, id> *)dictionary;
 
 @end
 
 @interface KMYItem (Subclassing)
 
-@property (nonatomic, strong, readonly, nullable)   NSDictionary        *attributeDictionary;
+@property (nonatomic, strong, readonly, nullable)   NSDictionary<NSString *, id>    *attributeDictionary;
 
 @end
 

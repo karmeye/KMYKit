@@ -18,8 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign, readonly)             NSUInteger                  numberOfItems;
 
 + (instancetype)sectionWithItems:(nullable NSArray *)items;
-+ (instancetype)sectionWithItemsInitializer:(void (^)(NSMutableArray * items))itemsInitializer;
-+ (instancetype)sectionWithInitializer:(void (^)(NSMutableDictionary * attributes, NSMutableArray * items))initializer;
++ (instancetype)sectionWithItemsInitializer:(void (^)(NSMutableArray *items))itemsInitializer;
++ (instancetype)sectionWithInitializer:(void (^)(NSMutableDictionary<NSString *, id> *attributes, NSMutableArray *items))initializer;
 
 - (nullable __kindof KMYItem *)itemAtIndex:(NSUInteger)index;
 - (void)replaceItemAtIndex:(NSUInteger)index withItem:(__kindof KMYItem *)item;
@@ -28,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface KMYSection (Subclassing)
 
-@property (nonatomic, strong, readonly, nullable)   NSDictionary        *attributeDictionary;
+@property (nonatomic, strong, readonly, nullable)   NSDictionary<NSString *, id>    *attributeDictionary;
 
 @end
 
