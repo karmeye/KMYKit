@@ -18,7 +18,7 @@ FOUNDATION_EXPORT   NSString * const KMYEmptyString;
 /// @note      Non-visible characters includes space characters, tabs, newlines, carriage returns, and any similar characters that do not have a visible representation.
 /// @param     stringToTrim The string to trim.
 /// @return    A new trimmed string or nil if given string was nil.
-FOUNDATION_EXPORT   NSString    *KMYStringTrimNonVisibleCharacters(NSString *stringToTrim);
+FOUNDATION_EXPORT   NSString    * _Nullable KMYStringTrimNonVisibleCharacters(NSString * _Nullable stringToTrim);
 
 /// Determines if a string contains visible characters by trimming non-visible characters and checking if the length of the result is > 0.
 ///
@@ -26,7 +26,7 @@ FOUNDATION_EXPORT   NSString    *KMYStringTrimNonVisibleCharacters(NSString *str
 /// @remarks    Non-visible characters includes space characters, tabs, newlines, carriage returns, and any similar characters that do not have a visible representation.
 /// @param      string The string to check.
 /// @return     YES if string contains visible characters.
-FOUNDATION_EXPORT   BOOL        KMYStringContainsVisibleCharacters(NSString *string);
+FOUNDATION_EXPORT   BOOL        KMYStringContainsVisibleCharacters(NSString * _Nullable string);
 
 @interface NSString (KMY)
 
