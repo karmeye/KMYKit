@@ -36,7 +36,7 @@ typedef NS_OPTIONS(NSUInteger, KMYUIItemEditingOptions) {
     KMYUIItemEditingOptionsAll              = NSUIntegerMax
 };
 
-typedef void (^KMYUIItemActionHandler)(__kindof KMYUIItem *item, NSDictionary * _Nullable info);
+typedef void (^KMYUIItemActionHandler)(__kindof KMYUIItem *item, NSDictionary<NSString *, id> * _Nullable info);
 
 typedef NSString * _Nullable (^KMYUIItemTextHandler)();
 
