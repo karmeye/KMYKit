@@ -50,6 +50,8 @@
 		A66DD83B1D5486DE00BD1A1E /* NSURL+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A66DD8391D5486DE00BD1A1E /* NSURL+KMY.m */; };
 		A681537D1DE730DA00793715 /* KMYApplicationBackgroundTask.h in Headers */ = {isa = PBXBuildFile; fileRef = A681537B1DE730DA00793715 /* KMYApplicationBackgroundTask.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A681537E1DE730DA00793715 /* KMYApplicationBackgroundTask.m in Sources */ = {isa = PBXBuildFile; fileRef = A681537C1DE730DA00793715 /* KMYApplicationBackgroundTask.m */; };
+		A68490C51E40C0B4005E4ACC /* KMYSelectableButton.h in Headers */ = {isa = PBXBuildFile; fileRef = A68490C31E40C0B4005E4ACC /* KMYSelectableButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A68490C61E40C0B4005E4ACC /* KMYSelectableButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A68490C41E40C0B4005E4ACC /* KMYSelectableButton.m */; };
 		A6863E201D7E8FD300694FF6 /* UIImage+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A6863E1E1D7E8FD300694FF6 /* UIImage+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6863E211D7E8FD300694FF6 /* UIImage+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A6863E1F1D7E8FD300694FF6 /* UIImage+KMY.m */; };
 		A6871C641CBE39710062E265 /* KMYManagedObject.h in Headers */ = {isa = PBXBuildFile; fileRef = A6871C621CBE39710062E265 /* KMYManagedObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -203,6 +205,8 @@
 		A66DD8391D5486DE00BD1A1E /* NSURL+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+KMY.m"; sourceTree = "<group>"; };
 		A681537B1DE730DA00793715 /* KMYApplicationBackgroundTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYApplicationBackgroundTask.h; sourceTree = "<group>"; };
 		A681537C1DE730DA00793715 /* KMYApplicationBackgroundTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYApplicationBackgroundTask.m; sourceTree = "<group>"; };
+		A68490C31E40C0B4005E4ACC /* KMYSelectableButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYSelectableButton.h; sourceTree = "<group>"; };
+		A68490C41E40C0B4005E4ACC /* KMYSelectableButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYSelectableButton.m; sourceTree = "<group>"; };
 		A6863E1E1D7E8FD300694FF6 /* UIImage+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+KMY.h"; sourceTree = "<group>"; };
 		A6863E1F1D7E8FD300694FF6 /* UIImage+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+KMY.m"; sourceTree = "<group>"; };
 		A6871C621CBE39710062E265 /* KMYManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYManagedObject.h; sourceTree = "<group>"; };
@@ -468,6 +472,8 @@
 				A627751B1CAD493300238E9D /* KMYDefaultReusableIdentifying.h */,
 				A68B8E1E1CAA6F9200DE6E95 /* KMYNavigationController.h */,
 				A68B8E1F1CAA6F9200DE6E95 /* KMYNavigationController.m */,
+				A68490C31E40C0B4005E4ACC /* KMYSelectableButton.h */,
+				A68490C41E40C0B4005E4ACC /* KMYSelectableButton.m */,
 				A68B8E221CAA6F9200DE6E95 /* KMYUIItem.h */,
 				A68B8E231CAA6F9200DE6E95 /* KMYUIItem.m */,
 				A68B8E241CAA6F9200DE6E95 /* KMYUISection.h */,
@@ -662,6 +668,7 @@
 				A6E4975D1DFECE0F0089E4EA /* UIFont+KMY.h in Headers */,
 				A6FAFA111E2E51EB0038F267 /* NSDate+KMY.h in Headers */,
 				A6FAFA151E30B3DC0038F267 /* NSManagedObjectContext+KMY.h in Headers */,
+				A68490C51E40C0B4005E4ACC /* KMYSelectableButton.h in Headers */,
 				A6C109041E446D0600BE6087 /* UIToolbar+KMY.h in Headers */,
 				A681537D1DE730DA00793715 /* KMYApplicationBackgroundTask.h in Headers */,
 				A6D87A491CF70567006BEC47 /* WKWebView+KMY.h in Headers */,
@@ -736,6 +743,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6F6DA691CCDDC5C0042B78A /* UICollectionViewController+KMY.m in Sources */,
+				A68490C61E40C0B4005E4ACC /* KMYSelectableButton.m in Sources */,
 				A6863E211D7E8FD300694FF6 /* UIImage+KMY.m in Sources */,
 				A68B8E471CAAB6B300DE6E95 /* KMYTableViewCellConfigurator.m in Sources */,
 				A6F6DA841CCF2BDF0042B78A /* KMYUIItem+TableView.m in Sources */,
