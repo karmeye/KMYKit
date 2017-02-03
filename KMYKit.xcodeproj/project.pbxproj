@@ -118,6 +118,8 @@
 		A6A8D03F1D22435E00BD292D /* KMYCollectionViewSupplementaryViewConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A8D03D1D22435E00BD292D /* KMYCollectionViewSupplementaryViewConfigurator.m */; };
 		A6A8D0541D250F2100BD292D /* KMYTableViewHeaderFooterConfigurator.h in Headers */ = {isa = PBXBuildFile; fileRef = A6A8D0521D250F2100BD292D /* KMYTableViewHeaderFooterConfigurator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6A8D0551D250F2100BD292D /* KMYTableViewHeaderFooterConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A8D0531D250F2100BD292D /* KMYTableViewHeaderFooterConfigurator.m */; };
+		A6C109041E446D0600BE6087 /* UIToolbar+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A6C109021E446D0600BE6087 /* UIToolbar+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6C109051E446D0600BE6087 /* UIToolbar+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C109031E446D0600BE6087 /* UIToolbar+KMY.m */; };
 		A6C2C67C1DC2065600EFD9D2 /* KMYFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A6C2C67A1DC2065600EFD9D2 /* KMYFileManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6C2C67D1DC2065600EFD9D2 /* KMYFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C2C67B1DC2065600EFD9D2 /* KMYFileManager.m */; };
 		A6C580771DA3C2930081FC2D /* UIRefreshControl+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A6C580751DA3C2930081FC2D /* UIRefreshControl+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -269,6 +271,8 @@
 		A6A8D03D1D22435E00BD292D /* KMYCollectionViewSupplementaryViewConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYCollectionViewSupplementaryViewConfigurator.m; sourceTree = "<group>"; };
 		A6A8D0521D250F2100BD292D /* KMYTableViewHeaderFooterConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYTableViewHeaderFooterConfigurator.h; sourceTree = "<group>"; };
 		A6A8D0531D250F2100BD292D /* KMYTableViewHeaderFooterConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYTableViewHeaderFooterConfigurator.m; sourceTree = "<group>"; };
+		A6C109021E446D0600BE6087 /* UIToolbar+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIToolbar+KMY.h"; sourceTree = "<group>"; };
+		A6C109031E446D0600BE6087 /* UIToolbar+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIToolbar+KMY.m"; sourceTree = "<group>"; };
 		A6C2C67A1DC2065600EFD9D2 /* KMYFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYFileManager.h; sourceTree = "<group>"; };
 		A6C2C67B1DC2065600EFD9D2 /* KMYFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYFileManager.m; sourceTree = "<group>"; };
 		A6C580751DA3C2930081FC2D /* UIRefreshControl+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIRefreshControl+KMY.h"; sourceTree = "<group>"; };
@@ -356,6 +360,8 @@
 				A697721C1D01BD2E00F1BE5A /* UISwitch+KMY.m */,
 				A62775331CB38F4100238E9D /* UITableViewController+KMY.h */,
 				A62775341CB38F4100238E9D /* UITableViewController+KMY.m */,
+				A6C109021E446D0600BE6087 /* UIToolbar+KMY.h */,
+				A6C109031E446D0600BE6087 /* UIToolbar+KMY.m */,
 				A68B8E281CAA6F9200DE6E95 /* UIView+KMY.h */,
 				A68B8E291CAA6F9200DE6E95 /* UIView+KMY.m */,
 				A6D87A471CF70567006BEC47 /* WKWebView+KMY.h */,
@@ -656,6 +662,7 @@
 				A6E4975D1DFECE0F0089E4EA /* UIFont+KMY.h in Headers */,
 				A6FAFA111E2E51EB0038F267 /* NSDate+KMY.h in Headers */,
 				A6FAFA151E30B3DC0038F267 /* NSManagedObjectContext+KMY.h in Headers */,
+				A6C109041E446D0600BE6087 /* UIToolbar+KMY.h in Headers */,
 				A681537D1DE730DA00793715 /* KMYApplicationBackgroundTask.h in Headers */,
 				A6D87A491CF70567006BEC47 /* WKWebView+KMY.h in Headers */,
 			);
@@ -794,6 +801,7 @@
 				A6A8D03F1D22435E00BD292D /* KMYCollectionViewSupplementaryViewConfigurator.m in Sources */,
 				A6F6DA281CCA18AB0042B78A /* UIBarButtonItem+KMY.m in Sources */,
 				A68B8E0E1CAA6F8900DE6E95 /* KMYDispatch.m in Sources */,
+				A6C109051E446D0600BE6087 /* UIToolbar+KMY.m in Sources */,
 				A6587CEA1D015C0400F6DD9E /* KMYSwitchTableViewCell.m in Sources */,
 				A68B8E3A1CAA825900DE6E95 /* KMYTableViewDataSource.m in Sources */,
 				A6D8DB611CE0B681003E227A /* NSAttributedString+KMY.m in Sources */,
