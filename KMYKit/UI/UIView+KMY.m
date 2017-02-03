@@ -10,9 +10,13 @@
 
 @implementation UIView (KMY)
 
++ (instancetype)kmy_view {
+    return [[self class] kmy_viewWithInitializer:NULL];
+}
+
 + (instancetype)kmy_viewWithFrame:(CGRect)frame initializer:(void (^)(__kindof UIView *view))initializer {
     UIView *view = [[[self class] alloc] initWithFrame:frame];
-    if (view && initializer != NULL) initializer(view);
+    if (initializer != NULL) initializer(view);
     return view;
 }
 
