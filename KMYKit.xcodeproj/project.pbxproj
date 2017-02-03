@@ -35,6 +35,8 @@
 		A62AF9E61D61766500B6731D /* UIColor+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A62AF9E41D61766500B6731D /* UIColor+KMY.m */; };
 		A62EA1E41D954CC300FAFAF7 /* KMYCGGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = A62EA1E21D954CC300FAFAF7 /* KMYCGGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A62EA1E51D954CC300FAFAF7 /* KMYCGGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = A62EA1E31D954CC300FAFAF7 /* KMYCGGeometry.m */; };
+		A634953C1E41D6A1004C1872 /* KMYSelectableBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = A634953A1E41D6A1004C1872 /* KMYSelectableBarButtonItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A634953D1E41D6A1004C1872 /* KMYSelectableBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A634953B1E41D6A1004C1872 /* KMYSelectableBarButtonItem.m */; };
 		A64408A51D700C2500450948 /* KMYCancelling.h in Headers */ = {isa = PBXBuildFile; fileRef = A64408A41D700C2500450948 /* KMYCancelling.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A64773241D89592F00520769 /* KMYAbsoluteURL.h in Headers */ = {isa = PBXBuildFile; fileRef = A64773221D89592F00520769 /* KMYAbsoluteURL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A64773251D89592F00520769 /* KMYAbsoluteURL.m in Sources */ = {isa = PBXBuildFile; fileRef = A64773231D89592F00520769 /* KMYAbsoluteURL.m */; };
@@ -190,6 +192,8 @@
 		A62AF9E41D61766500B6731D /* UIColor+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+KMY.m"; sourceTree = "<group>"; };
 		A62EA1E21D954CC300FAFAF7 /* KMYCGGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYCGGeometry.h; sourceTree = "<group>"; };
 		A62EA1E31D954CC300FAFAF7 /* KMYCGGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYCGGeometry.m; sourceTree = "<group>"; };
+		A634953A1E41D6A1004C1872 /* KMYSelectableBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYSelectableBarButtonItem.h; sourceTree = "<group>"; };
+		A634953B1E41D6A1004C1872 /* KMYSelectableBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYSelectableBarButtonItem.m; sourceTree = "<group>"; };
 		A64408A41D700C2500450948 /* KMYCancelling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYCancelling.h; sourceTree = "<group>"; };
 		A64773221D89592F00520769 /* KMYAbsoluteURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYAbsoluteURL.h; sourceTree = "<group>"; };
 		A64773231D89592F00520769 /* KMYAbsoluteURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYAbsoluteURL.m; sourceTree = "<group>"; };
@@ -472,6 +476,8 @@
 				A627751B1CAD493300238E9D /* KMYDefaultReusableIdentifying.h */,
 				A68B8E1E1CAA6F9200DE6E95 /* KMYNavigationController.h */,
 				A68B8E1F1CAA6F9200DE6E95 /* KMYNavigationController.m */,
+				A634953A1E41D6A1004C1872 /* KMYSelectableBarButtonItem.h */,
+				A634953B1E41D6A1004C1872 /* KMYSelectableBarButtonItem.m */,
 				A68490C31E40C0B4005E4ACC /* KMYSelectableButton.h */,
 				A68490C41E40C0B4005E4ACC /* KMYSelectableButton.m */,
 				A68B8E221CAA6F9200DE6E95 /* KMYUIItem.h */,
@@ -668,6 +674,7 @@
 				A6E4975D1DFECE0F0089E4EA /* UIFont+KMY.h in Headers */,
 				A6FAFA111E2E51EB0038F267 /* NSDate+KMY.h in Headers */,
 				A6FAFA151E30B3DC0038F267 /* NSManagedObjectContext+KMY.h in Headers */,
+				A634953C1E41D6A1004C1872 /* KMYSelectableBarButtonItem.h in Headers */,
 				A68490C51E40C0B4005E4ACC /* KMYSelectableButton.h in Headers */,
 				A6C109041E446D0600BE6087 /* UIToolbar+KMY.h in Headers */,
 				A681537D1DE730DA00793715 /* KMYApplicationBackgroundTask.h in Headers */,
@@ -754,6 +761,7 @@
 				A68B8E431CAAB61500DE6E95 /* KMYTextFieldTableViewCell.m in Sources */,
 				A6C580781DA3C2930081FC2D /* UIRefreshControl+KMY.m in Sources */,
 				A692F9081D6B1A6000BC84E8 /* KMYPersistentStoreOperation.m in Sources */,
+				A634953D1E41D6A1004C1872 /* KMYSelectableBarButtonItem.m in Sources */,
 				A626C9901CD8A49C0094802F /* NSString+KMY.m in Sources */,
 				A62775521CBCD71B00238E9D /* KMYDestructiveButtonTableViewCell.m in Sources */,
 				A6F6DA7B1CCDEC960042B78A /* KMYCollectionViewDelegate.m in Sources */,
