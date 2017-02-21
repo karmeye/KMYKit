@@ -10,6 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// An instance of this class can only exist if it’s `URL` property is an absolute URL.
 @interface KMYAbsoluteURL : NSObject <NSCopying>
 
 @property (nonatomic, copy, readonly)       NSURL       *URL;

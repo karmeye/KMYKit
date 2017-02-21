@@ -54,10 +54,56 @@
 #pragma mark -
 
 + (BOOL)isFullNetworkURL:(NSURL *)URL {
+    /*
 
+     NSURL *a = [NSURL URLWithString:@"http://example.com/monkey/monkey.jpg"];
+     DDLogDebug(@"%@ %@ %@ %@ — host %@, %d %d", a.absoluteString, a.scheme, a.baseURL, a.resourceSpecifier, a.host, a.isFileReferenceURL, [a app_isFullNetworkURL]);
+     a = [NSURL URLWithString:@"example.com/monkey/monkey.jpg"];
+     DDLogDebug(@"%@ %@ %@ %@ — host %@, %d %d", a.absoluteString, a.scheme, a.baseURL, a.resourceSpecifier, a.host, a.isFileURL, [a app_isFullNetworkURL]);
+     a = [NSURL URLWithString:@"/monkey/monkey.jpg"];
+     DDLogDebug(@"%@ %@ %@ %@ — host %@, %d %d", a.absoluteString, a.scheme, a.baseURL, a.resourceSpecifier, a.host, a.isFileURL, [a app_isFullNetworkURL]);
+     a = [NSURL URLWithString:@"httpasdfadf//:"];
+     DDLogDebug(@"%@ %@ %@ %@ — host %@, %d %d", a.absoluteString, a.scheme, a.baseURL, a.resourceSpecifier, a.host, a.isFileURL, [a app_isFullNetworkURL]);
+     a = [NSURL URLWithString:@"httpasdfadf:"];
+     DDLogDebug(@"%@ %@ %@ %@ — host %@, %d %d", a.absoluteString, a.scheme, a.baseURL, a.resourceSpecifier, a.host, a.isFileURL, [a app_isFullNetworkURL]);
+     a = [NSURL URLWithString:@"file:///file.txt"];
+     DDLogDebug(@"%@ %@ %@ %@ — host %@, %d %d", a.absoluteString, a.scheme, a.baseURL, a.resourceSpecifier, a.host, a.isFileURL, [a app_isFullNetworkURL]);
+
+     */
+    
     // `scheme` is what comes before the first colon. If there’s nothing before the first colon or there is, but that value is invalid, scheme will be `nil`.
     //
     return URL && URL.scheme != nil && URL.host != nil && URL.pathComponents.count > 0;
 }
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
