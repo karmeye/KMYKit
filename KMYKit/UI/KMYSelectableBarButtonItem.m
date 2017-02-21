@@ -38,6 +38,14 @@
                                                   handler:handler];
 }
 
++ (instancetype)buttonWithSystemItem:(UIBarButtonSystemItem)barButtonSystemItem
+                         initializer:(void (^_Nullable)(__kindof KMYSelectableBarButtonItem *buttonItem))initializer
+                             handler:(void (^_Nullable)(__kindof KMYSelectableBarButtonItem *buttonItem))handler {
+    return [[[self class] alloc] initWithSelectableButton:[KMYSelectableButton buttonForBarButtonCustomViewWithBarButtonSystemItem:barButtonSystemItem]
+                                              initializer:initializer
+                                                  handler:handler];
+}
+
 - (instancetype)initWithSelectableButton:(KMYSelectableButton *)selectableButton
                              initializer:(void (^_Nullable)(__kindof KMYSelectableBarButtonItem *buttonItem))initializer
                                  handler:(void (^_Nullable)(__kindof KMYSelectableBarButtonItem *buttonItem))handler {

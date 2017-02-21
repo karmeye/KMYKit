@@ -21,6 +21,10 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)buttonWithSystemItem:(UIBarButtonSystemItem)barButtonSystemItem
                              handler:(void (^_Nullable)(__kindof KMYSelectableBarButtonItem *buttonItem))handler;
 
++ (instancetype)buttonWithSystemItem:(UIBarButtonSystemItem)barButtonSystemItem
+                         initializer:(void (^_Nullable)(__kindof KMYSelectableBarButtonItem *buttonItem))initializer
+                             handler:(void (^_Nullable)(__kindof KMYSelectableBarButtonItem *buttonItem))handler;
+
 @end
 
 NS_ASSUME_NONNULL_END
