@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIView (KMY)
 
-+ (instancetype)kmy_view;
++ (instancetype)kmy_view NS_SWIFT_UNAVAILABLE("Use default initializer: UIView()");
 
 /// Calls initWithFrame:. Supports subclasses (UILabel etc.)
 ///
@@ -20,7 +20,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param initializer Use to customize the newly allocated UIView.
 ///
 /// @return A new UIView or subclass.
-+ (instancetype)kmy_viewWithFrame:(CGRect)frame initializer:(void (^_Nullable)(__kindof UIView *view))initializer;
++ (instancetype)kmy_viewWithFrame:(CGRect)frame initializer:(void (^_Nullable)(__kindof UIView *view))initializer NS_SWIFT_NAME(init(frame:initializer:));
+
++ (instancetype)kmy_viewWithInitializer:(void (^_Nullable)(__kindof UIView *view))initializer NS_SWIFT_NAME(init(initializer:));
+
 
 + (instancetype)kmy_viewWithInitializer:(void (^_Nullable)(__kindof UIView *view))initializer;
 

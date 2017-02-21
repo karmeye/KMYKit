@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIImageView (KMY)
 
-+ (nullable instancetype)kmy_viewWithImage:(nullable UIImage *)image initializer:(void (^_Nullable)(__kindof UIImageView *imageView))initializer;
++ (instancetype)kmy_viewWithImage:(nullable UIImage *)image initializer:(void (^_Nullable)(__kindof UIImageView *imageView))initializer NS_SWIFT_NAME(init(image:initializer:));
 
 @end
 

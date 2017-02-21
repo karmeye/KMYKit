@@ -12,11 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIBarButtonItem (KMY)
 
-+ (instancetype)kmy_buttonWithTitle:(NSString *)title;
-+ (instancetype)kmy_buttonWithTitle:(NSString *)title handler:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))handler;
-+ (instancetype)kmy_buttonWithTitle:(NSString *)title initializer:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))initializer handler:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))handler;
-+ (instancetype)kmy_doneButtonWithTitle:(NSString *)title handler:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))handler;
-+ (instancetype)kmy_doneButtonWithTitle:(NSString *)title initializer:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))initializer handler:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))handler;
++ (instancetype)kmy_buttonWithTitle:(NSString *)title NS_SWIFT_NAME(init(title:));
++ (instancetype)kmy_buttonWithTitle:(NSString *)title handler:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))handler NS_SWIFT_NAME(init(title:handler:));
++ (instancetype)kmy_buttonWithTitle:(NSString *)title initializer:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))initializer handler:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))handler NS_SWIFT_NAME(init(title:initializer:handler:));
++ (instancetype)kmy_doneButtonWithTitle:(NSString *)title handler:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))handler NS_SWIFT_NAME(init(title:handler:));
++ (instancetype)kmy_doneButtonWithTitle:(NSString *)title initializer:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))initializer handler:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))handler NS_SWIFT_NAME(init(doneTitle:initializer:handler:));
 + (instancetype)kmy_buttonWithSystemItem:(UIBarButtonSystemItem)systemItem handler:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))handler;
 + (instancetype)kmy_buttonWithSystemItem:(UIBarButtonSystemItem)systemItem initializer:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))initializer handler:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))handler;
 + (instancetype)kmy_buttonWithImage:(UIImage *)image handler:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))handler;

@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param initializer Use to customize the newly allocated instance.
 ///
 /// @return A new NSObject instance, or a subclass.
-+ (nullable instancetype)kmy_objectWithInitializer:(void (^_Nullable)(__kindof NSObject *object))initializer;
++ (instancetype)kmy_objectWithInitializer:(void (^_Nullable)(__kindof NSObject *object))initializer NS_SWIFT_NAME(init(initializer:));
 
 @end
 

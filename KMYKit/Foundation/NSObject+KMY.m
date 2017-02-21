@@ -12,7 +12,7 @@
 
 + (instancetype)kmy_objectWithInitializer:(void (^)(__kindof NSObject *object))initializer {
     NSObject *object = [[[self class] alloc] init];
-    if (object && initializer != NULL) initializer(object);
+    if (initializer != NULL) initializer(object);
     return object;
 }
 
