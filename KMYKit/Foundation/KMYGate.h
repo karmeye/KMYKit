@@ -14,11 +14,26 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign, readonly)     BOOL    isOpen;
 
-+ (instancetype)gateWithOpenHandler:(void (^)())didOpenHandler closeHandler:(void (^)())didCloseHandler;
-+ (instancetype)gateWithOpenHandler:(void (^)())didOpenHandler closeHandler:(void (^)())didCloseHandler callbackQueue:(nullable dispatch_queue_t)callbackQueue;
++ (instancetype)gateWithOpenHandler:(void (^)())didOpenHandler;
++ (instancetype)gateWithCloseHandler:(void (^)())didCloseHandler;
++ (instancetype)gateWithOpenHandler:(void (^ _Nullable)())didOpenHandler closeHandler:(void (^ _Nullable)())didCloseHandler;
+
+
+/**
+ Represents a gate into e.g. a house. The gate is closed initially. It opens as the first person enters. As long as there are people in the house, the gate remains open. When the last person leaves the house, the gate is closed.
+
+ @param didOpenHandler Block which will be executed when the gate opens.
+ @param didCloseHandler Block which will be executed when the gate closes.
+ @param callbackQueue Queue on which the open and close blocks will be executed async. If `nil` the blocks will be executed sync on the same thread the `enter` and `exit` method were called.
+ @return A new instance.
+ */
++ (instancetype)gateWithOpenHandler:(void (^ _Nullable)())didOpenHandler closeHandler:(void (^ _Nullable)())didCloseHandler callbackQueue:(nullable dispatch_queue_t)callbackQueue;
 
 - (void)enter;
 - (void)exit;
+
+/// Closes the gate, regardless of the number of enters. Appropriate for resetting state when gate is no longer used.
+- (void)forceClose;
 
 @end
 

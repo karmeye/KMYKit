@@ -24,6 +24,14 @@
 
 @dynamic isOpen;
 
++ (instancetype)gateWithOpenHandler:(void (^)())didOpenHandler {
+    return [[self class] gateWithOpenHandler:didOpenHandler closeHandler:NULL callbackQueue:nil];
+}
+
++ (instancetype)gateWithCloseHandler:(void (^)())didCloseHandler {
+    return [[self class] gateWithOpenHandler:NULL closeHandler:didCloseHandler callbackQueue:nil];
+}
+
 + (instancetype)gateWithOpenHandler:(void (^)())didOpenHandler closeHandler:(void (^)())didCloseHandler {
     return [[self class] gateWithOpenHandler:didOpenHandler closeHandler:didCloseHandler callbackQueue:nil];
 }
@@ -81,6 +89,17 @@
     });
     
     return isOpen;
+}
+
+- (void)forceClose {
+    if (self.isOpen) {
+
+        dispatch_sync(self.dispatchQueue, ^{
+            self.openRequestCount = 1;
+        });
+
+        [self exit];
+    }
 }
 
 @end
