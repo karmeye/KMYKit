@@ -12,8 +12,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void (^KMYPersistentStoreOperationSynchronousExecutionBlock)(NSManagedObjectContext *managedObjectContext, id<KMYCancelling> cancellingHandler);
-typedef void (^KMYPersistentStoreOperationAsynchronousExecutionBlock)(NSManagedObjectContext *managedObjectContext, id<KMYCancelling> cancellingHandler, KMYAsynchronousOperationCompetionHandler completionHandler);
+typedef id _Nullable (^KMYPersistentStoreOperationSynchronousExecutionBlock)(NSManagedObjectContext *managedObjectContext, id<KMYCancelling> cancellingHandler);
+typedef void         (^KMYPersistentStoreOperationAsynchronousExecutionBlock)(NSManagedObjectContext *managedObjectContext, id<KMYCancelling> cancellingHandler, KMYAsynchronousOperationCompetionHandler completionHandler);
 
 @interface KMYPersistentStoreOperation : KMYAsynchronousOperation
 
@@ -21,7 +21,17 @@ typedef void (^KMYPersistentStoreOperationAsynchronousExecutionBlock)(NSManagedO
         synchronousExecutionBlock:(KMYPersistentStoreOperationSynchronousExecutionBlock)executionBlock;
 
 - (instancetype)initWithContainer:(KMYPersistentContainer *)container
+        synchronousExecutionBlock:(KMYPersistentStoreOperationSynchronousExecutionBlock)executionBlock
+                      resultBlock:(KMYAsynchronousOperationResultBlock)resultBlock
+              resultCallbackQueue:(nullable dispatch_queue_t)resultCallbackQueue;
+
+- (instancetype)initWithContainer:(KMYPersistentContainer *)container
        asynchronousExecutionBlock:(KMYPersistentStoreOperationAsynchronousExecutionBlock)executionBlock;
+
+- (instancetype)initWithContainer:(KMYPersistentContainer *)container
+       asynchronousExecutionBlock:(KMYPersistentStoreOperationAsynchronousExecutionBlock)executionBlock
+                      resultBlock:(KMYAsynchronousOperationResultBlock)resultBlock
+              resultCallbackQueue:(nullable dispatch_queue_t)resultCallbackQueue;
 
 @end
 

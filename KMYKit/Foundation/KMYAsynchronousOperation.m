@@ -8,6 +8,7 @@
 
 #import "KMYAsynchronousOperation.h"
 #include <libkern/OSAtomic.h>
+#import "KMYDispatch.h"
 
 @interface KMYAsynchronousOperation ()
 @end
@@ -16,6 +17,9 @@
 
     KMYAsynchronousOperationSynchronousExecutionBlock   _syncExecutionBlock;
     KMYAsynchronousOperationAsynchronousExecutionBlock  _asyncExecutionBlock;
+    KMYAsynchronousOperationResultBlock                 _resultBlock;
+
+    dispatch_queue_t                                    _resultCallbackQueue;
 
     OSSpinLock  _isExecutingLock;
 
@@ -37,15 +41,48 @@
     return self;
 }
 
+- (instancetype)initWithSynchronousExecutionBlock:(KMYAsynchronousOperationSynchronousExecutionBlock)executionBlock
+                                      resultBlock:(KMYAsynchronousOperationResultBlock)resultBlock
+                              resultCallbackQueue:(nullable dispatch_queue_t)resultCallbackQueue {
+    self = [self initWithSynchronousExecutionBlock:executionBlock];
+    [self setResultBlock:resultBlock resultCallbackQueue:resultCallbackQueue];
+    return self;
+}
+
 - (instancetype)initWithAsynchronousExecutionBlock:(KMYAsynchronousOperationAsynchronousExecutionBlock)executionBlock {
     self = [self init];
     _asyncExecutionBlock = [executionBlock copy];
     return self;
 }
 
+- (instancetype)initWithAsynchronousExecutionBlock:(KMYAsynchronousOperationAsynchronousExecutionBlock)executionBlock
+                                       resultBlock:(KMYAsynchronousOperationResultBlock)resultBlock
+                               resultCallbackQueue:(nullable dispatch_queue_t)resultCallbackQueue {
+    self = [self initWithAsynchronousExecutionBlock:executionBlock];
+    [self setResultBlock:resultBlock resultCallbackQueue:resultCallbackQueue];
+    return self;
+}
+
 #pragma mark - Subclassing
 
+- (void)setResultBlock:(KMYAsynchronousOperationResultBlock)resultBlock resultCallbackQueue:(nullable dispatch_queue_t)resultCallbackQueue {
+    _resultBlock            = [resultBlock copy];
+    _resultCallbackQueue    = resultCallbackQueue ?: kmy_dispatch_get_utility_queue();
+}
+
 - (void)setOperationComplete {
+    [self setOperationCompleteWithResult:nil];
+}
+
+- (void)setOperationCompleteWithResult:(nullable id)result {
+
+    if (_resultBlock) {
+        dispatch_async(_resultCallbackQueue, ^{
+            _resultBlock(result, self.isCancelled);
+            _resultBlock = nil;
+        });
+    }
+
     self.executing  = NO;
     self.finished   = YES;
 }
@@ -70,11 +107,11 @@
         [self setOperationComplete];
     } else {
         if (_syncExecutionBlock) {
-            _syncExecutionBlock(self);
-            [self setOperationComplete];
+            id result = _syncExecutionBlock(self);
+            [self setOperationCompleteWithResult:result];
         } else if (_asyncExecutionBlock) {
-            _asyncExecutionBlock(self, ^{
-                [self setOperationComplete];
+            _asyncExecutionBlock(self, ^(id _Nullable result) {
+                [self setOperationCompleteWithResult:result];
             });
         } else {
             [self execute];
