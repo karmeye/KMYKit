@@ -24,8 +24,25 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)kmy_viewWithInitializer:(void (^_Nullable)(__kindof UIView *view))initializer NS_SWIFT_NAME(init(initializer:));
 
+@end
 
-+ (instancetype)kmy_viewWithInitializer:(void (^_Nullable)(__kindof UIView *view))initializer;
+typedef NS_OPTIONS(NSUInteger, KMYLayoutAxis) {
+    KMYLayoutConstraintAxisNone         = 0,
+    KMYLayoutConstraintAxisVertical     = 1UL << 0,
+    KMYLayoutConstraintAxisHorizontal   = 1UL << 1,
+    KMYLayoutConstraintAxisAll          = NSUIntegerMax
+};
+
+typedef NS_OPTIONS(NSUInteger, KMYLayoutTradeoff) {
+    KMYLayoutTradeoffNone                   = 0,
+    KMYLayoutTradeoffCompressionResistance  = 1UL << 0,
+    KMYLayoutTradeoffHugging                = 1UL << 1,
+    KMYLayoutTradeoffAll                    = NSUIntegerMax
+};
+
+@interface UIView (KMYUIConstraintBasedLayoutLayering)
+
+- (void)kmy_setLayoutTradeoff:(KMYLayoutTradeoff)tradeoff priority:(UILayoutPriority)priority forAxis:(KMYLayoutAxis)axis;
 
 @end
 

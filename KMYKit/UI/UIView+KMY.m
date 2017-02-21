@@ -25,3 +25,54 @@
 }
 
 @end
+
+@implementation UIView (KMYUIConstraintBasedLayoutLayering)
+
+- (void)kmy_setLayoutTradeoff:(KMYLayoutTradeoff)tradeoff priority:(UILayoutPriority)priority forAxis:(KMYLayoutAxis)axis {
+    if (tradeoff & KMYLayoutTradeoffCompressionResistance) {
+        if (axis & KMYLayoutConstraintAxisVertical)   [self setContentCompressionResistancePriority:priority forAxis:UILayoutConstraintAxisVertical];
+        if (axis & KMYLayoutConstraintAxisHorizontal) [self setContentCompressionResistancePriority:priority forAxis:UILayoutConstraintAxisHorizontal];
+    }
+    if (tradeoff & KMYLayoutTradeoffHugging) {
+        if (axis & KMYLayoutConstraintAxisVertical)   [self setContentHuggingPriority:priority forAxis:UILayoutConstraintAxisVertical];
+        if (axis & KMYLayoutConstraintAxisHorizontal) [self setContentHuggingPriority:priority forAxis:UILayoutConstraintAxisHorizontal];
+    }
+}
+
+@end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
