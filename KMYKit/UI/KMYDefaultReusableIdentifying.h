@@ -13,18 +13,23 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol KMYDefaultReusableIdentifying <NSObject>
 
 /// Return a reuse identifier that is unique to the class name. Typically NSStringFromClass([self class])
-+ (NSString *)defaultReuseIdentifier;
+@property (class, strong, readonly)     NSString    *defaultReuseIdentifier;
 
 @end
 
+// Returns the class name as a string. Implement as: 
+//
+// + (NSString *)defaultReuseIdentifier {
+//     return KMYDefaultReuseIdentifier();
+// }
 #define KMYDefaultReuseIdentifier() \
     ({ \
-        static NSString *_kmy_defaultReuseIdentifier; \
+        static NSString *defaultReuseIdentifier; \
         static dispatch_once_t onceToken; \
         dispatch_once(&onceToken, ^{ \
-            _kmy_defaultReuseIdentifier = NSStringFromClass([self class]); \
+            defaultReuseIdentifier = NSStringFromClass([self class]); \
         }); \
-        _kmy_defaultReuseIdentifier; \
+        defaultReuseIdentifier; \
     })
 
 NS_ASSUME_NONNULL_END
