@@ -12,7 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface KMYSection : NSObject <KMYItemAttributes>
+@interface KMYSection : NSObject <KMYItemAttributes, NSCopying, NSMutableCopying>
 
 @property (nonatomic, strong, readonly, nullable)   NSArray<__kindof KMYItem *> *items;
 @property (nonatomic, assign, readonly)             NSUInteger                  numberOfItems;
@@ -22,7 +22,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)sectionWithInitializer:(void (^)(NSMutableDictionary<NSString *, id> *attributes, NSMutableArray *items))initializer;
 
 - (nullable __kindof KMYItem *)itemAtIndex:(NSUInteger)index;
-- (void)replaceItemAtIndex:(NSUInteger)index withItem:(__kindof KMYItem *)item;
 
 @end
 
@@ -38,5 +37,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+@interface KMYMutableSection : KMYSection
+
+- (void)insertItem:(__kindof KMYItem *)item atIndex:(NSUInteger)index;
+- (void)replaceItemAtIndex:(NSUInteger)index withItem:(__kindof KMYItem *)item;
+
+@end
 
 NS_ASSUME_NONNULL_END

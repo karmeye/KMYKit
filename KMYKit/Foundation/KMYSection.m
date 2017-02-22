@@ -63,14 +63,26 @@
     }
 }
 
-- (void)replaceItemAtIndex:(NSUInteger)index withItem:(KMYItem *)item {
-    NSMutableArray *items = [self.items mutableCopy];
-    [items replaceObjectAtIndex:index withObject:item];
-    self.items = [items copy];
-}
-
 - (NSUInteger)numberOfItems {
     return self.items != nil ? self.items.count : 0;
+}
+
+#pragma mark - NSCopying protocol
+
+- (id)copyWithZone:(NSZone *)zone {
+    KMYSection *copy            = [KMYSection allocWithZone:zone];
+    copy.items                  = [self.items copy];
+    copy.attributeDictionary    = [self.attributeDictionary copy];
+    return copy;
+}
+
+#pragma mark - NSMutableCopying protocol
+
+- (id)mutableCopyWithZone:(NSZone *)zone {
+    KMYMutableSection *copy     = [KMYMutableSection allocWithZone:zone];
+    copy.items                  = [self.items copy];
+    copy.attributeDictionary    = [self.attributeDictionary copy];
+    return copy;
 }
 
 #pragma mark - KMYItemAttributes Protocol
@@ -89,7 +101,21 @@
 
 @end
 
+@implementation KMYMutableSection
 
+- (void)insertItem:(__kindof KMYItem *)item atIndex:(NSUInteger)index {
+    NSMutableArray *items = [self.items mutableCopy];
+    [items insertObject:item atIndex:index];
+    self.items = [items copy];
+}
+
+- (void)replaceItemAtIndex:(NSUInteger)index withItem:(__kindof KMYItem *)item {
+    NSMutableArray *items = [self.items mutableCopy];
+    [items replaceObjectAtIndex:index withObject:item];
+    self.items = [items copy];
+}
+
+@end
 
 
 
