@@ -35,7 +35,7 @@
 #define KMYIfDebugBuild(...)
 #endif
 
-#if TARGET_IPHONE_SIMULATOR
+#if TARGET_OS_SIMULATOR
 #define KMYIfSimulator(block)                   block()
 #else
 #define KMYIfSimulator(...)
