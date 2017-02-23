@@ -8,6 +8,7 @@
 
 #import "KMYTableViewControllerBehavior.h"
 #import "UITableViewController+KMY.h"
+#import "NSLayoutConstraint+KMY.h"
 
 @interface KMYTableViewControllerBehavior ()
 
@@ -18,21 +19,33 @@
 
 @implementation KMYTableViewControllerBehavior
 
-@dynamic tableView;
+@dynamic tableView, isTableViewLoaded;
 
 - (instancetype)initWithStyle:(UITableViewStyle)style {
-    self                = [self init];
-    self.tableViewStyle = style;
+    self                            = [self init];
+    self.tableViewStyle             = style;
+    self.automaticallyAddsTableView = YES;
+
     return self;
 }
 
 - (UITableView*)tableView {
+    KMYAssert(self.tableViewController);
     return self.tableViewController.tableView;
 }
 
-- (void)reloadData {
-    if ([self.tableViewController isViewLoaded]) [self.tableView reloadData];
+- (BOOL)isTableViewLoaded {
+    KMYAssert(self.tableViewController);
+    return [self.tableViewController isViewLoaded];
 }
+
+- (void)reloadData {
+    if (self.isTableViewLoaded) {
+        [self.tableView reloadData];
+    }
+}
+
+#pragma mark - KMYViewControllerBehaving protocol
 
 - (void)initializeWithParentController:(UIViewController *)parentViewController {
     self.tableViewController = [UITableViewController kmy_tableViewControllerWithStyle:self.tableViewStyle initializer:^(UITableViewController *tableViewController) {
@@ -42,14 +55,15 @@
 }
 
 - (void)loadViewWithParentViewController:(UIViewController *)parentViewController {
+    if (self.automaticallyAddsTableView) {
+        UIView *parentView = parentViewController.view;
 
-    UITableView *tableView      = self.tableView;
-    tableView.frame             = parentViewController.view.bounds;
-    tableView.autoresizingMask  = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    tableView.delegate          = self.delegate;
-    tableView.dataSource        = self.dataSource;
+        [parentView addSubview:self.tableView];
+        [NSLayoutConstraint activateConstraints:[NSLayoutConstraint kmy_constraintsForView:self.tableView equalToEdgesOfView:parentView]];
 
-    [parentViewController.view addSubview:tableView];
+        self.tableView.delegate     = self.delegate;
+        self.tableView.dataSource   = self.dataSource;
+    }
 }
 
 - (void)parentViewControllerDidLoadView:(UIViewController *)parentViewController {
@@ -57,3 +71,33 @@
 }
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

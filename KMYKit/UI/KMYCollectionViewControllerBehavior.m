@@ -8,40 +8,44 @@
 
 #import "KMYCollectionViewControllerBehavior.h"
 #import "UICollectionViewController+KMY.h"
+#import "NSLayoutConstraint+KMY.h"
 
 @interface KMYCollectionViewControllerBehavior ()
 
-@property (nonatomic, strong)       UICollectionViewLayout              *layout;
-@property (nonatomic, strong)       UICollectionViewController          *collectionViewController;
+@property (nonatomic, strong)               UICollectionViewLayout              *layout;
+@property (nonatomic, strong, readwrite)    UICollectionViewController          *collectionViewController;
 
 @end
 
 @implementation KMYCollectionViewControllerBehavior
 
-@dynamic collectionView;
-
-- (instancetype)init {
-    self = [super init];
-    if (self) {
-    }
-    return self;
-}
+@dynamic collectionView, isCollectionViewLoaded;
 
 - (instancetype)initWithCollectionViewLayout:(UICollectionViewLayout *)layout {
-    self = [super init];
-    if (self) {
-        self.layout = layout;
-    }
+    self                                    = [super init];
+    self.layout                             = layout;
+    self.automaticallyAddsCollectionView    = YES;
+
     return self;
 }
 
 - (UICollectionView*)collectionView {
+    KMYAssert(self.collectionViewController);
     return self.collectionViewController.collectionView;
 }
 
-- (void)reloadData {
-    if ([self.collectionViewController isViewLoaded]) [self.collectionView reloadData];
+- (BOOL)isCollectionViewLoaded {
+    KMYAssert(self.collectionViewController);
+    return [self.collectionViewController isViewLoaded];
 }
+
+- (void)reloadData {
+    if (self.isCollectionViewLoaded) {
+        [self.collectionView reloadData];
+    }
+}
+
+#pragma mark - KMYViewControllerBehaving protocol
 
 - (void)initializeWithParentController:(UIViewController *)parentViewController {
     self.collectionViewController = [UICollectionViewController kmy_collectionViewWithLayout:self.layout initializer:^(UICollectionViewController *viewController) {
@@ -51,14 +55,15 @@
 }
 
 - (void)loadViewWithParentViewController:(UIViewController *)parentViewController {
+    if (self.automaticallyAddsCollectionView) {
+        UIView *parentView = parentViewController.view;
 
-    UICollectionView *collectionView    = self.collectionView;
-    collectionView.frame                = parentViewController.view.bounds;
-    collectionView.autoresizingMask     = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    collectionView.delegate             = self.delegate;
-    collectionView.dataSource           = self.dataSource;
+        [parentView addSubview:self.collectionView];
+        [NSLayoutConstraint activateConstraints:[NSLayoutConstraint kmy_constraintsForView:self.collectionView equalToEdgesOfView:parentView]];
 
-    [parentViewController.view addSubview:collectionView];
+        self.collectionView.delegate    = self.delegate;
+        self.collectionView.dataSource  = self.dataSource;
+    }
 }
 
 - (void)parentViewControllerDidLoadView:(UIViewController *)parentViewController {
@@ -66,8 +71,6 @@
 }
 
 @end
-
-
 
 
 

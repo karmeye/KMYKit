@@ -13,8 +13,13 @@ NS_ASSUME_NONNULL_BEGIN
 @interface KMYTableViewControllerBehavior : NSObject <KMYViewControllerBehaving>
 
 @property (nonatomic, strong, readonly) UITableView                         *tableView;
+@property (nonatomic, assign, readonly) BOOL                                isTableViewLoaded;
+
 @property (nonatomic, weak, nullable)   id <UITableViewDataSource>          dataSource;
 @property (nonatomic, weak, nullable)   id <UITableViewDelegate>            delegate;
+
+/// Defaults to @YES
+@property (nonatomic, assign)           BOOL                                automaticallyAddsTableView;
 
 /// Set dataSource, delegate and register reusable cells here.
 @property (nonatomic, copy, nullable)   void (^tableViewDidLoad)(UITableView *);
