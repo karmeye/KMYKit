@@ -169,10 +169,8 @@
         _defaultCellConfigurationHandlers = [[NSMutableDictionary kmy_dictionaryWithInitializer:^(NSMutableDictionary *d) {
 
             KMYTableViewCellConfiguratorCellConfigurationHandler setTextHandler = ^(KMYDefaultStyleTableViewCell *cell, KMYUIItem *item, NSIndexPath *indexPath) {
-
-                if (item.text)          cell.textLabel.text = item.text;
-                if (item.detailText)    cell.detailTextLabel.text = item.detailText;
-
+                cell.textLabel.text = item.text;
+                cell.detailTextLabel.text = item.detailText;
             };
 
             // Incompatible pointer types sending 'Class' to parameter of type 'id<NSCopying> _Nonnull'
