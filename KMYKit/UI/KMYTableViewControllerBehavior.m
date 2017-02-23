@@ -21,10 +21,8 @@
 @dynamic tableView;
 
 - (instancetype)initWithStyle:(UITableViewStyle)style {
-    self = [self init];
-    if (self) {
-        self.tableViewStyle = style;
-    }
+    self                = [self init];
+    self.tableViewStyle = style;
     return self;
 }
 

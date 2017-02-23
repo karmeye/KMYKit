@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// Set dataSource, delegate and register reusable cells here.
 @property (nonatomic, copy, nullable)   void (^tableViewDidLoad)(UITableView *);
 
-- (nullable instancetype)initWithStyle:(UITableViewStyle)style;
+- (instancetype)initWithStyle:(UITableViewStyle)style;
 - (void)reloadData;
 
 @end
