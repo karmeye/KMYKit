@@ -33,7 +33,7 @@ typedef void (^KMYTableViewCellConfiguratorCellConfigurationHandler)(__kindof UI
 /// Default cell configurator
 @interface KMYTableViewCellConfigurator : NSObject <KMYTableViewCellConfigurating>
 
-/// Called for all cells after specific config
+/// Called for all cells after the specific config set by one of the `registerClass:` methods.
 @property (nonatomic, copy, nullable)   KMYTableViewCellConfiguratorCellConfigurationHandler    cellConfigurationHandler;
 
 /// Defaults to KMYDefaultStyleTableViewCell
