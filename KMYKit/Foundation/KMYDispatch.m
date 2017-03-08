@@ -51,6 +51,14 @@ void kmy_dispatch_async_on_main_queue(dispatch_block_t block) {
     dispatch_async(kmy_dispatch_get_main_queue(), block);
 }
 
+void kmy_dispatch_sync_on_main_queue(dispatch_block_t block) {
+    if (kmy_dispatch_is_main_queue()) {
+        block();
+    } else {
+        dispatch_sync(dispatch_get_main_queue(), block);
+    }
+}
+
 void kmy_dispatch_async_on_user_interactive_queue(dispatch_block_t block) {
     dispatch_async(kmy_dispatch_get_user_interactive_queue(), block);
 }
@@ -102,7 +110,19 @@ void kmy_dispatch_async_if(dispatch_queue_t queue, dispatch_block_t block) {
     else        block();
 }
 
+#pragma mark -
 
+bool kmy_dispatch_is_main_queue() {
+
+    static const void *const mainQueueKey;
+    static const void *mainQueueValue;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        dispatch_queue_set_specific(dispatch_get_main_queue(), &mainQueueKey, &mainQueueValue, NULL);
+    });
+
+    return dispatch_get_specific(&mainQueueKey) == &mainQueueValue;
+}
 
 
 

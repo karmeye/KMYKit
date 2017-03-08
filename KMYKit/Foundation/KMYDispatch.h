@@ -90,6 +90,9 @@ extern dispatch_queue_t     kmy_dispatch_get_background_queue(void);
 /// The main dispatch queue is a globally available serial queue that executes tasks on the application’s main thread.
 extern void                 kmy_dispatch_async_on_main_queue(dispatch_block_t block);
 
+/// Ensures that the given block is executed on the main queue. If the current queue isn't the main queue, the block is dispatched sync on the main queue.
+extern void                 kmy_dispatch_sync_on_main_queue(dispatch_block_t block);
+
 extern void                 kmy_dispatch_async_on_user_interactive_queue(dispatch_block_t block);
 extern void                 kmy_dispatch_async_on_user_initiated_queue(dispatch_block_t block);
 /// Only use if you have no QoS intent.
@@ -117,6 +120,12 @@ extern void                 kmy_dispatch_async_on_queue_after(dispatch_queue_t q
 
 extern void                 kmy_dispatch_async_if(dispatch_queue_t _Nullable queue, dispatch_block_t block);
 
+
+/// Main queue always runs on the main thread. But other queues than the main queue can run on the main thread as well.
+///
+/// http://blog.benjamin-encz.de/post/main-queue-vs-main-thread/
+/// http://stackoverflow.com/questions/12806506/how-can-i-verify-that-i-am-running-on-a-given-gcd-queue-without-using-dispatch-g
+extern bool                 kmy_dispatch_is_main_queue();
 
 NS_ASSUME_NONNULL_END
 
