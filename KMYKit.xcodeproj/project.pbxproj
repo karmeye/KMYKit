@@ -175,7 +175,7 @@
 		A626C98D1CD8A49C0094802F /* NSString+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+KMY.h"; sourceTree = "<group>"; };
 		A626C98E1CD8A49C0094802F /* NSString+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+KMY.m"; sourceTree = "<group>"; };
 		A627751B1CAD493300238E9D /* KMYDefaultReusableIdentifying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYDefaultReusableIdentifying.h; sourceTree = "<group>"; };
-		A627751D1CAE3B8300238E9D /* KMYAssert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYAssert.h; sourceTree = "<group>"; };
+		A627751D1CAE3B8300238E9D /* KMYAssert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KMYAssert.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		A627751E1CAE3B8300238E9D /* KMYAssert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYAssert.m; sourceTree = "<group>"; };
 		A62775281CAE8BD600238E9D /* KMYSubtitleStyleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYSubtitleStyleTableViewCell.h; sourceTree = "<group>"; };
 		A62775291CAE8BD600238E9D /* KMYSubtitleStyleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYSubtitleStyleTableViewCell.m; sourceTree = "<group>"; };

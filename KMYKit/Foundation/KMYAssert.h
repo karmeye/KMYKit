@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <KMYKit/KMYDispatch.h>
 
 // https://mikeash.com/pyblog/friday-qa-2013-05-03-proper-use-of-asserts.html
 
@@ -25,11 +26,11 @@
         abort(); \
     } while(0)
 
-#define KMYAssertMainThread() \
-    KMYAssert([NSThread isMainThread], @"This method must be called from main thread!\n\nStacktrace: %@", [NSThread callStackSymbols])
+#define KMYAssertMainQueue() \
+    KMYAssert(kmy_dispatch_is_main_queue(), @"This must execute on the main queue!\n\nStacktrace: %@", [NSThread callStackSymbols])
 
-#define KMYAssertNotMainThread() \
-    KMYAssert(![NSThread isMainThread], @"This method must not be called from main thread!\n\nStacktrace: %@", [NSThread callStackSymbols])
+#define KMYAssertNotMainQueue() \
+    KMYAssert(!kmy_dispatch_is_main_queue(), @"This must not execute on the main queue!\n\nStacktrace: %@", [NSThread callStackSymbols])
 
 #define KMYAssertNotDeallocated() \
     KMYAssert(self, @"An instance expected to exist was deallocated.\n\nStacktrace: %@", [NSThread callStackSymbols]);
@@ -40,12 +41,12 @@
     #define KMYAssertDebug                  KMYAssert
     #define KMYAssertDebugFail              KMYAssertFail
     #define KMYAssertDebugNotDeallocated    KMYAssertNotDeallocated
-    #define KMYAssertDebugMainThread        KMYAssertMainThread
-    #define KMYAssertDebugNotMainThread     KMYAssertNotMainThread
+    #define KMYAssertDebugMainQueue         KMYAssertMainQueue
+    #define KMYAssertDebugNotMainQueue      KMYAssertNotMainQueue
 #else
     #define KMYAssertDebug(...)
     #define KMYAssertDebugFail(...)
     #define KMYAssertDebugNotDeallocated(...)
-    #define KMYAssertDebugMainThread(...)
-    #define KMYAssertDebugNotMainThread(...)
+    #define KMYAssertDebugMainQueue(...)
+    #define KMYAssertDebugNotMainQueue(...)
 #endif
