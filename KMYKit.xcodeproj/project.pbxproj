@@ -422,6 +422,14 @@
 			name = Protocol;
 			sourceTree = "<group>";
 		};
+		A657D9421E83A2E40004E030 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				A627751B1CAD493300238E9D /* KMYDefaultReusableIdentifying.h */,
+			);
+			name = Protocol;
+			sourceTree = "<group>";
+		};
 		A6871C611CBE393E0062E265 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -479,7 +487,6 @@
 				A68B8E1D1CAA6F9200DE6E95 /* KMY+UIFoundation.h */,
 				A681537B1DE730DA00793715 /* KMYApplicationBackgroundTask.h */,
 				A681537C1DE730DA00793715 /* KMYApplicationBackgroundTask.m */,
-				A627751B1CAD493300238E9D /* KMYDefaultReusableIdentifying.h */,
 				A68B8E1E1CAA6F9200DE6E95 /* KMYNavigationController.h */,
 				A68B8E1F1CAA6F9200DE6E95 /* KMYNavigationController.m */,
 				A634953A1E41D6A1004C1872 /* KMYSelectableBarButtonItem.h */,
@@ -492,6 +499,7 @@
 				A68B8E251CAA6F9200DE6E95 /* KMYUISection.m */,
 				A68B8E261CAA6F9200DE6E95 /* KMYViewController.h */,
 				A68B8E271CAA6F9200DE6E95 /* KMYViewController.m */,
+				A657D9421E83A2E40004E030 /* Protocol */,
 				A68B8E3F1CAAB5F400DE6E95 /* TableView */,
 			);
 			path = UI;

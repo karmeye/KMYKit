@@ -12,4 +12,6 @@
 #import <KMYKit/KMYPersistentContainer.h>
 #import <KMYKit/KMYPersistentStoreOperation.h>
 
+// Category
+
 #import <KMYKit/NSManagedObjectContext+KMY.h>

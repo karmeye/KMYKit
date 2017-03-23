@@ -8,21 +8,25 @@
 
 #import <Foundation/Foundation.h>
 
-#import <KMYKit/KMYAssert.h>
 #import <KMYKit/KMYAbsoluteURL.h>
+#import <KMYKit/KMYAssert.h>
 #import <KMYKit/KMYAsynchronousOperation.h>
 #import <KMYKit/KMYBlock.h>
 #import <KMYKit/KMYCGGeometry.h>
 #import <KMYKit/KMYDispatch.h>
 #import <KMYKit/KMYFileManager.h>
+#import <KMYKit/KMYGate.h>
 #import <KMYKit/KMYItem.h>
 #import <KMYKit/KMYMacros.h>
 #import <KMYKit/KMYSection.h>
 #import <KMYKit/KMYSerialOperationQueue.h>
-#import <KMYKit/KMYGate.h>
+
+// Protocol
 
 #import <KMYKit/KMYCancelling.h>
 #import <KMYKit/KMYItemAttributes.h>
+
+// Category
 
 #import <KMYKit/NSArray+KMY.h>
 #import <KMYKit/NSAttributedString+KMY.h>
