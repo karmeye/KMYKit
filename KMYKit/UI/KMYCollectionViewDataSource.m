@@ -65,7 +65,7 @@
     KMYAssert(reuseIdentifier, @"Missing reuse identifier for supplementaryView of kind: %@", kind);
 
     UICollectionReusableView *view = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    if (view) [self.supplementaryViewConfigurator configureSupplementaryView:view withItem:item inSection:section ofKind:kind atIndexPath:indexPath];
+    [self.supplementaryViewConfigurator configureSupplementaryView:view withItem:item inSection:section ofKind:kind atIndexPath:indexPath];
 
     return view;
 }

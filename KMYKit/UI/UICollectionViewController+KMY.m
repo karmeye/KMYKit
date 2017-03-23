@@ -12,7 +12,7 @@
 
 + (instancetype)kmy_collectionViewWithLayout:(UICollectionViewLayout *)layout initializer:(void (^_Nullable)(__kindof UICollectionViewController *viewController))initializer {
     UICollectionViewController *viewController = [[[self class] alloc] initWithCollectionViewLayout:layout];
-    if (viewController && initializer != NULL) initializer(viewController);
+    if (initializer != NULL) initializer(viewController);
     return viewController;
 }
 

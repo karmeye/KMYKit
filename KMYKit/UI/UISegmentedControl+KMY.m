@@ -16,7 +16,7 @@ static const void   *KMYUISegmentedControlKeyValueDidChangeHandler = &KMYUISegme
 
 + (instancetype)kmy_segmentedControlWithWithItems:(NSArray *)items initializer:(void (^)(__kindof UISegmentedControl *segmentedControl))initializer {
     UISegmentedControl *segmentedControl = [[[self class] alloc] initWithItems:items];
-    if (segmentedControl && initializer != NULL) initializer(segmentedControl);
+    if (initializer != NULL) initializer(segmentedControl);
     return segmentedControl;
 }
 

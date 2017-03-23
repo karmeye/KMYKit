@@ -22,7 +22,7 @@ static const void   *KMYGestureRecognizerKeyHandler         = &KMYGestureRecogni
 + (instancetype)kmy_gestureRecognizerWithInitializer:(void (^_Nullable)(__kindof UIGestureRecognizer *gestureRecognizer))initializer
                                              handler:(void (^_Nullable)(__kindof UIGestureRecognizer *gestureRecognizer))handler {
     UIGestureRecognizer *gestureRecognizer = [[[self class] alloc] kmy_initWithHandler:handler];
-    if (gestureRecognizer && initializer != NULL) initializer(gestureRecognizer);
+    if (initializer != NULL) initializer(gestureRecognizer);
     return gestureRecognizer;
 }
 

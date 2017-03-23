@@ -20,22 +20,16 @@
 
 + (instancetype)sectionWithItems:(NSArray *)items {
     KMYSection *instance = [[[self class] alloc] init];
-
-    if (instance) {
-        instance.items = items;
-    }
-
+    instance.items = items;
     return instance;
 }
 
 + (instancetype)sectionWithItemsInitializer:(void (^)(NSMutableArray *items))itemsInitializer {
     KMYSection *instance = [[[self class] alloc] init];
 
-    if (instance) {
-        NSMutableArray *items = [[NSMutableArray alloc] init];
-        itemsInitializer(items);
-        instance.items = [items copy];
-    }
+    NSMutableArray *items = [[NSMutableArray alloc] init];
+    itemsInitializer(items);
+    instance.items = [items copy];
 
     return instance;
 }
@@ -43,14 +37,12 @@
 + (instancetype)sectionWithInitializer:(void (^)(NSMutableDictionary<NSString *, id> *attributes, NSMutableArray *items))initializer {
     KMYSection *instance = [[[self class] alloc] init];
 
-    if (instance) {
-        NSMutableDictionary *attributes = [[NSMutableDictionary alloc] init];
-        NSMutableArray *items = [[NSMutableArray alloc] init];
-        initializer(attributes, items);
+    NSMutableDictionary *attributes = [[NSMutableDictionary alloc] init];
+    NSMutableArray *items = [[NSMutableArray alloc] init];
+    initializer(attributes, items);
 
-        if (attributes.count > 0) instance.attributeDictionary = [attributes copy];
-        if (items.count > 0) instance.items = [items copy];
-    }
+    if (attributes.count > 0) instance.attributeDictionary = [attributes copy];
+    if (items.count > 0) instance.items = [items copy];
 
     return instance;
 }

@@ -40,7 +40,7 @@ NSString * const KMYItemKeyID           = @"KMYItemKeyID";
 
 + (__kindof KMYItem *)itemWithInitializer:(void (^)(NSMutableDictionary<NSString *, id> *attributes))initializer {
     KMYItem *item = [[[self class] alloc] init];
-    if (item && initializer != NULL) {
+    if (initializer != NULL) {
         NSMutableDictionary *attributes = [[NSMutableDictionary alloc] init];
         KMYInvokeBlockIfSet(initializer, attributes);
         item.attributeDictionary = [attributes copy];
