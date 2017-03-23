@@ -14,9 +14,17 @@ static const void   *KMYUIButtonKeyTouchUpInsideHandler = &KMYUIButtonKeyTouchUp
 
 @implementation UIButton (KMY)
 
-+ (nullable instancetype)kmy_buttonWithType:(UIButtonType)buttonType initializer:(void (^_Nullable)(__kindof UIButton *button))initializer {
++ (nullable instancetype)kmy_buttonWithType:(UIButtonType)buttonType
+                                initializer:(void (^_Nullable)(__kindof UIButton *button))initializer {
+    return [[self class] kmy_buttonWithType:buttonType initializer:initializer handler:NULL];
+}
+
++ (nullable instancetype)kmy_buttonWithType:(UIButtonType)buttonType
+                                initializer:(void (^_Nullable)(__kindof UIButton *button))initializer
+                                    handler:(void (^_Nullable)(__kindof UIButton *button))handler {
     UIButton *button = [[self class] buttonWithType:buttonType];
-    if (button && initializer != NULL) initializer(button);
+    button.kmy_touchUpInsideHandler = handler;
+    if (initializer != NULL) initializer(button);
     return button;
 }
 

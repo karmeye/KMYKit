@@ -40,8 +40,16 @@ static const void   *KMYBarButtonItemKeyHandler         = &KMYBarButtonItemKeyHa
     return buttonItem;
 }
 
++ (instancetype)kmy_buttonWithSystemItem:(UIBarButtonSystemItem)systemItem {
+    return [[self class] kmy_buttonWithSystemItem:systemItem initializer:NULL handler:NULL];
+}
+
 + (instancetype)kmy_buttonWithSystemItem:(UIBarButtonSystemItem)systemItem handler:(void (^)(__kindof UIBarButtonItem *buttonItem))handler {
-    return [[[self class] alloc] kmy_initWithBarButtonSystemItem:systemItem handler:handler];
+    return [[self class] kmy_buttonWithSystemItem:systemItem initializer:NULL handler:handler];
+}
+
++ (instancetype)kmy_buttonWithSystemItem:(UIBarButtonSystemItem)systemItem initializer:(void (^_Nullable)(__kindof UIBarButtonItem *buttonItem))initializer {
+    return [[self class] kmy_buttonWithSystemItem:systemItem initializer:initializer handler:NULL];
 }
 
 + (instancetype)kmy_buttonWithSystemItem:(UIBarButtonSystemItem)systemItem initializer:(void (^)(__kindof UIBarButtonItem *buttonItem))initializer handler:(void (^)(__kindof UIBarButtonItem *buttonItem))handler {
@@ -75,19 +83,19 @@ static const void   *KMYBarButtonItemKeyHandler         = &KMYBarButtonItemKeyHa
 }
 
 - (instancetype)kmy_initWithTitle:(NSString *)title style:(UIBarButtonItemStyle)style handler:(void (^)(__kindof UIBarButtonItem *buttonItem))handler {
-    UIBarButtonItem *barButtonItem = [self initWithTitle:title style:style target:handler == NULL ? nil : self action:handler == NULL ? nil : KMYBarButtonItemActionSelector()];
+    UIBarButtonItem *barButtonItem = [self initWithTitle:title style:style target:self action:KMYBarButtonItemActionSelector()];
     [barButtonItem kmy_registerHandler:handler];
     return barButtonItem;
 }
 
 - (instancetype)kmy_initWithBarButtonSystemItem:(UIBarButtonSystemItem)systemItem handler:(void (^)(__kindof UIBarButtonItem *buttonItem))handler {
-    UIBarButtonItem *barButtonItem = [self initWithBarButtonSystemItem:systemItem target:handler == NULL ? nil : self action:handler == NULL ? nil : KMYBarButtonItemActionSelector()];
+    UIBarButtonItem *barButtonItem = [self initWithBarButtonSystemItem:systemItem target:self action:KMYBarButtonItemActionSelector()];
     [barButtonItem kmy_registerHandler:handler];
     return barButtonItem;
 }
 
 - (instancetype)kmy_initWithImage:(UIImage *)image handler:(void (^)(__kindof UIBarButtonItem *buttonItem))handler {
-    UIBarButtonItem *barButtonItem = [self initWithImage:image style:UIBarButtonItemStylePlain target:handler == NULL ? nil : self action:handler == NULL ? nil : KMYBarButtonItemActionSelector()];
+    UIBarButtonItem *barButtonItem = [self initWithImage:image style:UIBarButtonItemStylePlain target:self action:KMYBarButtonItemActionSelector()];
     [barButtonItem kmy_registerHandler:handler];
     return barButtonItem;
 }
@@ -97,6 +105,14 @@ static const void   *KMYBarButtonItemKeyHandler         = &KMYBarButtonItemKeyHa
     return barButtonItem;
 }
 
+- (void)setKmy_actionHandler:(void (^)(__kindof UIBarButtonItem *))actionHandler {
+    [self kmy_registerHandler:actionHandler];
+}
+
+- (void (^)(__kindof UIBarButtonItem *))kmy_actionHandler {
+    return objc_getAssociatedObject(self, KMYBarButtonItemKeyHandler);
+}
+
 #pragma mark - Private -
 
 - (void)kmy_registerHandler:(void (^)(__kindof UIBarButtonItem *buttonItem))handler {
@@ -104,7 +120,7 @@ static const void   *KMYBarButtonItemKeyHandler         = &KMYBarButtonItemKeyHa
 }
 
 - (void)kmy_barButtonItemAction:(UIBarButtonItem *)sender {
-    void (^handler)(__kindof UIBarButtonItem *) = objc_getAssociatedObject(self, KMYBarButtonItemKeyHandler);
+    void (^handler)(__kindof UIBarButtonItem *) = self.kmy_actionHandler;
     KMYInvokeBlockIfSet(handler, self);
 }
 
