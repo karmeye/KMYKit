@@ -83,7 +83,7 @@
     return item.collectionViewCellReuseIdentifier ?: self.defaultCellReuseIdentifier;
 }
 
-- (void)configureCell:(UICollectionViewCell*)cell withItem:(KMYUIItem*)item atIndexPath:(NSIndexPath *)indexPath {
+- (void)configureCell:(__kindof UICollectionViewCell*)cell withItem:(__kindof KMYUIItem*)item atIndexPath:(NSIndexPath *)indexPath {
 
     NSString *reuseIdentifier = [self reuseIdentifierForItem:item];
     KMYAssert(reuseIdentifier);

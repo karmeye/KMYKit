@@ -104,7 +104,7 @@
     return item.tableViewCellReuseIdentifier ?: self.defaultCellReuseIdentifier;
 }
 
-- (void)configureCell:(UITableViewCell*)cell withItem:(KMYUIItem*)item atIndexPath:(NSIndexPath *)indexPath {
+- (void)configureCell:(__kindof UITableViewCell*)cell withItem:(__kindof KMYUIItem*)item atIndexPath:(NSIndexPath *)indexPath {
 
     NSString *reuseIdentifier = [self reuseIdentifierForItem:item];
     KMYAssert(reuseIdentifier);

@@ -21,8 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)reuseIdentifierForItem:(KMYUIItem *)item;
 
 /// Called by the data source after a cell has been dequeued.
-- (void)configureCell:(UICollectionViewCell*)cell
-             withItem:(KMYUIItem*)item
+- (void)configureCell:(__kindof UICollectionViewCell *)cell
+             withItem:(__kindof KMYUIItem *)item
           atIndexPath:(NSIndexPath *)indexPath;
 
 @end
