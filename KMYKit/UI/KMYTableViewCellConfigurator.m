@@ -48,13 +48,6 @@
 
 @implementation KMYTableViewCellConfigurator
 
-- (instancetype)init {
-    self = [super init];
-    if (self) {
-    }
-    return self;
-}
-
 #pragma mark - Public -
 
 - (void)registerClass:(Class<KMYDefaultReusableIdentifying>)cls {
