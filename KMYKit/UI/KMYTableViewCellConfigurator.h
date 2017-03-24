@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// Implementation should call the @c UITableView registerClass:withReuseIdentifier methods
 - (void)registerClassesForCellReuseWithTableView:(UITableView *)tableView;
 
-- (NSString *)reuseIdentifierForItem:(KMYUIItem *)item;
+- (NSString *)reuseIdentifierForItem:(__kindof KMYUIItem *)item;
 
 /// Is called by the data source after a cell has been dequeued.
 - (void)configureCell:(__kindof UITableViewCell *)cell

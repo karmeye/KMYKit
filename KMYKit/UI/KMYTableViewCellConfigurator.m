@@ -100,7 +100,7 @@
     }
 }
 
-- (NSString *)reuseIdentifierForItem:(KMYUIItem *)item {
+- (NSString *)reuseIdentifierForItem:(__kindof KMYUIItem *)item {
     return item.tableViewCellReuseIdentifier ?: self.defaultCellReuseIdentifier;
 }
 

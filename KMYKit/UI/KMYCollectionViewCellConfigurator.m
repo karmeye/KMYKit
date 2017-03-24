@@ -79,8 +79,8 @@
     }
 }
 
-- (NSString *)reuseIdentifierForItem:(KMYUIItem *)item {
     return item.collectionViewCellReuseIdentifier ?: self.defaultCellReuseIdentifier;
+- (NSString *)reuseIdentifierForItem:(__kindof KMYUIItem *)item {
 }
 
 - (void)configureCell:(__kindof UICollectionViewCell*)cell withItem:(__kindof KMYUIItem*)item atIndexPath:(NSIndexPath *)indexPath {
