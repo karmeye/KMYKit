@@ -32,8 +32,10 @@ typedef void (^KMYCollectionViewCellConfiguratorCellConfigurationHandler)(__kind
 @interface KMYCollectionViewCellConfigurator : NSObject <KMYCollectionViewCellConfigurating>
 
 /// Called for all cells after the specific config set by one of the `registerClass:` methods.
-@property (nonatomic, copy, nullable)   KMYCollectionViewCellConfiguratorCellConfigurationHandler   cellConfigurationHandler;
-@property (nonatomic, copy, nullable)   NSString                                                    *defaultCellReuseIdentifier;
+@property (nonatomic, copy, nullable)           KMYCollectionViewCellConfiguratorCellConfigurationHandler   cellConfigurationHandler;
+
+/// Defaults to KMYDefaultCollectionViewCell
+@property (nonatomic, copy, null_resettable)    NSString                                                    *defaultCellReuseIdentifier;
 
 - (void)registerClass:(Class<KMYDefaultReusableIdentifying>)cls;
 - (void)registerClass:(Class<KMYDefaultReusableIdentifying>)cls configurationHandler:(nullable KMYCollectionViewCellConfiguratorCellConfigurationHandler)handler;

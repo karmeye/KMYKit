@@ -62,6 +62,13 @@
     self.reuseIdentifierInfoMapping[reuseIdentifier] = [KMYCollectionViewCellConfiguratorReuseInfo infoWithClass:cls handler:handler];
 }
 
+- (NSString *)defaultCellReuseIdentifier {
+    if (!_defaultCellReuseIdentifier) {
+        _defaultCellReuseIdentifier = [[KMYDefaultCollectionViewCell defaultReuseIdentifier] copy];
+    }
+    return _defaultCellReuseIdentifier;
+}
+
 #pragma mark - KMYCollectionViewCellConfigurator Protocol
 
 - (void)registerClassesForCellReuseWithCollectionView:(UICollectionView *)collectionView {
@@ -79,8 +86,8 @@
     }
 }
 
-    return item.collectionViewCellReuseIdentifier ?: self.defaultCellReuseIdentifier;
 - (NSString *)reuseIdentifierForItem:(__kindof KMYUIItem *)item {
+    return item.collectionViewCellReuseIdentifier ?: self.defaultCellReuseIdentifier;
 }
 
 - (void)configureCell:(__kindof UICollectionViewCell*)cell withItem:(__kindof KMYUIItem*)item atIndexPath:(NSIndexPath *)indexPath {
