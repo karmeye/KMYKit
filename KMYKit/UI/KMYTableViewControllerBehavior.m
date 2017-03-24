@@ -14,6 +14,7 @@
 
 @property (nonatomic, assign)           UITableViewStyle                    tableViewStyle;
 @property (nonatomic, strong)           UITableViewController               *tableViewController;
+@property (nonatomic, weak, readwrite)  UIViewController                    *behavingViewController;
 
 @end
 
@@ -47,16 +48,17 @@
 
 #pragma mark - KMYViewControllerBehaving protocol
 
-- (void)initializeWithParentController:(UIViewController *)parentViewController {
+- (void)initializeBehaviorWithViewController:(__kindof UIViewController *)viewController {
+    self.behavingViewController = viewController;
     self.tableViewController = [UITableViewController kmy_tableViewControllerWithStyle:self.tableViewStyle initializer:^(UITableViewController *tableViewController) {
-        [parentViewController addChildViewController:tableViewController];
-        [tableViewController didMoveToParentViewController:parentViewController];
+        [viewController addChildViewController:tableViewController];
+        [tableViewController didMoveToParentViewController:viewController];
     }];
 }
 
-- (void)loadViewWithParentViewController:(UIViewController *)parentViewController {
+- (void)behaviorLoadView {
     if (self.automaticallyAddsTableView) {
-        UIView *parentView = parentViewController.view;
+        UIView *parentView = self.behavingViewController.view;
 
         [parentView addSubview:self.tableView];
         [NSLayoutConstraint activateConstraints:[NSLayoutConstraint kmy_constraintsForView:self.tableView equalToEdgesOfView:parentView]];
@@ -66,7 +68,7 @@
     }
 }
 
-- (void)parentViewControllerDidLoadView:(UIViewController *)parentViewController {
+- (void)behaviorViewControllerDidLoadView:(__kindof UIView *)view {
     KMYInvokeBlockIfSet(self.tableViewDidLoad, self.tableView);
 }
 

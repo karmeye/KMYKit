@@ -14,6 +14,7 @@
 
 @property (nonatomic, strong)               UICollectionViewLayout              *layout;
 @property (nonatomic, strong, readwrite)    UICollectionViewController          *collectionViewController;
+@property (nonatomic, weak, readwrite)      UIViewController                    *behavingViewController;
 
 @end
 
@@ -47,17 +48,17 @@
 
 #pragma mark - KMYViewControllerBehaving protocol
 
-- (void)initializeWithParentController:(UIViewController *)parentViewController {
-    self.collectionViewController = [UICollectionViewController kmy_collectionViewWithLayout:self.layout initializer:^(UICollectionViewController *viewController) {
-        [parentViewController addChildViewController:viewController];
-        [viewController didMoveToParentViewController:parentViewController];
+- (void)initializeBehaviorWithViewController:(__kindof UIViewController *)viewController {
+    self.behavingViewController = viewController;
+    self.collectionViewController = [UICollectionViewController kmy_collectionViewWithLayout:self.layout initializer:^(UICollectionViewController *collectionViewController) {
+        [viewController addChildViewController:collectionViewController];
+        [collectionViewController didMoveToParentViewController:viewController];
     }];
 }
 
-- (void)loadViewWithParentViewController:(UIViewController *)parentViewController {
+- (void)behaviorLoadView {
     if (self.automaticallyAddsCollectionView) {
-        UIView *parentView = parentViewController.view;
-
+        UIView *parentView = self.behavingViewController.view;
         [parentView addSubview:self.collectionView];
         [NSLayoutConstraint activateConstraints:[NSLayoutConstraint kmy_constraintsForView:self.collectionView equalToEdgesOfView:parentView]];
 
@@ -66,7 +67,7 @@
     }
 }
 
-- (void)parentViewControllerDidLoadView:(UIViewController *)parentViewController {
+- (void)behaviorViewControllerDidLoadView:(__kindof UIView *)view {
     KMYInvokeBlockIfSet(self.collectionViewDidLoad, self.collectionView);
 }
 

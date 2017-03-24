@@ -12,11 +12,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol KMYViewControllerBehaving <NSObject>
-@optional
 
-- (void)initializeWithParentController:(__kindof UIViewController *)parentViewController;
-- (void)loadViewWithParentViewController:(__kindof UIViewController *)parentViewController;
-- (void)parentViewControllerDidLoadView:(__kindof UIViewController *)parentViewController;
+- (void)initializeBehaviorWithViewController:(__kindof UIViewController *)viewController;
+- (void)behaviorLoadView;
+- (void)behaviorViewControllerDidLoadView:(__kindof UIView *)view;
 
 @end
 

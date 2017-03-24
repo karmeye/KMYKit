@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) UICollectionView                    *collectionView;
 @property (nonatomic, assign, readonly) BOOL                                isCollectionViewLoaded;
 
+@property (nonatomic, weak, readonly)   UIViewController                    *behavingViewController;
+
 @property (nonatomic, weak, nullable)   id <UICollectionViewDataSource>     dataSource;
 @property (nonatomic, weak, nullable)   id <UICollectionViewDelegate>       delegate;
 

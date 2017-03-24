@@ -36,9 +36,7 @@
     [super loadView];
 
     for (id <KMYViewControllerBehaving> behavior in self.behaviors) {
-        if ([behavior respondsToSelector:@selector(loadViewWithParentViewController:)]) {
-            [behavior loadViewWithParentViewController:self];
-        }
+        [behavior behaviorLoadView];
     }
 }
 
@@ -46,9 +44,7 @@
     [super viewDidLoad];
 
     for (id <KMYViewControllerBehaving> behavior in self.behaviors) {
-        if ([behavior respondsToSelector:@selector(parentViewControllerDidLoadView:)]) {
-            [behavior parentViewControllerDidLoadView:self];
-        }
+        [behavior behaviorViewControllerDidLoadView:self.view];
     }
 }
 
@@ -86,9 +82,7 @@
     _behaviors = [behaviors copy];
 
     for (id <KMYViewControllerBehaving> behavior in behaviors) {
-        if ([behavior respondsToSelector:@selector(initializeWithParentController:)]) {
-            [behavior initializeWithParentController:self];
-        }
+        [behavior initializeBehaviorWithViewController:self];
     }
 }
 
