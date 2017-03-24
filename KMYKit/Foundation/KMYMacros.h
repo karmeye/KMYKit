@@ -16,11 +16,12 @@
 #define KMYCastIfKindOfClass(inst, className)   ([inst isKindOfClass:[className class]] ? (className*)inst : nil)
 #define KMYCastIfConformsToProtocol(inst, prot) ([inst conformsToProtocol:@protocol(prot)] ? (id<prot>)inst : nil)
 
-// Nil, Null
+// Nil, NSNull
 //
 #define KMY_SET_IF_NIL(var, value)              if (!var) { var = value; }
-#define KMYIsNilOrNull(var)                     (var == nil || var == (id)[NSNull null])
-#define KMY_ENSURE_NIL_IF_NULL(var)             (var = (KMYIsNilOrNull(var) ? nil : var))
+#define KMYIsNSNull(var)                        (var == (id)[NSNull null])
+#define KMYIsNilOrNSNull(var)                   (var == nil || var == (id)[NSNull null])
+#define KMY_ENSURE_NIL_IF_NSNULL(var)           (var = (KMYIsNilOrNSNull(var) ? nil : var))
 
 // Collections
 #define KMYArrayContainsObjects(array)              (array && array.count > 0)
