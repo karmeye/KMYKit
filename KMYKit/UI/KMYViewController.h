@@ -27,8 +27,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithNibName:(nullable NSString *)nibName bundle:(nullable NSBundle *)bundle behavior:(nullable id <KMYViewControllerBehaving>)behavior;
 - (nullable instancetype)initWithCoder:(NSCoder *)decoder behavior:(nullable id <KMYViewControllerBehaving>)behavior;
 
-- (nullable instancetype)initWithBehavior:(nullable id <KMYViewControllerBehaving>)behavior;
-- (nullable instancetype)initWithBehaviors:(nullable NSArray<id <KMYViewControllerBehaving>> *)behaviors;
+- (instancetype)initWithBehavior:(nullable id <KMYViewControllerBehaving>)behavior;
+- (instancetype)initWithBehaviors:(nullable NSArray<id <KMYViewControllerBehaving>> *)behaviors;
 
 @end
 
