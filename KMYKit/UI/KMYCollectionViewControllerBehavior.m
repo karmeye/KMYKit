@@ -56,7 +56,16 @@
     }];
 }
 
-- (void)behaviorLoadView {
+- (void)deinitializeBehaviorWithViewController:(__kindof UIViewController *)viewController {
+    [self.collectionViewController willMoveToParentViewController:nil];
+    [self.collectionViewController removeFromParentViewController];
+
+    self.behavingViewController = nil;
+    self.collectionViewController = nil;
+}
+
+
+- (void)behaviorViewControllerLoadView {
     if (self.automaticallyAddsCollectionView) {
         UIView *parentView = self.behavingViewController.view;
         [parentView addSubview:self.collectionView];

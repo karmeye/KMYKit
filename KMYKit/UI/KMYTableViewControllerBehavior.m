@@ -56,7 +56,15 @@
     }];
 }
 
-- (void)behaviorLoadView {
+- (void)deinitializeBehaviorWithViewController:(__kindof UIViewController *)viewController {
+    [self.tableViewController willMoveToParentViewController:nil];
+    [self.tableViewController removeFromParentViewController];
+
+    self.behavingViewController = nil;
+    self.tableViewController = nil;
+}
+
+- (void)behaviorViewControllerLoadView {
     if (self.automaticallyAddsTableView) {
         UIView *parentView = self.behavingViewController.view;
 
