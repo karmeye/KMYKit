@@ -73,7 +73,7 @@
     
     // `scheme` is what comes before the first colon. If there’s nothing before the first colon or there is, but that value is invalid, scheme will be `nil`.
     //
-    return URL && URL.scheme != nil && URL.host != nil && URL.pathComponents.count > 0;
+    return URL && URL.scheme != nil && URL.host != nil;
 }
 
 @end
