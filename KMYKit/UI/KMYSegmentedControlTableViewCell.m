@@ -105,6 +105,8 @@
 }
 
 - (void)prepareForReuse {
+    [super prepareForReuse];
+    
     [_segmentedControl removeTarget:nil action:nil forControlEvents:UIControlEventAllEvents];
     [_segmentedControl removeAllSegments];
 }
