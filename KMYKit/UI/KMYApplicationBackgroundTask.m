@@ -15,7 +15,7 @@
 @property (nonatomic, weak)             UIApplication                   *application;
 
 @property (nonatomic, copy, nonnull)    void                            (^executionHandler)(KMYApplicationBackgroundTask *task);
-@property (nonatomic, copy, nonnull)    void                            (^expirationHandler)();
+@property (nonatomic, copy, nonnull)    void                            (^expirationHandler)(void);
 
 @end
 

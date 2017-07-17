@@ -14,9 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign, readonly)     BOOL    isOpen;
 
-+ (instancetype)gateWithOpenHandler:(void (^)())didOpenHandler;
-+ (instancetype)gateWithCloseHandler:(void (^)())didCloseHandler;
-+ (instancetype)gateWithOpenHandler:(void (^ _Nullable)())didOpenHandler closeHandler:(void (^ _Nullable)())didCloseHandler;
++ (instancetype)gateWithOpenHandler:(void (^)(void))didOpenHandler;
++ (instancetype)gateWithCloseHandler:(void (^)(void))didCloseHandler;
++ (instancetype)gateWithOpenHandler:(void (^ _Nullable)(void))didOpenHandler closeHandler:(void (^ _Nullable)(void))didCloseHandler;
 
 
 /**
@@ -27,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param callbackQueue Queue on which the open and close blocks will be executed async. If `nil` the blocks will be executed sync on the same thread the `enter` and `exit` method were called.
  @return A new instance.
  */
-+ (instancetype)gateWithOpenHandler:(void (^ _Nullable)())didOpenHandler closeHandler:(void (^ _Nullable)())didCloseHandler callbackQueue:(nullable dispatch_queue_t)callbackQueue;
++ (instancetype)gateWithOpenHandler:(void (^ _Nullable)(void))didOpenHandler closeHandler:(void (^ _Nullable)(void))didCloseHandler callbackQueue:(nullable dispatch_queue_t)callbackQueue;
 
 - (void)enter;
 - (void)exit;

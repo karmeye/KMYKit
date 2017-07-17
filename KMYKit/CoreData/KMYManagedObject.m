@@ -28,7 +28,7 @@
 
     NSManagedObjectContext __weak *refManagedObjectContext = managedObject.managedObjectContext;
 
-    void (^block)() = ^{
+    void (^block)(void) = ^{
         [refManagedObjectContext deleteObject:managedObject];
         if (processPendingChanges) {
             [refManagedObjectContext processPendingChanges];

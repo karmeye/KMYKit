@@ -125,7 +125,7 @@ extern void                 kmy_dispatch_async_if(dispatch_queue_t _Nullable que
 ///
 /// http://blog.benjamin-encz.de/post/main-queue-vs-main-thread/
 /// http://stackoverflow.com/questions/12806506/how-can-i-verify-that-i-am-running-on-a-given-gcd-queue-without-using-dispatch-g
-extern bool                 kmy_dispatch_is_main_queue();
+extern bool                 kmy_dispatch_is_main_queue(void);
 
 NS_ASSUME_NONNULL_END
 

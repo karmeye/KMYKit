@@ -38,7 +38,7 @@ typedef NS_OPTIONS(NSUInteger, KMYUIItemEditingOptions) {
 
 typedef void (^KMYUIItemActionHandler)(__kindof KMYUIItem *item, NSDictionary<NSString *, id> * _Nullable info);
 
-typedef NSString * _Nullable (^KMYUIItemTextHandler)();
+typedef NSString * _Nullable (^KMYUIItemTextHandler)(void);
 
 @interface KMYUIItem : KMYItem
 

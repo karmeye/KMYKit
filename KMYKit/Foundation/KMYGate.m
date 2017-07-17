@@ -15,8 +15,8 @@
 @property (nonatomic, assign)   NSInteger                   openRequestCount;
 @property (nonatomic, strong)   dispatch_queue_t            callbackQueue;
 
-@property (nonatomic, copy)     void                        (^didOpenHandler)();
-@property (nonatomic, copy)     void                        (^didCloseHandler)();
+@property (nonatomic, copy)     void                        (^didOpenHandler)(void);
+@property (nonatomic, copy)     void                        (^didCloseHandler)(void);
 
 @end
 
@@ -24,19 +24,19 @@
 
 @dynamic isOpen;
 
-+ (instancetype)gateWithOpenHandler:(void (^)())didOpenHandler {
++ (instancetype)gateWithOpenHandler:(void (^)(void))didOpenHandler {
     return [[self class] gateWithOpenHandler:didOpenHandler closeHandler:NULL callbackQueue:nil];
 }
 
-+ (instancetype)gateWithCloseHandler:(void (^)())didCloseHandler {
++ (instancetype)gateWithCloseHandler:(void (^)(void))didCloseHandler {
     return [[self class] gateWithOpenHandler:NULL closeHandler:didCloseHandler callbackQueue:nil];
 }
 
-+ (instancetype)gateWithOpenHandler:(void (^)())didOpenHandler closeHandler:(void (^)())didCloseHandler {
++ (instancetype)gateWithOpenHandler:(void (^)(void))didOpenHandler closeHandler:(void (^)(void))didCloseHandler {
     return [[self class] gateWithOpenHandler:didOpenHandler closeHandler:didCloseHandler callbackQueue:nil];
 }
 
-+ (instancetype)gateWithOpenHandler:(void (^)())didOpenHandler closeHandler:(void (^)())didCloseHandler callbackQueue:(dispatch_queue_t)callbackQueue {
++ (instancetype)gateWithOpenHandler:(void (^)(void))didOpenHandler closeHandler:(void (^)(void))didCloseHandler callbackQueue:(dispatch_queue_t)callbackQueue {
     KMYGate *s          = [[[self class] alloc] init];
     s.callbackQueue     = callbackQueue;
     s.dispatchQueue     = dispatch_queue_create("com.KMYKit.KMYGate", dispatch_queue_attr_make_with_qos_class(DISPATCH_QUEUE_SERIAL, QOS_CLASS_DEFAULT, -1));

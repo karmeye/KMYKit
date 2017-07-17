@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /// @return The natural scale factor associated with the main screen.
-FOUNDATION_EXPORT   CGFloat     KMYMainScreenDisplayScale();
+FOUNDATION_EXPORT   CGFloat     KMYMainScreenDisplayScale(void);
 
 @interface UIScreen (KMY)
 
