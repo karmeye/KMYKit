@@ -34,6 +34,10 @@ typedef void            (^KMYAsynchronousOperationResultBlock)(id _Nullable resu
 
 @end
 
+/// Normally when implementing a concurrent operation you override the @c start method.
+/// This class does that for you so you should not override the @c start methid. Instead,
+/// if you decide to subclass this method instead of using the available handlers/blocks,
+/// you should override the @c execute method.
 @interface KMYAsynchronousOperation (Subclassing)
 
 - (instancetype)init;
@@ -49,6 +53,7 @@ typedef void            (^KMYAsynchronousOperationResultBlock)(id _Nullable resu
 - (void)setOperationCompleteWithResult:(nullable id)result;
 
 /// Will be called if no execution block was set.
+/// The receiver will not check if it has been cancelled before calling this method, so the first thing to do when overriding this method is to check whether the operation was cancelled before implementing any logic.
 - (void)execute;
 
 @end

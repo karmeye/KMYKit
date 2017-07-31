@@ -9,6 +9,7 @@
 #import "KMYAsynchronousOperation.h"
 #include <libkern/OSAtomic.h>
 #import "KMYDispatch.h"
+#import "KMYAssert.h"
 
 @interface KMYAsynchronousOperation ()
 @end
@@ -87,6 +88,10 @@
     self.finished   = YES;
 }
 
+- (void)execute {
+    KMYAssertFail(@"The execute method must be overridden if you are not using any of the given execution blocks.");
+}
+
 #pragma mark - NSOperation
 
 - (void)cancel {
@@ -103,19 +108,15 @@
     // If you are implementing a concurrent operation, you must override this method and use it to
     // initiate your operation. Your custom implementation must not call super at any time.
 
-    if (self.isCancelled) {
-        [self setOperationComplete];
-    } else {
-        if (_syncExecutionBlock) {
-            id result = _syncExecutionBlock(self);
+    if (_syncExecutionBlock) {
+        id result = _syncExecutionBlock(self);
+        [self setOperationCompleteWithResult:result];
+    } else if (_asyncExecutionBlock) {
+        _asyncExecutionBlock(self, ^(id _Nullable result) {
             [self setOperationCompleteWithResult:result];
-        } else if (_asyncExecutionBlock) {
-            _asyncExecutionBlock(self, ^(id _Nullable result) {
-                [self setOperationCompleteWithResult:result];
-            });
-        } else {
-            [self execute];
-        }
+        });
+    } else {
+        [self execute];
     }
 }
 
