@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)kmy_addObjectIfSet:(nullable ObjectType)object;
 
+- (void)kmy_addObjectsFromArrayIfSet:(nullable NSArray<ObjectType> *)array;
+
 @end
 
 NS_ASSUME_NONNULL_END

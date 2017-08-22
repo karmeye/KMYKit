@@ -16,4 +16,10 @@
     }
 }
 
+- (void)kmy_addObjectsFromArrayIfSet:(nullable NSArray *)array {
+    if (array) {
+        [self addObjectsFromArray:array];
+    }
+}
+
 @end
