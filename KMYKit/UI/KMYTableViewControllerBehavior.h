@@ -15,13 +15,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) UITableView                         *tableView;
 @property (nonatomic, assign, readonly) BOOL                                isTableViewLoaded;
 
-@property (nonatomic, weak, readonly)   UIViewController                    *behavingViewController;
-
 @property (nonatomic, weak, nullable)   id <UITableViewDataSource>          dataSource;
 @property (nonatomic, weak, nullable)   id <UITableViewDelegate>            delegate;
 
 /// Defaults to @YES
 @property (nonatomic, assign)           BOOL                                automaticallyAddsTableView;
+
+@property (nonatomic, weak, readonly, nullable)     UIViewController        *behavingViewController;
+@property (nonatomic, strong, readonly, nullable)   UITableViewController   *tableViewController;
 
 /// Set dataSource, delegate and register reusable cells here.
 @property (nonatomic, copy, nullable)   void (^tableViewDidLoad)(UITableView *);

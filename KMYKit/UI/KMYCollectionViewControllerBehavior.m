@@ -12,9 +12,9 @@
 
 @interface KMYCollectionViewControllerBehavior ()
 
-@property (nonatomic, strong)               UICollectionViewLayout              *layout;
-@property (nonatomic, strong, readwrite)    UICollectionViewController          *collectionViewController;
-@property (nonatomic, weak, readwrite)      UIViewController                    *behavingViewController;
+@property (nonatomic, strong)                       UICollectionViewLayout          *layout;
+@property (nonatomic, strong, readwrite, nullable)  UICollectionViewController      *collectionViewController;
+@property (nonatomic, weak, readwrite, nullable)    UIViewController                *behavingViewController;
 
 @end
 

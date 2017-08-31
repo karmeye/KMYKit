@@ -12,9 +12,9 @@
 
 @interface KMYTableViewControllerBehavior ()
 
-@property (nonatomic, assign)           UITableViewStyle                    tableViewStyle;
-@property (nonatomic, strong)           UITableViewController               *tableViewController;
-@property (nonatomic, weak, readwrite)  UIViewController                    *behavingViewController;
+@property (nonatomic, assign)                       UITableViewStyle        tableViewStyle;
+@property (nonatomic, strong, readwrite, nullable)  UITableViewController   *tableViewController;
+@property (nonatomic, weak, readwrite, nullable)    UIViewController        *behavingViewController;
 
 @end
 
