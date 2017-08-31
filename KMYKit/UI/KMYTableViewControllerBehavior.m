@@ -67,9 +67,10 @@
 - (void)behaviorViewControllerLoadView {
     if (self.automaticallyAddsTableView) {
         UIView *parentView = self.behavingViewController.view;
+        UIView *childView = self.tableViewController.view;
 
-        [parentView addSubview:self.tableView];
-        [NSLayoutConstraint activateConstraints:[NSLayoutConstraint kmy_constraintsForView:self.tableView equalToEdgesOfView:parentView]];
+        [parentView addSubview:childView];
+        [NSLayoutConstraint activateConstraints:[NSLayoutConstraint kmy_constraintsForView:childView equalToEdgesOfView:parentView]];
 
         self.tableView.delegate     = self.delegate;
         self.tableView.dataSource   = self.dataSource;

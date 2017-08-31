@@ -68,8 +68,10 @@
 - (void)behaviorViewControllerLoadView {
     if (self.automaticallyAddsCollectionView) {
         UIView *parentView = self.behavingViewController.view;
-        [parentView addSubview:self.collectionView];
-        [NSLayoutConstraint activateConstraints:[NSLayoutConstraint kmy_constraintsForView:self.collectionView equalToEdgesOfView:parentView]];
+        UIView *childView = self.collectionViewController.view;
+
+        [parentView addSubview:childView];
+        [NSLayoutConstraint activateConstraints:[NSLayoutConstraint kmy_constraintsForView:childView equalToEdgesOfView:parentView]];
 
         self.collectionView.delegate    = self.delegate;
         self.collectionView.dataSource  = self.dataSource;
