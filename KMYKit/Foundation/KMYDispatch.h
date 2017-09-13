@@ -118,6 +118,7 @@ extern void                 kmy_dispatch_async_on_main_queue_after(NSTimeInterva
 /// Submits a block for asynchronous execution on the given dispatch queue after a delay in seconds and returns immediately.
 extern void                 kmy_dispatch_async_on_queue_after(dispatch_queue_t queue, NSTimeInterval delay, dispatch_block_t block);
 
+/// Submits a block for asynchronous execution if @c queue is not nil; if @c queue is @c nil the block is called synchronously.
 extern void                 kmy_dispatch_async_if(dispatch_queue_t _Nullable queue, dispatch_block_t block);
 
 
