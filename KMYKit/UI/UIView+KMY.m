@@ -39,6 +39,12 @@
     }
 }
 
++ (void)kmy_enableLayoutConstraintsOnViews:(NSArray<UIView *> *)views {
+    for (UIView *view in views) {
+        view.translatesAutoresizingMaskIntoConstraints = NO;
+    }
+}
+
 @end
 
 

@@ -44,6 +44,9 @@ typedef NS_OPTIONS(NSUInteger, KMYLayoutTradeoff) {
 
 - (void)kmy_setLayoutTradeoff:(KMYLayoutTradeoff)tradeoff priority:(UILayoutPriority)priority forAxis:(KMYLayoutAxis)axis;
 
+/// Sets @c translatesAutoresizingMaskIntoConstraints to @c NO on given views.
++ (void)kmy_enableLayoutConstraintsOnViews:(NSArray<UIView *> *)views NS_SWIFT_NAME(kmy_enableLayoutConstraints(_:));
+
 @end
 
 NS_ASSUME_NONNULL_END
