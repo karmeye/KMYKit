@@ -10,19 +10,19 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSLayoutAnchor (KMY)
+@interface NSLayoutAnchor<AnchorType> (KMY)
 
-- (NSLayoutConstraint *)kmy_constraintEqualToAnchor:(NSLayoutAnchor *)anchor                priority:(UILayoutPriority)priority NS_SWIFT_NAME(kmy_constraint(equalTo:priority:));
-- (NSLayoutConstraint *)kmy_constraintLessThanOrEqualToAnchor:(NSLayoutAnchor *)anchor      priority:(UILayoutPriority)priority NS_SWIFT_NAME(kmy_constraint(lessThanOrEqualTo:priority:));
-- (NSLayoutConstraint *)kmy_constraintGreaterThanOrEqualToAnchor:(NSLayoutAnchor *)anchor   priority:(UILayoutPriority)priority NS_SWIFT_NAME(kmy_constraint(greaterThanOrEqualTo:priority:));
+- (NSLayoutConstraint *)kmy_constraintEqualToAnchor:(NSLayoutAnchor<AnchorType> *)anchor                priority:(UILayoutPriority)priority NS_SWIFT_NAME(kmy_constraint(equalTo:priority:));
+- (NSLayoutConstraint *)kmy_constraintLessThanOrEqualToAnchor:(NSLayoutAnchor<AnchorType> *)anchor      priority:(UILayoutPriority)priority NS_SWIFT_NAME(kmy_constraint(lessThanOrEqualTo:priority:));
+- (NSLayoutConstraint *)kmy_constraintGreaterThanOrEqualToAnchor:(NSLayoutAnchor<AnchorType> *)anchor   priority:(UILayoutPriority)priority NS_SWIFT_NAME(kmy_constraint(greaterThanOrEqualTo:priority:));
 
-- (NSLayoutConstraint *)kmy_constraintEqualToAnchor:(NSLayoutAnchor *)anchor                constant:(CGFloat)c priority:(UILayoutPriority)priority NS_SWIFT_NAME(kmy_constraint(equalTo:constant:priority:));
-- (NSLayoutConstraint *)kmy_constraintLessThanOrEqualToAnchor:(NSLayoutAnchor *)anchor      constant:(CGFloat)c priority:(UILayoutPriority)priority NS_SWIFT_NAME(kmy_constraint(lessThanOrEqualTo:constant:priority:));
-- (NSLayoutConstraint *)kmy_constraintGreaterThanOrEqualToAnchor:(NSLayoutAnchor *)anchor   constant:(CGFloat)c priority:(UILayoutPriority)priority NS_SWIFT_NAME(kmy_constraint(greaterThanOrEqualTo:constant:priority:));
+- (NSLayoutConstraint *)kmy_constraintEqualToAnchor:(NSLayoutAnchor<AnchorType> *)anchor                constant:(CGFloat)c priority:(UILayoutPriority)priority NS_SWIFT_NAME(kmy_constraint(equalTo:constant:priority:));
+- (NSLayoutConstraint *)kmy_constraintLessThanOrEqualToAnchor:(NSLayoutAnchor<AnchorType> *)anchor      constant:(CGFloat)c priority:(UILayoutPriority)priority NS_SWIFT_NAME(kmy_constraint(lessThanOrEqualTo:constant:priority:));
+- (NSLayoutConstraint *)kmy_constraintGreaterThanOrEqualToAnchor:(NSLayoutAnchor<AnchorType> *)anchor   constant:(CGFloat)c priority:(UILayoutPriority)priority NS_SWIFT_NAME(kmy_constraint(greaterThanOrEqualTo:constant:priority:));
 
-- (NSLayoutConstraint *)kmy_constraintEqualToAnchor:(NSLayoutAnchor*)anchor                 identifier:(nullable NSString *)identifier NS_SWIFT_NAME(kmy_constraint(equalTo:identifier:));
-- (NSLayoutConstraint *)kmy_constraintLessThanOrEqualToAnchor:(NSLayoutAnchor *)anchor      identifier:(nullable NSString *)identifier NS_SWIFT_NAME(kmy_constraint(lessThanOrEqualTo:identifier:));
-- (NSLayoutConstraint *)kmy_constraintGreaterThanOrEqualToAnchor:(NSLayoutAnchor *)anchor   identifier:(nullable NSString *)identifier NS_SWIFT_NAME(kmy_constraint(greaterThanOrEqualTo:identifier:));
+- (NSLayoutConstraint *)kmy_constraintEqualToAnchor:(NSLayoutAnchor<AnchorType> *)anchor                identifier:(nullable NSString *)identifier NS_SWIFT_NAME(kmy_constraint(equalTo:identifier:));
+- (NSLayoutConstraint *)kmy_constraintLessThanOrEqualToAnchor:(NSLayoutAnchor<AnchorType> *)anchor      identifier:(nullable NSString *)identifier NS_SWIFT_NAME(kmy_constraint(lessThanOrEqualTo:identifier:));
+- (NSLayoutConstraint *)kmy_constraintGreaterThanOrEqualToAnchor:(NSLayoutAnchor<AnchorType> *)anchor   identifier:(nullable NSString *)identifier NS_SWIFT_NAME(kmy_constraint(greaterThanOrEqualTo:identifier:));
 
 @end
 
