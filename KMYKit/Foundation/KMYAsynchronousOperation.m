@@ -22,7 +22,9 @@
 
     dispatch_queue_t                                    _resultCallbackQueue;
 
+    // From docs: Your executing property must also provide the status in a thread-safe manner.
     OSSpinLock  _isExecutingLock;
+    OSSpinLock  _isFinishedLock;
 
     BOOL        _isExecuting;
     BOOL        _isFinished;
@@ -32,7 +34,8 @@
     self = [super init];
 
     _isExecutingLock = OS_SPINLOCK_INIT;
-    
+    _isFinishedLock = OS_SPINLOCK_INIT;
+
     return self;
 }
 
@@ -125,10 +128,6 @@
 }
 
 - (BOOL)isExecuting {
-
-    // From docs:
-    // Your executing property must also provide the status in a thread-safe manner.
-
     BOOL isExecuting;
     OSSpinLockLock(&_isExecutingLock);
     isExecuting = _isExecuting;
@@ -137,8 +136,8 @@
 }
 
 - (void)setExecuting:(BOOL)isExecuting {
-    if (isExecuting != _isExecuting) {
-        NSString * const key = @"isExecuting";
+    if (isExecuting != self.isExecuting) {
+        static NSString * const key = @"isExecuting";
         [self willChangeValueForKey:key];
         OSSpinLockLock(&_isExecutingLock);
         _isExecuting = isExecuting;
@@ -148,14 +147,20 @@
 }
 
 - (BOOL)isFinished {
-    return _isFinished;
+    BOOL isFinished;
+    OSSpinLockLock(&_isFinishedLock);
+    isFinished = _isFinished;
+    OSSpinLockUnlock(&_isFinishedLock);
+    return isFinished;
 }
 
 - (void)setFinished:(BOOL)isFinished {
-    if (isFinished != _isFinished) {
-        NSString * const key = @"isFinished";
+    if (isFinished != self.isFinished) {
+        static NSString * const key = @"isFinished";
         [self willChangeValueForKey:key];
+        OSSpinLockLock(&_isFinishedLock);
         _isFinished = isFinished;
+        OSSpinLockUnlock(&_isFinishedLock);
         [self didChangeValueForKey:key];
     }
 }
