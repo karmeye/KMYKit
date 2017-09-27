@@ -12,12 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIButton (KMY)
 
-+ (nullable instancetype)kmy_buttonWithType:(UIButtonType)buttonType
-                                initializer:(void (^_Nullable)(__kindof UIButton *button))initializer;
++ (instancetype)kmy_buttonWithType:(UIButtonType)buttonType
+                       initializer:(void (^_Nullable)(__kindof UIButton *button))initializer;
 
-+ (nullable instancetype)kmy_buttonWithType:(UIButtonType)buttonType
-                                initializer:(void (^_Nullable)(__kindof UIButton *button))initializer
-                                    handler:(void (^_Nullable)(__kindof UIButton *button))handler;
++ (instancetype)kmy_buttonWithType:(UIButtonType)buttonType
+                       initializer:(void (^_Nullable)(__kindof UIButton *button))initializer
+                           handler:(void (^_Nullable)(__kindof UIButton *button))handler;
 
 /// May be modified after initialization.
 @property (nonatomic, copy, nullable) void (^kmy_touchUpInsideHandler)(__kindof UIButton *button);
