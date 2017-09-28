@@ -39,7 +39,7 @@
     }
 }
 
-+ (void)kmy_enableLayoutConstraintsOnViews:(NSArray<UIView *> *)views {
++ (void)kmy_enableLayoutConstraintsOnViews:(NSArray<__kindof UIView *> *)views {
     for (UIView *view in views) {
         view.translatesAutoresizingMaskIntoConstraints = NO;
     }
@@ -47,13 +47,19 @@
 
 @end
 
+@implementation UIView (KMYViewHierarchy)
 
+- (nullable __kindof UIView *)kmy_firstAncestorOfClass:(Class)cls {
+    if (!self.superview) {
+        return nil;
+    } else if ([self.superview isMemberOfClass:cls]) {
+        return self.superview;
+    } else {
+        return [self.superview kmy_firstAncestorOfClass:cls];
+    }
+}
 
-
-
-
-
-
+@end
 
 
 
