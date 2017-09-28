@@ -61,12 +61,14 @@
 #import <KMYKit/UIGestureRecognizer+KMY.h>
 #import <KMYKit/UIImage+KMY.h>
 #import <KMYKit/UIImageView+KMY.h>
+#import <KMYKit/UILabel+KMY.h>
 #import <KMYKit/UINavigationController+KMY.h>
 #import <KMYKit/UIRefreshControl+KMY.h>
 #import <KMYKit/UIScreen+KMY.h>
 #import <KMYKit/UISegmentedControl+KMY.h>
 #import <KMYKit/UISwitch+KMY.h>
 #import <KMYKit/UITableViewController+KMY.h>
+#import <KMYKit/UITextField+KMY.h>
 #import <KMYKit/UIToolbar+KMY.h>
 #import <KMYKit/UIView+KMY.h>
 #import <KMYKit/WKWebView+KMY.h>

@@ -13,6 +13,8 @@
 		A6028DE61D46041500289B3A /* NSLayoutConstraint+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A6028DE41D46041500289B3A /* NSLayoutConstraint+KMY.m */; };
 		A6028DED1D46049800289B3A /* NSTimer+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A6028DEB1D46049800289B3A /* NSTimer+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6028DEE1D46049800289B3A /* NSTimer+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A6028DEC1D46049800289B3A /* NSTimer+KMY.m */; };
+		A614B5921F7D1F0E00E87D61 /* UITextField+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A614B5901F7D1F0E00E87D61 /* UITextField+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A614B5931F7D1F0E00E87D61 /* UITextField+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A614B5911F7D1F0E00E87D61 /* UITextField+KMY.m */; };
 		A626C98F1CD8A49C0094802F /* NSString+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A626C98D1CD8A49C0094802F /* NSString+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A626C9901CD8A49C0094802F /* NSString+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A626C98E1CD8A49C0094802F /* NSString+KMY.m */; };
 		A627751C1CAD493300238E9D /* KMYDefaultReusableIdentifying.h in Headers */ = {isa = PBXBuildFile; fileRef = A627751B1CAD493300238E9D /* KMYDefaultReusableIdentifying.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -38,6 +40,8 @@
 		A634953C1E41D6A1004C1872 /* KMYSelectableBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = A634953A1E41D6A1004C1872 /* KMYSelectableBarButtonItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A634953D1E41D6A1004C1872 /* KMYSelectableBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A634953B1E41D6A1004C1872 /* KMYSelectableBarButtonItem.m */; };
 		A64408A51D700C2500450948 /* KMYCancelling.h in Headers */ = {isa = PBXBuildFile; fileRef = A64408A41D700C2500450948 /* KMYCancelling.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A64441CD1F7D1AD600E29B5C /* UILabel+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A64441CB1F7D1AD600E29B5C /* UILabel+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A64441CE1F7D1AD600E29B5C /* UILabel+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A64441CC1F7D1AD600E29B5C /* UILabel+KMY.m */; };
 		A64773241D89592F00520769 /* KMYAbsoluteURL.h in Headers */ = {isa = PBXBuildFile; fileRef = A64773221D89592F00520769 /* KMYAbsoluteURL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A64773251D89592F00520769 /* KMYAbsoluteURL.m in Sources */ = {isa = PBXBuildFile; fileRef = A64773231D89592F00520769 /* KMYAbsoluteURL.m */; };
 		A6587CE91D015C0400F6DD9E /* KMYSwitchTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A6587CE71D015C0400F6DD9E /* KMYSwitchTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -172,6 +176,8 @@
 		A6028DE41D46041500289B3A /* NSLayoutConstraint+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+KMY.m"; sourceTree = "<group>"; };
 		A6028DEB1D46049800289B3A /* NSTimer+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+KMY.h"; sourceTree = "<group>"; };
 		A6028DEC1D46049800289B3A /* NSTimer+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+KMY.m"; sourceTree = "<group>"; };
+		A614B5901F7D1F0E00E87D61 /* UITextField+KMY.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+KMY.h"; sourceTree = "<group>"; };
+		A614B5911F7D1F0E00E87D61 /* UITextField+KMY.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+KMY.m"; sourceTree = "<group>"; };
 		A626C98D1CD8A49C0094802F /* NSString+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+KMY.h"; sourceTree = "<group>"; };
 		A626C98E1CD8A49C0094802F /* NSString+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+KMY.m"; sourceTree = "<group>"; };
 		A627751B1CAD493300238E9D /* KMYDefaultReusableIdentifying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYDefaultReusableIdentifying.h; sourceTree = "<group>"; };
@@ -197,6 +203,8 @@
 		A634953A1E41D6A1004C1872 /* KMYSelectableBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYSelectableBarButtonItem.h; sourceTree = "<group>"; };
 		A634953B1E41D6A1004C1872 /* KMYSelectableBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYSelectableBarButtonItem.m; sourceTree = "<group>"; };
 		A64408A41D700C2500450948 /* KMYCancelling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYCancelling.h; sourceTree = "<group>"; };
+		A64441CB1F7D1AD600E29B5C /* UILabel+KMY.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+KMY.h"; sourceTree = "<group>"; };
+		A64441CC1F7D1AD600E29B5C /* UILabel+KMY.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+KMY.m"; sourceTree = "<group>"; };
 		A64773221D89592F00520769 /* KMYAbsoluteURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYAbsoluteURL.h; sourceTree = "<group>"; };
 		A64773231D89592F00520769 /* KMYAbsoluteURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYAbsoluteURL.m; sourceTree = "<group>"; };
 		A6587CE71D015C0400F6DD9E /* KMYSwitchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYSwitchTableViewCell.h; sourceTree = "<group>"; };
@@ -360,6 +368,8 @@
 				A6863E1F1D7E8FD300694FF6 /* UIImage+KMY.m */,
 				A6871C751CBFC8630062E265 /* UIImageView+KMY.h */,
 				A6871C761CBFC8630062E265 /* UIImageView+KMY.m */,
+				A64441CB1F7D1AD600E29B5C /* UILabel+KMY.h */,
+				A64441CC1F7D1AD600E29B5C /* UILabel+KMY.m */,
 				A62775391CB3927400238E9D /* UINavigationController+KMY.h */,
 				A627753A1CB3927400238E9D /* UINavigationController+KMY.m */,
 				A6C580751DA3C2930081FC2D /* UIRefreshControl+KMY.h */,
@@ -372,6 +382,8 @@
 				A697721C1D01BD2E00F1BE5A /* UISwitch+KMY.m */,
 				A62775331CB38F4100238E9D /* UITableViewController+KMY.h */,
 				A62775341CB38F4100238E9D /* UITableViewController+KMY.m */,
+				A614B5901F7D1F0E00E87D61 /* UITextField+KMY.h */,
+				A614B5911F7D1F0E00E87D61 /* UITextField+KMY.m */,
 				A6C109021E446D0600BE6087 /* UIToolbar+KMY.h */,
 				A6C109031E446D0600BE6087 /* UIToolbar+KMY.m */,
 				A68B8E281CAA6F9200DE6E95 /* UIView+KMY.h */,
@@ -690,8 +702,10 @@
 				A6FAFA151E30B3DC0038F267 /* NSManagedObjectContext+KMY.h in Headers */,
 				A634953C1E41D6A1004C1872 /* KMYSelectableBarButtonItem.h in Headers */,
 				A68490C51E40C0B4005E4ACC /* KMYSelectableButton.h in Headers */,
+				A614B5921F7D1F0E00E87D61 /* UITextField+KMY.h in Headers */,
 				A6C109041E446D0600BE6087 /* UIToolbar+KMY.h in Headers */,
 				A6900E391E6FE89600B72EB4 /* NSNotificationCenter+KMY.h in Headers */,
+				A64441CD1F7D1AD600E29B5C /* UILabel+KMY.h in Headers */,
 				A681537D1DE730DA00793715 /* KMYApplicationBackgroundTask.h in Headers */,
 				A6D87A491CF70567006BEC47 /* WKWebView+KMY.h in Headers */,
 			);
@@ -787,6 +801,7 @@
 				A68B8E321CAA6F9200DE6E95 /* KMYUISection.m in Sources */,
 				A6F6DA611CCDD4650042B78A /* KMYTableViewControllerBehavior.m in Sources */,
 				A69674A81CFEE653003B49F0 /* UIGestureRecognizer+KMY.m in Sources */,
+				A614B5931F7D1F0E00E87D61 /* UITextField+KMY.m in Sources */,
 				A64773251D89592F00520769 /* KMYAbsoluteURL.m in Sources */,
 				A68B8E101CAA6F8900DE6E95 /* KMYItem.m in Sources */,
 				A6E4975E1DFECE0F0089E4EA /* UIFont+KMY.m in Sources */,
@@ -807,6 +822,7 @@
 				A627753C1CB3927400238E9D /* UINavigationController+KMY.m in Sources */,
 				A68B8E131CAA6F8900DE6E95 /* KMYSection.m in Sources */,
 				A6D01FF01CABE139003CF026 /* KMYDefaultStyleTableViewCell.m in Sources */,
+				A64441CE1F7D1AD600E29B5C /* UILabel+KMY.m in Sources */,
 				A69E36081CEC40AF00FB3B8C /* NSLayoutAnchor+KMY.m in Sources */,
 				A6028DEE1D46049800289B3A /* NSTimer+KMY.m in Sources */,
 				A68B8E2E1CAA6F9200DE6E95 /* KMYTableViewController.m in Sources */,
