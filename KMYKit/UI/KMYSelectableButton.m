@@ -266,7 +266,7 @@
 
     if (self.isManagedByBarButtonItem && self.toolbar) {
         if (self.superview) {
-            KMYAssertDebug([self.superview isKindOfClass:[UINavigationBar class]] || [self.superview isKindOfClass:[UIToolbar class]], @"You must add this the UIBarButtonItem that contains this button to either a UINavigationBar or a UIToolbar.");
+            KMYAssertDebug([self kmy_firstAncestorOfClass:[UINavigationBar class]] != nil || [self kmy_firstAncestorOfClass:[UIToolbar class]] != nil, @"You must add the UIBarButtonItem that contains this button to either a UINavigationBar or a UIToolbar.");
             self.toolbarHeightConstraint.constant = CGRectGetHeight(self.superview.bounds);
         }
     }
