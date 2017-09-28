@@ -111,19 +111,19 @@
 
 #pragma mark -
 
-- (NSLayoutConstraint *)kmy_constraintEqualToAnchor:(NSLayoutDimension *)anchor                 priority:(UILayoutPriority)priority identifier:(nullable NSString *)identifier NS_SWIFT_NAME(kmy_constraint(equalTo:priority:identifier:)) {
+- (NSLayoutConstraint *)kmy_constraintEqualToAnchor:(NSLayoutDimension *)anchor                 priority:(UILayoutPriority)priority identifier:(nullable NSString *)identifier {
     NSLayoutConstraint *constraint = [self kmy_constraintEqualToAnchor:anchor multiplier:1.0f constant:0 identifier:identifier];
     constraint.priority = priority;
     return constraint;
 }
 
-- (NSLayoutConstraint *)kmy_constraintLessThanOrEqualToAnchor:(NSLayoutDimension *)anchor       priority:(UILayoutPriority)priority identifier:(nullable NSString *)identifier NS_SWIFT_NAME(kmy_constraint(lessThanOrEqualTo:priority:identifier:)) {
+- (NSLayoutConstraint *)kmy_constraintLessThanOrEqualToAnchor:(NSLayoutDimension *)anchor       priority:(UILayoutPriority)priority identifier:(nullable NSString *)identifier {
     NSLayoutConstraint *constraint = [self kmy_constraintLessThanOrEqualToAnchor:anchor multiplier:1.0f constant:0 identifier:identifier];
     constraint.priority = priority;
     return constraint;
 }
 
-- (NSLayoutConstraint *)kmy_constraintGreaterThanOrEqualToAnchor:(NSLayoutDimension *)anchor    priority:(UILayoutPriority)priority identifier:(nullable NSString *)identifier NS_SWIFT_NAME(kmy_constraint(greaterThanOrEqualTo:priority:identifier:)) {
+- (NSLayoutConstraint *)kmy_constraintGreaterThanOrEqualToAnchor:(NSLayoutDimension *)anchor    priority:(UILayoutPriority)priority identifier:(nullable NSString *)identifier {
     NSLayoutConstraint *constraint = [self kmy_constraintGreaterThanOrEqualToAnchor:anchor multiplier:1.0f constant:0 identifier:identifier];
     constraint.priority = priority;
     return constraint;
