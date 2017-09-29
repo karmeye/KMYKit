@@ -7,9 +7,9 @@
 //
 
 #import "KMYAsynchronousOperation.h"
-#include <libkern/OSAtomic.h>
 #import "KMYDispatch.h"
 #import "KMYAssert.h"
+#import <os/lock.h>
 
 @interface KMYAsynchronousOperation ()
 @end
@@ -23,18 +23,18 @@
     dispatch_queue_t                                    _resultCallbackQueue;
 
     // From docs: Your executing property must also provide the status in a thread-safe manner.
-    OSSpinLock  _isExecutingLock;
-    OSSpinLock  _isFinishedLock;
+    os_unfair_lock _isExecutingLock;
+    os_unfair_lock _isFinishedLock;
 
-    BOOL        _isExecuting;
-    BOOL        _isFinished;
+    BOOL _isExecuting;
+    BOOL _isFinished;
 }
 
 - (instancetype)init {
     self = [super init];
 
-    _isExecutingLock = OS_SPINLOCK_INIT;
-    _isFinishedLock = OS_SPINLOCK_INIT;
+    _isExecutingLock = OS_UNFAIR_LOCK_INIT;
+    _isFinishedLock = OS_UNFAIR_LOCK_INIT;
 
     return self;
 }
@@ -129,9 +129,9 @@
 
 - (BOOL)isExecuting {
     BOOL isExecuting;
-    OSSpinLockLock(&_isExecutingLock);
+    os_unfair_lock_lock(&_isExecutingLock);
     isExecuting = _isExecuting;
-    OSSpinLockUnlock(&_isExecutingLock);
+    os_unfair_lock_unlock(&_isExecutingLock);
     return isExecuting;
 }
 
@@ -139,18 +139,18 @@
     if (isExecuting != self.isExecuting) {
         static NSString * const key = @"isExecuting";
         [self willChangeValueForKey:key];
-        OSSpinLockLock(&_isExecutingLock);
+        os_unfair_lock_lock(&_isExecutingLock);
         _isExecuting = isExecuting;
-        OSSpinLockUnlock(&_isExecutingLock);
+        os_unfair_lock_unlock(&_isExecutingLock);
         [self didChangeValueForKey:key];
     }
 }
 
 - (BOOL)isFinished {
     BOOL isFinished;
-    OSSpinLockLock(&_isFinishedLock);
+    os_unfair_lock_lock(&_isFinishedLock);
     isFinished = _isFinished;
-    OSSpinLockUnlock(&_isFinishedLock);
+    os_unfair_lock_unlock(&_isFinishedLock);
     return isFinished;
 }
 
@@ -158,9 +158,9 @@
     if (isFinished != self.isFinished) {
         static NSString * const key = @"isFinished";
         [self willChangeValueForKey:key];
-        OSSpinLockLock(&_isFinishedLock);
+        os_unfair_lock_lock(&_isFinishedLock);
         _isFinished = isFinished;
-        OSSpinLockUnlock(&_isFinishedLock);
+        os_unfair_lock_unlock(&_isFinishedLock);
         [self didChangeValueForKey:key];
     }
 }
