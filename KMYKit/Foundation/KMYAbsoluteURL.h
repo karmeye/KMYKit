@@ -19,8 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, readonly)       NSString    *string;
 
 - (instancetype)init NS_UNAVAILABLE;
-+ (nullable instancetype)absoluteURLWithURL:(NSURL *)URL;
-+ (nullable instancetype)absoluteURLWithString:(NSString *)string relativeToFallbackbaseURL:(NSURL *)fallbackBaseURL;
++ (nullable instancetype)absoluteURLWithURL:(NSURL *)URL NS_SWIFT_NAME(init(_:));
++ (nullable instancetype)absoluteURLWithString:(NSString *)string relativeToFallbackbaseURL:(NSURL *)fallbackBaseURL NS_SWIFT_NAME(init(string:relativeToFallbackbaseURL:));
 
 @end
 
