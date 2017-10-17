@@ -18,35 +18,39 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)deleteManagedObject:(__kindof KMYManagedObject *)managedObject
       processPendingChanges:(BOOL)processPendingChanges;
 
-+ (NSFetchRequest *)fetchRequest;
-+ (NSFetchRequest *)shallowFetchRequest;
+/// By default, an entity name with the same name as the subclass is assumed. Subclasses can override @c entityName: method to provide a custom name.
+/// @remark If the Xcode code generation creates a method with the same name, i.e. @c fetchRequest, that should do the same thing as this method does, and
+///         fetch methods methods, such as @c executeFetchInManagedObjectContext:error:, will call the subclass’s @c fetchRequest method instead of this one.
+/// @return A new fetch request initialized with the Entity represented by this subclass.
++ (NSFetchRequest<__kindof KMYManagedObject *> *)fetchRequest;
++ (NSFetchRequest<__kindof KMYManagedObject *> *)shallowFetchRequest;
 
 /// @return An array with the results; an empty array if there were no results; or @c nil if an error occurred.
-+ (nullable NSArray *)executeFetchInManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
-                                                   error:(NSError **)error;
++ (nullable NSArray<__kindof KMYManagedObject *> *)executeFetchInManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
+                                                                                error:(NSError **)error;
 
 /// @return An array with the results; an empty array if there were no results; or @c nil if an error occurred.
-+ (nullable NSArray *)executeFetchWithPredicate:(nullable NSPredicate *)predicate
-                         inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
-                                          error:(NSError **)error;
++ (nullable NSArray<__kindof KMYManagedObject *> *)executeFetchWithPredicate:(nullable NSPredicate *)predicate
+                                                      inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
+                                                                       error:(NSError **)error;
 
 /// @return An array with the results; an empty array if there were no results; or @c nil if an error occurred.
-+ (NSArray *)executeFetchWithSortDescriptors:(NSArray *)sortDescriptors
-                      inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
-                                       error:(NSError **)error;
++ (NSArray<__kindof KMYManagedObject *> *)executeFetchWithSortDescriptors:(NSArray *)sortDescriptors
+                                                   inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
+                                                                    error:(NSError **)error;
 
 /// @return An array with the results; an empty array if there were no results; or @c nil if an error occurred.
-+ (nullable NSArray *)executeFetchWithPredicate:(nullable NSPredicate *)predicate
-                                sortDescriptors:(nullable NSArray *)sortDescriptors
-                         inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
-                                          error:(NSError **)error;
++ (nullable NSArray<__kindof KMYManagedObject *> *)executeFetchWithPredicate:(nullable NSPredicate *)predicate
+                                                             sortDescriptors:(nullable NSArray *)sortDescriptors
+                                                      inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
+                                                                       error:(NSError **)error;
 
 /// @return An array with the results; an empty array if there were no results; or @c nil if an error occurred.
-+ (nullable NSArray *)executeFetchWithRequest:(nullable NSFetchRequest *)fetchRequest
-                                    predicate:(nullable NSPredicate *)predicate
-                              sortDescriptors:(nullable NSArray *)sortDescriptors
-                       inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
-                                        error:(NSError **)error;
++ (nullable NSArray<__kindof KMYManagedObject *> *)executeFetchWithRequest:(nullable NSFetchRequest *)fetchRequest
+                                                                 predicate:(nullable NSPredicate *)predicate
+                                                           sortDescriptors:(nullable NSArray *)sortDescriptors
+                                                    inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
+                                                                     error:(NSError **)error;
 
 + (NSUInteger)numberOfResultsInManagedObjectContext:(NSManagedObjectContext*)managedObjectContext
                                               error:(NSError **)error;
