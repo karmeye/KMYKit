@@ -103,15 +103,11 @@
 + (NSUInteger)numberOfResultsInManagedObjectContext:(NSManagedObjectContext*)managedObjectContext
                                               error:(NSError **)error {
     NSError *localError;
-    NSArray *result = [[self class] executeFetchWithRequest:[[self class] shallowFetchRequest]
-                                                  predicate:nil
-                                            sortDescriptors:nil
-                                     inManagedObjectContext:managedObjectContext
-                                                      error:&localError];
+    NSUInteger count = [managedObjectContext countForFetchRequest:[[self class] shallowFetchRequest] error:&localError];
 
     if (localError && error != NULL) *error = localError;
 
-    return localError ? 0 : result.count;
+    return localError ? 0 : count;
 }
 
 #pragma mark - Subclassing
