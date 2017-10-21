@@ -10,7 +10,11 @@
 
 @implementation UIImageView (KMY)
 
-+ (instancetype)kmy_viewWithImage:(UIImage *)image initializer:(void (^)(__kindof UIImageView *imageView))initializer {
++ (instancetype)kmy_imageViewWithInitializer:(void (^_Nullable)(__kindof UIImageView *imageView))initializer {
+    return [[self class] kmy_imageViewWithImage:nil initializer:initializer];
+}
+
++ (instancetype)kmy_imageViewWithImage:(UIImage *)image initializer:(void (^)(__kindof UIImageView *imageView))initializer {
     UIImageView *imageView = [[[self class] alloc] initWithImage:image];
     if (initializer != NULL) initializer(imageView);
     return imageView;

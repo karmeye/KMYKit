@@ -12,7 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface WKWebView (KMY)
 
-+ (instancetype)kmy_viewWithInitializer:(void (^_Nullable)(__kindof WKWebView *view))initializer configurationInitializer:(void (^_Nullable)(WKWebViewConfiguration *configuration))configurationInitializer;
++ (instancetype)kmy_viewWithInitializer:(void (^_Nullable)(__kindof WKWebView *view))initializer
+               configurationInitializer:(void (^_Nullable)(WKWebViewConfiguration *configuration))configurationInitializer NS_SWIFT_NAME(init(initializer:configurationiInitializer:));
 
 @end
 
