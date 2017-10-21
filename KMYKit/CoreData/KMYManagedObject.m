@@ -44,6 +44,11 @@
     }
 }
 
++ (void)deleteAllInManagedObjectContext:(NSManagedObjectContext *)managedObjectContext error:(NSError **)error {
+    NSBatchDeleteRequest *deleteRequest = [[NSBatchDeleteRequest alloc] initWithFetchRequest:[[self class] fetchRequest]];
+    [managedObjectContext.persistentStoreCoordinator executeRequest:deleteRequest withContext:managedObjectContext error:error];
+}
+
 #pragma mark - Fetching
 
 + (NSFetchRequest *)fetchRequest {

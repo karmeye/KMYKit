@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)deleteManagedObject:(__kindof KMYManagedObject *)managedObject;
 + (void)deleteManagedObject:(__kindof KMYManagedObject *)managedObject
       processPendingChanges:(BOOL)processPendingChanges;
++ (void)deleteAllInManagedObjectContext:(NSManagedObjectContext *)managedObjectContext error:(NSError **)error;
 
 /// By default, an entity name with the same name as the subclass is assumed. Subclasses can override @c entityName: method to provide a custom name.
 /// @remark If the Xcode code generation creates a method with the same name, i.e. @c fetchRequest, that should do the same thing as this method does, and
