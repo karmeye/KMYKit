@@ -56,6 +56,8 @@
 		A66DD83B1D5486DE00BD1A1E /* NSURL+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A66DD8391D5486DE00BD1A1E /* NSURL+KMY.m */; };
 		A681537D1DE730DA00793715 /* KMYApplicationBackgroundTask.h in Headers */ = {isa = PBXBuildFile; fileRef = A681537B1DE730DA00793715 /* KMYApplicationBackgroundTask.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A681537E1DE730DA00793715 /* KMYApplicationBackgroundTask.m in Sources */ = {isa = PBXBuildFile; fileRef = A681537C1DE730DA00793715 /* KMYApplicationBackgroundTask.m */; };
+		A683F99D1FA25128001FFB6A /* NSOperationQueue+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A683F99B1FA25128001FFB6A /* NSOperationQueue+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A683F99E1FA25128001FFB6A /* NSOperationQueue+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A683F99C1FA25128001FFB6A /* NSOperationQueue+KMY.m */; };
 		A68490C51E40C0B4005E4ACC /* KMYSelectableButton.h in Headers */ = {isa = PBXBuildFile; fileRef = A68490C31E40C0B4005E4ACC /* KMYSelectableButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A68490C61E40C0B4005E4ACC /* KMYSelectableButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A68490C41E40C0B4005E4ACC /* KMYSelectableButton.m */; };
 		A6863E201D7E8FD300694FF6 /* UIImage+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A6863E1E1D7E8FD300694FF6 /* UIImage+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -219,6 +221,8 @@
 		A66DD8391D5486DE00BD1A1E /* NSURL+KMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+KMY.m"; sourceTree = "<group>"; };
 		A681537B1DE730DA00793715 /* KMYApplicationBackgroundTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYApplicationBackgroundTask.h; sourceTree = "<group>"; };
 		A681537C1DE730DA00793715 /* KMYApplicationBackgroundTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYApplicationBackgroundTask.m; sourceTree = "<group>"; };
+		A683F99B1FA25128001FFB6A /* NSOperationQueue+KMY.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSOperationQueue+KMY.h"; sourceTree = "<group>"; };
+		A683F99C1FA25128001FFB6A /* NSOperationQueue+KMY.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSOperationQueue+KMY.m"; sourceTree = "<group>"; };
 		A68490C31E40C0B4005E4ACC /* KMYSelectableButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYSelectableButton.h; sourceTree = "<group>"; };
 		A68490C41E40C0B4005E4ACC /* KMYSelectableButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYSelectableButton.m; sourceTree = "<group>"; };
 		A6863E1E1D7E8FD300694FF6 /* UIImage+KMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+KMY.h"; sourceTree = "<group>"; };
@@ -415,6 +419,8 @@
 				A6900E381E6FE89600B72EB4 /* NSNotificationCenter+KMY.m */,
 				A68B8E081CAA6F8900DE6E95 /* NSObject+KMY.h */,
 				A68B8E091CAA6F8900DE6E95 /* NSObject+KMY.m */,
+				A683F99B1FA25128001FFB6A /* NSOperationQueue+KMY.h */,
+				A683F99C1FA25128001FFB6A /* NSOperationQueue+KMY.m */,
 				A626C98D1CD8A49C0094802F /* NSString+KMY.h */,
 				A626C98E1CD8A49C0094802F /* NSString+KMY.m */,
 				A6028DEB1D46049800289B3A /* NSTimer+KMY.h */,
@@ -706,6 +712,7 @@
 				A6C109041E446D0600BE6087 /* UIToolbar+KMY.h in Headers */,
 				A6900E391E6FE89600B72EB4 /* NSNotificationCenter+KMY.h in Headers */,
 				A64441CD1F7D1AD600E29B5C /* UILabel+KMY.h in Headers */,
+				A683F99D1FA25128001FFB6A /* NSOperationQueue+KMY.h in Headers */,
 				A681537D1DE730DA00793715 /* KMYApplicationBackgroundTask.h in Headers */,
 				A6D87A491CF70567006BEC47 /* WKWebView+KMY.h in Headers */,
 			);
@@ -828,6 +835,7 @@
 				A68B8E2E1CAA6F9200DE6E95 /* KMYTableViewController.m in Sources */,
 				A6C2C67D1DC2065600EFD9D2 /* KMYFileManager.m in Sources */,
 				A68B8E0C1CAA6F8900DE6E95 /* KMYBlock.m in Sources */,
+				A683F99E1FA25128001FFB6A /* NSOperationQueue+KMY.m in Sources */,
 				A68B8E2C1CAA6F9200DE6E95 /* KMYNavigationController.m in Sources */,
 				A68B8E151CAA6F8900DE6E95 /* NSArray+KMY.m in Sources */,
 				A66DD83B1D5486DE00BD1A1E /* NSURL+KMY.m in Sources */,

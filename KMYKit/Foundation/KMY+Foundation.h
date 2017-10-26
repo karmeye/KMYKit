@@ -37,6 +37,7 @@
 #import <KMYKit/NSMutableString+KMY.h>
 #import <KMYKit/NSNotificationCenter+KMY.h>
 #import <KMYKit/NSObject+KMY.h>
+#import <KMYKit/NSOperationQueue+KMY.h>
 #import <KMYKit/NSString+KMY.h>
 #import <KMYKit/NSTimer+KMY.h>
 #import <KMYKit/NSURL+KMY.h>
