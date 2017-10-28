@@ -750,6 +750,7 @@
 				TargetAttributes = {
 					A6F6F6BC1CA3CDAA0074F8A4 = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0900;
 					};
 				};
 			};
@@ -975,6 +976,7 @@
 		A6F6F6C61CA3CDAA0074F8A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -986,12 +988,15 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.karmeye.KMYKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
 		A6F6F6C71CA3CDAA0074F8A4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1003,6 +1008,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.karmeye.KMYKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
