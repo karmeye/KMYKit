@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UICollectionViewController (KMY)
 
-+ (instancetype)kmy_collectionViewWithLayout:(UICollectionViewLayout *)layout initializer:(void (^_Nullable)(__kindof UICollectionViewController *viewController))initializer;
++ (instancetype)kmy_collectionViewWithLayout:(UICollectionViewLayout *)layout initializer:(void (^_Nullable)(__kindof UICollectionViewController *viewController))initializer NS_SWIFT_NAME(init(layout:initializer:));
 
 @end
 

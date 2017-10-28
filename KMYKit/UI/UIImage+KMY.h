@@ -12,10 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIImage (KMY)
 
-@property (nonatomic, assign, readonly)     CGSize          kmy_sizeInPixels;
+@property (nonatomic, assign, readonly)     CGSize          kmy_sizeInPixels NS_SWIFT_NAME(kmySizeInPixels);
 
-- (CGSize)kmy_sizeThatAspectFitsSize:(CGSize)sizeToAspectFit;
-+ (CGSize)kmy_sizeFromSize:(CGSize)fromSize thatAspectFitsSize:(CGSize)sizeToAspectFit;
+- (CGSize)kmy_sizeThatAspectFitsSize:(CGSize)sizeToAspectFit NS_SWIFT_NAME(kmySizeThatAspectFits(_:));
++ (CGSize)kmy_sizeFromSize:(CGSize)fromSize thatAspectFitsSize:(CGSize)sizeToAspectFit NS_SWIFT_NAME(init(from:thatAspectFits:));
 
 @end
 

@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSAttributedString (KMY)
 
-+ (instancetype)kmy_stringWithInitializer:(void (^_Nullable)(NSMutableAttributedString *string))initializer;
++ (instancetype)kmy_stringWithInitializer:(void (^_Nullable)(NSMutableAttributedString *string))initializer NS_SWIFT_NAME(init(initializer:));
 
 @end
 

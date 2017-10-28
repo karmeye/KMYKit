@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UISwitch (KMY)
 
-@property (nonatomic, copy, nullable)   void (^kmy_valueDidChangeHandler)(__kindof UISwitch *switchControl);
+@property (nonatomic, copy, nullable)   void (^kmy_valueDidChangeHandler)(__kindof UISwitch *switchControl) NS_SWIFT_NAME(kmyValueDidChangeHandler);
 
 @end
 

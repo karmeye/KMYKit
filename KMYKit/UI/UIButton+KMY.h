@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
                            handler:(void (^_Nullable)(__kindof UIButton *button))handler NS_SWIFT_NAME(init(type:initializer:handler:));
 
 /// May be modified after initialization.
-@property (nonatomic, copy, nullable) void (^kmy_touchUpInsideHandler)(__kindof UIButton *button);
+@property (nonatomic, copy, nullable) void (^kmy_touchUpInsideHandler)(__kindof UIButton *button) NS_SWIFT_NAME(kmyTouchUpInsideHandler);
 
 @end
 

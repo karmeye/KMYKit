@@ -21,11 +21,11 @@ typedef NS_OPTIONS(NSUInteger, KMYLayoutConstraintOptions) {
 
 @interface NSLayoutConstraint (KMY)
 
-+ (NSArray<__kindof NSLayoutConstraint *> *)kmy_constraintsForView:(UIView *)view1 equalToEdgesOfView:(UIView *)view2;
-+ (NSArray<__kindof NSLayoutConstraint *> *)kmy_constraintsForView:(UIView *)view1 equalToEdgesOfView:(UIView *)view2 options:(KMYLayoutConstraintOptions)options;
++ (NSArray<__kindof NSLayoutConstraint *> *)kmy_constraintsForView:(UIView *)view1 equalToEdgesOfView:(UIView *)view2 NS_SWIFT_NAME(kmyConstraints(for:equalToEdgesOf:));
++ (NSArray<__kindof NSLayoutConstraint *> *)kmy_constraintsForView:(UIView *)view1 equalToEdgesOfView:(UIView *)view2 options:(KMYLayoutConstraintOptions)options NS_SWIFT_NAME(kmyConstraints(for:equalToEdgesOf:options:));
 
-+ (NSArray<__kindof NSLayoutConstraint *> *)kmy_constraintsForView:(UIView *)view1 equalToMarginsOfView:(UIView *)view2;
-+ (NSArray<__kindof NSLayoutConstraint *> *)kmy_constraintsForView:(UIView *)view1 equalToMarginsOfView:(UIView *)view2 options:(KMYLayoutConstraintOptions)options;
++ (NSArray<__kindof NSLayoutConstraint *> *)kmy_constraintsForView:(UIView *)view1 equalToMarginsOfView:(UIView *)view2 NS_SWIFT_NAME(kmyConstraints(for:equalToMarginsOf:));
++ (NSArray<__kindof NSLayoutConstraint *> *)kmy_constraintsForView:(UIView *)view1 equalToMarginsOfView:(UIView *)view2 options:(KMYLayoutConstraintOptions)options NS_SWIFT_NAME(kmyConstraints(for:equalToMarginsOf:options:));
 
 @end
 

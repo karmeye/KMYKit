@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UITableViewController (KMY)
 
-+ (nullable instancetype)kmy_tableViewControllerWithStyle:(UITableViewStyle)style initializer:(void (^_Nullable)(__kindof UITableViewController *viewController))initializer;
++ (nullable instancetype)kmy_tableViewControllerWithStyle:(UITableViewStyle)style initializer:(void (^_Nullable)(__kindof UITableViewController *viewController))initializer NS_SWIFT_NAME(init(style:initializer:));
 
 @end
 

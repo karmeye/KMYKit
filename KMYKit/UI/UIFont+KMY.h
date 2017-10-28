@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIFont (KMY)
 
-+ (void)kmy_logAllInstalled;
++ (void)kmy_logAllInstalled NS_SWIFT_NAME(kmyLogAllInstalled());
 
 @end
 

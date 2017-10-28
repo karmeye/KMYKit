@@ -10,6 +10,6 @@
 
 @interface NSMutableString (KMY)
 
-- (void)kmy_trimWhitespace;
+- (void)kmy_trimWhitespace NS_SWIFT_NAME(kmyTrimWhitespace());
 
 @end

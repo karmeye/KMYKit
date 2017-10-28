@@ -12,9 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSMutableArray<ObjectType>  (KMY)
 
-- (void)kmy_addObjectIfSet:(nullable ObjectType)object;
+- (void)kmy_addObjectIfSet:(nullable ObjectType)object NS_SWIFT_NAME(kmyAddIfSet(_:));
 
-- (void)kmy_addObjectsFromArrayIfSet:(nullable NSArray<ObjectType> *)array;
+- (void)kmy_addObjectsFromArrayIfSet:(nullable NSArray<ObjectType> *)array NS_SWIFT_NAME(kmyAddObjectsIfSet(from:));
 
 @end
 

@@ -12,10 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSArray (KMY)
 
-+ (nullable instancetype)kmy_arrayWithInitializer:(void (^_Nullable)(NSMutableArray *array))initializer;
++ (nullable instancetype)kmy_arrayWithInitializer:(void (^_Nullable)(NSMutableArray *array))initializer NS_SWIFT_NAME(init(initializer:));
 
 /// @return The object at the specified index or nil if index is out of bounds.
-- (nullable id)kmy_objectAtIndexOrNil:(NSUInteger)index;
+- (nullable id)kmy_objectAtIndexOrNil:(NSUInteger)index NS_SWIFT_NAME(kmyObject(at:));
 
 @end
 

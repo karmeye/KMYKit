@@ -42,7 +42,7 @@ typedef NS_OPTIONS(NSUInteger, KMYLayoutTradeoff) {
 
 @interface UIView (KMYUIConstraintBasedLayoutLayering)
 
-- (void)kmy_setLayoutTradeoff:(KMYLayoutTradeoff)tradeoff priority:(UILayoutPriority)priority forAxis:(KMYLayoutAxis)axis;
+- (void)kmy_setLayoutTradeoff:(KMYLayoutTradeoff)tradeoff priority:(UILayoutPriority)priority forAxis:(KMYLayoutAxis)axis NS_SWIFT_NAME(setLayoutTradeoff(_:priority:forAxis:));
 
 /// Sets @c translatesAutoresizingMaskIntoConstraints to @c NO on given views.
 + (void)kmy_enableLayoutConstraintsOnViews:(NSArray<__kindof UIView *> *)views NS_SWIFT_NAME(kmyEnableLayoutConstraints(_:));
@@ -54,7 +54,7 @@ typedef NS_OPTIONS(NSUInteger, KMYLayoutTradeoff) {
 /// Traverses the view hierarchy until it finds an ancestor that is of the given class.
 ///
 /// @return The first ancestor view in the view hierarchy that is of the given class, or @c nil if not found.
-- (nullable __kindof UIView *)kmy_firstAncestorOfClass:(Class)cls;
+- (nullable __kindof UIView *)kmy_firstAncestorOfClass:(Class)cls NS_SWIFT_NAME(kmyFirstAncestorOfClass(_:));
 
 @end
 

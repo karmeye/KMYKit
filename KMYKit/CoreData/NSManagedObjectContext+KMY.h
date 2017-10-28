@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param error The pointer to an error object that is passed to the @c save: method of the receiver.
  @return @c YES if save succeeds or if there are no changes to save. NO if save failes and @c error is set.
  */
-- (BOOL)kmy_save:(NSError * _Nullable *)error;
+- (BOOL)kmy_save:(NSError * _Nullable *)error NS_SWIFT_NAME(kmySave());
 
 @end
 

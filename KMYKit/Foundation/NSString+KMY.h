@@ -30,7 +30,7 @@ FOUNDATION_EXPORT   BOOL        KMYStringContainsVisibleCharacters(NSString * _N
 
 @interface NSString (KMY)
 
-+ (instancetype)kmy_stringWithInitializer:(void (^_Nullable)(NSMutableString *string))initializer;
++ (instancetype)kmy_stringWithInitializer:(void (^_Nullable)(NSMutableString *string))initializer NS_SWIFT_NAME(init(initializer:));
 
 @end
 

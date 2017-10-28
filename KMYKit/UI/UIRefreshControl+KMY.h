@@ -12,8 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIRefreshControl (KMY)
 
-+ (instancetype)kmy_refreshControlWithInitializer:(void (^_Nullable)(__kindof UIRefreshControl *refreshControl))initializer handler:(void (^_Nullable)(__kindof UIRefreshControl *refreshControl))handler;
-+ (instancetype)kmy_refreshControlWithHandler:(void (^_Nullable)(__kindof UIRefreshControl *refreshControl))handler;
++ (instancetype)kmy_refreshControlWithInitializer:(void (^_Nullable)(__kindof UIRefreshControl *refreshControl))initializer handler:(void (^_Nullable)(__kindof UIRefreshControl *refreshControl))handler NS_SWIFT_NAME(init(initializer:handler:));
++ (instancetype)kmy_refreshControlWithHandler:(void (^_Nullable)(__kindof UIRefreshControl *refreshControl))handler NS_SWIFT_NAME(init(handler:));
 
 @end
 

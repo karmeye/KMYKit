@@ -12,11 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UISegmentedControl (KMY)
 
-@property (nonatomic, copy, nullable)   void (^kmy_valueDidChangeHandler)(__kindof UISegmentedControl *segmentedControl);
+@property (nonatomic, copy, nullable)   void (^kmy_valueDidChangeHandler)(__kindof UISegmentedControl *segmentedControl) NS_SWIFT_NAME(kmyValueDidChangeHandler);
 
-+ (instancetype)kmy_segmentedControlWithWithItems:(nullable NSArray *)items initializer:(void (^_Nullable)(__kindof UISegmentedControl *segmentedControl))initializer;
++ (instancetype)kmy_segmentedControlWithWithItems:(nullable NSArray *)items initializer:(void (^_Nullable)(__kindof UISegmentedControl *segmentedControl))initializer NS_SWIFT_NAME(init(items:initializer:));
 
-- (void)kmy_insertSegmentsWithTitles:(NSArray <NSString *> *)segmentTitles animated:(BOOL)animated;
+- (void)kmy_insertSegmentsWithTitles:(NSArray <NSString *> *)segmentTitles animated:(BOOL)animated NS_SWIFT_NAME(kmyInsertSegmentsWithTitles(_:animated:));
 
 @end
 

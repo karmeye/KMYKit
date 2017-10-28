@@ -37,7 +37,7 @@ typedef void         (^KMYPersistentStoreOperationAsynchronousExecutionBlock)(NS
 
 @interface NSOperationQueue (KMYPersistentStoreOperation)
 
-+ (NSOperationQueue *)kmy_queueForPersistantStoreOperations;
++ (NSOperationQueue *)kmy_queueForPersistantStoreOperations NS_SWIFT_NAME(kmyQueueForPersistantStoreOperations());
 
 @end
 

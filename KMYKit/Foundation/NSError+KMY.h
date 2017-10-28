@@ -18,17 +18,17 @@ typedef NS_ENUM(NSInteger, KMYErrorCode) {
 
 @interface NSError (KMY)
 
-+ (instancetype)kmy_errorWithLocalizedDescription:(nullable NSString *)localizedDescription;
++ (instancetype)kmy_errorWithLocalizedDescription:(nullable NSString *)localizedDescription NS_SWIFT_NAME(init(localizedDescription:));
 
 + (instancetype)kmy_errorWithDomain:(NSString *)domain
                                code:(NSInteger)code
-               localizedDescription:(nullable NSString *)localizedDescription;
+               localizedDescription:(nullable NSString *)localizedDescription NS_SWIFT_NAME(init(domain:code:localizedDescription:));
 
 + (instancetype)kmy_errorWithDomain:(NSString *)domain
                                code:(NSInteger)code
                localizedDescription:(nullable NSString *)localizedDescription
                       failureReason:(nullable NSString *)failureReason
-                 recoverySuggestion:(nullable NSString *)recoverySuggestion;
+                 recoverySuggestion:(nullable NSString *)recoverySuggestion NS_SWIFT_NAME(init(domain:code:localizedDescription:failureReason:recoverySuggestion:));
 
 @end
 

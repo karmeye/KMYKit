@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSTimer (KMY)
 
 /// @note The receiver is added to the run loop and retained there; it will not be released until invalidate is called on the receiver. Hence you may store the returned timer in a weak variable and make sure to call invalidate to release it.
-+ (NSTimer *)kmy_timerWithTimeInterval:(NSTimeInterval)interval userInfo:(nullable id)userInfo repeats:(BOOL)repeats handler:(void (^)(NSTimer *timer))handler;
++ (NSTimer *)kmy_timerWithTimeInterval:(NSTimeInterval)interval userInfo:(nullable id)userInfo repeats:(BOOL)repeats handler:(void (^)(NSTimer *timer))handler NS_SWIFT_NAME(init(interval:userInfo:repeats:handler:));
 
 @end
 

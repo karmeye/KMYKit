@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSURL (KMY)
 
-+ (nullable instancetype)kmy_ensuredAbsoluteURLWithString:(NSString *)stringRepresentation relativeToFallbackURL:(NSURL *)fallbackBaseURL;
++ (nullable instancetype)kmy_ensuredAbsoluteURLWithString:(NSString *)stringRepresentation relativeToFallbackURL:(NSURL *)fallbackBaseURL NS_SWIFT_NAME(init(absoluteURLWithString:relativeToFallbackURL:));
 
 @end
 
