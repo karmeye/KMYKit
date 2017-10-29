@@ -30,10 +30,10 @@ public func dispatchPreconditionNotOnMainQueue() {
     }
 }
 
-public func assertOnMainQueue() {
-    assert(dispatchIsOnMainQueue())
+public func assertOnMainQueue(file: StaticString = #file, line: UInt = #line) {
+    assert(dispatchIsOnMainQueue(), "This must execute on the main queue!", file: file, line: line)
 }
 
-public func assertNotOnMainQueue() {
-    assert(!dispatchIsOnMainQueue())
+public func assertNotOnMainQueue(file: StaticString = #file, line: UInt = #line) {
+    assert(!dispatchIsOnMainQueue(), "This must not execute on the main queue!", file: file, line: line)
 }
