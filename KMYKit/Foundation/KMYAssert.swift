@@ -9,23 +9,31 @@
 import Foundation
 
 /// Uses `dispatchPrecondition(condition:)` to check if the current context is on the main queue.
-/// Falls back to `assert(kmyDispatchIsMainQueue())` if `dispatchPrecondition(condition:)` is not available.
+/// Falls back to `assertOnMainQueue()` if `dispatchPrecondition(condition:)` is not available.
 /// - Remark: `dispatchPrecondition(condition:)` will stop program execution in release builds, whereas `assert` will not.
-public func kmyDispatchPreconditionOnMainQueue() {
+public func dispatchPreconditionOnMainQueue() {
     if #available(iOS 10.0, *) {
         dispatchPrecondition(condition: .onQueue(DispatchQueue.main))
     } else {
-        assert(kmyDispatchIsMainQueue())
+        assertOnMainQueue()
     }
 }
 
 /// Uses `dispatchPrecondition(condition:)` to check if the current context is not on the main queue.
-/// Falls back to `assert(kmyDispatchIsMainQueue())` if `dispatchPrecondition(condition:)` is not available.
+/// Falls back to `assertNotOnMainQueue()` if `dispatchPrecondition(condition:)` is not available.
 /// - Remark: `dispatchPrecondition(condition:)` will stop program execution in release builds, whereas `assert` will not.
-public func kmyDispatchPreconditionNotOnMainQueue() {
+public func dispatchPreconditionNotOnMainQueue() {
     if #available(iOS 10.0, *) {
         dispatchPrecondition(condition: .notOnQueue(DispatchQueue.main))
     } else {
-        assert(!kmyDispatchIsMainQueue())
+        assertNotOnMainQueue()
     }
+}
+
+public func assertOnMainQueue() {
+    assert(dispatchIsOnMainQueue())
+}
+
+public func assertNotOnMainQueue() {
+    assert(!dispatchIsOnMainQueue())
 }
