@@ -38,7 +38,7 @@
     // The timer maintains a strong reference to the target object until it (the timer) is invalidated.
     NSTimer *timer = [NSTimer timerWithTimeInterval:interval target:[[KMYNSTimerTarget alloc] initWithHandler:handler] selector:@selector(timerWithTimeIntervalTrigger:) userInfo:userInfo repeats:repeats];
 
-    if ([NSThread isMainThread]) {
+    if (kmy_dispatch_is_main_queue()) {
         [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
     } else {
         dispatch_async(dispatch_get_main_queue(), ^{ [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes]; });
