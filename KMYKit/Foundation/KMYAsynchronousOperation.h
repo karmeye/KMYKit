@@ -13,9 +13,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef id _Nullable    (^KMYAsynchronousOperationSynchronousExecutionBlock)(id<KMYCancelling> cancellingHandler);
 
-typedef void            (^KMYAsynchronousOperationCompetionHandler)(id _Nullable);
+/// Call this handler when asynchronous work is done and optionally provide a result which will be provided to the @c KMYAsynchronousOperationResultBlock.
+/// @attention Must always be called, even if the operation was cancelled. Subclasses, however, call @c setOperationComplete or @c setOperationCompleteWithResult: instead.
+typedef void            (^KMYAsynchronousOperationCompetionHandler)(id _Nullable result);
+
+/// @attention The @c completionHandler must always be called, even if the operation was cancelled, i.e., @c cancellingHandler.isCancelled returned @c YES.
 typedef void            (^KMYAsynchronousOperationAsynchronousExecutionBlock)(id<KMYCancelling> cancellingHandler, KMYAsynchronousOperationCompetionHandler completionHandler);
 
+/// Will be called on the given @c resultCallbackQueue with the result value provided in the @c KMYAsynchronousOperationCompetionHandler call.
 typedef void            (^KMYAsynchronousOperationResultBlock)(id _Nullable result, BOOL cancelled);
 
 @interface KMYAsynchronousOperation : NSOperation <KMYCancelling>
