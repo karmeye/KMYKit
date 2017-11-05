@@ -39,6 +39,7 @@
 		A62EA1E51D954CC300FAFAF7 /* KMYCGGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = A62EA1E31D954CC300FAFAF7 /* KMYCGGeometry.m */; };
 		A634953C1E41D6A1004C1872 /* KMYSelectableBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = A634953A1E41D6A1004C1872 /* KMYSelectableBarButtonItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A634953D1E41D6A1004C1872 /* KMYSelectableBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A634953B1E41D6A1004C1872 /* KMYSelectableBarButtonItem.m */; };
+		A6368E881FADC5BE0047C892 /* String+KMY.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6368E871FADC5BE0047C892 /* String+KMY.swift */; };
 		A64408A51D700C2500450948 /* KMYCancelling.h in Headers */ = {isa = PBXBuildFile; fileRef = A64408A41D700C2500450948 /* KMYCancelling.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A64441CD1F7D1AD600E29B5C /* UILabel+KMY.h in Headers */ = {isa = PBXBuildFile; fileRef = A64441CB1F7D1AD600E29B5C /* UILabel+KMY.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A64441CE1F7D1AD600E29B5C /* UILabel+KMY.m in Sources */ = {isa = PBXBuildFile; fileRef = A64441CC1F7D1AD600E29B5C /* UILabel+KMY.m */; };
@@ -205,6 +206,7 @@
 		A62EA1E31D954CC300FAFAF7 /* KMYCGGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYCGGeometry.m; sourceTree = "<group>"; };
 		A634953A1E41D6A1004C1872 /* KMYSelectableBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYSelectableBarButtonItem.h; sourceTree = "<group>"; };
 		A634953B1E41D6A1004C1872 /* KMYSelectableBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMYSelectableBarButtonItem.m; sourceTree = "<group>"; };
+		A6368E871FADC5BE0047C892 /* String+KMY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+KMY.swift"; sourceTree = "<group>"; };
 		A64408A41D700C2500450948 /* KMYCancelling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMYCancelling.h; sourceTree = "<group>"; };
 		A64441CB1F7D1AD600E29B5C /* UILabel+KMY.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+KMY.h"; sourceTree = "<group>"; };
 		A64441CC1F7D1AD600E29B5C /* UILabel+KMY.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+KMY.m"; sourceTree = "<group>"; };
@@ -429,6 +431,7 @@
 				A6028DEC1D46049800289B3A /* NSTimer+KMY.m */,
 				A66DD8381D5486DE00BD1A1E /* NSURL+KMY.h */,
 				A66DD8391D5486DE00BD1A1E /* NSURL+KMY.m */,
+				A6368E871FADC5BE0047C892 /* String+KMY.swift */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -823,6 +826,7 @@
 				A6871C651CBE39710062E265 /* KMYManagedObject.m in Sources */,
 				A6F6DA761CCDE7840042B78A /* KMYDefaultCollectionViewCell.m in Sources */,
 				A68B8E361CAA6F9200DE6E95 /* UIView+KMY.m in Sources */,
+				A6368E881FADC5BE0047C892 /* String+KMY.swift in Sources */,
 				A62775361CB38F4100238E9D /* UITableViewController+KMY.m in Sources */,
 				A6028DE61D46041500289B3A /* NSLayoutConstraint+KMY.m in Sources */,
 				A6F6DA711CCDE45E0042B78A /* KMYCollectionViewCellConfigurator.m in Sources */,
