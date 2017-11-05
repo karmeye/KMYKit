@@ -23,8 +23,9 @@ extension String {
     /**
      Determines if a string contains visible characters by trimming non-visible characters and checking if the length of the result is > 0.
 
+     Non-visible characters includes space characters, tabs, newlines, carriage returns, and any similar characters that do not have a visible representation.
+
      - Note: This function is useful to determine if a string is empty.
-     - Remarks: Non-visible characters includes space characters, tabs, newlines, carriage returns, and any similar characters that do not have a visible representation.
      - Returns: `true` if the string contains visible characters.
      */
     public func kmyContainsVisibleCharacters() -> Bool {
