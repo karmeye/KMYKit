@@ -75,7 +75,7 @@
 
 @implementation NSOperationQueue (KMYPersistentStoreOperation)
 
-+ (NSOperationQueue *)kmy_queueForPersistantStoreOperations {
++ (NSOperationQueue *)kmy_queueForPersistentStoreOperations {
     return [KMYSerialOperationQueue queue];
 }
 
