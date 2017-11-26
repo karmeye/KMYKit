@@ -37,16 +37,14 @@
 
     if (refManagedObjectContext.concurrencyType == NSPrivateQueueConcurrencyType || refManagedObjectContext.concurrencyType == NSMainQueueConcurrencyType) {
         [refManagedObjectContext performBlockAndWait:block];
-    } else if (refManagedObjectContext.concurrencyType == NSConfinementConcurrencyType) {
-        block();
     } else {
         KMYAssertFail();
     }
 }
 
-+ (void)deleteAllInManagedObjectContext:(NSManagedObjectContext *)managedObjectContext error:(NSError **)error {
++ (BOOL)deleteAllInManagedObjectContext:(NSManagedObjectContext *)managedObjectContext error:(NSError **)error {
     NSBatchDeleteRequest *deleteRequest = [[NSBatchDeleteRequest alloc] initWithFetchRequest:[[self class] fetchRequest]];
-    [managedObjectContext.persistentStoreCoordinator executeRequest:deleteRequest withContext:managedObjectContext error:error];
+    return [managedObjectContext.persistentStoreCoordinator executeRequest:deleteRequest withContext:managedObjectContext error:error] != nil;
 }
 
 #pragma mark - Fetching
