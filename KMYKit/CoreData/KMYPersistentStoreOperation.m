@@ -15,41 +15,41 @@
 @end
 
 @implementation KMYPersistentStoreOperation {
-    KMYPersistentContainer                                  *_persistentContainer;
+    id<KMYBackgroundContextProviding>                       _contextProvider;
     KMYPersistentStoreOperationSynchronousExecutionBlock    _syncExecutionBlock;
     KMYPersistentStoreOperationAsynchronousExecutionBlock   _asyncExecutionBlock;
 }
 
-- (instancetype)initWithContainer:(KMYPersistentContainer *)container
-        synchronousExecutionBlock:(KMYPersistentStoreOperationSynchronousExecutionBlock)executionBlock {
+- (instancetype)initWithContextProvider:(id<KMYBackgroundContextProviding>)contextProvider
+              synchronousExecutionBlock:(KMYPersistentStoreOperationSynchronousExecutionBlock)executionBlock {
     self = [super init];
-    _persistentContainer    = container;
+    _contextProvider        = contextProvider;
     _syncExecutionBlock     = [executionBlock copy];
     return self;
 }
 
-- (instancetype)initWithContainer:(KMYPersistentContainer *)container
-        synchronousExecutionBlock:(KMYPersistentStoreOperationSynchronousExecutionBlock)executionBlock
-                      resultBlock:(KMYAsynchronousOperationResultBlock)resultBlock
-              resultCallbackQueue:(nullable dispatch_queue_t)resultCallbackQueue {
-    self = [self initWithContainer:container synchronousExecutionBlock:executionBlock];
+- (instancetype)initWithContextProvider:(id<KMYBackgroundContextProviding>)contextProvider
+              synchronousExecutionBlock:(KMYPersistentStoreOperationSynchronousExecutionBlock)executionBlock
+                            resultBlock:(KMYAsynchronousOperationResultBlock)resultBlock
+                    resultCallbackQueue:(nullable dispatch_queue_t)resultCallbackQueue {
+    self = [self initWithContextProvider:contextProvider synchronousExecutionBlock:executionBlock];
     [self setResultBlock:resultBlock resultCallbackQueue:resultCallbackQueue];
     return self;
 }
 
-- (instancetype)initWithContainer:(KMYPersistentContainer *)container
-       asynchronousExecutionBlock:(KMYPersistentStoreOperationAsynchronousExecutionBlock)executionBlock {
+- (instancetype)initWithContextProvider:(id<KMYBackgroundContextProviding>)contextProvider
+             asynchronousExecutionBlock:(KMYPersistentStoreOperationAsynchronousExecutionBlock)executionBlock {
     self = [super init];
-    _persistentContainer    = container;
+    _contextProvider        = contextProvider;
     _asyncExecutionBlock    = [executionBlock copy];
     return self;
 }
 
-- (instancetype)initWithContainer:(KMYPersistentContainer *)container
-       asynchronousExecutionBlock:(KMYPersistentStoreOperationAsynchronousExecutionBlock)executionBlock
-                      resultBlock:(KMYAsynchronousOperationResultBlock)resultBlock
-              resultCallbackQueue:(nullable dispatch_queue_t)resultCallbackQueue {
-    self = [self initWithContainer:container asynchronousExecutionBlock:executionBlock];
+- (instancetype)initWithContextProvider:(id<KMYBackgroundContextProviding>)contextProvider
+             asynchronousExecutionBlock:(KMYPersistentStoreOperationAsynchronousExecutionBlock)executionBlock
+                            resultBlock:(KMYAsynchronousOperationResultBlock)resultBlock
+                    resultCallbackQueue:(nullable dispatch_queue_t)resultCallbackQueue {
+    self = [self initWithContextProvider:contextProvider asynchronousExecutionBlock:executionBlock];
     [self setResultBlock:resultBlock resultCallbackQueue:resultCallbackQueue];
     return self;
 }
@@ -57,7 +57,8 @@
 #pragma mark - KMYAsynchronousOperation
 
 - (void)execute {
-    [_persistentContainer performBackgroundTask:^(NSManagedObjectContext *backgroundContext) {
+    NSManagedObjectContext *backgroundContext = [_contextProvider newBackgroundContext];
+    [backgroundContext performBlock:^{
         if (_syncExecutionBlock) {
             id result = _syncExecutionBlock(backgroundContext, self);
             [self setOperationCompleteWithResult:result];
@@ -72,6 +73,8 @@
 }
 
 @end
+
+#pragma mark -
 
 @implementation NSOperationQueue (KMYPersistentStoreOperation)
 

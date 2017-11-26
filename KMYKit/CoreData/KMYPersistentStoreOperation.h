@@ -8,7 +8,7 @@
 
 #import <CoreData/CoreData.h>
 #import <KMYKit/KMYAsynchronousOperation.h>
-#import <KMYKit/KMYPersistentContainer.h>
+#import <KMYKit/KMYBackgroundContextProviding.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,21 +17,21 @@ typedef void         (^KMYPersistentStoreOperationAsynchronousExecutionBlock)(NS
 
 @interface KMYPersistentStoreOperation : KMYAsynchronousOperation
 
-- (instancetype)initWithContainer:(KMYPersistentContainer *)container
-        synchronousExecutionBlock:(KMYPersistentStoreOperationSynchronousExecutionBlock)executionBlock;
+- (instancetype)initWithContextProvider:(id<KMYBackgroundContextProviding>)contextProvider
+              synchronousExecutionBlock:(KMYPersistentStoreOperationSynchronousExecutionBlock)executionBlock;
 
-- (instancetype)initWithContainer:(KMYPersistentContainer *)container
-        synchronousExecutionBlock:(KMYPersistentStoreOperationSynchronousExecutionBlock)executionBlock
-                      resultBlock:(KMYAsynchronousOperationResultBlock)resultBlock
-              resultCallbackQueue:(nullable dispatch_queue_t)resultCallbackQueue;
+- (instancetype)initWithContextProvider:(id<KMYBackgroundContextProviding>)contextProvider
+              synchronousExecutionBlock:(KMYPersistentStoreOperationSynchronousExecutionBlock)executionBlock
+                            resultBlock:(KMYAsynchronousOperationResultBlock)resultBlock
+                    resultCallbackQueue:(nullable dispatch_queue_t)resultCallbackQueue;
 
-- (instancetype)initWithContainer:(KMYPersistentContainer *)container
-       asynchronousExecutionBlock:(KMYPersistentStoreOperationAsynchronousExecutionBlock)executionBlock;
+- (instancetype)initWithContextProvider:(id<KMYBackgroundContextProviding>)contextProvider
+             asynchronousExecutionBlock:(KMYPersistentStoreOperationAsynchronousExecutionBlock)executionBlock;
 
-- (instancetype)initWithContainer:(KMYPersistentContainer *)container
-       asynchronousExecutionBlock:(KMYPersistentStoreOperationAsynchronousExecutionBlock)executionBlock
-                      resultBlock:(KMYAsynchronousOperationResultBlock)resultBlock
-              resultCallbackQueue:(nullable dispatch_queue_t)resultCallbackQueue;
+- (instancetype)initWithContextProvider:(id<KMYBackgroundContextProviding>)contextProvider
+             asynchronousExecutionBlock:(KMYPersistentStoreOperationAsynchronousExecutionBlock)executionBlock
+                            resultBlock:(KMYAsynchronousOperationResultBlock)resultBlock
+                    resultCallbackQueue:(nullable dispatch_queue_t)resultCallbackQueue;
 
 @end
 

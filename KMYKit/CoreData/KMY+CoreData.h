@@ -8,8 +8,9 @@
 
 #import <KMYKit/KMY+Foundation.h>
 
+#import <KMYKit/KMYBackgroundContextProvider.h>
+#import <KMYKit/KMYBackgroundContextProviding.h>
 #import <KMYKit/KMYManagedObject.h>
-#import <KMYKit/KMYPersistentContainer.h>
 #import <KMYKit/KMYPersistentStoreOperation.h>
 
 // Category
